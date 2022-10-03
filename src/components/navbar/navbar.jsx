@@ -8,9 +8,9 @@ function NavBar() {
 
     return (
         
-    <nav data-aos="fade-down" class="border-gray-200 px-2 sm:px-4 py-2.5 z-10">
-        <div class="container flex flex-wrap justify-between items-center mx-auto sm:px-10 px-5">
-            <a href="/" class="flex items-center">
+    <nav data-aos="fade-down" class="border-gray-200 mx-0 z-10" style={{backgroundColor: "#256D85"}}>
+        <div class="container1 flex flex-wrap justify-between items-center mx-auto w-full sm:px-10 px-5">
+            <a href="/" class="flex">
                 <span class="self-center text-3xl mx-10 font-semibold border-transparent border-b-4 whitespace-nowrap text-dark-800">KASHIYATRA</span>
             </a>
             <div class="flex md:order-2">
@@ -23,16 +23,16 @@ function NavBar() {
             <div id="navbar-cta" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
                 <ul class="flex flex-col content-between items-center p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                 <li class="transition ease-in-out delay-200 justify-center align-middle items-center hover:bg-black rounded-lg hover:rounded-lg py-2 hover:py-2 px-2 hover:px-2 hover:text-white ">
-                    <Link to="whyca" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-2xl bg-dark-400 hover:bg-dark-500 md:p-0 dark:text-dark-400 dark:hover:bg-dark-700 dark:border-gray-700">Why CA?</Link>
+                    <Link to="whyca" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-xl bg-dark-400 hover:bg-dark-500 md:p-0 dark:text-dark-400 dark:hover:bg-dark-700 dark:border-gray-700">WHY CA?</Link>
                 </li>
                 <li class="transition ease-in-out delay-200 hover:bg-black rounded-lg hover:rounded-lg py-2 hover:py-2 px-2 hover:px-2 hover:text-white ">
-                    <Link to="duties" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-2xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Duties</Link>
+                    <Link to="duties" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">DUTIES</Link>
                 </li>
                 <li class="transition ease-in-out delay-200 hover:bg-black rounded-lg hover:rounded-lg py-2 hover:py-2 px-2 hover:px-2 hover:text-white ">
-                    <Link to="benefits" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-2xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Benefits</Link>
+                    <Link to="benefits" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">BENEFITS</Link>
                 </li>
                 <li class="transition ease-in-out delay-200 hover:bg-black rounded-lg hover:rounded-lg py-2 hover:py-2 px-2 hover:px-2 hover:text-white ">
-                    <Link to="contacts" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-2xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Contacts</Link>
+                    <Link to="contacts" smooth={true} class="block py-2 pr-4 pl-3 cursor-pointer text-dark-700 rounded text-xl hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-dark-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">CONTACTS</Link>
                 </li>
                 </ul>
             </div>
