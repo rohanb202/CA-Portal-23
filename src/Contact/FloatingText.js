@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import "./FloatingText.css";
-import ScrollReveal from 'scrollreveal'
 
 export default function FloatingText() {
 
@@ -25,11 +24,6 @@ export default function FloatingText() {
     }
   };
 
-ScrollReveal.reveal('.App',{
-    delay: 375,
-    duration: 1000,
-    reset: true
-})
 
   return (
     <>
