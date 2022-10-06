@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Services from "./components/Services/Services";
+import Brownie from "./components/Brownie/index";
 import { useContext } from "react";
 import { themeContext } from "./Context";
 import Header from './components/header/header';
 import Contact from './Contact/Contact';
+import Duties from './components/Duties/Card';
 import aos from 'aos';
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
@@ -20,8 +21,9 @@ function App() {
   return (
     <>
       <Header />
-     
-        <Services />
+     {/* <Duties/> */}
+      {/* <Services /> */}
+      <Brownie/>
     
 
       <Contact />
