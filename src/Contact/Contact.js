@@ -6,12 +6,8 @@ import Footer from './Footer'
 
 export default function Contact(){
 
-    setTimeout(()=>{
-        document.getElementById("contacts").classList.remove("hidden");
-    }, 5000)
-
     return(
-        <div id="contacts" class="hidden" style={{backgroundColor: "#0a0a0a"}}>
+        <div id="contacts" style={{backgroundColor: "#0a0a0a"}}>
             <FloatingText />
             <Buttons />
             <Footer />
