@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Brownie from "./components/Brownie/index";
+import Brownie from "./components/New_brownie/Brownie_point";
 import { useContext } from "react";
 import { themeContext } from "./Context";
 import Header from './components/header/header';
