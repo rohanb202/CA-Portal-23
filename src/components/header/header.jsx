@@ -1,45 +1,21 @@
 import NavBar from "../navbar/navbar"
 import styled, {keyframes} from "styled-components"
-import aos from "aos";
+import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../index"
+import {useEffect} from 'react'
 
-function Header() {
-
-    const arr = ["K", "A", "S", "H", "I", "Y", "A", "T", "R", "A"];
-    const arr2 = ["2", "0", "2", "3"];
-
-
-    setTimeout(() => {
-        
-        // document.getElementById("ca").classList.remove("hidden");
-        aos.init({duration: 3000})
-    }, 5000);
-    
+function Header() {    
 
     return (
         <HeaderStyled>
             <NavBar />
-            <div class="head flex align-middle flex-row justify-center px-20 py-2 mt-20 min-h-20 w-100 mx-auto font-bold text-dark-700 z-0">
-                <Wrapper>
-                    {arr.map((item, index) => (
-                        <span key={index}>{item}</span>
-                    ))}
-                </Wrapper>
+                <div  class="head flex flex-col px-20 pb-14 min-h-20 w-100 mx-auto font-bold text-dark-700">
+                <div id="ca" data-aos='fade-down-right' data-aos-duration="2000" class="flex place-content-start justify-items-end my-4 h-auto font-bold text-dark-600">
+                    <div class="flex-item">CA</div>
                 </div>
-                <div  class="head flex align-middle flex-row justify-center  px-20 py-2 min-h-20 w-100 mx-auto font-bold text-dark-700">
-                <Wrapper>
-                    {arr2.map((item, index) => (
-                        <span key={index}>{item}</span>
-                    ))}
-                </Wrapper>
-
-                <div id="ca" data-aos='fade-down-right' class="absolute left-60 md:left:60 top-8 my-14 h-auto font-bold text-dark-600">
-                    CA
-                </div>
-                
-                <div id="portal" data-aos="fade-up-left" class="absolute bottom-28 my-10 h-auto font-bold text-dark-600">
-                    PORTAL
+                <div id="portal" data-aos="fade-up-left" data-aos-duration="2000" class="flex place-content-end justify-items-end h-auto font-bold text-dark-600">
+                    <div class="flex-item">PORTAL</div>
                 </div>
             </div>
         </HeaderStyled>

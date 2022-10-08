@@ -1,9 +1,32 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion,useAnimation } from "framer-motion";
 import AnimatedText from "./AnimatedText";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 import "./FloatingText.css";
 
+AOS.init();
+
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
+  hidden: { opacity: 0, scale: 0 }
+};
+
 export default function FloatingText() {
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
 
   // Placeholder text data, as if from API
   const placeholderText = [
@@ -24,15 +47,18 @@ export default function FloatingText() {
     }
   };
 
-
   return (
     <>
+    {/* <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"> */}
     <motion.div
       className="App"
+      ref={ref}
+      // variants={boxVariant}
       initial="hidden"
-
-      animate="visible" 
-      variants={container}
+      animate={control} 
+      variants={boxVariant}
     >
       <div className="container">
         {placeholderText.map((item, index) => {
@@ -45,7 +71,11 @@ export default function FloatingText() {
         })}
       </div> */}
     </motion.div>
-   
+    {/* </div> */}
+    {/* < div class="page">
+    <div class="text text--perspective App" data-scroll="out" data-splitting="">Perspective</div>
+    </div> */}
+    
     </>
     
   );

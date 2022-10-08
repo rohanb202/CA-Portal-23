@@ -35,6 +35,7 @@ code {
   }
 } */
 
+
 @media screen and (max-width: 1000px) {
   .head{
     font-size: 70px;
@@ -52,11 +53,22 @@ code {
 @media screen and (max-width: 620px){
   .head{
     font-size: 50px;;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
-@media screen and (max-width: 490px){
+@media screen and (max-width: 500px){
   .head{
     font-size: 30px;;
+    
+  }
+  #ca{
+    font-size: 80px;
+    place-content: middle;
+  }
+  #portal{
+    font-size: 80px;
+    place-content: "middle";
   }
 }
 
