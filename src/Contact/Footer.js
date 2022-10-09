@@ -37,6 +37,13 @@ export default function Footer (){
                 <span style={{backgroundColor:"white",borderRadius:"50%"}} className='icons'><SocialIcon url="https://telegram.com" /></span>
                </div>
             </button>
+            <div className='mobileicons'>
+             <span style={{backgroundColor:"#FFF5E4",borderRadius:"50%"}} className='icons' ><SocialIcon url="https://instagram.com" /></span>
+             <span style={{backgroundColor:"#FFF5E4",borderRadius:"50%"}} className='icons'><SocialIcon url="https://facebook.com" /></span>
+             <span style={{backgroundColor:"#FFF5E4",borderRadius:"50%"}} className='icons'><SocialIcon url="https://whatsapp.com" /></span>
+             <span style={{backgroundColor:"#FFF5E4",borderRadius:"50%"}} className='icons'><SocialIcon url="https://telegram.com" /></span>
+            </div>
+
         </div>
        
     );

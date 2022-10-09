@@ -8,7 +8,7 @@ import Info from "./Info"
 export default function Contact(){
 
     return(
-        <div id="contacts" style={{backgroundColor: "#F5F5F5"}}>
+        <div id="contacts" style={{backgroundColor: "#FFF5E4"}}>
             <FloatingText />
             <Info />
             <Buttons />

@@ -99,5 +99,18 @@
   .footer{
     grid-template-columns: auto ;
 }
+.btnFooter{
+  display: none;
+}
+.mobileicons{
+  display: block;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+}
+// .footer{
+//   grid-template-columns: auto auto auto auto;
+// }
+
 }
 
