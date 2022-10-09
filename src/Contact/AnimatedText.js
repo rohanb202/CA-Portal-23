@@ -17,12 +17,12 @@ const AnimatedCharacters = (props) => {
   const item = {
     hidden: {
       y: "200%",
-      color: "black",
+      color: "#F5F5F5",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.5 }
     },
     visible: {
       y: 0,
-      color: "white",
+      color: "#F74061",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.4 }
     }
   };
