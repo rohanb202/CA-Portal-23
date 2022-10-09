@@ -12,8 +12,8 @@ export default function Buttons () {
     }
     return (
         <div className='buttons'>
-            <p className='btn' onMouseMove={ripple}><span className='gridContent'>Lorem Ipsum</span></p>
-            <p className='btn' onMouseMove={ripple}><span className='gridContent'>Lorem Ipsum</span></p>
+            <p style={{backgroundColor:'#098770'}} className='btn' onMouseMove={ripple}><span className='gridContent'>Lorem Ipsum</span></p>
+            <p style={{backgroundColor:'#098770'}} className='btn' onMouseMove={ripple}><span className='gridContent'>Lorem Ipsum</span></p>
         </div>
         
     );

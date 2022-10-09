@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "react-social-icons": "^5.15.0",
+    "reshake": "^1.2.4",
     "sass": "^1.55.0",
     "scrollreveal": "^4.0.9",
     "styled-components": "^5.3.6",

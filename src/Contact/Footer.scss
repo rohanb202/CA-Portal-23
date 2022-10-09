@@ -5,7 +5,7 @@
     margin-top: 50px;
     
 }
-.button {
+.btnFooter {
   margin: 10px 35px;
   font-size: 30px;
   text-decoration: none;
@@ -27,12 +27,12 @@
   // font-family: monospace;
   letter-spacing: -1px;
   
-  [class^="button__text"] {
+  [class^="btnFooter__text"] {
     font-size: 30px;
   }
   
-  .button__text-dynamic,
-  .button__text-dynamic-inner {    
+  .btnFooter__text-dynamic,
+  .btnFooter__text-dynamic-inner {    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,28 +48,28 @@
     transition: all ease 0.5s;
   }
   
-  .button__text-dynamic {
-    background-color: black;
+  .btnFooter__text-dynamic {
+    background-color: #F74061;
     color: white;
     text-decoration: none;
     overflow: hidden;
   }
   
   &:hover {
-    .button__text-dynamic {
+    .btnFooter__text-dynamic {
       transform: translateX(-100%);
     }
-    .button__text-dynamic-inner {
+    .btnFooter__text-dynamic-inner {
       transform: translateX(100%);
     }
   }
 }
-.button--animation-from-top {
+.btnFooter--animation-from-top {
   &:hover {
-  .button__text-dynamic {
+  .btnFooter__text-dynamic {
     transform: translateY(100%);
   }
-  .button__text-dynamic-inner {
+  .btnFooter__text-dynamic-inner {
     transform: translateY(-100%);
   }
 }
@@ -82,17 +82,17 @@
 
 }
 @media screen and (max-width: 950px){
-  .button{
+  .btnFooter{
     font-size: 25px;
-    [class^="button__text"] {
+    [class^="btnFooter__text"] {
       font-size: 25px;
     }
   }
 }
 @media screen and (max-width: 550px){
-  .button{
+  .btnFooter{
     font-size: 20px;
-    [class^="button__text"] {
+    [class^="btnFooter__text"] {
       font-size: 20px;
     }
   }

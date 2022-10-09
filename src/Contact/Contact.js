@@ -3,12 +3,14 @@ import React from 'react';
 import FloatingText from './FloatingText';
 import Buttons from './Buttons'
 import Footer from './Footer'
+import Info from "./Info"
 
 export default function Contact(){
 
     return(
-        <div id="contacts" style={{backgroundColor: "#0a0a0a"}}>
+        <div id="contacts" style={{backgroundColor: "#F5F5F5"}}>
             <FloatingText />
+            <Info />
             <Buttons />
             <Footer />
         </div>
