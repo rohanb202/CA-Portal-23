@@ -1,37 +1,66 @@
+html, body{
+    margin:0;
+}
+
 .home{
     /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    backdrop-filter: blur(500px);
-    /* overflow: hidden; */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
     /* background-color: white; */
     /* z-index:20; */
 }
 
-.home button{
-    position: absolute;
-    bottom: 15%;
-    z-index:30;
-}
-
 video{
-    position: relative;
+    /* position: relative; */
+    justify-self: center;
     object-fit: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    backdrop-filter: blur(500px);
-    /* opacity: 0.5; */
-    /* top: 0;
-    left: 0; */
+    /* background-position: 0; */
+    /* overflow: hidden; */
+    /* z-index: -1;
+    backdrop-filter: blur(5px); */
+    /* -o-filter: blur(4px); */
+    filter: blur(4px);
 }
 
 .head{
     position: absolute;
     z-index: 20;
+    height: 60%;
+    margin-bottom: 60px;;
+    /* top: 10%; */
+    align-content: center;
+    justify-content: center;
     /* backdrop-filter: blur(3px); */
+}
+
+#ca{
+    font-size: 160px;;
+}
+#portal{
+    font-size: 160px;
+    right: 250px;
+}
+
+.start{
+    /* position: absolute; */
+    /* bottom: 10%; */
+    /* top: 80vh; */
+    margin: 0 20%;
+    z-index:30;
+    background-color: #F6F5E9;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+.start:hover{
+    background-color: #F74061;
+    color: #F6F5E9;
 }
 
 .kashiyatra{
@@ -48,22 +77,38 @@ video{
     /* z-index: 20; */
 }
 
+.wrapper{
+    height: 100%;
+}
+
 .left-pattern{
     position: absolute;
-    top: 0;
+    /* top: 0; */
     left: 30px;
     height: 100%;
-    width: 64px;
-    background-image: url("./home.svg");
+    width: 44px;
+    /* background-size: cover; */
+    
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-clip: border-box; */
+    background-image: url("./Group\ 174.svg");
 }
 
 .right-pattern{
     position: absolute;
-    top: 0;
+    /* top: 0; */
     right: 30px;
     height: 100%;
-    width: 64px;
-    background-image: url("./home.svg");
+    width: 44px;
+    /* background-size: cover; */
+    
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-clip: border-box; */
+    background-image: url("./Group\ 174.svg");
 }
 
 
@@ -192,7 +237,7 @@ background: #F6F5E9;
 border-radius: 8px;
 }
 
-.button-text{
+.button-text, .start{
 
 
 font-family: 'Poppins';
@@ -354,6 +399,10 @@ color: #06122E;
     }
 }
 @media screen and (max-width: 700px) {
+    #ca, #portal{
+        font-size: 70px;
+    }
+
     .center-top img{
         width: 100%;
     }
@@ -389,6 +438,12 @@ color: #06122E;
     }
 }
 @media screen and (max-width: 400px) {
+    #ca{
+        font-size: 60px;
+    }
+    #portal{
+        font-size: 60px;;
+    }
     .left-title{
         font-size: 14px;;
     }

@@ -31,7 +31,7 @@ function NavBar() {
                 <button onClick={showNav}></button>
                 <img src={kylogo}></img>
             </div>
-        <div class="outer-nav hidden" style={style}>
+        <div class="outer-nav hidden" >
         <div class="sidebar">
             {navdisplay ? <button onClick={closeNav} class="cross"></button> : ""}
             <div class="title">
@@ -59,13 +59,13 @@ function NavBar() {
                         <span>Ambassador</span>
                     </a>
                 </li>
-                {/* <li class="logout">
+                <div class="logout">
                     <a href="#">
                         <span>Logout</span>
                     </a>
-                </li> */}
+                </div>
             </ul>
-            <div class="logout"><a href="#">Log Out</a></div>
+            {/* <div class="logout"><a href="#">Log Out</a></div> */}
         </div>
         <div class="sideline1"></div>
         <div class="sideline2"></div>

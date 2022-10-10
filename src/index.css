@@ -18,16 +18,7 @@ code {
     monospace;
 }
 
-#ca{
-  font-size: 200px;;
-}
-#portal{
-  font-size: 200px;
-  right: 250px;
-}
-.head{
-  font-size: 130px;
-}
+
 
 /* @media screen and (max-width: 1000px) {
   .head{
