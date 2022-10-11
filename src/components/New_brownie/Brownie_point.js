@@ -11,16 +11,16 @@ import MtPattern from "../../img/MtPattern.png";
 const Brownie_point = () => {
   return (
     <div className="">
-      <div className="text-4xl font-semibold mb-14 ml-24 text-[#F74061]">
+      <div className="text-4xl font-semibold mb-14 text-[#F74061]">
         Brownie Points
       </div>
       <div>
         <img
           src={white_strip}
           alt=""
-          className="relative lg:top-6 hidden lg:block"
+          className="relative lg:top-5 hidden lg:block"
         />
-        <div className="lg:flex  justify-center lg:mb-[56px] h-[80%]">
+        <div className="lg:flex  justify-center h-[60%]">
           <div className="flex">
             <img src={Side_Pattern} alt="" className="relative left-6" />
             <div className="">
@@ -29,17 +29,17 @@ const Brownie_point = () => {
                 alt=""
                 className="relative top-4 lg:hidden"
               />
-              <div className="w-72">
+              <div className="w-56">
                 <img src="" alt="" />
                 <div>
                   <img src="" alt="" />
                   <div className="bg-[#F79840] p-3">
                     <img
-                      className="my-9 mr-3 ml-7 h-40"
+                      className="my-9 mr-3 ml-7 h-28"
                       src={event}
                       alt="Event Pass"
                     />
-                    <div className="text-white text-center text-4xl font-semibold my-10">
+                    <div className="text-white text-center text-3xl font-semibold my-10">
                       Event Pass
                     </div>
                   </div>
@@ -65,7 +65,7 @@ const Brownie_point = () => {
               alt=""
               className="relative left-6 lg:hidden"
             />
-            <div className="w-72">
+            <div className="w-56">
               <img
                 src={MtPattern}
                 alt=""
@@ -75,11 +75,11 @@ const Brownie_point = () => {
                 <img src="" alt="" />
                 <div className="bg-[#F75440]  p-3">
                   <img
-                    className="my-9 mr-3 ml-3 h-40 px-10"
+                    className="my-9 mr-3 ml-3 h-28 px-10"
                     src={prizes}
                     alt="prizes"
                   />
-                  <div className="text-white text-center text-4xl font-semibold my-10">
+                  <div className="text-white text-center text-3xl font-semibold my-10">
                     Prizes
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const Brownie_point = () => {
               alt=""
               className="relative left-6 lg:hidden"
             />
-            <div className="w-72">
+            <div className="w-56">
               <img
                 src={MtPattern}
                 alt=""
@@ -113,11 +113,11 @@ const Brownie_point = () => {
                 <img src="" alt="" />
                 <div className="bg-[#06122E]  p-3">
                   <img
-                    className="my-9 mr-3 ml-3 h-40 px-10"
+                    className="my-9 mr-3 ml-3 h-28 px-10"
                     src={merchandise}
                     alt="merchandise"
                   />
-                  <div className="text-white text-center text-4xl font-semibold my-10">
+                  <div className="text-white text-center text-3xl font-semibold my-10">
                     Merchandise
                   </div>
                 </div>
@@ -142,7 +142,7 @@ const Brownie_point = () => {
               alt=""
               className="relative left-6 lg:hidden"
             />
-            <div className="w-72">
+            <div className="w-56">
               <img
                 src={MtPattern}
                 alt=""
@@ -152,11 +152,11 @@ const Brownie_point = () => {
                 <img src="" alt="" />
                 <div className="bg-[#098770]  p-3">
                   <img
-                    className="my-9 mr-3 ml-3 h-40 px-7"
+                    className="my-9 mr-3 ml-3 h-28 px-7"
                     src={celebrity}
                     alt="celebrity"
                   />
-                  <div className="text-white text-center lg:text-4xl text-3xl font-semibold my-10 ">
+                  <div className="text-white text-center lg:text-2xl text-3xl font-semibold my-11 ">
                     Celebrity Meets
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const Brownie_point = () => {
               alt=""
               className="relative left-6 lg:hidden"
             />
-            <div className="w-72">
+            <div className="w-56">
               <img
                 src={MtPattern}
                 alt=""
@@ -190,11 +190,11 @@ const Brownie_point = () => {
                 <img src="" alt="" />
                 <div className="bg-[#F74061]  p-3">
                   <img
-                    className="my-9 mr-6 ml-1 h-40 px-10"
+                    className="my-9 mr-6 ml-1 h-28 px-10"
                     src={certificate}
                     alt="certificate"
                   />
-                  <div className="text-white text-center text-4xl font-semibold my-10">
+                  <div className="text-white text-center text-3xl font-semibold my-10">
                     Certificates
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const Brownie_point = () => {
             <img src={Side_Pattern} alt="" className="relative right-6" />
           </div>
         </div>
-        <img src={white_strip} alt="" className="relative bottom-[204px] hidden lg:block" />
+        <img src={white_strip} alt="" className="relative bottom-[190px] hidden lg:block" />
       </div>
     </div>
   );
