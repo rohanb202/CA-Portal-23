@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll'
 import './navbar.css'
+
 // import title from './KY Header Logo.svg'
 
 function NavBar() {
@@ -34,6 +35,16 @@ function NavBar() {
                     <a href="#">
                         <span>Ambassador</span>
                     </a>
+                </li>
+                <li>
+                    {/* <a href="#">
+                        <span>Login</span>
+                    </a> */}
+
+                    <Link to="/Login">
+                     <button>Login</button>
+                    </Link>
+                    
                 </li>
                 {/* <li class="logout">
                     <a href="#">
