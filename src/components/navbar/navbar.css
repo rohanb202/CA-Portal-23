@@ -152,9 +152,9 @@ text-transform: capitalize;
     z-index: 1;
 }
 
-.hidden{
+/* .hidden{
 
-}
+} */
 
 
 @media screen and (max-width: 700px) {

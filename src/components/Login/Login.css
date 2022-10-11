@@ -205,7 +205,7 @@ input::placeholder {
 }
 
 .primary-button {
-  background-color: var(--black);
+  background-color: #ef44a9;
   color: var(--white);
   border-radius: 5px;
   width: 100%;
@@ -218,7 +218,7 @@ input::placeholder {
     padding: 30px 50px;
     padding-left:0px;
   }
-  
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -231,14 +231,14 @@ input::placeholder {
     height: unset;
     flex-direction: column;
   }
-  
+
   .image-part, .main-part {
     width: 100%;
   }
   .image-part {
     height: 0px;
   }
-  
+
 }
 
 @media only screen and (max-width: 425px) {
