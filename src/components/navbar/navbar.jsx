@@ -1,20 +1,44 @@
 import { Link } from 'react-scroll'
 import './navbar.css'
 
+import kashiyatra from './KY Header Logo.svg'
+import kylogo from "../main/KY Logo.svg"
+import { useState } from 'react'
+import cross from "./cross.png"
 // import title from './KY Header Logo.svg'
 
 function NavBar() {
+    const [navdisplay, setNavDisplay] = useState(0);
 
-    function toggle(){
-        document.getElementById("navbar-cta").classList.toggle("hidden");
+    function showNav(){
+        document.querySelector(".outer-nav").classList.remove("hidden");
+        setNavDisplay(1);
+    }
+    function closeNav(){
+        document.querySelector(".outer-nav").classList.add("hidden");
+        setNavDisplay(0);
     }
 
     const h = window.innerHeight;
 
+    const style ={
+        height : h,
+    }
+
     return (
-        <div class="outer-nav" style={{height: h}}>
+        <>
+        <div class="mobile-nav">
+                {/* <i class="fa fa-bars" aria-hidden="true"></i> */}
+                <button onClick={showNav}></button>
+                <img src={kylogo}></img>
+            </div>
+        <div class="outer-nav hidden" >
         <div class="sidebar">
-            <div class="title"></div>
+            {navdisplay ? <button onClick={closeNav} class="cross"></button> : ""}
+            <div class="title">
+                <img src={kashiyatra}></img>
+                
+            </div>
             <ul class="nav">
                 <li>
                     <a href="#">
@@ -47,17 +71,20 @@ function NavBar() {
                     
                 </li>
                 {/* <li class="logout">
+                <div class="logout">
                     <a href="#">
                         <span>Logout</span>
                     </a>
-                </li> */}
-            </ul>
-            <div class="logout">Log Out</div>
+                </div>
+            
+            {/* <div class="logout"><a href="#">Log Out</a></div> */}
+        </ul>
         </div>
         <div class="sideline1"></div>
         <div class="sideline2"></div>
         
         </div>
+        </>
         
     // <nav data-aos="fade-down" data-aos-duration="3000" class="border-gray-200 mx-0 z-10 py-4" style={{backgroundColor: "#256D85"}}>
     //     <div class="container1 flex flex-wrap justify-between items-center mx-auto w-full lg:px-8 px-3">

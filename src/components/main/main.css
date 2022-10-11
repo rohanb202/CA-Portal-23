@@ -1,31 +1,66 @@
+html, body{
+    margin:0;
+}
+
 .home{
     /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    backdrop-filter: blur(500px);
-    /* overflow: hidden; */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
     /* background-color: white; */
     /* z-index:20; */
 }
 
 video{
-    position: relative;
+    /* position: relative; */
+    justify-self: center;
     object-fit: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    backdrop-filter: blur(500px);
-    /* opacity: 0.5; */
-    /* top: 0;
-    left: 0; */
+    /* background-position: 0; */
+    /* overflow: hidden; */
+    /* z-index: -1;
+    backdrop-filter: blur(5px); */
+    /* -o-filter: blur(4px); */
+    filter: blur(4px);
 }
 
 .head{
     position: absolute;
     z-index: 20;
-    backdrop-filter: blur(3px);
+    height: 60%;
+    margin-bottom: 60px;;
+    /* top: 10%; */
+    align-content: center;
+    justify-content: center;
+    /* backdrop-filter: blur(3px); */
+}
+
+#ca{
+    font-size: 160px;;
+}
+#portal{
+    font-size: 160px;
+    right: 250px;
+}
+
+.start{
+    /* position: absolute; */
+    /* bottom: 10%; */
+    /* top: 80vh; */
+    margin: 0 20%;
+    z-index:30;
+    background-color: #F6F5E9;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+.start:hover{
+    background-color: #F74061;
+    color: #F6F5E9;
 }
 
 .kashiyatra{
@@ -42,62 +77,94 @@ video{
     /* z-index: 20; */
 }
 
+.wrapper{
+    height: 100%;
+}
+
 .left-pattern{
     position: absolute;
-    top: 0;
+    /* top: 0; */
     left: 30px;
     height: 100%;
-    width: 64px;
-    background-image: url("./home.svg");
+    width: 44px;
+    /* background-size: cover; */
+    
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-clip: border-box; */
+    background-image: url("./Group\ 174.svg");
 }
 
 .right-pattern{
     position: absolute;
-    top: 0;
+    /* top: 0; */
     right: 30px;
     height: 100%;
-    width: 64px;
-    background-image: url("./home.svg");
+    width: 44px;
+    /* background-size: cover; */
+    
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-clip: border-box; */
+    background-image: url("./Group\ 174.svg");
 }
 
+
+
+/* .home2{
+    position: absolute;
+    right: 0;
+} */
+
 .outer-main{
-    display: flex;
+    /* position: absolute; */
+    /* display: flex; */
+    /* flex-basis: 100%; */
+    /* right: 0px; */
+    /* float: right; */
+    margin-left: 0;
+    margin-right: 3%;
+    /* flex-grow: 0;; */
 }
 
 .main{
     display: flex;
-    position: relative;
+    /* position: relative; */
     /* top: 0; */
     flex-direction: column;
     /* position: absolute; */
     /* margin-left: 300px;; */
     /* margin-right: 150px;; */
-    /* flex-basis: 30%; */
-    width: 78%;
+    flex-basis: 80%;
+    /* width: 78%; */
     flex-grow:0;
-    /* flex-shrink: 0; */
+    flex-shrink: 0;
     height: auto;
     padding: 10px;;
     /* width: auto; */
 }
 
 .sidepattern{
-    position: sticky;
-    width: 64px;
-    margin-right: 30px;;
-    /* height: 100%; */
+    position: fixed;
+    width: 20px;
+    margin-right: 20px;;
+    height: 100%;
     top: 0;
-    flex-grow: 0;;
-    flex-shrink: 0;
+    right: 0;
+    /* flex-basis: 3%; */
+    /* flex-grow: 0;; */
+    /* flex-shrink: 0; */
     /* right: 30px; */
-    background-image: url('../navbar/Super\ Side\ Pattern.svg');
-    z-index: 10;
+    /* background-image: url('../navbar/Super\ Side\ Pattern.svg'); */
+    z-index: 20;
 }
 
 .top{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .center{
@@ -110,37 +177,42 @@ video{
 }
 
 .center-top{
+    position:static;
     display: flex;
     flex-direction: column;
-    height: 300px;
-    background-image: url('./back.svg');
-    background-size:cover;
+    height: auto;
+    /* background-image: url('./back.svg'); */
+    /* background-size:cover; */
     background-repeat: no-repeat;
     background-position-x: center;
     /* align-content: center; */
     align-items: center;
     justify-content: center;
-    /* justify-items: center; */
-    
-    /* overflow: hidden; */
-    /* background-position: 0%; */
-    /* background-position: 0px; */
+}
+.center-top img{
+    height: auto;
+    width: 90%;
+    /* width: auto; */
+}
 
+.center-top-content{
+    position: absolute;
+    text-align: center;
 }
 
 .text{
-    /* position: absolute;
-left: 30.31%;
+    /* position: absolute; */
+/* left: 30.31%;
 right: 23.96%; */
-/* top: 33.32%;
-bottom: 64.39%; */
+/* top: 33.32%; */
+/* bottom: 64.39%; */
 
 font-family: 'Arima Madurai';
 font-style: normal;
 font-weight: 800;
-font-size: 40px;
-line-height: 91px;
-text-align: center;
+font-size: 37px;
+/* line-height: 91px; */
+/* text-align: center; */
 text-transform: capitalize;
 
 /* BG */
@@ -154,8 +226,10 @@ color: #F6F5E9;
 right: 40%;
 top: 36.31%;
 bottom: 62.18%; */
-height: 50px;
-width: 200px;;
+/* height: 50px; */
+padding: 10px 100px;
+margin-top: 20px;;
+/* width: fit; */
 
 /* BG */
 
@@ -163,7 +237,7 @@ background: #F6F5E9;
 border-radius: 8px;
 }
 
-.button-text{
+.button-text, .start{
 
 
 font-family: 'Poppins';
@@ -186,7 +260,7 @@ color: #F74061;
 /* width: 213.86px; */
 /* height: 62px; */
 
-
+display: flex;
 font-family: 'Arima Madurai';
 font-style: normal;
 font-weight: 900;
@@ -203,10 +277,10 @@ z-index: 10;
 }
 
 .date{
-width: 115.2px;
-height: 27px;
+/* width: 115.2px;
+height: 27px; */
 
-
+display: flex;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
@@ -225,7 +299,7 @@ color: #06122E;
     /* position: fixed;
     top: 50px; */
     /* right: 100px; */
-    width: 100%;
+    /* width: 100%; */
     height: 5px;;
     /* left: 235px; */
     background-image: url('./bottombar.svg');
@@ -234,21 +308,23 @@ color: #06122E;
 
 .center-bottom{
     display: flex;
-    margin-top: 30px;
+    margin-bottom: 30px;
     align-content: space-between;
     justify-items: center;
     /* align-items: center; */
-    /* height: 300px; */
+    height: 50%;
 }
 
 .left{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 140%;
+    /* align-items: center;
+    align-content: center; */
+    justify-content: center;
+    /* width: 140%; */
     flex-basis: 70%;
-    margin-right: 50px;;
+    flex-wrap: nowrap;
+    /* margin-right: 50px;; */
 }
 
 .left-title{
@@ -258,7 +334,7 @@ font-family: 'Arima Madurai';
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
-line-height: 59px;
+/* line-height: 59px; */
 /* identical to box height */
 
 text-transform: capitalize;
@@ -284,9 +360,97 @@ color: #06122E;
 }
 
 .right{
-    flex-basis: 30%;
+    flex-basis: 50%;
+    display: flex;
+    /* margin-right: 0;; */
+    /* align-items: center; */
+    align-content: flex-end;
+    justify-content: flex-end;
     /* width: 100%; */
-    background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg');
-    background-size: cover;
-    background-position-y: center;
+    /* background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg'); */
+    /* background-size: cover; */
+    /* background-position-y: center; */
+}
+
+.right img{
+    height: 80%;
+    width: 80%;
+}
+
+@media screen and (max-width: 900px) {
+    .text{
+        font-size:25px;
+    }
+    .apply{
+        padding: 5px 70px;
+    }
+    .button-text{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .mobile-nav{
+        display: none;
+    }
+
+    .outer-main{
+        margin-left:234px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #ca, #portal{
+        font-size: 70px;
+    }
+
+    .center-top img{
+        width: 100%;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .apply {
+        margin-top: 10px;;
+        padding: 2px 20px;
+    }
+    .button-text{
+        font-size: 20px;
+    }
+    .left-title{
+        font-size: 23px;
+    }
+    .desc{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .hello{
+        font-size: 25px;
+        line-height: 30px;;
+        justify-content: center;
+    }
+    .date{
+        font-size: 10px;;
+        line-height: 13px;;
+        justify-content: center;
+    }
+    .sidepattern{
+        margin-right: 10px;;
+    }
+}
+@media screen and (max-width: 400px) {
+    #ca{
+        font-size: 60px;
+    }
+    #portal{
+        font-size: 60px;;
+    }
+    .left-title{
+        font-size: 14px;;
+    }
+    .text{
+        font-size: 15px;
+    }
+    .button-text{
+        font-size: 15px;;
+    }
 }

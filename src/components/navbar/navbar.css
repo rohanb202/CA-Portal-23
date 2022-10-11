@@ -8,24 +8,72 @@ body{
     box-sizing: border-box;
 }
 
-.outer-nav{
+.mobile-nav{
     position: sticky;
+    display: flex;
+    justify-content: center;
     top: 0;
     display: flex;
+    height: 80px;
+    z-index: 20;
+    background: #098770;
+}
+
+.mobile-nav button{
+    position: absolute;
+    left: 30px;
+    /* top: 20px; */
+    height: 30px;
+    width: 30px;
+    color: #06122E;
+    background-image: url("../main/navicon.svg");
+    background-size: cover;
+    align-self: center;
+}
+
+.mobile-nav img{
+    /* position: absolute; */
+    /* left: 37%; */
+    height: 80px;
+    width: 120px;
+    align-self: center;
+    justify-self: center;
+}
+
+.cross{
+    /* position: absolute; */
+    left : 40%;
+    height: 30px;
+    width: 30px;
+    color: white;
+    z-index: 30;
+    background-image: url(./cross.png);
+    background-size: cover;
+}
+
+.outer-nav{
+    position: fixed;
+    top: 0;
+    width: 15%;
+    display: flex;
+    /* float: left; */
     flex-direction: row;
-    /* height: 100%; */
+    /* flex-basis: 15%; */
+    height: 100%;
+    z-index: 20;
+    transition: all 2s ease 1s;
 }
 
 .sidebar{
-    /* position: sticky; */
+    /* position: fixed; */
     background: #098770;
     /* display: flex; */
-    width: 234px;
-    /* height: 760px; */
-    /* top: 0; */
-    /* left: 0; */
+    /* width: 15%; */
+    height: 100%;
+    /* top: 0;
+    left: 0; */
     /* overflow: visible; */
-    /* flex-basis: 20%; */
+    flex-basis: 30%;
     flex-grow: 0;
     /* flex-wrap: wrap; */
     flex-shrink: 0;
@@ -43,11 +91,6 @@ body{
     font-weight: bold;
 }
 
-.logout{
-    position: absolute;
-    bottom: 8%;
-}
-
 .sidebar ul{
     margin-top: 50%;
 }
@@ -56,9 +99,24 @@ body{
     margin: 25px 0;
 }
 
+.logout{
+    margin: 250px 0;
+    /* position: absolute; */
+    /* bottom: 8%; */
+}
+
 .sidebar ul li a, .logout{
-    color: #ffffff;
-    padding: 0 30px;
+    color: #F6F5E9;
+    padding: 0 10px;
+    font-family: 'Arima Madurai';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 25px;
+/* identical to box height */
+
+text-transform: capitalize;
+
 }
 
 .sidebar ul li a:hover{
@@ -67,30 +125,42 @@ body{
 }
 
 .title{
-    height: 50px;;
+    height: 60px;;
+    width: 150px;
     /* padding: 10px;; */
-    margin: 20px;
-    background-image: url('./KY\ Header\ Logo.svg');
+    margin: 10px;
+    /* background-image: url('./KY\ Header\ Logo.svg'); */
 }
 
 .sideline1{
-    position: sticky;
-    top: 0;
+    /* position: fixed; */
+    /* top: 0; */
     width: 5px;
-    height: 764px;
-    /* left: 235px; */
+    height: 100%;
+    left: 170px;
     background-image: url('./line1.svg');
     z-index: 1;
 }
 
 .sideline2{
-    position: sticky;
-    top: 0;
+    /* position: fixed; */
+    /* top: 0; */
     width: 8px;
-    height: 764px;
-    /* left: 238px; */
+    height: 100%;
+    left: 173px;
     background-image: url('./line2.svg');
     z-index: 1;
+}
+
+.hidden{
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .hidden{
+        display: none;
+    }
 }
 
 
