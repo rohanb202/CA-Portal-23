@@ -1,0 +1,78 @@
+.contactInfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #098770;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+.contactImage{
+    width: 500px;
+}
+.contactPageInfo{
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contactPageInfoHeading{
+    display: flex;
+    justify-content: center;
+    color: #098770;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contactCallInfo{
+    padding: 10px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+.contactPersonName{
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contactPersonEmail{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: solid 2px #098770;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+@media screen and (max-width: 900px){
+    .contactInfo{
+        grid-template-columns: auto;
+    }
+    .contactPageImage{
+        margin-bottom: 50px;
+    }
+    .contactPageInfo{
+        margin-bottom: 50px;
+    }
+    .contactPageInfoHeading{
+
+        font-size: 3rem;
+
+    }
+    
+    .contactCallInfo{
+        font-size: 1.3rem;
+    }
+    .contactPersonName{
+        font-size: 1.3rem;
+    }
+    
+    .contactPersonEmail{
+        font-size: 1.3rem;
+    }
+  
+  }
