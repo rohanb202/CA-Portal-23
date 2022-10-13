@@ -1,8 +1,9 @@
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 import './navbar.css'
 import kashiyatra from './KY Header Logo.svg'
 import kylogo from "../main/KY Logo.svg"
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import cross from "./cross.png"
 // import title from './KY Header Logo.svg'
 
@@ -40,9 +41,9 @@ function NavBar() {
             </div>
             <ul class="nav">
                 <li>
-                    <a href="#">
-                        <span>Dashboard</span>
-                    </a>
+                <Link to='/'>
+                    <span>Dashboard</span>
+                    </Link>
                 </li>
                 <li>
                     <a href="#">
@@ -55,9 +56,12 @@ function NavBar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span>Ambassador</span>
-                    </a>
+                    
+                    <Link to='/leaderboard'>
+                    <span>Ambassador</span>
+                    </Link>
+                        
+                    {/* </a> */}
                 </li>
                 <div class="logout">
                     <a href="#">

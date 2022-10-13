@@ -11,6 +11,9 @@ import Main from './components/main/main';
 import aos from 'aos';
 import "aos/dist/aos.css";
 import { useEffect, useState } from 'react';
+import Home from './components/Home';
+import {Routes,Route} from "react-router-dom";
+import LeaderBoard from './components/leaderboard/LeaderBoard';
 
 function App() {
   const [animeOver, setAnimeOver] = useState(0);
@@ -28,11 +31,11 @@ function App() {
 
   return (
     <>
-      <Main>
-      <Nduty/>
-          <Brownie/>
-          <Contact />
-      </Main>
+    <Routes>
+      <Route path='/' element={<Home />}></Route> 
+      <Route path="/leaderboard" element={<LeaderBoard />}></Route>
+    </Routes>
+      
     </>
   )
   // if (animeOver===1){

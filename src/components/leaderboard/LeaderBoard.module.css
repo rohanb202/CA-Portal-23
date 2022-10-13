@@ -1,0 +1,297 @@
+body{
+    height: 100%;
+    background-color: #F6F5E9;
+    font-family: 'Arima Madurai', cursive;
+}
+.LeaderBoardPage{
+
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr ;
+    grid-template-rows: auto;
+}
+.LeaderBoardCenterColumn{
+    margin: 50px;
+}
+.LeaderBoardCenterColumnBorder{
+    border-bottom: solid 2px #F74061;
+}
+.LeaderBoardCenterColumnProfile{
+    padding: 30px;
+    height: 30vh;
+    margin-top: 20px;
+    background-image: url('./img/Group\ 273\ Profile.svg');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url('./img/Vector.svg'); */
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+
+}
+
+
+.LeaderBoardCenterColumnProfileLeftColumn{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+.LeaderBoardCenterColumnProfileReferal{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+}
+.LeaderBoardCenterColumnPersonName{
+    font-size: 2.5rem;
+    margin: -15px;
+}
+.LeaderBoardCenterColumnCollegeName{
+    font-size: 1.5rem;
+    margin: -15px;
+}
+.copyLeaderBoardBtnDiv{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+.LeaderBoardCenterColumnProfileImage{
+border-radius: 50%;
+height: 12vh;
+padding-right: 30px;
+padding-left: 30px;
+}
+.LeaderBoardCenterColumnProfileReferal h3{
+    padding: 30px;
+}
+.copyLeaderBoardBtn{
+    padding: 30px;
+}
+.LeaderBoardCenterColumnReferals{
+    margin: 50px;
+}
+.LeaderBoardCenterColumnReferalsHeading{
+    font-size: 2.5rem;
+}
+.LeaderBoardCenterColumnReferal{
+    display: grid;
+    color: #098770;
+    font-size: 1.8rem !important;
+    grid-template-columns: auto auto auto auto auto ;
+}
+.LeaderBoardCenterColumnReferalBorder{
+    border-bottom: solid 2px #098770;
+}
+.LeaderBoardCenterColumnReferalContent{
+    display: grid;
+    font-size: 1.31rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-template-columns: auto auto auto auto auto;
+    border-bottom: solid 1px #098770;
+}
+.LeaderBoardCenterColumnReferalContent h3{
+    padding-left: 20px;
+}
+
+
+
+
+
+.LeaderBoardCenterColumnReferals2{
+    display: none;
+}
+
+
+.LeaderBoardRightColumn{
+    color: white;
+    background-image: url('./img/Group\ 273.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-size: 0.8rem;
+    /* padding: 50px; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.LeaderBoardRightColumnDiv{
+    padding: 30px;
+}
+.LeaderBoardRightColumnHeading{
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+}
+.LeaderBoardCenterColumnProfileReferalCode{
+    font-size: 1.2rem;
+}
+.LeaderBoardRightColumnContentHeading{
+    display: grid;
+    font-size: 1.3rem !important;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+.LeaderBoardRightColumnContentHeading h2{
+    padding: 20px;
+}
+.LeaderBoardRightColumnBorder{
+    border-bottom: solid 2px white;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.LeaderBoardRightColumnContent{
+    display: grid;
+    font-size: 1.3rem !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+.hoverOnButtons :hover{
+    background: #F74061;
+}
+.LeaderBoardCenterColumnHeading{
+    font-size: 2.5rem;
+}
+
+
+@media screen and (max-width: 600px){
+    .LeaderBoardCenterColumnReferals2{
+        display: block;
+        font-size: 1.8rem;
+        padding: 40px;
+    }
+    .LeaderBoardCenterColumnReferalContent{
+        border: 0px;
+        font-size: 1rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        grid-template-columns: auto auto auto auto;
+    }
+    .LeaderBoardCenterColumnReferals{
+        display: none;
+    }
+    .LeaderBoardPage{
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .LeaderBoardCenterColumnHeading{
+        display: flex;
+        font-size: 2rem;
+        justify-content: center;
+    }
+    .LeaderBoardCenterColumnDate{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .LeaderBoardCenterColumnProfile{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        font-size: 0.8rem;
+
+    }
+    .LeaderBoardCenterColumnProfileLeftColumn{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .LeaderBoardCenterColumnProfileReferal{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        padding: 2px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .LeaderBoardCenterColumnProfileReferal h3{
+        padding: 5px !important;
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+    .LeaderBoardCenterColumnProfileName h1,h2{
+        display: flex;
+        justify-content: center;
+    }
+    .copyLeaderBoardBtnDiv{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+        padding-right: 0;
+    }
+    .copyLeaderBoardBtn{
+        padding-top: 2px;
+        height: 2.5vh;
+        padding-bottom: 35px;
+    }
+    .LeaderBoardCenterColumnHeading{
+        margin: 0 !important;
+    }
+    .LeaderBoardCenterColumnPersonName{
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+    .LeaderBoardCenterColumnCollegeName{
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+    .LeaderBoardCenterColumnReferal{
+        grid-template-columns: auto auto auto auto;
+        font-size: 1.2rem !important;
+    }
+    .LeaderBoardCenterColumnReferalsHeading { 
+        font-size: 2rem
+    }
+    .LeaderBoardRightColumnHeading{
+        font-size: 1.8rem;
+    }
+    .LeaderBoardRightColumnContentHeading{
+        font-size: 1.3rem !important;
+    }
+    .LeaderBoardRightColumnContent{
+        font-size: 1.1rem;
+    }
+    .LeaderBoardCenterColumnProfile{
+        height: 45vh !important;
+    }
+
+    .LeaderBoardCenterColumn{
+        margin: 40px;
+    }
+}
+@media screen and (max-width: 380px){
+    .LeaderBoardRightColumnHeading{
+        font-size: 1.5rem !important;
+    }
+    .LeaderBoardRightColumnContentHeading{
+        font-size: 1.2rem !important;
+    }
+    .LeaderBoardRightColumnContent{
+        font-size: 1rem  !important;
+    }
+    .LeaderBoardCenterColumnProfileReferalCode{
+        font-size: 1.1rem !important;
+    }
+    .LeaderBoardCenterColumnProfile{
+        height: 45vh !important;
+    }
+    .LeaderBoardCenterColumn{
+        margin: 10px !important;
+    }
+}
