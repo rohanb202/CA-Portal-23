@@ -1,6 +1,4 @@
-import NavBar from "../navbar/navbar"
 import styled, {keyframes} from "styled-components"
-import aos from "aos";
 import "aos/dist/aos.css";
 import "../../index"
 

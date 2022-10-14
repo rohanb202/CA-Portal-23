@@ -25,11 +25,11 @@ export default function Info () {
             <div className='contactPageInfo'>
                 <h2 className='contactPageInfoHeading'>Publicity</h2>
                 <h3 className='contactPersonName'>Lorem Ipsum</h3>
-                <a href='#' className='contactPersonEmail'>LoremIpsum@gmail.com</a>
-                <a href='#' className='contactCallInfo'>Call (788)043-9042</a>
+                <a href='/#' className='contactPersonEmail'>LoremIpsum@gmail.com</a>
+                <a href='/#' className='contactCallInfo'>Call (788)043-9042</a>
                 <h3 className='contactPersonName'>Lorem Ipsum</h3>
-                <a href='#' className='contactPersonEmail'>LoremIpsum@gmail.com</a>
-                <a href='#' className='contactCallInfo'>Call (788)043-9042</a>
+                <a href='/#' className='contactPersonEmail'>LoremIpsum@gmail.com</a>
+                <a href='/#' className='contactCallInfo'>Call (788)043-9042</a>
             </div>
             
         </div>

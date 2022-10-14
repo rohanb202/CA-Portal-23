@@ -1,17 +1,17 @@
 import './main.css'
 import NavBar from '../navbar/navbar';
-import Nduty from '../New_Duty/Nduty';
-import Brownie from "../New_brownie/Brownie_point";
-import Contact from '../../Contact/Contact';
+// import Nduty from '../New_Duty/Nduty';
+// import Brownie from "../New_brownie/Brownie_point";
+// import Contact from '../../Contact/Contact';
 import sample from './Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4'
 import kashiyatra from "./kashiyatra.svg"
-import {Children, useEffect, useState} from "react"
+import { useEffect, useState} from "react"
 import sidepattern from "../navbar/Super Side Pattern.svg"
-import kylogo from "./KY Logo.svg"
-import navicon from "./navicon.svg"
+// import kylogo from "./KY Logo.svg"
+// import navicon from "./navicon.svg"
 import back from "./back.svg"
 import right from "./why CA_Mesa de trabajo 1 1-cropped.svg"
-import homepattern from "./home.svg"
+// import homepattern from "./home.svg"
 
 function Main(props){
     const [style, setStyle] = useState({});
@@ -24,9 +24,9 @@ function Main(props){
         top: "10px",
     }
 
-    const style2 = {
-        display : "none",
-    }
+    // const style2 = {
+    //     display : "none",
+    // }
 
     function handleClick(){
         setVideoOn(0);
@@ -59,7 +59,7 @@ function Main(props){
             </div>}
             
                 <video loop autoPlay muted><source type="video/mp4" src={sample}></source></video>
-                <div class="kashiyatra" style={style}><img src={kashiyatra}></img></div>
+                <div class="kashiyatra" style={style}><img src={kashiyatra}  alt="kashiyatra"></img></div>
                 <div class="wrapper"><div class="left-pattern"></div></div>
                 <div class="wrapper"><div class="right-pattern"></div></div>
             </div>}
@@ -83,7 +83,7 @@ function Main(props){
                 </div>
                 <div class="center">
                     <div class="center-top">
-                        <img src={back}></img>
+                        <img src={back}  alt="back"></img>
                         <div class="center-top-content">
                             <div class="text">
                                 Become A Campus Ambassador
@@ -104,7 +104,7 @@ per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisqu
                             </div>
                         </div>
                         <div class="right">
-                            <img src={right}></img>
+                            <img src={right}  alt="right"></img>
                         </div>
                     </div>
                     {props.children}
@@ -112,7 +112,7 @@ per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisqu
                     
                 </div>
             </div>
-            <div class="sidepattern"><img src={sidepattern}></img></div>
+            <div class="sidepattern"><img src={sidepattern} alt="sidepattern"></img></div>
             </div>
             </div>}
         </>

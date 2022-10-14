@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+:root {
+  --primary: #2a9eda;
+  --secodary: #ef44a9;
+  --lightGray: #b8b8b8;
+  --lighterGray: #d4d4d4;
+  --darkGray: #798490;
+  --darkerGray: #4a5158;
+  --white: #ffffff;
+  --black: #000000;
+  --root-font: 'EB Garamond', serif;
+}
+
+* {
+  margin: 0px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-family: var(--root-font);
+}
+
+.main-part,
+.image-part {
+  min-height: 100vh;
+}
+
+.heading{
+  /* font-size: px; */
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--white);
+  height: 94vh;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+/* utilite css */
+.mx-20 {
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+
+.py-25 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.my-35 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* .py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+} */
+
+.w-100 {
+  width: 100% !important;
+}
+
+.text-center {
+  text-align: center;
+  color: var(--darkerGray);
+}
+
+.heading {
+  /* margin-top: 90px; */
+  color: var(--black);
+  font-size: 30px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-gray {
+  color: var(--darkerGray);
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+/* utilite css */
+
+.auth-card {
+  /* width: 60%;  */
+   height:107vh;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden; 
+  /* display: flex; */
+  background-color: var(--light-blue);
+   border-radius: var(--radius); 
+   /* height: 600px;  */
+   /* max-width: fit-content; */
+  display: flex;
+  /* align-items: center;  */
+   /* padding-left: 0px;  */
+}
+
+.text{
+  font-size: 20px;
+  color: var(--darkGray);
+}
+
+.image-part, .main-part {
+  width: 60%;
+  height: 100%;
+}
+.image-part {
+  width: 50%;
+  height: 100%;
+}
+
+.image-part img{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.main-part {
+  padding: 90px 100px;
+}
+
+.social-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.separator {
+  color: var(--primary);
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  width: 30%;
+}
+
+
+
+.form-group {
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px 10px 32px;
+  
+}
+
+label {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid var(--darkerGray);
+  color: var(--darkerGray);
+  padding: 10px 0px;
+  align-items: center;
+}
+
+input:focus { 
+  outline: 0;
+  border-bottom: 1px solid var(--primary);
+}
+
+input::placeholder {
+  font-style: italic;
+  color: var(--lightGray);
+}
+
+.secondary-class {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.check-wrapper label{
+  color: var(--black);
+}
+
+
+.form-extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0px;
+  color: var(--lighterGray);
+}
+
+.primary-button {
+  background-color:#f74062c7;
+  color: var(--white);
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 0px;
+  border: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-part {
+    padding: 60px 60px;
+    align-items: center;
+  }
+  
+}
+
+@media only screen and (max-width: 830px) {
+  .main-part {
+    padding: 90px 100px;
+    /* display: flex; */
+  }
+ 
+  .auth-card {
+    height: unset;
+    flex-direction: column;
+  }
+  
+  .image-part, .main-part {
+    width: 100%;
+  }
+  .image-part{
+    display: none;
+   }
+  .image-part {
+    height: 0px;
+  }
+  
+}
+
+@media only screen and (max-width: 625px) {
+   .image-part{
+    display: none;
+   }
+  .main-part{
+    width: 100%;
+    border-radius: 0px;
+  }
+
+}
