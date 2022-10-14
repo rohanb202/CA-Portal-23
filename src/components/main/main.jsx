@@ -24,9 +24,6 @@ function Main(props){
         top: "10px",
     }
 
-    // const style2 = {
-    //     display : "none",
-    // }
 
     function handleClick(){
         setVideoOn(0);
@@ -46,20 +43,20 @@ function Main(props){
     return(
         <>
             {videoOn===1 && <div class="home">
-            {animeover===1 && <div  class="head flex flex-col min-h-20 w-100 mx-auto font-bold text-dark-700">
+            {/* {animeover===1 && <div  class="head flex flex-col min-h-20 w-100 mx-auto font-bold text-dark-700">
                 <div id="ca" data-aos='fade-down-right' data-aos-duration="3000" class="flex place-content-start justify-items-end text-light-600">
                     <div class="text-white">CA</div>
                 </div>
                 <div id="portal" data-aos="fade-up-left" data-aos-duration="3000" class="flex place-content-end justify-items-end text-light-600">
                     <div class="text-white">PORTAL</div>
-                </div>
+                </div> */}
                 <button onClick={handleClick} class="start">
                 START
                 </button>
-            </div>}
+            {/* </div>} */}
             
                 <video loop autoPlay muted><source type="video/mp4" src={sample}></source></video>
-                <div class="kashiyatra" style={style}><img src={kashiyatra}  alt="kashiyatra"></img></div>
+                <div class="kashiyatra"><img src={kashiyatra} alt="kashiyatra"></img></div>
                 <div class="wrapper"><div class="left-pattern"></div></div>
                 <div class="wrapper"><div class="right-pattern"></div></div>
             </div>}

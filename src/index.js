@@ -3,41 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Login from './components/Login/Login';
-// import { render } from "react-dom";
-// import App from "./App";
-// import { BrowserRouter } from "react-router-dom";
-// // import Contact from './Contact/Contact';
-// import {
-//   Routes,
-//   Route,
-// } from "react-router-dom";;
-// import Login from './components/Login/Login'
-
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-// } from "react-router-dom";
-
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App/>,
-//   },
-//   {
-//     path: "/login",
-//     element: <Login/>,
-//   },
-// ]);
+import { BrowserRouter } from 'react-router-dom';
+// import Contact from './Contact/Contact';
+// import Contact from './Contact/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-       {/* <RouterProvider router={router} /> */
-       }
-       <App/>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 
