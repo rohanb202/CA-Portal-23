@@ -1,94 +1,3 @@
-*{
-    margin: 0;
-    /* padding: 0; */
-    text-decoration: none;
-}
-
-body{
-    box-sizing: border-box;
-}
-
-.mobile-nav-dropdown{
-    position: fixed;
-    display: none;
-    /* opacity: 0; */
-    flex-direction: column;
-    /* top: 0; */
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background: #098770;
-    z-index: 40;
-    /* transition: all 2s ease 1s; */
-}
-
-.mobile-nav-dropdown img{
-    width: 400px;
-}
-
-.mobile-nav-dropdown .title{
-    /* height: 30px; */
-    width: 250px;
-    align-content: center;
-    justify-content: center;
-}
-
-.mobile-nav-dropdown ul{
-    display: flex;
-    flex-basis: 60%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-content: center;
-    justify-content: center;
-}
-
-.mobile-nav-dropdown ul li{
-    margin: 10px auto;
-    align-content: center;
-    justify-content: center;
-}
-
-.mobile-nav-dropdown .logout{
-    font-size: 25px;;
-    margin: 250px auto;
-}
-.mobile-nav-dropdown ul li a{
-    color: #F6F5E9;
-    padding: 20px 30px;
-    font-family: 'Arima Madurai';
-font-style: normal;
-font-weight: 600;
-font-size: 25px;
-line-height: 25px;
-/* identical to box height */
-
-text-transform: capitalize;
-}
-.back-icon{
-    display: flex;
-    /* flex-basis: 20%; */
-    /* left : 40%; */
-    height: 50px;
-    width: 100vw;
-    margin-top: 150px;
-    margin-left: 20px;;
-    /* flex-grow: 0; */
-    flex-shrink: 0;
-    /* width: 30px; */
-    /* color: white; */
-    z-index: 30;
-    background-image: url(./icons8-arrow-50.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.nav{
-    display: flex;
-    flex-direction: column;
-}
-
 .mobile-nav{
     position: sticky;
     display: flex;
@@ -107,7 +16,7 @@ text-transform: capitalize;
     height: 30px;
     width: 30px;
     color: #06122E;
-    background-image: url("../main/navicon.svg");
+    background-image: url("./img/navicon.svg");
     background-size: cover;
     align-self: center;
 }
@@ -119,6 +28,7 @@ text-transform: capitalize;
     width: 120px;
     align-self: center;
     justify-self: center;
+    
 }
 
 .cross{
@@ -128,14 +38,14 @@ text-transform: capitalize;
     width: 30px;
     color: white;
     z-index: 30;
-    background-image: url(./cross.png);
+    background-image: url("./img/cross.png");
     background-size: cover;
 }
 
 .outer-nav{
     position: fixed;
     top: 0;
-    width: 15%;
+    width: 42%;
     display: flex;
     /* float: left; */
     flex-direction: row;
@@ -177,7 +87,7 @@ text-transform: capitalize;
 }
 
 .sidebar ul li{
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 .logout{
@@ -206,7 +116,6 @@ text-transform: capitalize;
 }
 
 .title{
-    display: flex;
     height: 60px;;
     width: 150px;
     /* padding: 10px;; */
@@ -220,7 +129,7 @@ text-transform: capitalize;
     width: 5px;
     height: 100%;
     left: 170px;
-    background-image: url('./line1.svg');
+    background-image: url('./img/line1.svg');
     z-index: 1;
 }
 
@@ -230,19 +139,17 @@ text-transform: capitalize;
     width: 8px;
     height: 100%;
     left: 173px;
-    background-image: url('./line2.svg');
+    background-image: url('./img/line2.svg');
     z-index: 1;
 }
 
-/* .hidden{
-
-} */
 
 
 @media screen and (max-width: 700px) {
     .hidden{
         display: none;
     }
+    .NavbarLogoKashi{
+        height: 9vw;
+    }
 }
-
-

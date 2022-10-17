@@ -49,8 +49,8 @@ video{
 }
 
 .start{
-    /* position: absolute; */
-    /* bottom: 10%; */
+    position: absolute;
+    bottom: 20vh;
     /* top: 80vh; */
     margin: 0 20%;
     z-index:30;
@@ -72,7 +72,7 @@ video{
     /* background-image: url('./kashiyatra.svg');
     background-size: cover; */
     backdrop-filter: blur(2px);
-    transition: all 5s ease 1s;
+    /* transition: all 5s ease 1s; */
     /* margin: auto; */
     /* z-index: 20; */
 }
@@ -93,7 +93,7 @@ video{
     background-repeat: no-repeat;
     /* background-position: center; */
     /* background-clip: border-box; */
-    background-image: url("./Group\ 174.svg");
+    background-image: url("./Super\ Side\ Pattern.svg");
 }
 
 .right-pattern{
@@ -108,7 +108,7 @@ video{
     background-repeat: no-repeat;
     /* background-position: center; */
     /* background-clip: border-box; */
-    background-image: url("./Group\ 174.svg");
+    background-image: url("./Super\ Side\ Pattern.svg");
 }
 
 
@@ -399,6 +399,19 @@ color: #06122E;
     }
 }
 @media screen and (max-width: 700px) {
+    .kashiyatra{
+        height: 200px;
+        width: 350px;
+    }
+    .left-pattern, .right-pattern{
+        width: 15px;
+    }
+    .left-pattern{
+        left: 20px;
+    }
+    .right-pattern{
+        right: 20px;
+    }
     #ca, #portal{
         font-size: 70px;
     }
@@ -438,6 +451,10 @@ color: #06122E;
     }
 }
 @media screen and (max-width: 400px) {
+    .kashiyatra{
+        height: 100px;
+        width: 250px;
+    }
     #ca{
         font-size: 60px;
     }

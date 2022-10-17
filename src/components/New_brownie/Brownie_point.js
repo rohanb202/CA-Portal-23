@@ -11,7 +11,7 @@ import MtPattern from "../../img/MtPattern.png";
 const Brownie_point = () => {
   return (
     <div className="">
-      <div className="text-4xl font-semibold mb-14 text-[#F74061]">
+      <div className="text-4xl font-semibold mb-14 text-left text-[#F74061]">
         Brownie Points
       </div>
       <div>
@@ -35,7 +35,7 @@ const Brownie_point = () => {
                   <img src="" alt="" />
                   <div className="bg-[#F79840] p-3">
                     <img
-                      className="my-9 mr-3 ml-7 h-28"
+                      className="my-9 mr-3 ml-3 h-28 px-10"
                       src={event}
                       alt="Event Pass"
                     />
@@ -209,7 +209,11 @@ const Brownie_point = () => {
             <img src={Side_Pattern} alt="" className="relative right-6" />
           </div>
         </div>
-        <img src={white_strip} alt="" className="relative bottom-[190px] hidden lg:block" />
+        <img
+          src={white_strip}
+          alt=""
+          className="relative bottom-[190px] hidden lg:block"
+        />
       </div>
     </div>
   );

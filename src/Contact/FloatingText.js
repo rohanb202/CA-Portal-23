@@ -39,13 +39,13 @@ export default function FloatingText() {
   //   }
   // ]
 
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
+  // const container = {
+  //   visible: {
+  //     transition: {
+  //       staggerChildren: 0.025
+  //     }
+  //   }
+  // };
 
   return (
     <>
