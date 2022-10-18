@@ -3,6 +3,7 @@ import NavBar from "../navbar/navbar";
 // import Nduty from '../New_Duty/Nduty';
 // import Brownie from "../New_brownie/Brownie_point";
 // import Contact from '../../Contact/Contact';
+import { Link } from "react-router-dom";
 import sample from "./Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4";
 import kashiyatra from "./kashiyatra.svg";
 import { useEffect, useState } from "react";
@@ -95,7 +96,11 @@ function Main(props) {
                   <div class="center-top-content">
                     <div class="text">Become A Campus Ambassador</div>
                     <button class="apply">
-                      <span class="button-text">Apply</span>
+                      <span class="button-text">
+                        <Link to='/ambassador-apply'>
+                          Apply
+                        </Link>
+                      </span>
                     </button>
                   </div>
                 </div>

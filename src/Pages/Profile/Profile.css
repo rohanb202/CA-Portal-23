@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&family=Poppins&display=swap');
+
+.main-frame {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.main-greet {
+    margin: 0px 5%;
+}
+
+.main-greet .user-greet{
+    font-family: 'Arima Madurai', cursive;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: #F74061;
+}
+
+.main-greet .date{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #06122E;
+}
+
+.frame {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: 0px auto;
+}
+
+.frame img{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.frame .details{
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.details-frame {
+    margin: 5% 10% 10% 5%;
+    height: 74%;
+    display: flex;
+    flex-direction: column;
+    color: #F6F5E9;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.details-frame .user-main{
+    display: flex;
+    flex-direction: row;
+    height: 45%;
+    padding:12px 24px;
+    align-items: center;
+}
+
+.details-frame .user-main img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.details-frame .user-main .about-user{
+    width: 56%;
+    padding: 0px 16px;
+}
+
+.details-frame .user-main .about-user h3{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: capitalize;
+}
+
+.details-frame .user-details {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%;
+}
+
+.details-frame .user-details ul{
+    margin: 0% 4%;
+}
+
+.details-frame .user-details ul li{
+    margin: 8px 12px;
+}
+
+@media only screen and (max-width: 1023px){
+    .main{
+        padding: 0px;
+    }
+    .side {
+        display: none;
+    }
+    
+    .details-frame .user-main .about-user{
+        width: auto;
+    }
+
+    .details-frame .user-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .details-frame .user-details {
+        height: 50%;
+        padding: 0px;
+    }
+    
+    .details-frame .user-details ul{
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 742px){
+    .article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-greet .user-greet{
+        width: auto;
+        width: fit-content;
+    }
+    
+    .main-greet .date{
+        width: fit-content;
+    }
+
+    .frame img{
+        height: 140%;
+    }
+
+    .details-frame {
+        height: auto;
+    }
+    
+    .details-frame .user-main{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding:12px 24px;
+        align-items: center;
+    }
+    
+    .details-frame .user-main img{
+        width: 120px;
+        height: 120px;
+        margin: 36px 0px 12px 0px;
+    }
+    .details-frame .user-main .about-user{
+        width: 56%;
+        padding: 12px 0px;
+        text-align: center;
+
+    }
+
+    .details-frame .user-main .about-user h3{
+        font-size: 24px;
+    }
+
+    .details-frame .user-details {
+        flex-direction: column;
+    }
+    
+    .details-frame .user-details ul{
+        margin: 16px 0px;
+    }
+    
+}

@@ -14,9 +14,9 @@ export default function Home (){
     const [animeOver, setAnimeOver] = useState(0);
 
     return(
-        <Main>
-          <Brownie_point/>
-          <Contact />
+      <Main>
+        <Brownie_point/>
+        <Contact />
       </Main>
     );
 }
