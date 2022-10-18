@@ -10,6 +10,7 @@ import sidepattern from "../navbar/Super Side Pattern.svg";
 // import kylogo from "./KY Logo.svg"
 // import navicon from "./navicon.svg"
 import back from "./back.svg";
+import whyCAImage from "./why ca_Mesa de trabajo 1 1.svg"
 import right from "./why CA_Mesa de trabajo 1 1-cropped.svg";
 import responsibility from "../../img/responsibility.png";
 // import homepattern from "./home.svg"
@@ -120,6 +121,23 @@ function Main(props) {
                   <div class="right">
                     <img src={right} alt="right"></img>
                   </div>
+                </div>
+                <div class="center-bottom">
+                <div class="rightImgCa">
+                    <img src={whyCAImage} alt="right"></img>
+                  </div>
+                  <div class="left">
+                    <div class="left-title">Why Campus Ambassador?</div>
+                    <div class="desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
+                      dignissim, metus nec fringilla accumsan, risus sem
+                      sollicitudin lacus, ut interdum tellus elit sed risus.
+                      Maecenas eget condimentum velit, sit amet feugiat lectus.
+                      tellus.
+                    </div>
+                  </div>
+                  
                 </div>
                 <div class="center-bottom">
                   <div class="left">

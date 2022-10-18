@@ -1,7 +1,7 @@
 import React from "react";
 import LeaderBoardCSS from './LeaderBoard.module.css';
 // import LeaderBoardCSS from './Lea'
-import './navbar.css'
+// import './navbar.css'
 import NavBar from "../navbar/navbar";
 import GOH from './img/GOH.jpg'
 import CopyBtn from './img/Vector.svg';
