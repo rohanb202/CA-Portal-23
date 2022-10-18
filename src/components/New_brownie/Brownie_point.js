@@ -14,7 +14,7 @@ const Brownie_point = () => {
       <div className="text-4xl font-semibold mb-14 text-left text-[#F74061]">
         Brownie Points
       </div>
-      <div>
+      <div data-aos="flip-up" data-aos-duration="2000">
         <img
           src={white_strip}
           alt=""

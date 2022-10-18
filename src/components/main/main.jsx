@@ -16,6 +16,11 @@ import back from "./back.svg";
 import whyCAImage from "./why ca_Mesa de trabajo 1 1.svg"
 import right from "./why CA_Mesa de trabajo 1 1-cropped.svg";
 import responsibility from "../../img/responsibility.png";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 // import homepattern from "./home.svg"
 
 function Main(props) {
@@ -103,7 +108,7 @@ function Main(props) {
               <div class="center">
                 <div class="center-top">
                   <img src={back} alt="back"></img>
-                  <div class="center-top-content">
+                  <div class="center-top-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="text">Become A Campus Ambassador</div>
                     <button class="apply">
                       <span class="button-text">Apply</span>
@@ -128,12 +133,12 @@ function Main(props) {
                       tellus.
                     </div>
                   </div>
-                  <div class="right">
+                  <div class="right" data-aos="zoom-in-up" data-aos-duration="1000">
                     <img src={right} alt="right"></img>
                   </div>
                 </div>
                 <div class="center-bottom">
-                <div class="rightImgCa">
+                <div class="rightImgCa" data-aos="zoom-in-up" data-aos-duration="1000">
                     <img src={whyCAImage} alt="right"></img>
                   </div>
                   <div class="left">
@@ -166,7 +171,7 @@ function Main(props) {
                       Donec ut rhoncus ex.
                     </div>
                   </div>
-                  <div class="">
+                  <div class="" data-aos="zoom-in-up" data-aos-duration="1000">
                     <img src={responsibility} alt="responsibility" className="w-40 lg:w-[80%] lg:ml-16 mt-20
                     "></img>
                   </div>
