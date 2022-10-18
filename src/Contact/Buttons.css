@@ -47,17 +47,17 @@
     color: white;
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 1100px){
     .buttons{
-        grid-template-columns: 300px 300px ;
+        grid-template-columns: 240px 240px ;
     }
     .btn{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         
         padding: 10px 10px !important;
         margin: 10px;
     }
-    
+
 }
 @media screen and (max-width: 550px){
     .buttons{

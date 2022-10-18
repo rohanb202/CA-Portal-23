@@ -7,10 +7,10 @@ export default function Footer (){
         <div className='footer'>
             <button class="btnFooter btnFooter--animation-from-top" style={{backgroundColor:"#098770"}}>
             <a href='https://instagram.com' className='content' style={{color:"white",textDecoration:"none"}}>Instagram</a>
-                <span style={{backgroundColor:"white",borderRadius:"50%"}} className='icons'  ><SocialIcon url="https://instagram.com" /></span>
+                <span style={{backgroundColor:"white",borderRadius:"50%"}} className='icons'><SocialIcon url="https://instagram.com" /></span>
                <div class="btnFooter__text-dynamic">
                <a href='https://instagram.com' className='content' style={{color:"white",textDecoration:"none"}}>Instagram</a>
-                <span style={{backgroundColor:"white",borderRadius:"50%"}} className='icons' ><SocialIcon url="https://instagram.com" /></span>
+                <span style={{backgroundColor:"white",borderRadius:"50%"}} className='icons'><SocialIcon url="https://instagram.com" /></span>
                </div>
             </button>
             <button class="btnFooter btnFooter--animation-from-top" style={{backgroundColor:"#098770"}}>
