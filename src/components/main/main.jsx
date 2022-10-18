@@ -1,10 +1,13 @@
 import "./main.css";
+import {Link} from "react-scroll"
+import createScrollSnap from 'scroll-snap'
 import NavBar from "../navbar/navbar";
 // import Nduty from '../New_Duty/Nduty';
 // import Brownie from "../New_brownie/Brownie_point";
 // import Contact from '../../Contact/Contact';
 import sample from "./Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4";
 import kashiyatra from "./kashiyatra.svg";
+import mouse from "./mouse.svg";
 import { useEffect, useState } from "react";
 import sidepattern from "../navbar/Super Side Pattern.svg";
 // import kylogo from "./KY Logo.svg"
@@ -29,7 +32,8 @@ function Main(props) {
   function handleClick() {
     setVideoOn(0);
     console.log(videoOn);
-    document.querySelector(".home").style.display = "none";
+    // document.querySelector(".home").style.display = "none";
+    document.querySelector(".outer-nav").style.top = 0;
   }
 
   useEffect(() => {
@@ -43,7 +47,8 @@ function Main(props) {
 
   return (
     <>
-      {videoOn === 1 && (
+      {/* {videoOn === 1 && ( */}
+      <section>
         <div class="home">
           {/* {animeover===1 && <div  class="head flex flex-col min-h-20 w-100 mx-auto font-bold text-dark-700">
                 <div id="ca" data-aos='fade-down-right' data-aos-duration="3000" class="flex place-content-start justify-items-end text-light-600">
@@ -52,9 +57,9 @@ function Main(props) {
                 <div id="portal" data-aos="fade-up-left" data-aos-duration="3000" class="flex place-content-end justify-items-end text-light-600">
                     <div class="text-white">PORTAL</div>
                 </div> */}
-          <button onClick={handleClick} class="start">
-            START
-          </button>
+          <div class="start">
+            <Link to="main-page" onClick={handleClick} spy={true} smooth={true}><img src={mouse}></img></Link>
+          </div>
           {/* </div>} */}
 
           <video loop autoPlay muted>
@@ -70,11 +75,13 @@ function Main(props) {
             <div class="right-pattern"></div>
           </div>
         </div>
-      )}
+      </section>
+      {/* )} */}
 
-      {videoOn ? (
+      {/* {videoOn ? (
         ""
-      ) : (
+      ) : ( */}
+      <section id="main-page">
         <div class="home2">
           {/* <div class="mobile-nav">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -83,6 +90,9 @@ function Main(props) {
             </div> */}
 
           <NavBar />
+          <div class="sidepattern">
+              {/* <img src={sidepattern} alt="sidepattern"></img> */}
+            </div>
           <div class="outer-main">
             <div class="main">
               <div class="top">
@@ -164,12 +174,11 @@ function Main(props) {
                 {props.children}
               </div>
             </div>
-            <div class="sidepattern">
-              <img src={sidepattern} alt="sidepattern"></img>
-            </div>
+            
           </div>
         </div>
-      )}
+      </section>
+      {/* )} */}
     </>
   );
 }

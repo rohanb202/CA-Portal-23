@@ -133,14 +133,14 @@ text-transform: capitalize;
 }
 
 .outer-nav{
-    position: fixed;
-    top: 0;
+    position: sticky;
+    top: 0vh;
     width: 15%;
     display: flex;
-    /* float: left; */
+    float: left;
     flex-direction: row;
     /* flex-basis: 15%; */
-    height: 100%;
+    height: 100vh;
     z-index: 20;
     transition: all 2s ease 1s;
 }
@@ -150,11 +150,11 @@ text-transform: capitalize;
     background: #098770;
     /* display: flex; */
     /* width: 15%; */
-    height: 100%;
+    height: 100vh;
     /* top: 0;
     left: 0; */
     /* overflow: visible; */
-    flex-basis: 30%;
+    /* flex-basis: 30%; */
     flex-grow: 0;
     /* flex-wrap: wrap; */
     flex-shrink: 0;
@@ -218,7 +218,7 @@ text-transform: capitalize;
     /* position: fixed; */
     /* top: 0; */
     width: 5px;
-    height: 100%;
+    height: 100vh;
     left: 170px;
     background-image: url('./line1.svg');
     z-index: 1;
@@ -228,7 +228,7 @@ text-transform: capitalize;
     /* position: fixed; */
     /* top: 0; */
     width: 8px;
-    height: 100%;
+    height: 100vh;
     left: 173px;
     background-image: url('./line2.svg');
     z-index: 1;

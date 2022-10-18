@@ -26,6 +26,7 @@
     "react-social-icons": "^5.15.0",
     "reshake": "^1.2.4",
     "sass": "^1.55.0",
+    "scroll-snap": "^4.0.3",
     "scrollreveal": "^4.0.9",
     "styled-components": "^5.3.6",
     "tailwind": "^4.0.0",
