@@ -1,5 +1,5 @@
 import "./main.css";
-import {Link} from "react-scroll"
+import {Link as ScrollLink} from "react-scroll"
 import createScrollSnap from 'scroll-snap'
 import NavBar from "../navbar/navbar";
 // import Nduty from '../New_Duty/Nduty';
@@ -64,7 +64,7 @@ function Main(props) {
                     <div class="text-white">PORTAL</div>
                 </div> */}
           <div class="start">
-            <Link to="main-page" onClick={handleClick} spy={true} smooth={true}><img src={mouse}></img></Link>
+            <ScrollLink to="main-page" onClick={handleClick} spy={true} smooth={true}><img src={mouse}></img></ScrollLink>
           </div>
           {/* </div>} */}
 
