@@ -12,8 +12,8 @@ function Profile() {
   return (
     <>
       <NavBar />
-      <div className="flex flex-shrink-0 w-screen h-screen">
-        <div className="main flex flex-col w-[100%] pl-[15%] pr-[5%]">
+      <div className="flex flex-shrink-0">
+        <div className="main-profile flex flex-col w-[100%]">
           <div className="main-frame">
             <div className="main-greet">
               <div className='article'>

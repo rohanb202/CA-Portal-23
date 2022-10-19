@@ -8,8 +8,8 @@ function Ambassador() {
   return (
     <>
       <NavBar />
-      <div className="flex flex-shrink-0 w-screen h-screen">
-        <div className=" flex flex-col w-[100%] pl-[15%] pr-[5%]">
+      <div className="flex flex-shrink-0">
+        <div className="main-application flex flex-col w-[100%]">
           <div className="form-frame">
           <img 
               src={FormFrame} 
@@ -17,7 +17,7 @@ function Ambassador() {
           <div className="main-form">
             <div className="form">
               <h3>Campus Ambassador Application</h3>
-              <form action="">
+              <form>
                 <div className="element">
                   <label htmlFor="Name">Name:</label>
                   <input type="text" name='Name' />
@@ -33,6 +33,18 @@ function Ambassador() {
                 <div className="element">
                   <label htmlFor="Mail">Mail ID:</label>
                   <input type="text" name='Mail' />
+                </div>
+                <div className="element">
+                  <label htmlFor="Phone">Phone:</label>
+                  <input type="text" name='Phone' />
+                </div>
+                <div className="element">
+                  <label htmlFor="Password">Password:</label>
+                  <input type="password" name='Password' />
+                </div>
+                <div className="element">
+                  <label htmlFor="CPassword">Confirm Password:</label>
+                  <input type="password" name='CPassword' />
                 </div>
                 <div className="element">
                   <label htmlFor="Phone">Phone:</label>

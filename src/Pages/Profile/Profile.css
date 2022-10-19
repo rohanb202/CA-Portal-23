@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&family=Poppins&display=swap');
 
+.main-profile{
+    position: absolute;
+    height: calc(100% - 80px);
+    padding-left: 160px;
+}
 .main-frame {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -107,9 +113,6 @@
 }
 
 @media only screen and (max-width: 1023px){
-    .main{
-        padding: 0px;
-    }
     .side {
         display: none;
     }
@@ -134,7 +137,10 @@
     }
 }
 
-@media only screen and (max-width: 742px){
+@media only screen and (max-width: 700px){
+    .main-profile{
+        padding: 0px;
+    }
     .article{
         display: flex;
         flex-direction: column;
@@ -152,7 +158,7 @@
     }
 
     .frame img{
-        height: 140%;
+        height: 120%;
     }
 
     .details-frame {
@@ -191,4 +197,9 @@
         margin: 16px 0px;
     }
     
+}
+@media only screen and (max-width: 380px){
+    .frame img{
+        height: 160%;
+    }
 }
