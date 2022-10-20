@@ -31,7 +31,7 @@ export const AuthProvider = ({children}) => {
             .then((res) => {
                 // console.log("details recieved", res)
                 setUserInfo(res.data)
-                console.log("set user Info", res.data)
+                // console.log("set user Info", res.data)
             })
             .catch((err) => {
                 console.log(err)
@@ -93,7 +93,7 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
-                console.log("tokens refreshed successfully")
+                // console.log("tokens refreshed successfully")
             }
             else {
                 logoutUser()
