@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&family=Poppins&display=swap');
 
-.main-application{
+/* .main-application{
     position: absolute;
     height: calc(100% - 80px);
     padding-left: 160px;
-}
+} */
 
 .form-frame {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    /* width: calc(100% - 170px); */
     height: 100%;
     margin: 0px auto;
 }
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 140%;
+    height: 120%;
 }
 
 .main-form{

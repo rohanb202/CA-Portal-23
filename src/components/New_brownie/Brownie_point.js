@@ -14,14 +14,14 @@ const Brownie_point = () => {
       <div className="text-4xl font-semibold mb-14 text-left text-[#F74061]">
         Brownie Points
       </div>
-      <div data-aos="flip-up" data-aos-duration="2000">
+      <div>
         <img
           src={white_strip}
           alt=""
           className="relative lg:top-5 hidden lg:block"
         />
         <div className="lg:flex  justify-center h-[60%]">
-          <div className="flex">
+          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img src={Side_Pattern} alt="" className="relative left-6" />
             <div className="">
               <img
@@ -59,7 +59,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div className="flex">
+          <div data-aos="flip-right" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -97,7 +97,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div className="flex">
+          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -136,7 +136,7 @@ const Brownie_point = () => {
             />
           </div>
 
-          <div className="flex">
+          <div data-aos="flip-right" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -174,7 +174,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div className="flex">
+          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""

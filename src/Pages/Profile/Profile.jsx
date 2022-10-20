@@ -5,7 +5,7 @@ import profileFrame from './SVG/profileFrame.png';
 import profilePic from './SVG/user.jpg';
 import border from './SVG/border.svg';
 // import Side from '../../components/Side';
-import sidepattern from "../../components/navbar/Super Side Pattern.svg";
+// import sidepattern from "../../components/navbar/Super Side Pattern.svg";
 import NavBar from '../../components/navbar/navbar';
 
 function Profile() {
@@ -57,11 +57,11 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div className="side">
+          {/* <div className="side">
             <div class="sidepattern">
               <img src={sidepattern} alt="sidepattern"></img>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
