@@ -3,6 +3,8 @@ import './App.css';
 // import Nduty from "./components/New_Duty/Nduty"
 
 // import Contact from './Contact/Contact';
+import Login1 from './components/Login1/Login1';
+// import Login from './components/Login/Login';
 // import Main from './components/main/main';
 
 
@@ -26,8 +28,9 @@ function App() {
       <Route path="/leaderboard" element={<LeaderBoard />}></Route>
       <Route path='/ambassador-apply' element={<AmbassadorApplyForm />} />
       <Route path='/profile' element={<Profile />} />
+      <Route path='/login1' element={<Login1 />} />
     </Routes>
-      
+      {/* <Login1/> */}
     </>
   )
   

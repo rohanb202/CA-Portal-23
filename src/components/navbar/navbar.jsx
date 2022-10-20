@@ -26,7 +26,7 @@ function NavBar() {
       <div class="mobile-nav">
         <i class="fa fa-bars bg-gray-300" aria-hidden="true"></i>
         <button onClick={showNav}></button>
-        <img src={kylogo}></img>
+        <img src={kylogo} alt="ky-23"></img>
       </div>
       <div class="mobile-nav-dropdown">
         <button onClick={closeNav} class="back-icon"></button>
@@ -55,7 +55,7 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/login1">
               <span>Login</span>
             </Link>
           </li>
@@ -89,7 +89,7 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <a href="/#">
+              <a href="/login1">
                 <span>Login</span>
               </a>
             </li>
