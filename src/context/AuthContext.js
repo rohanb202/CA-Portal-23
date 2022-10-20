@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode";
+import axios from 'axios';
 
 import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -54,25 +55,32 @@ export const AuthProvider = ({children}) => {
 
     let updateToken = async ()=> {
 
-        let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({'refresh':authTokens?.refresh})
-        })
+        try{
+            let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({'refresh':authTokens?.refresh})
+            })
 
-        let data = await response.json()
+            let data = await response.json()
         
-        if (response.status === 200){
-            data["refresh"] = authTokens.refresh
-            setAuthTokens(data)
-            setUser(jwt_decode(data.access))
-            localStorage.setItem('authTokens', JSON.stringify(data))
-            // console.log("tokens refreshed successfully")
-        }else{
-            logoutUser()
+            if (response.status === 200){
+                data["refresh"] = authTokens.refresh
+                setAuthTokens(data)
+                setUser(jwt_decode(data.access))
+                localStorage.setItem('authTokens', JSON.stringify(data))
+                // console.log("tokens refreshed successfully")
+            }
+            else {
+                logoutUser()
+            }
         }
+        catch (error) {
+            console.log('error', error)
+            logoutUser()
+        }   
 
         if(loading){
             setLoading(false)
