@@ -12,7 +12,7 @@ import { useContext } from "react";
 
 function NavBar() {
 
-  let {user, logoutUser} = useContext(AuthContext);
+  let {tokenInfo, logoutUser} = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
@@ -99,7 +99,7 @@ function NavBar() {
               </Link>
             </li>
             {
-              user && <>
+              tokenInfo && <>
               <div class="logout">
                 <a href="/#">
                   <span onClick={logoutUser}>Logout</span>

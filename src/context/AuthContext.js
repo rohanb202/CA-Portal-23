@@ -17,8 +17,27 @@ export const AuthProvider = ({children}) => {
     let navigate = useNavigate()
     
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
-    let [user, setUser] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(JSON.parse(localStorage.getItem('authTokens')).access) : null)
+    let [tokenInfo, setTokenInfo] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(JSON.parse(localStorage.getItem('authTokens')).access) : null)
+    let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
+
+    function setInfoFromTokens() {
+        if (authTokens != null) {
+            axios({
+                method: 'get',
+                url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
+                headers: {'Authorization': `Bearer ${authTokens.access}`}
+            })
+            .then((res) => {
+                // console.log("details recieved", res)
+                setUserInfo(res.data)
+                console.log("set user Info", res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        }        
+    }
 
 
     let loginUser = async (e )=> {
@@ -35,8 +54,9 @@ export const AuthProvider = ({children}) => {
 
         if(response.status === 200){
             setAuthTokens(data)
-            setUser(jwt_decode(data.access))
+            setTokenInfo(jwt_decode(data.access))
             localStorage.setItem('authTokens', JSON.stringify(data))
+            setInfoFromTokens()
             navigate("/")
         }
         else {
@@ -47,8 +67,10 @@ export const AuthProvider = ({children}) => {
 
     let logoutUser = () => {
         setAuthTokens(null)
-        setUser(null)
+        setTokenInfo(null)
         localStorage.removeItem('authTokens')
+        setUserInfo(null)
+        console.log("set user info null")
         navigate("/")
     }
 
@@ -69,9 +91,9 @@ export const AuthProvider = ({children}) => {
             if (response.status === 200){
                 data["refresh"] = authTokens.refresh
                 setAuthTokens(data)
-                setUser(jwt_decode(data.access))
+                setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
-                // console.log("tokens refreshed successfully")
+                console.log("tokens refreshed successfully")
             }
             else {
                 logoutUser()
@@ -88,8 +110,9 @@ export const AuthProvider = ({children}) => {
     }
 
     let contextData = {
-        user:user,
+        tokenInfo:tokenInfo,
         authTokens:authTokens,
+        userInfo:userInfo,
         loginUser:loginUser,
         logoutUser:logoutUser,
     }
@@ -99,16 +122,17 @@ export const AuthProvider = ({children}) => {
 
         if(loading){
             updateToken()
+            setInfoFromTokens()
         }
 
-        let fourMinutes = 1000 * 60 * 4
-        // let fourMinutes = 1000 * 3
+        const fourMinutes = 1000 * 60 * 4
+        let intervalTime = fourMinutes
 
         let interval =  setInterval(()=> {
             if(authTokens){
                 updateToken()
             }
-        }, fourMinutes)
+        }, intervalTime)
         return ()=> clearInterval(interval)
 
     }, [authTokens, loading])
