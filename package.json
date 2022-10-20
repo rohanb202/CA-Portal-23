@@ -15,6 +15,7 @@
     "flowbite": "^1.5.3",
     "framer-motion": "^7.5.1",
     "gsap": "^3.10.4",
+    "jwt-decode": "^3.1.2",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

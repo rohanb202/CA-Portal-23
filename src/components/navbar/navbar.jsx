@@ -7,8 +7,13 @@ import { useState } from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import cross from "./cross.png"
 // import title from './KY Header Logo.svg'
+import AuthContext from "../../context/AuthContext";
+import { useContext } from "react";
 
 function NavBar() {
+
+  let {user, logoutUser} = useContext(AuthContext);
+
   const [navdisplay, setNavDisplay] = useState(0);
 
   function showNav() {
@@ -89,15 +94,19 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <a href="/#">
+              <Link to="/login">
                 <span>Login</span>
-              </a>
+              </Link>
             </li>
-            <div class="logout">
-              <a href="/#">
-                <span>Logout</span>
-              </a>
-            </div>
+            {
+              user && <>
+              <div class="logout">
+                <a href="/#">
+                  <span onClick={logoutUser}>Logout</span>
+                </a>
+              </div>
+              </>
+            }
           </ul>
           {/* <div class="logout"><a href="/#">Log Out</a></div> */}
         </div>
