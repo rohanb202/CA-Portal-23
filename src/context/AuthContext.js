@@ -10,7 +10,7 @@ const AuthContext = createContext()
 export default AuthContext;
 
 // const { REACT_APP_BASE_BACKEND_URL } = process.env;
-const REACT_APP_BASE_BACKEND_URL = "http://localhost:8000"
+const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 
 export const AuthProvider = ({children}) => {

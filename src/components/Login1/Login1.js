@@ -332,7 +332,7 @@ function Login1() {
     </div>
     <br/>
     <button type="submit">
-      <a href="/login1">Login</a>
+      Login
     </button>
     </form>
      <hr className={Login["Login.separator"]} />
