@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&family=Poppins&display=swap');
 
-
 .main-frame {
     position: absolute;
     height: 100%;
-    width: calc(100%-170px);
+    width: 85%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    margin: 0px auto;
 }
 
 .main-greet {
-    margin: 0px 5%;
+    margin: 0px 12%;
 }
 
 .main-greet .user-greet{
@@ -110,9 +110,6 @@
 }
 
 @media only screen and (max-width: 1023px){
-    .side {
-        display: none;
-    }
     
     .details-frame .user-main .about-user{
         width: auto;
@@ -135,8 +132,8 @@
 }
 
 @media only screen and (max-width: 700px){
-    .main-profile{
-        padding: 0px;
+    .main-frame{
+        width: 100%;
     }
     .article{
         display: flex;
