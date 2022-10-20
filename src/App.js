@@ -18,19 +18,22 @@ import LeaderBoard from './components/leaderboard/LeaderBoard';
 import Profile from './Pages/Profile/Profile';
 import AmbassadorApplyForm from './Pages/Ambassodor/Application/ApplicationForm';
 // import Login from './components/Login/Login';
+import LoginPage from './Pages/LoginPage';
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
  
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Home />}></Route> 
-      <Route path="/leaderboard" element={<LeaderBoard />}></Route>
-      <Route path='/ambassador-apply' element={<AmbassadorApplyForm />} />
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/login1' element={<Login1 />} />
-    </Routes>
-      {/* <Login1/> */}
+    <AuthProvider>
+      <Routes>
+        <Route path='/' element={<Home />}></Route> 
+        <Route path="/leaderboard" element={<LeaderBoard />}></Route>
+        <Route path='/ambassador-apply' element={<AmbassadorApplyForm />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/login1' element={<Login1 />} />
+      </Routes>
+    </AuthProvider>
     </>
   )
   

@@ -3,8 +3,11 @@ import Login from './Login1.module.css'
 // import Icon from  "../../img/Group 252.jpg";
 // import logo from "../";
 // import Loginlogo from "./image/Loginlogo.svg";
-
+import { useContext } from 'react'
+import AuthContext from '../../context/AuthContext'
 function Login1() {
+
+  let {loginUser} = useContext(AuthContext)
   return (
     <>
    <div className={Login["box-form"]}>
@@ -307,10 +310,14 @@ function Login1() {
       </svg>
     </div>
     {/* <p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p> */}
+    <form onSubmit={loginUser}>
     <div className={Login.inputs}>
-      <input type="email" placeholder="Enter your email" />
+    
+      <input type="email" name="email" placeholder="Enter your email" />
       <br />
-      <input type="password" placeholder="Enter your password" />
+      <input type="password" name="password" placeholder="Enter your password" />
+    
+    
     </div>
     <br />
     <br />
@@ -324,9 +331,10 @@ function Login1() {
       </p>
     </div>
     <br/>
-    <button>
-      <a href="/login1">Login</a>
+    <button type="submit">
+      Login
     </button>
+    </form>
      <hr className={Login["Login.separator"]} />
         <p className={Login["Login.lightGray"]}>
           Don't have an account?{" "}

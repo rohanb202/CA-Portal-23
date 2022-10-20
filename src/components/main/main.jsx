@@ -17,7 +17,8 @@ import back from "./back.svg";
 import whyCAImage from "./why ca_Mesa de trabajo 1 1.svg"
 import right from "./why CA_Mesa de trabajo 1 1-cropped.svg";
 import responsibility from "../../img/responsibility.png";
-
+import AuthContext from "../../context/AuthContext";
+import { useContext } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -25,6 +26,8 @@ AOS.init();
 // import homepattern from "./home.svg"
 
 function Main(props) {
+  let {tokenInfo} = useContext(AuthContext);
+
   const [style, setStyle] = useState({});
   const [animeover, setAnimeover] = useState(0);
   const [videoOn, setVideoOn] = useState(1);
@@ -102,7 +105,7 @@ function Main(props) {
           <div class="outer-main">
             <div class="main">
               <div class="top">
-                <div class="hello">Hello!</div>
+                <div class="hello">Hello {tokenInfo && tokenInfo.full_name}!</div>
                 <div class="date">05 Februry</div>
                 <div class="bottombar"></div>
               </div>
