@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&family=Poppins&display=swap');
 
-/* .main-profile{
-    position: absolute;
-    height: calc(100% - 80px);
-    padding-left: 160px;
-} */
 
 .main-frame {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: calc(100%-170px);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
