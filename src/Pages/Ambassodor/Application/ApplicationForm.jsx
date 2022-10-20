@@ -46,10 +46,6 @@ function Ambassador() {
                   <label htmlFor="CPassword">Confirm Password:</label>
                   <input type="password" name='CPassword' />
                 </div>
-                <div className="element">
-                  <label htmlFor="Phone">Phone:</label>
-                  <input type="text" name='Phone' />
-                </div>
                 <input type="submit" value="Apply" />
               </form>
             </div>

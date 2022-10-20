@@ -57,11 +57,11 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div className="side">
+          {/* <div className="side">
             <div class="sidepattern">
               <img src={sidepattern} alt="sidepattern"></img>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
