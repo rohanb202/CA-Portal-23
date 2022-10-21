@@ -1,5 +1,7 @@
 import React from 'react'
 import Login from './Login1.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import Icon from  "../../img/Group 252.jpg";
 // import logo from "../";
 // import Loginlogo from "./image/Loginlogo.svg";
@@ -10,6 +12,7 @@ function Login1() {
   let {loginUser} = useContext(AuthContext)
   return (
     <>
+    <ToastContainer />
    <div className={Login["box-form"]}>
   <div className={Login.left}>
     <div className={Login.overlay}>

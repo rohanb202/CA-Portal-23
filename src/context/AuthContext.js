@@ -24,74 +24,44 @@ export const AuthProvider = ({children}) => {
     let [loading, setLoading] = useState(true)
 
     function setInfoFromTokens() {
-        if (authTokens != null) {
-            axios({
-                method: 'get',
-                url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
-                headers: {'Authorization': `Bearer ${authTokens.access}`}
-            })
-            .then((res) => {
-                // console.log("details recieved", res)
-                toast.success('Details received', {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    });
-                setUserInfo(res.data)
-                // console.log("set user Info", res.data)
-            })
-            .catch((err) => {
-                console.log(err)
-                toast.error('Some Error', {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    });
-            });
-        }        
-    }
-
-
-    let loginUser = async (e )=> {
-        e.preventDefault()
-        let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({'email':e.target.email.value, 'password':e.target.password.value})
-        })
-        let data = await response.json()
-        // console.log(data)
-
-        if(response.status === 200){
-            setAuthTokens(data)
-            setTokenInfo(jwt_decode(data.access))
-            localStorage.setItem('authTokens', JSON.stringify(data))
-            setInfoFromTokens()
-            navigate("/")
-            toast.success('Logged in successFully', {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
+        try{
+            if (authTokens != null) {
+                axios({
+                    method: 'get',
+                    url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
+                    headers: {'Authorization': `Bearer ${authTokens.access}`}
+                })
+                .then((res) => {
+                    // console.log("details recieved", res)
+                    toast.success('Details received', {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        });
+                    setUserInfo(res.data)
+                    // console.log("set user Info", res.data)
+                })
+                .catch((err) => {
+                    console.log(err)
+                    toast.error('Some Error', {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        });
                 });
+            }    
         }
-        else {
+        catch(error){
             toast.error('Something went wrong!', {
                 position: "top-center",
                 autoClose: 3000,
@@ -102,8 +72,81 @@ export const AuthProvider = ({children}) => {
                 progress: undefined,
                 theme: "light",
                 });
-            alert('Something went wrong!')
+            console.log('error', error)
         }
+            
+    }
+
+
+    let loginUser = async (e )=> {
+        e.preventDefault()
+        toast('Something went wrong!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        console.log('error')
+        try{
+            let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({'email':e.target.email.value, 'password':e.target.password.value})
+            })
+            let data = await response.json()
+            // console.log(data)
+    
+            if(response.status === 200){
+                setAuthTokens(data)
+                setTokenInfo(jwt_decode(data.access))
+                localStorage.setItem('authTokens', JSON.stringify(data))
+                setInfoFromTokens()
+                navigate("/")
+                toast.success('Logged in successFully', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+            }
+            else {
+                toast.error('Something went wrong!', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+                alert('Something went wrong!')
+            }
+        }
+        catch(error){
+            toast.error('Something went wrong!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            console.log('error', error)
+        }
+        
     }
 
 
