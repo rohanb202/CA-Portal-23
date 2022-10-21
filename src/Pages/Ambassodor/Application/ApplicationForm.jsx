@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ApplicationForm.css';
 import axios from 'axios';
 // import Sidebar from '../../../components/Sidebar';
-import FormFrame from './SVG/FormFrame.png';
+import FormFrame from './SVG/FormFrame.svg';
 import NavBar from '../../../components/navbar/navbar';
 
 const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
@@ -42,6 +42,9 @@ function Ambassador() {
           <img 
               src={FormFrame} 
               alt="Frame" />
+          <div className="svg">
+
+          </div>
           <div className="main-form">
             <div className="form">
               <h3>Campus Ambassador Application</h3>

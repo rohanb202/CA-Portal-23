@@ -12,23 +12,24 @@
     height: 100%;
     margin: 0px auto;
     overflow-y: scroll;
+    width: 85%;
 }
 
 .form-frame img{
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: 1400px;
+    width: 102%;
+    min-height: 740px;
+    max-height: 1440px;
     height: 190%;
-    transform: translateY(-80px);
+    transform: translate(-3%,-100px);
 }
 
 .main-form{
     position: absolute;
     top: 0px;
-    width: 90%;
-    margin-top: 160px;
-    margin-left: 6%;
+    width: 96%;
+    margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +108,7 @@ form input[type=submit]{
 @media only screen and (max-width: 700px){
     .form-frame{
         height: 100%;
+        width: 100%;
     }
     .form h3{
         font-size: 26px;
