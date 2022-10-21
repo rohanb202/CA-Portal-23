@@ -80,17 +80,6 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async (e )=> {
         e.preventDefault()
-        toast('Something went wrong!', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
-        console.log('error')
         try{
             let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
                 method:'POST',
@@ -149,6 +138,12 @@ export const AuthProvider = ({children}) => {
         
     }
 
+    const clearTokens = () => {
+        setAuthTokens(null)
+        setTokenInfo(null)
+        localStorage.removeItem('authTokens')
+        setUserInfo(null)
+    }
 
     let logoutUser = () => {
         setAuthTokens(null)
@@ -186,7 +181,7 @@ export const AuthProvider = ({children}) => {
         
             if (response.status === 200){
                 data["refresh"] = authTokens.refresh
-                toast.success('Token updated succesfully', {
+                toast.success('Your session has been refreshed!', {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -202,11 +197,13 @@ export const AuthProvider = ({children}) => {
                 // console.log("tokens refreshed successfully")
             }
             else {
-                logoutUser()
+                // console.log("CALLING LOGOUT FROM UPDATETOKEN AS BAD RESPONSE")
+                // logoutUser()
+                clearTokens();
             }
         }
         catch (error) {
-            toast.error('Something went wrong!', {
+            toast.error('Something went wrong! Please try again later.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -216,8 +213,9 @@ export const AuthProvider = ({children}) => {
                 progress: undefined,
                 theme: "light",
                 });
-            console.log('error', error)
-            logoutUser()
+            // console.log('error', error)
+            // console.log("CALLING LOGOUT FROM UPDATETOKEN AS FETCH FAILED")
+            clearTokens()
         }   
 
         if(loading){
@@ -240,16 +238,17 @@ export const AuthProvider = ({children}) => {
             updateToken()
             setInfoFromTokens()
         }
-
-        // const fourMinutes = 1000 * 60 * 4
-        let intervalTime = 1000 * 60 * 18
-
-        let interval =  setInterval(()=> {
-            if(authTokens){
-                updateToken()
-            }
-        }, intervalTime)
-        return ()=> clearInterval(interval)
+        else {            
+                    // const fourMinutes = 1000 * 60 * 4
+                    let intervalTime = 1000 * 60 * 18
+            
+                    let interval =  setInterval(()=> {
+                        if(authTokens){
+                            updateToken()
+                        }
+                    }, intervalTime)
+                    return ()=> clearInterval(interval)
+        }
 
     }, [authTokens, loading])
 

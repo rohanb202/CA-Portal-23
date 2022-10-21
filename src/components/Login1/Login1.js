@@ -12,7 +12,6 @@ function Login1() {
   let {loginUser} = useContext(AuthContext)
   return (
     <>
-    <ToastContainer />
    <div className={Login["box-form"]}>
   <div className={Login.left}>
     <div className={Login.overlay}>
