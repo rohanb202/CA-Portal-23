@@ -5,7 +5,7 @@ import axios from 'axios';
 import FormFrame from './SVG/FormFrame.png';
 import NavBar from '../../../components/navbar/navbar';
 
-const REACT_APP_BASE_BACKEND_URL = "http://localhost:8000"
+const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 function Ambassador() {
   const [formData, setformData] = useState({})
@@ -732,7 +732,8 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="postal_address">postal address:</label>
-                  <input type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true}/>
+                  {/* <input type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true}/> */}
+                  <textarea type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true} rows={3}/>
                 </div>
                 <div className="element">
                   <label htmlFor="pincode">pincode:</label>
@@ -748,11 +749,8 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="reason">reason:</label>
-                  <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="ref">Referral Code:</label>
-                  <input type="text" name="ref" placeholder="Referral Code (Optional)" onChange={handleChange}/>
+                  {/* <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/> */}
+                  <textarea type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
                 </div>
                 <input type="submit" value="Apply" />
               </form>

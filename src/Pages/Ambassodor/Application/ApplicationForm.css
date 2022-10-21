@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-height: 1400px;
     height: 190%;
     transform: translateY(-80px);
 }
@@ -64,7 +65,7 @@ label::before{
     display: none;
 }
 
-form input{
+form input,form textarea{
     color: black;
     border-radius: 6px;
     background: #F6F5E9;
