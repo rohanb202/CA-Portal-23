@@ -125,8 +125,8 @@ export const AuthProvider = ({children}) => {
             setInfoFromTokens()
         }
 
-        const fourMinutes = 1000 * 60 * 4
-        let intervalTime = fourMinutes
+        // const fourMinutes = 1000 * 60 * 4
+        let intervalTime = 1000 * 60 * 18
 
         let interval =  setInterval(()=> {
             if(authTokens){
