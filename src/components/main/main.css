@@ -379,6 +379,28 @@ color: #06122E;
     width: 80%;
 }
 
+.whyCampusAmbassadorContent{
+    margin-top: 20px;
+}
+.responsibilitiesAsCampusAmbassador{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.responsibilitiesAsCampusAmbassadorColumn{
+    margin: 10px;
+}
+.responsibilitiesAsCampusAmbassadorHeading{
+    font-size: 1.3rem;
+    color: #F74061;
+    font-weight: bold;
+    font-family: 'Arima Madurai', cursive;
+}
+.responsibilitiesAsCampusAmbassadorContent{
+    font-weight: bold;
+    font-family: 'Arima Madurai' , cursive;
+}
+
+
 @media screen and (max-width: 900px) {
     .text{
         font-size:25px;
@@ -388,6 +410,10 @@ color: #06122E;
     }
     .button-text{
         font-size: 25px;
+    }
+    .responsibilitiesAsCampusAmbassador{
+        display: grid;
+        grid-template-columns: auto ;
     }
 }
 
@@ -455,6 +481,17 @@ color: #06122E;
     .sidepattern{
         margin-right: 10px;;
     }
+    .responsibilitiesAsCampusAmbassador{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+    .responsibilitiesAsCampusAmbassadorColumn{
+        margin: 10px;
+    }
+    .responsibilitiesAsCampusAmbassadorHeading{
+        font-size: 1.2rem;
+    }
+
 }
 @media screen and (max-width: 400px) {
     .kashiyatra{
@@ -475,5 +512,18 @@ color: #06122E;
     }
     .button-text{
         font-size: 15px;;
+    }
+    .responsibilitiesAsCampusAmbassador{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+    .responsibilitiesAsCampusAmbassadorColumn{
+        margin: 3px;
+    }
+    .responsibilitiesAsCampusAmbassadorHeading{
+        font-size: 12px;
+    }
+    .responsibilitiesAsCampusAmbassadorContent{
+        font-size: 12px;
     }
 }
