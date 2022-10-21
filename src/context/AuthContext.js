@@ -32,17 +32,16 @@ export const AuthProvider = ({children}) => {
                     headers: {'Authorization': `Bearer ${authTokens.access}`}
                 })
                 .then((res) => {
-                    // console.log("details recieved", res)
-                    toast.success('Details received', {
-                        position: "top-center",
-                        autoClose: 3000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                        });
+                    // toast.success('Details received', {
+                    //     position: "top-center",
+                    //     autoClose: 3000,
+                    //     hideProgressBar: false,
+                    //     closeOnClick: true,
+                    //     pauseOnHover: true,
+                    //     draggable: true,
+                    //     progress: undefined,
+                    //     theme: "light",
+                    //     });
                     setUserInfo(res.data)
                     // console.log("set user Info", res.data)
                 })
@@ -77,6 +76,10 @@ export const AuthProvider = ({children}) => {
             
     }
 
+    useEffect(()=>{
+        setInfoFromTokens()
+    }, [authTokens]);
+
 
     let loginUser = async (e )=> {
         e.preventDefault()
@@ -95,7 +98,7 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
-                setInfoFromTokens()
+                // setInfoFromTokens()
                 navigate("/")
                 toast.success('Logged in successFully', {
                     position: "top-center",
@@ -236,7 +239,7 @@ export const AuthProvider = ({children}) => {
 
         if(loading){
             updateToken()
-            setInfoFromTokens()
+            // setInfoFromTokens()
         }
         else {            
                     // const fourMinutes = 1000 * 60 * 4
