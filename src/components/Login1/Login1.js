@@ -1,5 +1,7 @@
 import React from 'react'
 import Login from './Login1.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import Icon from  "../../img/Group 252.jpg";
 // import logo from "../";
 // import Loginlogo from "./image/Loginlogo.svg";
