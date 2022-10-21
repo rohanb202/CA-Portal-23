@@ -152,12 +152,17 @@ function Main(props) {
                   <div class="left">
                     <div class="left-title">Why Campus Ambassador?</div>
                     <div class="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-                      dignissim, metus nec fringilla accumsan, risus sem
-                      sollicitudin lacus, ut interdum tellus elit sed risus.
-                      Maecenas eget condimentum velit, sit amet feugiat lectus.
-                      tellus.
+                      For bringin together a fest which encircles diversity like never before we are reaching
+                      out to colleges across the country. The selected Campus Ambassador in his/her tenure will represent Kashiyatra,
+                      IIT(BHU) in his/her college and will become a an integral memeber of the team.
+                      <ul className="whyCampusAmbassadorContent">
+                        <li> Become a leader </li>
+                        <li> Update your organisational </li>
+                        <li> Polish your communicating & public speaking skills.</li>
+                        <li> Get the exposure to online and media marketing </li>
+                        <li> Expand your creative horizons </li>
+                      </ul>
+                      
                     </div>
                   </div>
                   
@@ -168,15 +173,44 @@ function Main(props) {
                       Responsibilities as Campus Ambassador
                     </div>
                     <div class="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-                      dignissim, metus nec fringilla accumsan, risus sem
-                      sollicitudin lacus, ut interdum tellus elit sed risus.
-                      Maecenas eget condimentum velit, sit amet feugiat lectus.
-                      Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra. <br/><br/>per inceptos himenaeos. Praesent auctor
-                      purus luctus enim egestas, ac scelerisque ante pulvinar.
-                      Donec ut rhoncus ex.
+                      Campus Ambassador is the face of Kashiyatra. They act as th link between Kashiyatra
+                      and their college and are the first point of contact for the students. Following 
+                      are the responsibilites one is required to take : 
+                      <div className="responsibilitiesAsCampusAmbassador">
+                        <div className="responsibilitiesAsCampusAmbassadorColumn">
+                        <div className="responsibilitiesAsCampusAmbassadorHeading">
+                          Represent
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorContent">
+                          Represent and exemplify Kashiyatra in your college among your peers. 
+                        </div>
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorColumn">
+                        <div className="responsibilitiesAsCampusAmbassadorHeading">
+                          Publicize
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorContent">
+                          Promote Kashiyatra by publicizing its events through social meadi platforms.
+                        </div>
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorColumn">
+                        <div className="responsibilitiesAsCampusAmbassadorHeading">
+                          Conceptualize
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorContent">
+                          Bring forth ideas and proposals as valuable input for team Kashiyatra.
+                        </div>
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorColumn">
+                        <div className="responsibilitiesAsCampusAmbassadorHeading">
+                          Organize
+                        </div>
+                        <div className="responsibilitiesAsCampusAmbassadorContent">
+                          Conduct workshops and promotional events in your college for Kashiyatra.
+                        </div>
+                        </div>
+                        
+                      </div>
                     </div>
                   </div>
                   <div class="" data-aos="zoom-in-up" data-aos-duration="1000">
