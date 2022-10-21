@@ -32,11 +32,31 @@ export const AuthProvider = ({children}) => {
             })
             .then((res) => {
                 // console.log("details recieved", res)
+                toast.success('Details received', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 setUserInfo(res.data)
                 // console.log("set user Info", res.data)
             })
             .catch((err) => {
                 console.log(err)
+                toast.error('Some Error', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
             });
         }        
     }
@@ -60,8 +80,28 @@ export const AuthProvider = ({children}) => {
             localStorage.setItem('authTokens', JSON.stringify(data))
             setInfoFromTokens()
             navigate("/")
+            toast.success('Logged in successFully', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
         else {
+            toast.error('Something went wrong!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
             alert('Something went wrong!')
         }
     }
@@ -70,10 +110,21 @@ export const AuthProvider = ({children}) => {
     let logoutUser = () => {
         setAuthTokens(null)
         setTokenInfo(null)
+        toast.success('Logged out successFully', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         localStorage.removeItem('authTokens')
         setUserInfo(null)
         console.log("set user info null")
         navigate("/")
+
     }
 
 
@@ -92,6 +143,16 @@ export const AuthProvider = ({children}) => {
         
             if (response.status === 200){
                 data["refresh"] = authTokens.refresh
+                toast.success('Token updated succesfully', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 setAuthTokens(data)
                 setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
@@ -102,6 +163,16 @@ export const AuthProvider = ({children}) => {
             }
         }
         catch (error) {
+            toast.error('Something went wrong!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
             console.log('error', error)
             logoutUser()
         }   
