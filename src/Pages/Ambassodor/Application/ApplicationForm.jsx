@@ -63,8 +63,17 @@ function Ambassador() {
           });
         }
       })
-      .catch((err) => {
-        console.log(err)
+      .catch((error) => {
+        toast.error('Server Error! Try again later.', {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       })
     } else{
       alert("password and confirm password should be same")
