@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^1.1.3",
+    "dayjs": "^1.11.6",
     "flowbite": "^1.5.3",
     "framer-motion": "^7.6.1",
     "gsap": "^3.10.4",
