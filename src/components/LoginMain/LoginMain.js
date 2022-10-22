@@ -23,14 +23,14 @@ function LoginMain() {
           <span className="text-gray-700 whitespace-nowrap">Email ID</span>
           <input
             type="email"
-            className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="email"
             placeholder=""
           />
         </label>
         <label class="block  w-6/12 min-w-[15rem]">
           <span class="text-gray-700">Password</span>
           <input
-            type="password"
+            type="password" name="password"
             class="
                     mt-1
                     block
