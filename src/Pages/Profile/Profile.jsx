@@ -56,7 +56,7 @@ function Profile() {
           <div className="main-frame">
             <div className="main-greet">
               <div className='article'>
-                <p className='user-greet'>Hello {userInfo.name}</p>
+                <p className='user-greet'>Hello {userInfo.full_name}</p>
                 <p className='date'>20 October</p>
               </div>
               <img 
@@ -75,21 +75,21 @@ function Profile() {
                       src={userInfo.profile_picture}
                       alt="ProfilePicture" />
                     <div className="about-user">
-                      <h3>{userInfo.name}</h3>
+                      <h3>{userInfo.full_name}</h3>
                       <p className='college'>{userInfo.college}</p>
                     </div>
-                    <p className='ky-id'>KY ID: {userInfo.ky.id}</p>
+                    <p className='ky-id'>KY ID: {userInfo.ky_id}</p>
                   </div>
                   <div className="user-details">
                     <ul className="main-details">
-                      <li>Age: {userInfo.age}</li>
-                      <li>Phone: {userInfo.phone_number}</li>
+                      {/* <li>Age: {userInfo.age}</li> */}
+                      <li>Phone: {userInfo.mobile_number}</li>
                       <li>Mail ID: {userInfo.email}</li>
                       <li>Year of Study: {userInfo.year}</li>
                     </ul>
                     <ul className='ky-details'>
-                      <li>Competitions: {userInfo.ky.competitions.length}</li>
-                      <li>Events: {userInfo.ky.events.length}</li>
+                      <li>Competitions: Coming Soon</li>
+                      <li>Events: Coming Soon</li>
                     </ul>
                   </div>
                 </div>
