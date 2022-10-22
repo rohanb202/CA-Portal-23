@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from './Login1.module.css'
+import Login from './forgotPass.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Icon from  "../../img/Group 252.jpg";
@@ -7,7 +7,70 @@ import 'react-toastify/dist/ReactToastify.css';
 // import Loginlogo from "./image/Loginlogo.svg";
 import { useContext } from 'react'
 import AuthContext from '../../context/AuthContext'
-function Login1() {
+
+const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
+
+function ForgotPass() {
+
+  let sendPasswordResetLink = async (e )=> {
+    e.preventDefault()
+    try{
+        let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/forgotPass/`, {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({'email':e.target.email.value})
+        })
+        let data = await response.json()
+        console.log(data)
+
+        // if(response.status === 200){
+        //     setAuthTokens(data)
+        //     setTokenInfo(jwt_decode(data.access))
+        //     localStorage.setItem('authTokens', JSON.stringify(data))
+        //     // setInfoFromTokens()
+        //     navigate("/")
+        //     toast.success('Logged in successFully', {
+        //         position: "top-center",
+        //         autoClose: 3000,
+        //         hideProgressBar: false,
+        //         closeOnClick: true,
+        //         pauseOnHover: true,
+        //         draggable: true,
+        //         progress: undefined,
+        //         theme: "light",
+        //         });
+        // }
+        // else {
+        //     toast.error('Something went wrong!', {
+        //         position: "top-center",
+        //         autoClose: 3000,
+        //         hideProgressBar: false,
+        //         closeOnClick: true,
+        //         pauseOnHover: true,
+        //         draggable: true,
+        //         progress: undefined,
+        //         theme: "light",
+        //         });
+        //     alert('Something went wrong!')
+        // }
+    }
+    catch(error){
+        toast.error('Something went wrong!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        console.log('error', error)
+    }
+    
+}
 
   let {loginUser} = useContext(AuthContext)
   return (
@@ -312,36 +375,36 @@ function Login1() {
       </svg>
     </div>
     {/* <p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p> */}
-    <form onSubmit={loginUser}>
+    <form onSubmit={sendPasswordResetLink}>
     <div className={Login.inputs}>
     
       <input type="email" name="email" placeholder="Enter your email" />
       <br />
-      <input type="password" name="password" placeholder="Enter your password" />
+      {/* <input type="password" name="password" placeholder="Enter your password" /> */}
     
     
     </div>
     <br />
     <br />
-    <div className={Login["remember-me--forget-password"]}>
+    {/* <div className={Login["remember-me--forget-password"]}>
       <label>
         <input type="checkbox" name="item" defaultChecked="" />
         <span className={Login["text-checkbox"]}>Remember me</span>
       </label>
       <p>
-        <a href="/forgotpass">Forgot password?</a>
+        <a href="/login1">Forgot password?</a>
       </p>
-    </div>
+    </div> */}
     <br/>
     <button type="submit">
-      Login
+      Reset Password
     </button>
     </form>
-     <hr className={Login["Login.separator"]} />
+     {/* <hr className={Login["Login.separator"]} />
         <p className={Login["Login.lightGray"]}>
           Don't have an account?{" "}
           <span className={Login["Login.secondaryClass"]}><a href="/login1"><b>Sign up</b></a></span>
-        </p>
+        </p> */}
       
   </div>
 </div>
@@ -350,4 +413,4 @@ function Login1() {
   )
 }
 
-export default Login1
+export default ForgotPass;

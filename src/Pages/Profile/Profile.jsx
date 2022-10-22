@@ -7,8 +7,14 @@ import border from './SVG/border.svg';
 // import Side from '../../components/Side';
 // import sidepattern from "../../components/navbar/Super Side Pattern.svg";
 import NavBar from '../../components/navbar/navbar';
+import AuthContext from '../../context/AuthContext';
+import {useContext} from "react"
 
 function Profile() {
+
+  const contextData = useContext(AuthContext)
+  console.log(contextData)
+
   return (
     <>
       <NavBar />

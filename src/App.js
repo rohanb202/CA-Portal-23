@@ -4,6 +4,7 @@ import './App.css';
 
 // import Contact from './Contact/Contact';
 import Login1 from './components/Login1/Login1';
+import ForgotPass from './components/ForgotPass/forgotPass';
 // import Login from './components/Login/Login';
 // import Main from './components/main/main';
 
@@ -35,6 +36,7 @@ function App() {
         <Route path='/ambassador-apply' element={<AmbassadorApplyForm />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/login1' element={<Login1 />} />
+        <Route path='/forgotpass' element={<ForgotPass />} />
       </Routes>
     </AuthProvider>
     </>
