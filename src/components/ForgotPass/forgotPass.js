@@ -25,8 +25,8 @@ function ForgotPass() {
             body:JSON.stringify({'email':e.target.email.value})
         })
         let data = await response.json()
-        console.log(data)
-        if (data["msg"] === "Reset password email sent!"){
+        console.log(response.status)
+        if (response.status === 200){
           toast.success('Reset password email sent!', {
             position: "top-center",
             autoClose: 3000,
@@ -38,7 +38,7 @@ function ForgotPass() {
             theme: "light",
             });
         }
-        if (data["msg"] === "Enter correct email!"){
+        if (response.status === 404){
           toast.error('Enter Correct Email!!', {
             position: "top-center",
             autoClose: 3000,
