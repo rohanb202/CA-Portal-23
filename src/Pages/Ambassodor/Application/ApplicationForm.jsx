@@ -24,6 +24,7 @@ function Ambassador() {
       }})
       .then((res) => {
         alert(res.data)
+        console.log(res)
       })
       .catch((err) => {
         console.log(err)

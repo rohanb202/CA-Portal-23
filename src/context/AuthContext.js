@@ -2,9 +2,9 @@ import { createContext, useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode";
 import axios from 'axios';
 
-import { redirect } from "react-router-dom";
+// import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AuthContext = createContext()
@@ -23,45 +23,22 @@ export const AuthProvider = ({children}) => {
     let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
 
-    function setInfoFromTokens() {
-        try{
-            if (authTokens != null) {
-                axios({
-                    method: 'get',
-                    url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
-                    headers: {'Authorization': `Bearer ${authTokens.access}`}
-                })
-                .then((res) => {
-                    // toast.success('Details received', {
-                    //     position: "top-center",
-                    //     autoClose: 3000,
-                    //     hideProgressBar: false,
-                    //     closeOnClick: true,
-                    //     pauseOnHover: true,
-                    //     draggable: true,
-                    //     progress: undefined,
-                    //     theme: "light",
-                    //     });
-                    setUserInfo(res.data)
-                    // console.log("set user Info", res.data)
-                })
-                .catch((err) => {
-                    console.log(err)
-                    toast.error('Some Error', {
-                        position: "top-center",
-                        autoClose: 3000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                        });
-                });
-            }    
-        }
-        catch(error){
-            toast.error('Something went wrong!', {
+    // myaxios automatically attaches authToken to Authorization header, and also handles token refreshing if expired.
+    // let myAxios = useAxios()
+
+
+    let setInfoFromToken = async(access_token) =>{
+
+        // let response = await axios.get('/api/current_user/')
+        let response = await axios({
+            method: 'get',
+            url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
+            headers: {'Authorization': `Bearer ${access_token}`}
+        });
+
+        if (response.status == 200) {
+            setUserInfo(response.data)
+            toast.success(`Welcome ${response.data.full_name}!`, {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -71,14 +48,57 @@ export const AuthProvider = ({children}) => {
                 progress: undefined,
                 theme: "light",
                 });
-            console.log('error', error)
+        }
+        else {
+            toast.error('Something went wrong while fetching user data!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
             
     }
 
-    useEffect(()=>{
-        setInfoFromTokens()
-    }, [authTokens]);
+    let getInfoFromToken = async(access_token) =>{
+        // let response = await axios.get('/api/current_user/')
+        let response = await axios({
+            method: 'get',
+            url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
+            headers: {'Authorization': `Bearer ${access_token}`}
+        });
+
+        if (response.status == 200) {
+            toast.success(`Welcome ${response.data.full_name}!`, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            return response.data
+        }
+        else {
+            toast.error('Something went wrong while fetching user data!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            return {}
+        }    
+    }
 
 
     let loginUser = async (e )=> {
@@ -98,9 +118,22 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
-                // setInfoFromTokens()
+
+                setInfoFromToken(data.access)
                 navigate("/")
                 toast.success('Logged in successFully', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+            }
+            else if (response.status == 401) {
+                toast.error('Login failed! Please check your credentials, or activate your account from email if not done!', {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -122,11 +155,10 @@ export const AuthProvider = ({children}) => {
                     progress: undefined,
                     theme: "light",
                     });
-                alert('Something went wrong!')
             }
         }
         catch(error){
-            toast.error('Something went wrong!', {
+            toast.error('Server Error! Try again later.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -136,7 +168,7 @@ export const AuthProvider = ({children}) => {
                 progress: undefined,
                 theme: "light",
                 });
-            console.log('error', error)
+            // console.log('error', error)
         }
         
     }
@@ -149,8 +181,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let logoutUser = () => {
-        setAuthTokens(null)
-        setTokenInfo(null)
+        clearTokens()
         toast.success('Logged out successFully', {
             position: "top-center",
             autoClose: 3000,
@@ -161,29 +192,34 @@ export const AuthProvider = ({children}) => {
             progress: undefined,
             theme: "light",
             });
-        localStorage.removeItem('authTokens')
-        setUserInfo(null)
-        console.log("set user info null")
         navigate("/")
 
     }
 
+    let contextData = {
+        tokenInfo:tokenInfo,
+        setTokenInfo: setTokenInfo,
+        authTokens: authTokens,
+        setAuthTokens: setAuthTokens,
+        userInfo:userInfo,
+        loginUser:loginUser,
+        logoutUser:logoutUser,
+        clearTokens: clearTokens,
+    }
 
-    let updateToken = async ()=> {
+    let refreshTokens = async() => {
+        try {
+            console.log("making refresh api request")
+            const response = await axios.post(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
+                refresh: authTokens?.refresh
+              });
+         
+            if(response.status == 200) {
+                let tokens = response.data
+                tokens["refresh"] = authTokens.refresh
+                localStorage.setItem('authTokens', JSON.stringify(tokens))
 
-        try{
-            let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
-                method:'POST',
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                body:JSON.stringify({'refresh':authTokens?.refresh})
-            })
-
-            let data = await response.json()
-        
-            if (response.status === 200){
-                data["refresh"] = authTokens.refresh
+                // session refreshed
                 toast.success('Your session has been refreshed!', {
                     position: "top-center",
                     autoClose: 3000,
@@ -194,19 +230,52 @@ export const AuthProvider = ({children}) => {
                     progress: undefined,
                     theme: "light",
                     });
-                setAuthTokens(data)
-                setTokenInfo(jwt_decode(data.access))
-                localStorage.setItem('authTokens', JSON.stringify(data))
-                // console.log("tokens refreshed successfully")
+
+                setAuthTokens(response.data)
+
+                if(!userInfo) {
+                    setInfoFromToken(response.data.access)
+                }
+            }
+            else if(response.status == 401) {
+                clearTokens()
+
+                // your session has expired! Please login again.
+                toast.error('Your session has expired! please login again!', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+
+                navigate("/")
             }
             else {
-                // console.log("CALLING LOGOUT FROM UPDATETOKEN AS BAD RESPONSE")
-                // logoutUser()
-                clearTokens();
+                clearTokens()
+                // something went wrong. try again later!
+                toast.error('Something went wrong! please login again!', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+
+                navigate("/login1")
             }
         }
         catch (error) {
-            toast.error('Something went wrong! Please try again later.', {
+            clearTokens()
+
+            // your session has expired, please login again!
+            toast.error('Your session has expired! Please login again.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -216,44 +285,36 @@ export const AuthProvider = ({children}) => {
                 progress: undefined,
                 theme: "light",
                 });
-            // console.log('error', error)
-            // console.log("CALLING LOGOUT FROM UPDATETOKEN AS FETCH FAILED")
-            clearTokens()
-        }   
 
-        if(loading){
-            setLoading(false)
+            navigate("/login1")
         }
     }
 
-    let contextData = {
-        tokenInfo:tokenInfo,
-        authTokens:authTokens,
-        userInfo:userInfo,
-        loginUser:loginUser,
-        logoutUser:logoutUser,
-    }
-
-
-    useEffect(()=> {
-
-        if(loading){
-            updateToken()
-            // setInfoFromTokens()
+    useEffect(()=> {  
+        if(loading) {
+            // will be executed on first try only
+            // toast.success('This is the first load!', {
+            //     position: "top-center",
+            //     autoClose: 3000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            //     theme: "light",
+            //     });
+            if(authTokens) {
+                refreshTokens();           
+            }
+        setLoading(false)
         }
-        else {            
-                    // const fourMinutes = 1000 * 60 * 4
-                    let intervalTime = 1000 * 60 * 18
-            
-                    let interval =  setInterval(()=> {
-                        if(authTokens){
-                            updateToken()
-                        }
-                    }, intervalTime)
-                    return ()=> clearInterval(interval)
+
+        if(authTokens){            
+            setTokenInfo(jwt_decode(authTokens.access))
         }
 
     }, [authTokens, loading])
+
 
     return(
         <AuthContext.Provider value={contextData} >
