@@ -110,6 +110,7 @@ function Main(props) {
                 <div class="bottombar"></div>
               </div>
               <div class="center">
+              { tokenInfo===null && <>
                 <div class="center-top">
                   <img src={back} alt="back"></img>
                   <div class="center-top-content" data-aos="fade-up" data-aos-duration="1000">
@@ -123,6 +124,8 @@ function Main(props) {
                     </button>
                   </div>
                 </div>
+                </>
+              }
                 <div class="center-bottom">
                   <div class="left">
                     <div class="left-title">What Is Campus Ambassador?</div>

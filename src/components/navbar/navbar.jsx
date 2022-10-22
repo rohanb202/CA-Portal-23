@@ -54,16 +54,34 @@ function NavBar() {
               <span>Event Registration</span>
             </a>
           </li>
+          { tokenInfo!==null && <>
           <li>
             <Link to="/leaderboard">
               <span>Ambassador</span>
             </Link>
           </li>
-          <li>
-            <Link to="/login1">
-              <span>Login</span>
-            </Link>
-          </li>
+          </>
+          }
+          { tokenInfo === null && <>
+            <li>
+              <Link to="/login1">
+                <span>Login</span>
+              </Link>
+            </li>
+            </>
+            }
+            {
+              tokenInfo && <>
+              <div class="logout">
+                <a href="/#">
+                  <span onClick={() => {
+                  closeNav();
+                  logoutUser();
+                  }}>Logout</span>
+                </a>
+              </div>
+              </>
+            }
         </ul>
       </div>
       <div class="outer-nav hidden">
@@ -88,17 +106,22 @@ function NavBar() {
                 <span>Event Registration</span>
               </a>
             </li>
+            { tokenInfo && <>
             <li>
               <Link to="/leaderboard">
                 <span>Ambassador</span>
               </Link>
             </li>
+            </>
+            }
+            { tokenInfo === null && <>
             <li>
               <Link to="/login1">
-
                 <span>Login</span>
               </Link>
             </li>
+            </>
+            }
             {
               tokenInfo && <>
               <div class="logout">

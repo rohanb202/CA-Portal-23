@@ -24,6 +24,18 @@ function ForgotPass() {
         })
         let data = await response.json()
         console.log(data)
+        if (data["msg"] === "Reset password email sent!"){
+          toast.success('Reset password email sent!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        }
 
         // if(response.status === 200){
         //     setAuthTokens(data)
@@ -31,16 +43,16 @@ function ForgotPass() {
         //     localStorage.setItem('authTokens', JSON.stringify(data))
         //     // setInfoFromTokens()
         //     navigate("/")
-        //     toast.success('Logged in successFully', {
-        //         position: "top-center",
-        //         autoClose: 3000,
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //         progress: undefined,
-        //         theme: "light",
-        //         });
+            // toast.success('Logged in successFully', {
+            //     position: "top-center",
+            //     autoClose: 3000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            //     theme: "light",
+            //     });
         // }
         // else {
         //     toast.error('Something went wrong!', {
