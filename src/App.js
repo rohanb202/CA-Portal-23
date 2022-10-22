@@ -20,7 +20,7 @@ import Profile from './Pages/Profile/Profile';
 import AmbassadorApplyForm from './Pages/Ambassodor/Application/ApplicationForm';
 // import Login from './components/Login/Login';
 import LoginPage from './Pages/LoginPage';
-import { AuthProvider } from './context/AuthContext'
+// import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -29,7 +29,6 @@ function App() {
   return (
     <>
     <ToastContainer />
-    <AuthProvider>
       <Routes>
         <Route path='/' element={<Home />}></Route> 
         <Route path="/leaderboard" element={<LeaderBoard />}></Route>
@@ -38,7 +37,6 @@ function App() {
         <Route path='/login1' element={<Login1 />} />
         <Route path='/forgotpass' element={<ForgotPass />} />
       </Routes>
-    </AuthProvider>
     </>
   )
   
