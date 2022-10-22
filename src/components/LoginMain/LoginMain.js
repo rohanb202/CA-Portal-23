@@ -54,7 +54,7 @@ function LoginMain() {
         </button>
         <span class="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/login"> Sign up</Link>
+          <Link to="/ambassador-apply"> Sign up</Link>
         </span>
       </form>
     </div>
