@@ -6,7 +6,7 @@ import Main from "./main/main";
 // import Main from './components/main/main';
 import Brownie_point from "./New_brownie/Brownie_point";
 // import Brownie from "./components/New_brownie/Brownie_point";
-import Nduty from "./New_Duty/Nduty";
+// import Nduty from "./New_Duty/Nduty";
 // import Nduty from "./components/New_Duty/Nduty"
 
 export default function Home (){

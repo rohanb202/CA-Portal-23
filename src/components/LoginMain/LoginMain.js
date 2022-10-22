@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
+
 function LoginMain() {
   let { loginUser } = useContext(AuthContext);
   return (
@@ -53,7 +54,7 @@ function LoginMain() {
         </button>
         <span class="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/login1"> Sign up</Link>
+          <Link to="/login"> Sign up</Link>
         </span>
       </form>
     </div>
