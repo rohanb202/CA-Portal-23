@@ -1,13 +1,22 @@
-import React from "react";
+import React,{ useState,useContext } from "react";
 import LeaderBoardCSS from './LeaderBoard.module.css';
 // import LeaderBoardCSS from './Lea'
 // import './navbar.css'
 import NavBar from "../navbar/navbar";
 import GOH from './img/GOH.jpg'
 import CopyBtn from './img/Vector.svg';
+import AuthContext from "../../context/AuthContext";
 
 export default function LeaderBoard (){
-
+    const {userInfo} = useContext(AuthContext);
+    const [refferals, setrefferals] = useState(null);
+    const [leaderboard, setleaderboard] = useState(null);
+    // const [userInfo, setuserInfo] = useState({
+    //     full_name:'peter',
+    //     ca_id:4,
+    //     college:'iitbhu',
+    //     profile_picture:'www.google.com'
+    // })
 
     return(
         <div className={LeaderBoardCSS.LeaderBoardPage}>
@@ -16,22 +25,22 @@ export default function LeaderBoard (){
             </div>
             <div className={LeaderBoardCSS.LeaderBoardCenterColumn}>
                 <div>
-                <h1 style={{color:"#F74061"}} className={LeaderBoardCSS.LeaderBoardCenterColumnHeading}>Hello Peter</h1>
+                <h1 style={{color:"#F74061"}} className={LeaderBoardCSS.LeaderBoardCenterColumnHeading}>Hello {userInfo.full_name}</h1>
                 <h2 className={LeaderBoardCSS.LeaderBoardCenterColumnDate}>13 October</h2>
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardCenterColumnBorder}></div>
                 <div className={LeaderBoardCSS.LeaderBoardCenterColumnProfile}>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnProfileLeftColumn}>
-                    <img  src={GOH}  className={LeaderBoardCSS.LeaderBoardCenterColumnProfileImage}alt="profile"/>
+                    <img  src={userInfo.profile_picture}  className={LeaderBoardCSS.LeaderBoardCenterColumnProfileImage}alt="profile"/>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnProfileName}>
-                        <h1 className={LeaderBoardCSS.LeaderBoardCenterColumnPersonName}>Peter Parker</h1>
-                        <h3 className={LeaderBoardCSS.LeaderBoardCenterColumnCollegeName}>IIT BHU</h3>
+                        <h1 className={LeaderBoardCSS.LeaderBoardCenterColumnPersonName}>{userInfo.full_name}</h1>
+                        <h3 className={LeaderBoardCSS.LeaderBoardCenterColumnCollegeName}>{userInfo.college}</h3>
                     </div>
                     </div>
                     
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnProfileReferal}>
-                        <h3 className={LeaderBoardCSS.LeaderBoardCenterColumnProfileReferalCode}>Refferal Code: #KYCA007</h3>
+                        <h3 className={LeaderBoardCSS.LeaderBoardCenterColumnProfileReferalCode}>Refferal Code: {userInfo.ca_id}</h3>
                         <div className={LeaderBoardCSS.copyLeaderBoardBtnDiv}>
                         <img className={LeaderBoardCSS.copyLeaderBoardBtn} style={{padding:"0"}} src={CopyBtn} alt="copy"/>
                         </div>
@@ -46,7 +55,32 @@ export default function LeaderBoard (){
                         <h2>Name</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
+                    {
+                        !refferals && 
+                        <div className={LeaderBoardCSS.hoverOnButtons}>
+                            <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
+                                <h3>0</h3>
+                                <h3>Coming</h3>
+                                <h3>Soon</h3>
+                            </div>
+                        </div>
+                    }
+                    {
+                        refferals &&
+                        refferals.map((item,count=0) => {
+                            count += 1;
+                            return (
+                                <div className={LeaderBoardCSS.hoverOnButtons} key={item.ky_id}>
+                                    <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
+                                        <h3>{count}</h3>
+                                        <h3>{item.ky_id}</h3>
+                                        <h3>{item.username}</h3>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                    {/* <div className={LeaderBoardCSS.hoverOnButtons}>
                         <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
                             <h3>1</h3>
                             <h3>Lorem</h3>
@@ -74,7 +108,7 @@ export default function LeaderBoard (){
                             <h3>Lorem</h3>
                             <h3>Ipsum</h3>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
            
@@ -90,7 +124,40 @@ export default function LeaderBoard (){
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnBorder}></div>
-                <div className={LeaderBoardCSS.hoverOnButtons}>
+                {
+                    !leaderboard &&
+                    <>
+                    <div className={LeaderBoardCSS.hoverOnButtons}>
+                        <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
+                            <h3>1</h3>
+                            <h3>{userInfo.full_name}</h3>
+                            <h3>0</h3>
+                        </div> 
+                    </div>
+                    <div className={LeaderBoardCSS.hoverOnButtons}>
+                        <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
+                            <h3>2</h3>
+                            <h3>Coming</h3>
+                            <h3>Soon</h3>
+                        </div> 
+                    </div>
+                    </>
+                }
+                {
+                    leaderboard &&
+                    leaderboard.map((item) => {
+                        return (
+                            <div className={LeaderBoardCSS.hoverOnButtons} key={item.rank}>
+                                <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
+                                    <h3>{item.rank}</h3>
+                                    <h3>{item.username}</h3>
+                                    <h3>{item.refferals}</h3>
+                                </div> 
+                            </div>
+                        )
+                    })
+                }
+                {/* <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <h3>1</h3>
                         <h3>Lorem</h3>
@@ -118,7 +185,7 @@ export default function LeaderBoard (){
                         <h3>Lorem</h3>
                         <h3>Ipsum</h3>
                     </div> 
-                </div>    
+                </div>     */}
                 </div>
                 
             </div>
