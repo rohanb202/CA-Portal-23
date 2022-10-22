@@ -4,11 +4,13 @@ import axios from 'axios';
 // import Sidebar from '../../../components/Sidebar';
 import FormFrame from './SVG/FormFrame.svg';
 import NavBar from '../../../components/navbar/navbar';
+import { useNavigate } from 'react-router-dom';
 
 const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 function Ambassador() {
   const [formData, setformData] = useState({})
+  const navigator = useNavigate();
 
   const handleChange = (e) => {
     setformData({...formData,[e.target.name]:e.target.value})
@@ -22,9 +24,44 @@ function Ambassador() {
         headers: {
           'Content-Type':'application/json'
       }})
-      .then((res) => {
-        alert(res.data)
-        console.log(res)
+      .then((response) => {
+        if (response.status === 201){
+          toast.success(response.data.msg, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          navigator("/")
+        } 
+        else if (response.status === 406){
+          toast.error(response.data.msg, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } 
+        else if (response.status === 226){
+          toast.error(response.data.msg, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
       })
       .catch((err) => {
         console.log(err)
