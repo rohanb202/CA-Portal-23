@@ -64,42 +64,6 @@ export const AuthProvider = ({children}) => {
             
     }
 
-    let getInfoFromToken = async(access_token) =>{
-        // let response = await axios.get('/api/current_user/')
-        let response = await axios({
-            method: 'get',
-            url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
-            headers: {'Authorization': `Bearer ${access_token}`}
-        });
-
-        if (response.status == 200) {
-            toast.success(`Welcome ${response.data.full_name}!`, {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                });
-            return response.data
-        }
-        else {
-            toast.error('Something went wrong while fetching user data!', {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                });
-            return {}
-        }    
-    }
-
 
     let loginUser = async (e )=> {
         e.preventDefault()
