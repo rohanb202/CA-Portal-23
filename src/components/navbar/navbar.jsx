@@ -11,8 +11,8 @@ import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 
 function NavBar() {
-
-  let {tokenInfo, logoutUser} = useContext(AuthContext);
+  
+  let {userInfo, tokenInfo, logoutUser} = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
@@ -28,32 +28,32 @@ function NavBar() {
 
   return (
     <>
-      <div class="mobile-nav">
-        <i class="fa fa-bars bg-gray-300" aria-hidden="true"></i>
+      <div className="mobile-nav">
+        <i className="fa fa-bars bg-gray-300" aria-hidden="true"></i>
         <button onClick={showNav}></button>
         <img src={kylogo} alt="ky-23"></img>
       </div>
-      <div class="mobile-nav-dropdown">
-        <button onClick={closeNav} class="back-icon"></button>
-        <div class="title">
+      <div className="mobile-nav-dropdown">
+        <button onClick={closeNav} className="back-icon"></button>
+        <div className="title">
           <img src={kashiyatra} alt="kashiyatra"></img>
         </div>
-        <ul class="nav">
+        <ul className="nav">
           <li>
             <Link to="/">
               <span>Dashboard</span>
             </Link>
           </li>
-          <li>
+          {userInfo && <li>
             <Link to="/profile">
               <span>Profile</span>
             </Link>
-          </li>
-          <li>
+          </li>}
+          {/* <li>
             <a href="/#">
               <span>Event Registration</span>
             </a>
-          </li>
+          </li> */}
           <li>
             <Link to="/leaderboard">
               <span>Ambassador</span>
@@ -66,28 +66,28 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div class="outer-nav hidden">
-        <div class="sidebar">
-          {navdisplay ? <button onClick={closeNav} class="cross"></button> : ""}
-          <div class="title">
+      <div className="outer-nav hidden">
+        <div className="sidebar">
+          {navdisplay ? <button onClick={closeNav} className="cross"></button> : ""}
+          <div className="title">
             <img src={kashiyatra}></img>
           </div>
-          <ul class="nav">
+          <ul className="nav">
             <li>
               <Link to="/">
                 <span>Dashboard</span>
               </Link>
             </li>
-            <li>
-              <Link to="/profile">
-                <span>Profile</span>
-              </Link>
-            </li>
-            <li>
+            {userInfo && <li>
+            <Link to="/profile">
+              <span>Profile</span>
+            </Link>
+          </li>}
+            {/* <li>
               <a href="#">
                 <span>Event Registration</span>
               </a>
-            </li>
+            </li> */}
             <li>
               <Link to="/leaderboard">
                 <span>Ambassador</span>
@@ -101,7 +101,7 @@ function NavBar() {
             </li>
             {
               tokenInfo && <>
-              <div class="logout">
+              <div className="logout">
                 <a href="/#">
                   <span onClick={logoutUser}>Logout</span>
                 </a>
@@ -109,10 +109,10 @@ function NavBar() {
               </>
             }
           </ul>
-          {/* <div class="logout"><a href="/#">Log Out</a></div> */}
+          {/* <div className="logout"><a href="/#">Log Out</a></div> */}
         </div>
-        <div class="sideline1"></div>
-        <div class="sideline2"></div>
+        <div className="sideline1"></div>
+        <div className="sideline2"></div>
       </div>
     </>
   );
