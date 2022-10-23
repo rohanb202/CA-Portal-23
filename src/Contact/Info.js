@@ -24,12 +24,12 @@ export default function Info () {
             </div>
             <div className='contactPageInfo'>
                 <h2 className='contactPageInfoHeading'>Publicity</h2>
-                <h3 className='contactPersonName'>Utkarsh Dwivedi</h3>
-                <a href='/#' className='contactPersonEmail'>utkarsh.dwivedi.mec17@itbhu.ac.in</a>
-                <a href='/#' className='contactCallInfo'>Call (788)043-9042</a>
-                <h3 className='contactPersonName'>Sharad Ghodke</h3>
-                <a href='/#' className='contactPersonEmail'>sharad.dghodke.mec17@itbhu.ac.in</a>
-                <a href='/#' className='contactCallInfo'>Call (896)285-1919</a>
+                <h3 className='contactPersonName'>Rudrarpit Patra</h3>
+                <a href='mailto:rudrarpit.patra.mec19@itbhu.ac.in' className='contactPersonEmail'>rudrarpit.patra.mec19@itbhu.ac.in</a>
+                <a href="tel:8763811512" className='contactCallInfo'>Call 8763811512</a>
+                <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
+                <a href='mailto:gaurav.jaiswal.min10@itbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min10@itbhu.ac.in</a>
+                <a href="tel:9838660830" className='contactCallInfo'>Call 9838660830</a>
             </div>
             
         </div>

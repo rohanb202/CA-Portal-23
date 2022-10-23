@@ -7,12 +7,55 @@ import certificate from "../../img/img5.png"
 import white_strip from "../../img/white_strip.png";
 import Side_Pattern from "../../img/Side_Pattern.png";
 import MtPattern from "../../img/MtPattern.png";
+// import React from "react";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion,useAnimation } from "framer-motion";
+import AnimatedText from "../../Contact/AnimatedText";
+
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
+  hidden: { opacity: 0, scale: 0 }
+};
 
 const Brownie_point = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  // Placeholder text data, as if from API
+  const placeholderText = [
+    { type: "heading1", text: "Brownie Points" }
+  ];
   return (
     <div className="">
       <div className="text-4xl font-semibold mb-14 text-left text-[#F74061]">
-        Brownie Points
+      <motion.div
+      className="App"
+      ref={ref}
+      // variants={boxVariant}
+      initial="hidden"
+      animate={control} 
+      variants={boxVariant}
+    >
+      <div className="container">
+        {placeholderText.map((item, index) => {
+          return <AnimatedText {...item} key={index} />;
+        })}
+      </div>
+      {/* <div className="container">
+        {paragraphText.map((item, index) => {
+          return <AnimatedText {...item} key={index} />;
+        })}
+      </div> */}
+    </motion.div>
       </div>
       <div>
         <img

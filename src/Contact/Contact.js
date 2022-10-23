@@ -11,7 +11,7 @@ export default function Contact(){
         <div id="contacts" style={{backgroundColor: "#F6F5E9"}}>
             <FloatingText />
             <Info />
-            <Buttons />
+            {/* <Buttons /> */}
             <Footer />
         </div>
     )
