@@ -42,6 +42,7 @@
     text-transform: capitalize;
     color: #F6F5E9;
     width: 86%;
+    margin-left: 6%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
