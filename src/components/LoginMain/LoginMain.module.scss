@@ -115,51 +115,47 @@
 
 @keyframes f_fadeG {
   0% {
-    background-color: #F74061;
+    background-color: #f74061;
   }
 
   100% {
     background-color: rgb(255, 255, 255);
   }
 }
-
 
 @-o-keyframes f_fadeG {
   0% {
-    background-color: #F74061;
+    background-color: #f74061;
   }
 
   100% {
     background-color: rgb(255, 255, 255);
   }
 }
-
 
 @-ms-keyframes f_fadeG {
   0% {
-    background-color: #F74061;
+    background-color: #f74061;
   }
 
   100% {
     background-color: rgb(255, 255, 255);
   }
 }
-
 
 @-webkit-keyframes f_fadeG {
   0% {
-    background-color: #F74061;
+    background-color: #f74061;
   }
 
   100% {
     background-color: rgb(255, 255, 255);
   }
 }
-
 
 @-moz-keyframes f_fadeG {
   0% {
-    background-color: #F74061;
+    background-color: #f74061;
   }
 
   100% {
@@ -167,11 +163,11 @@
   }
 }
 
-.LoginBtnAndSpinner{
+.LoginBtnAndSpinner {
   display: grid;
-  padding-left: 55px;
+  // padding-left: 55px;
   grid-template-columns: auto auto;
 }
-.preloaderFloatingCirclesDisappear{
+.preloaderFloatingCirclesDisappear {
   visibility: hidden;
 }
