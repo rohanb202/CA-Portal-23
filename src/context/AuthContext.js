@@ -65,15 +65,15 @@ export const AuthProvider = ({children}) => {
     }
 
 
-    let loginUser = async (e )=> {
-        e.preventDefault()
+    let loginUser = async (email, password)=> {
+        // e.preventDefault()
         try{
             let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
                 },
-                body:JSON.stringify({'email':e.target.email.value, 'password':e.target.password.value})
+                body:JSON.stringify({'email':email, 'password':password})
             })
             let data = await response.json()
             // console.log(data)
