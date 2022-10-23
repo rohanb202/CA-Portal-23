@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import stripes from "./stripes.svg";
 import logo from "./logo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
+import LoaderCss from "./LoginMain.module.scss"
 function LoginMain() {
+  
+  const [variable,setVariable]=useState(true);
   let { loginUser } = useContext(AuthContext);
+  
+  function handleClick(e) {
+    e.preventDefault();
+    setVariable(()=>{
+      return false;
+    })
+    
+    loginUser(e);
+    setVariable(()=>{
+      return true;
+    })
+
+  }
+
+  console.log(variable);
+
   return (
+
+    
+
     <div className="flex items-center justify-center h-screen">
       <div className="w-[50vw] hidden md:block">
         <img src={stripes} alt="" className="object-cover h-screen" />
@@ -14,7 +36,7 @@ function LoginMain() {
       </div>
 
       <form
-        onSubmit={loginUser}
+        onSubmit={handleClick}
         class="flex flex-col space-y-5 justify-center items-center px-10"
       >
         <img src={logo} alt="" className="w-2/3 min-w-[18rem]" />
@@ -45,12 +67,25 @@ function LoginMain() {
         <Link to="/forgotpass" className="text-sm text-[#F74061]">
           Forgot password?
         </Link>
-        <button
+        <div className={LoaderCss.LoginBtnAndSpinner}>
+        <button onClick={handleClick} 
           type="submit"
           className="bg-[#F74061] rounded-lg w-36 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
         >
           Login
         </button>
+        <div className={variable?LoaderCss.preloaderFloatingCirclesDisappear:LoaderCss.preloaderFloatingCircles}>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_01}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_02}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_03}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_04}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_05}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_06}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_07}></div>
+              <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_08}></div>
+            </div>
+        </div>
+        
         <span class="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
           <Link to="/login1"> Sign up</Link>
