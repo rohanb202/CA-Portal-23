@@ -66,7 +66,8 @@ label::before{
     display: none;
 }
 
-form input,form textarea{
+.element input,.element textarea{
+    font-size: 18px;
     color: black;
     border-radius: 6px;
     background: #F6F5E9;
@@ -74,6 +75,14 @@ form input,form textarea{
     width: 64%;
     padding: 0px 6px;
     outline: none;
+}
+
+.element input{
+    height: 28px;
+}
+
+.element input:focus, .element textarea:focus{
+    box-shadow: none;
 }
 
 form .element {

@@ -788,11 +788,11 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="pincode">pincode:</label>
-                  <input type="text" name='pincode' onChange={handleChange} placeholder="pincode" required={true}/>
+                  <input type="text" name='pincode' onChange={handleChange} placeholder="Pincode" required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="pass2">Password:</label>
-                  <input type="password" name='pass2' onChange={handleChange} placeholder="password" required={true} minLength={8}/>
+                  <input type="password" name='pass2' onChange={handleChange} placeholder="Password" required={true} minLength={8}/>
                 </div>
                 <div className="element">
                   <label htmlFor="confirm_password">Confirm Password:</label>

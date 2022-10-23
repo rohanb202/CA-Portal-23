@@ -3,10 +3,9 @@ import "./App.css";
 // import Nduty from "./components/New_Duty/Nduty"
 
 // import Contact from './Contact/Contact';
-import Login1 from "./components/Login1/Login1";
+// import Login1 from "./components/Login1/Login1";
 import LoginMain from "./components/LoginMain/LoginMain";
 import ForgotPass from "./components/ForgotPass/forgotPass";
-// import Login from './components/Login/Login';
 // import Main from './components/main/main';
 
 import "aos/dist/aos.css";
@@ -18,7 +17,7 @@ import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
 // import Login from './components/Login/Login';
-import LoginPage from "./Pages/LoginPage";
+
 // import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -32,7 +31,7 @@ function App() {
         <Route path="/leaderboard" element={<LeaderBoard />}></Route>
         <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/login1" element={<LoginMain />} />
+        <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>
     </>

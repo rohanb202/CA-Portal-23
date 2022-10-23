@@ -64,7 +64,7 @@ function NavBar() {
           }
           { tokenInfo === null && <>
             <li>
-              <Link to="/login1">
+              <Link to="/login">
                 <span>Login</span>
               </Link>
             </li>
@@ -88,7 +88,7 @@ function NavBar() {
         <div className="sidebar">
           {navdisplay ? <button onClick={closeNav} className="cross"></button> : ""}
           <div className="title">
-            <img src={kashiyatra}></img>
+            <img src={kashiyatra} alt="kashiyatra"></img>
           </div>
           <ul className="nav">
             <li>
@@ -116,7 +116,7 @@ function NavBar() {
             }
             { tokenInfo === null && <>
             <li>
-              <Link to="/login1">
+              <Link to="/login">
                 <span>Login</span>
               </Link>
             </li>

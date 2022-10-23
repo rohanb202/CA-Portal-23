@@ -1,6 +1,6 @@
 import "./main.css";
 import { Link as ScrollLink } from "react-scroll";
-import createScrollSnap from "scroll-snap";
+// import createScrollSnap from "scroll-snap";
 import NavBar from "../navbar/navbar";
 // import Nduty from '../New_Duty/Nduty';
 // import Brownie from "../New_brownie/Brownie_point";
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import kashiyatra from "./kashiyatra.svg";
 import mouse from "./mouse.svg";
 import { useEffect, useState } from "react";
-import sidepattern from "../navbar/Super Side Pattern.svg";
+// import sidepattern from "../navbar/Super Side Pattern.svg";
 // import kylogo from "./KY Logo.svg"
 // import navicon from "./navicon.svg"
 import back from "./back.svg";
@@ -73,7 +73,7 @@ function Main(props) {
               spy={true}
               smooth={true}
             >
-              <img src={mouse}></img>
+              <img src={mouse} alt="mouse"></img>
             </ScrollLink>
           </div>
           {/* </div>} */}

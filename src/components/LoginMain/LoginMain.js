@@ -4,7 +4,9 @@ import logo from "./logo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
+
 import LoaderCss from "./LoginMain.module.scss"
+
 function LoginMain() {
   
   const [requesting, setRequesting] = useState(false);
@@ -92,8 +94,9 @@ function LoginMain() {
         
         <span className="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/login1"> Sign up</Link>
+          <Link to="/ambassador-apply"> Sign up</Link>
         </span>
+        <Link to="/" className="text-sm text-[#F74061]">Back to Home Page</Link>
       </form>
     </div>
   );
