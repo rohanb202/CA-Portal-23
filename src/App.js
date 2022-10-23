@@ -20,6 +20,7 @@ import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm"
 // import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import RequireAuth from "./utils/RequireAuth";
 
 function App() {
   return (
@@ -27,9 +28,9 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/leaderboard" element={<LeaderBoard />}></Route>
+        <Route path="/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
         <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>
