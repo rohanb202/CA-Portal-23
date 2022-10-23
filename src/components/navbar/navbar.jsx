@@ -11,25 +11,30 @@ import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 
 function NavBar() {
-  
-  let {userInfo, tokenInfo, logoutUser} = useContext(AuthContext);
+  let { userInfo, tokenInfo, logoutUser } = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
   function showNav() {
     document.querySelector(".mobile-nav-dropdown").style.display = "flex";
     setNavDisplay(1);
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () {
+      window.scrollTo(x, y);
+    };
   }
   function closeNav() {
     // console.log("HI")
     document.querySelector(".mobile-nav-dropdown").style.display = "none";
     setNavDisplay(0);
+    window.onscroll = function () {};
   }
 
   return (
     <>
       <div className="mobile-nav">
-        <i className="fa fa-bars bg-gray-300" aria-hidden="true"></i>
+        <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
         <button onClick={showNav}></button>
         <img src={kylogo} alt="ky-23"></img>
       </div>
@@ -44,49 +49,61 @@ function NavBar() {
               <span>Dashboard</span>
             </Link>
           </li>
-          {userInfo && <li>
-            <Link to="/profile">
-              <span>Profile</span>
-            </Link>
-          </li>}
+          {userInfo && (
+            <li>
+              <Link to="/profile">
+                <span>Profile</span>
+              </Link>
+            </li>
+          )}
           {/* <li>
             <a href="/#">
               <span>Event Registration</span>
             </a>
           </li> */}
-          { tokenInfo!==null && <>
-          <li>
-            <Link to="/leaderboard">
-              <span>Ambassador</span>
-            </Link>
-          </li>
-          </>
-          }
-          { tokenInfo === null && <>
-            <li>
-              <Link to="/login">
-                <span>Login</span>
-              </Link>
-            </li>
+          {tokenInfo !== null && (
+            <>
+              <li>
+                <Link to="/leaderboard">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
             </>
-            }
-            {
-              tokenInfo && <>
+          )}
+          {tokenInfo === null && (
+            <>
+              <li>
+                <Link to="/login">
+                  <span>Login</span>
+                </Link>
+              </li>
+            </>
+          )}
+          {tokenInfo && (
+            <>
               <div class="logout">
                 <a href="/#">
-                  <span onClick={() => {
-                  closeNav();
-                  logoutUser();
-                  }}>Logout</span>
+                  <span
+                    onClick={() => {
+                      closeNav();
+                      logoutUser();
+                    }}
+                  >
+                    Logout
+                  </span>
                 </a>
               </div>
-              </>
-            }
+            </>
+          )}
         </ul>
       </div>
-      <div className="outer-nav hidden">
+      <div className="hidden outer-nav">
         <div className="sidebar">
-          {navdisplay ? <button onClick={closeNav} className="cross"></button> : ""}
+          {navdisplay ? (
+            <button onClick={closeNav} className="cross"></button>
+          ) : (
+            ""
+          )}
           <div className="title">
             <img src={kashiyatra} alt="kashiyatra"></img>
           </div>
@@ -96,41 +113,45 @@ function NavBar() {
                 <span>Dashboard</span>
               </Link>
             </li>
-            {userInfo && <li>
-            <Link to="/profile">
-              <span>Profile</span>
-            </Link>
-          </li>}
+            {userInfo && (
+              <li>
+                <Link to="/profile">
+                  <span>Profile</span>
+                </Link>
+              </li>
+            )}
             {/* <li>
               <a href="#">
                 <span>Event Registration</span>
               </a>
             </li> */}
-            {tokenInfo!==null && <>
-            <li>
-              <Link to="/leaderboard">
-                <span>Ambassador</span>
-              </Link>
-            </li>
-            </>
-            }
-            { tokenInfo === null && <>
-            <li>
-              <Link to="/login">
-                <span>Login</span>
-              </Link>
-            </li>
-            </>
-            }
-            {
-              tokenInfo && <>
-              <div className="logout">
-                <a href="/#">
-                  <span onClick={logoutUser}>Logout</span>
-                </a>
-              </div>
+            {tokenInfo !== null && (
+              <>
+                <li>
+                  <Link to="/leaderboard">
+                    <span>Ambassador</span>
+                  </Link>
+                </li>
               </>
-            }
+            )}
+            {tokenInfo === null && (
+              <>
+                <li>
+                  <Link to="/login">
+                    <span>Login</span>
+                  </Link>
+                </li>
+              </>
+            )}
+            {tokenInfo && (
+              <>
+                <div className="logout">
+                  <a href="/#">
+                    <span onClick={logoutUser}>Logout</span>
+                  </a>
+                </div>
+              </>
+            )}
           </ul>
           {/* <div className="logout"><a href="/#">Log Out</a></div> */}
         </div>

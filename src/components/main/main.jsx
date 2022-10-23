@@ -162,18 +162,13 @@ function Main(props) {
                   <div class="left">
                     <div class="left-title">What Is Campus Ambassador?</div>
                     <div class="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-                      dignissim, metus nec fringilla accumsan, risus sem
-                      sollicitudin lacus, ut interdum tellus elit sed risus.
-                      Maecenas eget condimentum velit, sit amet feugiat lectus.
-                      Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra. <br /> <br />
-                      per inceptos himenaeos. Praesent auctor purus luctus enim
-                      egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
-                      ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur
-                      vel bibendum lorem. Morbi convallis convallis diam sit
-                      amet lacinia. Aliquam in elementum tellus.
+                      Kashiyatra offers you the chance to represent and promote
+                      the festival at your colleges and universites! Campus
+                      Ambassadors get a chance to be an extended part of the
+                      organising team of Kashiyatra&apos;23. All you have to do
+                      is lead the contingent from your college taking part in KY
+                      and make sure that people in your institute know about it.
+                      Be the leader in a crowd of followers!
                     </div>
                   </div>
                   <div
