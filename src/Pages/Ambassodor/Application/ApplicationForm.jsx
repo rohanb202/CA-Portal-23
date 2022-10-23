@@ -20,6 +20,14 @@ function Ambassador() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    console.log(formData);
+    if(isNaN(formData.year) || isNaN(formData.mobile_number) || isNaN(formData.whatsapp_number) || isNaN(formData.pincode)) {
+      alert("Please enter details correctly!");
+      return;
+    }
+
+
     setRequesting(true)
     if(formData.pass2 === formData.confirm_password){
       axios.post(
@@ -83,6 +91,7 @@ function Ambassador() {
       })
     } else{
       alert("password and confirm password should be same")
+      setRequesting(false)
     }
   }
 
@@ -789,7 +798,7 @@ function Ambassador() {
                 <div className="element">
                   <label htmlFor="postal_address">postal address:</label>
                   {/* <input type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true}/> */}
-                  <textarea type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true} rows={3}/>
+                  <textarea maxLength={500} type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true} rows={3}/>
                 </div>
                 <div className="element">
                   <label htmlFor="pincode">pincode:</label>
@@ -806,7 +815,7 @@ function Ambassador() {
                 <div className="element">
                   <label htmlFor="reason">reason:</label>
                   {/* <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/> */}
-                  <textarea type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
+                  <textarea maxLength={500} type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
                 </div>
                 {
                   requesting ? 

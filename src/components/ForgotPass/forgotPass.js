@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import stripes from "./stripes.svg";
 import logo from "./logo.svg";
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,9 +13,11 @@ import AuthContext from '../../context/AuthContext'
 const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 function ForgotPass() {
+  const [requesting, setRequesting] = useState(false)
 
   let sendPasswordResetLink = async (e )=> {
     e.preventDefault()
+    setRequesting(true)
     try{
         let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/forgotPass/`, {
             method:'POST',
@@ -65,6 +67,7 @@ function ForgotPass() {
         console.log('error', error)
     }
     
+    setRequesting(false)
 }
 
   let {loginUser} = useContext(AuthContext)
@@ -91,12 +94,21 @@ function ForgotPass() {
           />
         </label>
         
+        { (requesting) ?
+
+          <button
+          className="bg-[#F74061] rounded-lg w-36 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
+          >
+          Loading...
+          </button>
+          :
         <button
           type="submit"
           className="bg-[#F74061] rounded-lg w-36 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
         >
           Reset Link
         </button>
+        }
         <Link to="/login" className="text-sm text-[#F74061]">Back to Login Page</Link>        
       </form>
     </div>
