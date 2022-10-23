@@ -131,11 +131,13 @@ function Main(props) {
                     data-aos-duration="1000"
                   >
                     <div class="text">Become A Campus Ambassador</div>
+                    <Link to="/ambassador-apply">
                     <button class="apply">
                       <span class="button-text">
-                        <Link to="/ambassador-apply">Apply</Link>
+                        Apply
                       </span>
                     </button>
+                    </Link>
                   </div>
                 </div>
                 </>

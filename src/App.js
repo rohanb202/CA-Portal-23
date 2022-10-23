@@ -3,7 +3,6 @@ import "./App.css";
 // import Nduty from "./components/New_Duty/Nduty"
 
 // import Contact from './Contact/Contact';
-// import Login1 from "./components/Login1/Login1";
 import LoginMain from "./components/LoginMain/LoginMain";
 import ForgotPass from "./components/ForgotPass/forgotPass";
 // import Main from './components/main/main';

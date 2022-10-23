@@ -109,6 +109,22 @@ form input[type=submit]{
     justify-content: center;
     align-items: center;
 }
+
+.applying {
+    font-family: 'Poppins';
+    font-weight: 100;
+    border: none;
+    background: #343432;
+    color: #F74061;
+    margin: 14px auto;
+    border-radius: 6px;
+    width: 160px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width: 1023px){
     form {
         width: 86%;

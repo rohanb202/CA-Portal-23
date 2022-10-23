@@ -11,6 +11,7 @@ const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "ht
 
 function Ambassador() {
   const [formData, setformData] = useState({})
+  const [requesting, setRequesting] = useState(false)
   const navigator = useNavigate();
 
   const handleChange = (e) => {
@@ -19,6 +20,7 @@ function Ambassador() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setRequesting(true)
     if(formData.pass2 === formData.confirm_password){
       axios.post(
         `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
@@ -63,6 +65,7 @@ function Ambassador() {
             theme: "light",
           });
         }
+        setRequesting(false)
       })
       .catch((error) => {
         toast.error('Server Error! Try again later.', {
@@ -75,6 +78,8 @@ function Ambassador() {
           progress: undefined,
           theme: "light",
           });
+        
+          setRequesting(false)
       })
     } else{
       alert("password and confirm password should be same")
@@ -803,7 +808,12 @@ function Ambassador() {
                   {/* <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/> */}
                   <textarea type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
                 </div>
-                <input type="submit" value="Apply" />
+                {
+                  requesting ? 
+                  <div className="applying">Applying.... </div> :
+                  <input type="submit" value="Apply" />
+                }
+                
               </form>
             </div>
           </div>

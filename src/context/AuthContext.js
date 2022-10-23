@@ -232,7 +232,7 @@ export const AuthProvider = ({children}) => {
                     theme: "light",
                     });
 
-                navigate("/login1")
+                navigate("/login")
             }
         }
         catch (error) {
@@ -250,7 +250,7 @@ export const AuthProvider = ({children}) => {
                 theme: "light",
                 });
 
-            navigate("/login1")
+            navigate("/login")
         }
     }
 
