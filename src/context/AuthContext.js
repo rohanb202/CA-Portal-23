@@ -173,7 +173,7 @@ export const AuthProvider = ({children}) => {
 
     let refreshTokens = async() => {
         try {
-            console.log("making refresh api request")
+            // console.log("making refresh api request")
             const response = await axios.post(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
                 refresh: authTokens?.refresh
               });

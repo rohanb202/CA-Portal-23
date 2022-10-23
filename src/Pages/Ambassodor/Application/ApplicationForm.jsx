@@ -21,9 +21,20 @@ function Ambassador() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(formData);
-    if(isNaN(formData.year) || isNaN(formData.mobile_number) || isNaN(formData.whatsapp_number) || isNaN(formData.pincode)) {
-      alert("Please enter details correctly!");
+    if(isNaN(formData.year)){
+      alert("Year must be a number!");
+      return;
+    }
+    if(isNaN(formData.mobile_number)){
+      alert("Mobile Number must be a number!");
+      return;
+    }
+    if(isNaN(formData.whatsapp_number)){
+      alert("Whatsapp number must be a number!");
+      return;
+    }
+    if(isNaN(formData.pincode)){
+      alert("Pincode must be a number!");
       return;
     }
 
