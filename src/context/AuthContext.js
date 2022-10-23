@@ -85,7 +85,7 @@ export const AuthProvider = ({children}) => {
 
                 setInfoFromToken(data.access)
                 navigate("/")
-                toast.success('Logged in successFully', {
+                toast.success('Logged in successfully!', {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -146,7 +146,7 @@ export const AuthProvider = ({children}) => {
 
     let logoutUser = () => {
         clearTokens()
-        toast.success('Logged out successFully', {
+        toast.success('Logged out!', {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
@@ -205,7 +205,7 @@ export const AuthProvider = ({children}) => {
                 clearTokens()
 
                 // your session has expired! Please login again.
-                toast.error('Your session has expired! please login again!', {
+                toast.error('Your session has expired! Please login again!', {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
