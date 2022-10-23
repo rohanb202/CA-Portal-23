@@ -30,7 +30,7 @@ export default function FloatingText() {
 
   // Placeholder text data, as if from API
   const placeholderText = [
-    { type: "heading1", text: "Contact Page" }
+    { type: "heading1", text: "Contact" }
   ];
   // const paragraphText=[
   //   {
