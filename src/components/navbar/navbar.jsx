@@ -44,13 +44,13 @@ function NavBar() {
           <img src={kashiyatra} alt="kashiyatra"></img>
         </div>
         <ul className="nav">
-          <li>
+          <li onClick={closeNav}>
             <Link to="/">
               <span>Dashboard</span>
             </Link>
           </li>
           {userInfo && (
-            <li>
+            <li onClick={closeNav}>
               <Link to="/profile">
                 <span>Profile</span>
               </Link>
@@ -63,7 +63,7 @@ function NavBar() {
           </li> */}
           {tokenInfo !== null && (
             <>
-              <li>
+              <li onClick={closeNav}>
                 <Link to="/leaderboard">
                   <span>Ambassador</span>
                 </Link>
@@ -73,7 +73,7 @@ function NavBar() {
           {tokenInfo === null && (
             <>
               <li>
-                <Link to="/login">
+                <Link onClick={closeNav} to="/login">
                   <span>Login</span>
                 </Link>
               </li>
