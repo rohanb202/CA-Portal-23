@@ -53,6 +53,21 @@ function Main(props) {
       setAnimeover(1);
     }, 7000);
   });
+  let dateNow = new Date();
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   return (
     <>
@@ -118,30 +133,31 @@ function Main(props) {
                 <div class="hello">
                   Hello {tokenInfo && tokenInfo.full_name}!
                 </div>
-                <div class="date">05 Februry</div>
+                <div class="date">{`${dateNow.getDate()} ${
+                  months[dateNow.getMonth()]
+                }`}</div>
                 <div class="bottombar"></div>
               </div>
               <div class="center">
-              { tokenInfo===null && <>
-                <div class="center-top">
-                  <img src={back} alt="back"></img>
-                  <div
-                    class="center-top-content"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <div class="text">Become A Campus Ambassador</div>
-                    <Link to="/ambassador-apply">
-                    <button class="apply">
-                      <span class="button-text">
-                        Apply
-                      </span>
-                    </button>
-                    </Link>
-                  </div>
-                </div>
-                </>
-              }
+                {tokenInfo === null && (
+                  <>
+                    <div class="center-top">
+                      <img src={back} alt="back"></img>
+                      <div
+                        class="center-top-content"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                      >
+                        <div class="text">Become A Campus Ambassador</div>
+                        <Link to="/ambassador-apply">
+                          <button class="apply">
+                            <span class="button-text">Apply</span>
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                )}
                 <div class="center-bottom">
                   <div class="left">
                     <div class="left-title">What Is Campus Ambassador?</div>
