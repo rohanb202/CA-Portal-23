@@ -218,7 +218,7 @@ function Main(props) {
                     </div>
                     <div class="desc">
                       Campus Ambassador is the face of Kashiyatra. They act as
-                      th link between Kashiyatra and their college and are the
+                      the link between Kashiyatra and their college and are the
                       first point of contact for the students. Following are the
                       responsibilites one is required to take :
                       <div className="responsibilitiesAsCampusAmbassador">
@@ -237,7 +237,7 @@ function Main(props) {
                           </div>
                           <div className="responsibilitiesAsCampusAmbassadorContent">
                             Promote Kashiyatra by publicizing its events through
-                            social meadi platforms.
+                            social media platforms.
                           </div>
                         </div>
                         <div className="responsibilitiesAsCampusAmbassadorColumn">
