@@ -190,11 +190,11 @@ function Main(props) {
                   <div class="left">
                     <div class="left-title">Why Campus Ambassador?</div>
                     <div class="desc">
-                      For bringin together a fest which encircles diversity like
+                      For bringing together a fest which encircles diversity like
                       never before we are reaching out to colleges across the
                       country. The selected Campus Ambassador in his/her tenure
                       will represent Kashiyatra, IIT(BHU) in his/her college and
-                      will become a an integral memeber of the team.
+                      will become an integral member of the team.
                       <ul className="whyCampusAmbassadorContent">
                         <li> Become a leader </li>
                         <li> Update your organisational </li>
