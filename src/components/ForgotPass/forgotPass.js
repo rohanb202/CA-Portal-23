@@ -109,7 +109,7 @@ function ForgotPass() {
           Reset Link
         </button>
         }
-        <Link to="/login" className="text-sm text-[#F74061]">Back to Login Page</Link>        
+        <Link to="/ca/login" className="text-sm text-[#F74061]">Back to Login Page</Link>        
       </form>
     </div>
 
