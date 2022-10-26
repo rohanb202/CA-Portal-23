@@ -216,7 +216,7 @@ export const AuthProvider = ({children}) => {
                     theme: "light",
                     });
 
-                navigate("/")
+                navigate("/ca")
             }
             else {
                 clearTokens()
@@ -232,7 +232,7 @@ export const AuthProvider = ({children}) => {
                     theme: "light",
                     });
 
-                navigate("/login")
+                navigate("/ca/login")
             }
         }
         catch (error) {
@@ -250,7 +250,7 @@ export const AuthProvider = ({children}) => {
                 theme: "light",
                 });
 
-            navigate("/login")
+            navigate("/ca/login")
         }
     }
 
