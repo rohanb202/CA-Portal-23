@@ -27,12 +27,12 @@ function App() {
     <>
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
-        <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
-        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-        <Route path="/login" element={<LoginMain />} />
-        <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/ca" element={<Home />}></Route>
+        <Route path="/ca/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
+        <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />
+        <Route path="/ca/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path="/ca/login" element={<LoginMain />} />
+        <Route path="/ca/forgotpass" element={<ForgotPass />} />
       </Routes>
     </>
   );
