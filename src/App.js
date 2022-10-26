@@ -21,6 +21,8 @@ import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
+import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
+import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
         <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
+        <Route path="/complete-profile" element={<CompleteProfile />} />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>

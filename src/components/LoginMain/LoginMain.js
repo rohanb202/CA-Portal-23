@@ -4,7 +4,7 @@ import logo from "./logo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-
+import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
 import LoaderCss from "./LoginMain.module.scss"
 
 function LoginMain() {
@@ -97,6 +97,8 @@ function LoginMain() {
           <Link to="/ambassador-apply"> Sign up</Link>
         </span>
         <Link to="/" className="text-sm text-[#F74061]">Back to Home Page</Link>
+        <p>{'( or )'}</p>
+        <LoginWithGoogle />
       </form>
     </div>
   );

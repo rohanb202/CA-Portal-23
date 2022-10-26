@@ -22,6 +22,7 @@ export const AuthProvider = ({children}) => {
     let [tokenInfo, setTokenInfo] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(JSON.parse(localStorage.getItem('authTokens')).access) : null)
     let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
+    let [googleCompleteProfile, setGoogleCompleteProfile] = useState(false)
 
     // myaxios automatically attaches authToken to Authorization header, and also handles token refreshing if expired.
     // let myAxios = useAxios()
@@ -169,6 +170,8 @@ export const AuthProvider = ({children}) => {
         loginUser:loginUser,
         logoutUser:logoutUser,
         clearTokens: clearTokens,
+        googleCompleteProfile:googleCompleteProfile,
+        setGoogleCompleteProfile:setGoogleCompleteProfile,
     }
 
     let refreshTokens = async() => {
