@@ -77,7 +77,7 @@ const useAxios = () => {
 
                 // cancel the request which requires auth and redirect
                 controller.abort()
-                navigate("/")
+                navigate("/ca")
             }
             else {
                 clearTokens()
@@ -95,7 +95,7 @@ const useAxios = () => {
 
                 // cancel the request which requires auth and redirect
                 controller.abort()
-                navigate("/login")
+                navigate("/ca/login")
             }
         }
         catch (error) {
@@ -115,7 +115,7 @@ const useAxios = () => {
 
             // cancel the request which requires auth and redirect
             controller.abort()
-            navigate("/login")
+            navigate("/ca/login")
         }
 
     })
