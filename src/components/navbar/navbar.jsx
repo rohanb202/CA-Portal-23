@@ -1,8 +1,8 @@
 // import { Link } from 'react-scroll'
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import kashiyatra from "./KY Header Logo.svg";
-import kylogo from "../main/KY Logo.svg";
+import kashiyatra from "../../svgs/KY Header Logo.svg";
+import kylogo from "../../svgs/KY Logo.svg";
 import { useState } from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import cross from "./cross.png"
