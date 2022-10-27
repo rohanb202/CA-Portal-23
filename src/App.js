@@ -6,6 +6,7 @@ import "./App.css";
 import LoginMain from "./components/LoginMain/LoginMain";
 import ForgotPass from "./components/ForgotPass/forgotPass";
 // import Main from './components/main/main';
+import Main from "./components/KY Main/main";
 
 import "aos/dist/aos.css";
 
@@ -27,6 +28,7 @@ function App() {
     <>
       <ToastContainer />
       <Routes>
+        <Route path="/" element={<Main />}></Route>
         <Route path="/ca" element={<Home />}></Route>
         <Route path="/ca/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
         <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />
