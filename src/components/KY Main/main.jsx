@@ -7,7 +7,7 @@ function Main(){
     const [navdisplay, setNavDisplay] = useState(0);
 
   function showNav() {
-    document.getElementById("mobilenavdropdown").style.display = "flex";
+    document.getElementById("mobilenavdropdown").style.height = "100%";
     setNavDisplay(1);
     var x = window.scrollX;
     var y = window.scrollY;
@@ -17,7 +17,7 @@ function Main(){
   }
   function closeNav() {
     // console.log("HI")
-    document.getElementById("mobilenavdropdown").style.display = "none";
+    document.getElementById("mobilenavdropdown").style.height = "0";
     setNavDisplay(0);
     window.onscroll = function () {};
   }
