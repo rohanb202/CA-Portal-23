@@ -15,6 +15,7 @@ import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
+import EventRegistration from "./components/EventsRegistration/EventRegistration";
 // import Login from './components/Login/Login';
 
 // import { AuthProvider } from './context/AuthContext'
@@ -33,6 +34,7 @@ function App() {
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/eventRegistration" element={<EventRegistration/>} />
       </Routes>
     </>
   );

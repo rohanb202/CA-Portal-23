@@ -1,0 +1,81 @@
+body{
+    height: 100%;
+    background-color: #F6F5E9;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.eventRegistrationHeading{
+    font-size: 2.5rem;
+    padding-top: 25px;
+    margin-left: 2rem;
+}
+.eventRegistrationBorder{
+    margin-left: 2rem;
+    background-image: url("img/Vector\ \(1\).svg");
+    padding: 3.2px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.eventCardBorder{
+    background-image: url("img/cardBord.svg");
+    padding: 2.5px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.eventPattern1{
+    background-image: url("img/Pattern-1.svg");
+    padding: 10px;
+    /* position: absolute;
+    z-index: 42; */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-color: #F74061;
+    transform: rotate(-180deg);
+}
+.eventRegistrationColumns{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.eventPattern{
+    background-image: url("img/Pattern-1.svg");
+    padding: 10px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-color: #F74061;
+}
+.eventRegistrationCard{
+    max-width: 32rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    margin: 1rem;
+    border: 25px solid;
+    background-color: #F74061;
+    border-image-source: url("img/Pattern-1.svg");
+    border-image-slice: 48;
+}
+/* .eventRegistrationCardBorder{
+    border: 25px solid;
+    border-image-source: url("img/Pattern-1.svg");
+    border-image-slice: 48;
+} */
+
+@media screen and (max-width: 1100px){
+    .eventRegistrationColumns{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 950px){
+    .eventRegistrationColumns{
+        grid-template-columns: auto auto ;
+    }
+}
+@media screen and (max-width: 600px){
+    .eventRegistrationColumns{
+        grid-template-columns: auto ;
+    }
+}
