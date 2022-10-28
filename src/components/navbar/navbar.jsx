@@ -120,15 +120,15 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {/* <li>
-              <a href="#">
+            <li>
+              <a href="/eventRegistration">
                 <span>Event Registration</span>
               </a>
-            </li> */}
+            </li>
             {tokenInfo !== null && (
               <>
                 <li>
-                  <Link to="/leaderboard">
+                  <Link to="/ambassador-apply">
                     <span>Ambassador</span>
                   </Link>
                 </li>
