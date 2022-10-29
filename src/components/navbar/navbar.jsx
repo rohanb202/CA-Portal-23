@@ -56,11 +56,11 @@ function NavBar() {
               </Link>
             </li>
           )}
-          {/* <li>
-            <a href="/#">
+          <li>
+            <a href="/eventRegistration">
               <span>Event Registration</span>
             </a>
-          </li> */}
+          </li>
           {tokenInfo !== null && (
             <>
               <li onClick={closeNav}>
@@ -120,11 +120,11 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {/* <li>
-              <a href="#">
-                <span>Event Registration</span>
-              </a>
-            </li> */}
+            <li>
+            <a href="/eventRegistration">
+              <span>Event Registration</span>
+            </a>
+          </li>
             {tokenInfo !== null && (
               <>
                 <li>

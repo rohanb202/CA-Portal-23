@@ -1,0 +1,116 @@
+.aboutSectionBody{
+    background-color: #06122E;
+
+}
+.aboutTitle{
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.aboutPageHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.aboutBorder1{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    /* margin-left: 20px; */
+    background-image: url("img/Vector\ \(2\).svg");
+}
+.aboutBorder2{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* margin-right: -100px; */
+    display: flex;
+    justify-content: end;
+    background-image: url("img/Vector\ \(1\).svg");
+}
+.aboutContent{
+    display: grid;
+    /* height: 70vh; */
+    /* padding-bottom: 120px; */
+    grid-template-columns: auto auto auto auto;
+}
+.aboutContentText{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.aboutContentImg1{
+    background-image: url("img/Group\ 226.svg");
+    height: 80vh;
+    width: 20vw;
+    background-repeat: no-repeat;
+}
+.aboutContentImg2{
+    background-image: url("img/Group\ 227.svg");
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 20vw;
+}
+.aboutContentImg3{
+    background-image: url("img/Group\ 228.svg");
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    height: 80vh;
+    width: 20vw;
+}
+.aboutContentMobileImg{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .aboutContent{
+        grid-template-columns: auto ;
+    }
+    
+    .aboutContentMobileImg{
+        display: block;
+        display: flex;
+        justify-content: center;
+
+        /* height: 80vh; */
+    }
+    .aboutContentImg1{
+        display: none;
+    }
+    .aboutContentImg2{
+        display: none;
+    }
+    .aboutContentImg3{
+        display: none;
+    }
+    .aboutContentMobileImg1{
+        height: 20vh;
+        width: 25vw;
+        margin: 5px;
+        background-repeat: no-repeat;
+        background-image: url("img/Group\ 268\ \(1\).svg");
+    }
+    .aboutContentMobileImg2{
+        height: 20vh;
+        width: 25vw;
+        margin: 5px;
+        background-repeat: no-repeat;
+        background-image: url("img/Group\ 268.svg");
+    }
+    .aboutContentMobileImg3{
+        height: 20vh;
+        width: 25vw;
+        margin: 5px;
+        background-repeat: no-repeat;
+        background-image: url("img/Group\ 267.svg");
+    }
+}
+@media screen and (max-width: 600px){
+    .aboutContentText{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}
