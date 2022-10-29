@@ -23,6 +23,7 @@ import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
 import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
+import TestPage from "./Pages/TestPage";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </>
   );
