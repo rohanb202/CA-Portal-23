@@ -11,7 +11,7 @@ import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 
 function NavBar() {
-  let { userInfo, tokenInfo, logoutUser } = useContext(AuthContext);
+  let { userInfo, logoutUser } = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
