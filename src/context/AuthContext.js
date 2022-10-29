@@ -21,12 +21,10 @@ export const AuthProvider = ({children}) => {
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
     let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
-    let [googleCompleteProfile, setGoogleCompleteProfile] = useState(false)
+    // let [googleCompleteProfile, setGoogleCompleteProfile] = useState(false)
 
 
     let setInfoFromToken = async(access_token) =>{
-        // console.log("start, token:", access_token)
-        // let response = await axios.get('/api/current_user/')
         try{
         let response = await axios({
             method: 'get',
@@ -85,7 +83,6 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
-                // setInfoFromToken(data.access)
                 navigate("/")
                 toast.success('Logged in successfully!', {
                     position: "top-center",
@@ -164,7 +161,6 @@ export const AuthProvider = ({children}) => {
 
     let refreshTokens = async() => {
         try {
-            // console.log("making refresh api request")
             const response = await axios.post(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
                 refresh: authTokens?.refresh
               });
@@ -188,13 +184,11 @@ export const AuthProvider = ({children}) => {
 
                 setAuthTokens(response.data)
 
-                // if(!userInfo) {
-                //     setInfoFromToken(response.data.access)
-                // }
+
             }
             else if(response.status == 401) {
                 clearTokens()
-
+                
                 // your session has expired! Please login again.
                 toast.error('Your session has expired! Please login again!', {
                     position: "top-center",
@@ -277,8 +271,8 @@ export const AuthProvider = ({children}) => {
         loginUser:loginUser,
         logoutUser:logoutUser,
         clearTokens: clearTokens,
-        googleCompleteProfile:googleCompleteProfile,
-        setGoogleCompleteProfile:setGoogleCompleteProfile,
+        // googleCompleteProfile:googleCompleteProfile,
+        // setGoogleCompleteProfile:setGoogleCompleteProfile,
         testContext: testContext,
     }
 

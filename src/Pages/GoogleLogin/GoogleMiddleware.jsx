@@ -7,7 +7,7 @@ import jwt_decode from "jwt-decode";
 
 function GoogleMiddleware() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const { setAuthTokens, setGoogleCompleteProfile } = useContext(AuthContext);
+    const { setAuthTokens } = useContext(AuthContext);
     const navigate = useNavigate();
     const {REACT_APP_BASE_BACKEND_URL} = process.env;
     let code = searchParams.get("code")

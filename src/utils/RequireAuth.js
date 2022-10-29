@@ -5,8 +5,8 @@ import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function RequireAuth({ children }) {
-    const { userInfo } = useContext(AuthContext);
-    if(!userInfo) {
+    const { authTokens } = useContext(AuthContext);
+    if(!authTokens) {
         toast.error("You need to login to do that!", {
                         position: "top-center",
                         autoClose: 3000,
@@ -18,7 +18,7 @@ function RequireAuth({ children }) {
                         theme: "light",
                         });
     }
-    return userInfo
+    return authTokens
       ? children
       : <Navigate to="/login"/>;
   }
