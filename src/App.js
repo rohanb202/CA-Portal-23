@@ -34,7 +34,7 @@ function App() {
         <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
-        <Route path="/complete-profile" element={<CompleteProfile />} />
+        {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>

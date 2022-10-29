@@ -31,6 +31,7 @@ export const AuthProvider = ({children}) => {
     let setInfoFromToken = async(access_token) =>{
         // console.log("start, token:", access_token)
         // let response = await axios.get('/api/current_user/')
+        try{
         let response = await axios({
             method: 'get',
             url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
@@ -64,12 +65,15 @@ export const AuthProvider = ({children}) => {
                 theme: "light",
                 });
         }
+        }
+        catch(e) {
+            console.error("setuserinfoerror", e);
+        }
             
     }
 
 
     let loginUser = async (email, password)=> {
-        // e.preventDefault()
         try{
             let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
                 method:'POST',
@@ -83,10 +87,10 @@ export const AuthProvider = ({children}) => {
     
             if(response.status === 200){
                 setAuthTokens(data)
-                setTokenInfo(jwt_decode(data.access))
+                // setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
-                setInfoFromToken(data.access)
+                // setInfoFromToken(data.access)
                 navigate("/")
                 toast.success('Logged in successfully!', {
                     position: "top-center",
@@ -190,9 +194,9 @@ export const AuthProvider = ({children}) => {
 
                 setAuthTokens(response.data)
 
-                if(!userInfo) {
-                    setInfoFromToken(response.data.access)
-                }
+                // if(!userInfo) {
+                //     setInfoFromToken(response.data.access)
+                // }
             }
             else if(response.status == 401) {
                 clearTokens()
@@ -247,30 +251,27 @@ export const AuthProvider = ({children}) => {
         }
     }
 
+
     useEffect(()=> {  
         if(loading) {
             // will be executed on first try only
-            // toast.success('This is the first load!', {
-            //     position: "top-center",
-            //     autoClose: 3000,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: true,
-            //     draggable: true,
-            //     progress: undefined,
-            //     theme: "light",
-            //     });
             if(authTokens) {
                 refreshTokens();           
             }
         setLoading(false)
         }
 
-        if(authTokens){            
-            setTokenInfo(jwt_decode(authTokens.access))
+        else {
+            // does not run on first load
+            if(authTokens){            
+                setTokenInfo(jwt_decode(authTokens.access));
+                if(!userInfo){
+                    setInfoFromToken(authTokens.access);
+                }
+            }
         }
 
-    }, [authTokens, loading])
+    }, [authTokens])
 
     function testContext() {
         console.log("HELLO FROM CONTEXT!");
