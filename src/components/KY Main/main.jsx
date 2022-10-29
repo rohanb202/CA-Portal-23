@@ -1,10 +1,31 @@
 import Maincss from "./main.module.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import kylogo from "./kylogo.svg"
 import { Link } from "react-router-dom";
 
 function Main(){
     const [navdisplay, setNavDisplay] = useState(0);
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+
+    const deadline = "January, 20, 2023";
+
+    const getTime = () => {
+        const time = Date.parse(deadline) - Date.now();
+
+        setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+        setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+        setMinutes(Math.floor((time / 1000 / 60) % 60));
+        setSeconds(Math.floor((time / 1000) % 60));
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => getTime(deadline), 1000);
+    
+        return () => clearInterval(interval);
+      }, []);
 
   function showNav() {
     document.getElementById("mobilenavdropdown").style.height = "100%";
@@ -44,7 +65,7 @@ function Main(){
                 <div className={Maincss.navbar}>
                     <Link to="/"><div className={Maincss.kylogo}></div></Link>
                     <div className={Maincss.navlist}>
-                        <ul>
+                        <ul className={Maincss.navlistul}>
                             <li className={Maincss.navitem}><Link to="/">TEAM</Link></li>
                             <li className={Maincss.navitem}><Link to="/">EVENTS</Link></li>
                             <li className={Maincss.navitem}><Link to="/">FAQ</Link></li>
@@ -58,7 +79,7 @@ function Main(){
                     <div className={Maincss.timeboxwrap}>
                         <div className={Maincss.outerbox}>
                             <div className={Maincss.numbox}>
-                                59
+                                {days}
                             </div>
                             <div className={Maincss.textbox}>
                                 Days
@@ -66,7 +87,7 @@ function Main(){
                         </div>
                         <div className={Maincss.outerbox}>
                             <div className={Maincss.numbox}>
-                                59
+                                {hours}
                             </div>
                             <div className={Maincss.textbox}>
                                 Hours
@@ -74,7 +95,7 @@ function Main(){
                         </div>
                         <div className={Maincss.outerbox}>
                             <div className={Maincss.numbox}>
-                                59
+                                {minutes}
                             </div>
                             <div className={Maincss.textbox}>
                                 Minutes
@@ -82,7 +103,7 @@ function Main(){
                         </div>
                         <div className={Maincss.outerbox}>
                             <div className={Maincss.numbox}>
-                                59
+                                {seconds}
                             </div>
                             <div className={Maincss.textbox}>
                                 Seconds
