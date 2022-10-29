@@ -19,13 +19,9 @@ export const AuthProvider = ({children}) => {
     let navigate = useNavigate()
     
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
-    let [tokenInfo, setTokenInfo] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(JSON.parse(localStorage.getItem('authTokens')).access) : null)
     let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
     let [googleCompleteProfile, setGoogleCompleteProfile] = useState(false)
-
-    // myaxios automatically attaches authToken to Authorization header, and also handles token refreshing if expired.
-    // let myAxios = useAxios()
 
 
     let setInfoFromToken = async(access_token) =>{
@@ -87,7 +83,6 @@ export const AuthProvider = ({children}) => {
     
             if(response.status === 200){
                 setAuthTokens(data)
-                // setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
                 // setInfoFromToken(data.access)
@@ -146,7 +141,6 @@ export const AuthProvider = ({children}) => {
 
     const clearTokens = () => {
         setAuthTokens(null)
-        setTokenInfo(null)
         localStorage.removeItem('authTokens')
         setUserInfo(null)
         // console.log("cleared tokens!")
@@ -264,7 +258,6 @@ export const AuthProvider = ({children}) => {
         else {
             // does not run on first load
             if(authTokens){            
-                setTokenInfo(jwt_decode(authTokens.access));
                 if(!userInfo){
                     setInfoFromToken(authTokens.access);
                 }
@@ -278,8 +271,6 @@ export const AuthProvider = ({children}) => {
     }
 
     let contextData = {
-        tokenInfo:tokenInfo,
-        setTokenInfo: setTokenInfo,
         authTokens: authTokens,
         setAuthTokens: setAuthTokens,
         userInfo:userInfo,

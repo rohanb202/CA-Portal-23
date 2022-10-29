@@ -61,7 +61,7 @@ function NavBar() {
               <span>Event Registration</span>
             </a>
           </li> */}
-          {tokenInfo !== null && (
+          {userInfo !== null && (
             <>
               <li onClick={closeNav}>
                 <Link to="/leaderboard">
@@ -70,7 +70,7 @@ function NavBar() {
               </li>
             </>
           )}
-          {tokenInfo === null && (
+          {userInfo === null && (
             <>
               <li>
                 <Link onClick={closeNav} to="/login">
@@ -79,7 +79,7 @@ function NavBar() {
               </li>
             </>
           )}
-          {tokenInfo && (
+          {userInfo && (
             <>
               <div class="logout">
                 <a href="/#">
@@ -125,7 +125,7 @@ function NavBar() {
                 <span>Event Registration</span>
               </a>
             </li> */}
-            {tokenInfo !== null && (
+            {userInfo !== null && (
               <>
                 <li>
                   <Link to="/leaderboard">
@@ -134,7 +134,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {tokenInfo === null && (
+            {userInfo === null && (
               <>
                 <li>
                   <Link to="/login">
@@ -143,7 +143,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {tokenInfo && (
+            {userInfo && (
               <>
                 <div className="logout">
                   <a href="/#">
