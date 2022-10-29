@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stripes from "./stripes.svg";
 import logo from "./logo.svg";
 import { useContext } from "react";
@@ -13,7 +13,12 @@ function LoginMain() {
   // const [email, setEmail] = useState("")
   // const [password, setPassword] = useState("")
   const [formData, setformData] = useState({email: "", password: ""})
-  let { loginUser } = useContext(AuthContext);
+  let { loginUser, clearTokens } = useContext(AuthContext);
+
+  useEffect(()=>{
+    // console.log("clearing tokens");
+    clearTokens();
+  },[])
 
   const handleChange = (e) => {
     setformData({...formData,[e.target.name]:e.target.value})

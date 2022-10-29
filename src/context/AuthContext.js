@@ -29,7 +29,7 @@ export const AuthProvider = ({children}) => {
 
 
     let setInfoFromToken = async(access_token) =>{
-
+        // console.log("start, token:", access_token)
         // let response = await axios.get('/api/current_user/')
         let response = await axios({
             method: 'get',
@@ -38,6 +38,7 @@ export const AuthProvider = ({children}) => {
         });
 
         if (response.status == 200) {
+            // console.log("got data!")
             setUserInfo(response.data)
             toast.success(`Welcome ${response.data.full_name}!`, {
                 position: "top-center",
@@ -51,6 +52,7 @@ export const AuthProvider = ({children}) => {
                 });
         }
         else {
+            // console.log("didnt get 200 userdata")
             toast.error('Something went wrong while fetching user data!', {
                 position: "top-center",
                 autoClose: 3000,
@@ -143,6 +145,7 @@ export const AuthProvider = ({children}) => {
         setTokenInfo(null)
         localStorage.removeItem('authTokens')
         setUserInfo(null)
+        // console.log("cleared tokens!")
     }
 
     let logoutUser = () => {
@@ -159,19 +162,6 @@ export const AuthProvider = ({children}) => {
             });
         navigate("/")
 
-    }
-
-    let contextData = {
-        tokenInfo:tokenInfo,
-        setTokenInfo: setTokenInfo,
-        authTokens: authTokens,
-        setAuthTokens: setAuthTokens,
-        userInfo:userInfo,
-        loginUser:loginUser,
-        logoutUser:logoutUser,
-        clearTokens: clearTokens,
-        googleCompleteProfile:googleCompleteProfile,
-        setGoogleCompleteProfile:setGoogleCompleteProfile,
     }
 
     let refreshTokens = async() => {
@@ -281,6 +271,25 @@ export const AuthProvider = ({children}) => {
         }
 
     }, [authTokens, loading])
+
+    function testContext() {
+        console.log("HELLO FROM CONTEXT!");
+    }
+
+    let contextData = {
+        tokenInfo:tokenInfo,
+        setTokenInfo: setTokenInfo,
+        authTokens: authTokens,
+        setAuthTokens: setAuthTokens,
+        userInfo:userInfo,
+        loginUser:loginUser,
+        logoutUser:logoutUser,
+        clearTokens: clearTokens,
+        googleCompleteProfile:googleCompleteProfile,
+        setGoogleCompleteProfile:setGoogleCompleteProfile,
+        testContext: testContext,
+    }
+
 
 
     return(
