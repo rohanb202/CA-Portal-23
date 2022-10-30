@@ -71,7 +71,7 @@ function LoginMain() {
                   "
                   required={true}/>
         </label>
-        <Link to="/forgotpass" className="text-sm text-[#F74061]">
+        <Link to="/ca/forgotpass" className="text-sm text-[#F74061]">
           Forgot password?
         </Link>
         <div className={LoaderCss.LoginBtnAndSpinner}>
@@ -99,11 +99,12 @@ function LoginMain() {
         
         <span className="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/ambassador-apply"> Sign up</Link>
+          <Link to="/ca/ambassador-apply"> Sign up</Link>
         </span>
-        <Link to="/" className="text-sm text-[#F74061]">Back to Home Page</Link>
+        <Link to="/ca" className="text-sm text-[#F74061]">Back to Home Page</Link>
         <p>{'( or )'}</p>
         <LoginWithGoogle />
+
       </form>
     </div>
   );

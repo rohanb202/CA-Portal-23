@@ -83,7 +83,8 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
-                navigate("/")
+                navigate("/ca")
+
                 toast.success('Logged in successfully!', {
                     position: "top-center",
                     autoClose: 3000,
@@ -155,7 +156,7 @@ export const AuthProvider = ({children}) => {
             progress: undefined,
             theme: "light",
             });
-        navigate("/")
+        navigate("/ca")
 
     }
 
@@ -201,7 +202,7 @@ export const AuthProvider = ({children}) => {
                     theme: "light",
                     });
 
-                navigate("/")
+                navigate("/ca")
             }
             else {
                 clearTokens()
@@ -217,7 +218,7 @@ export const AuthProvider = ({children}) => {
                     theme: "light",
                     });
 
-                navigate("/login")
+                navigate("/ca/login")
             }
         }
         catch (error) {
@@ -235,7 +236,7 @@ export const AuthProvider = ({children}) => {
                 theme: "light",
                 });
 
-            navigate("/login")
+            navigate("/ca/login")
         }
     }
 

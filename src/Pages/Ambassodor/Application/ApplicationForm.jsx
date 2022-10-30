@@ -58,7 +58,7 @@ function Ambassador() {
             progress: undefined,
             theme: "light",
           });
-          navigator("/")
+          navigator("/ca")
         } 
         else if (response.status === 406){
           toast.error(response.data.msg, {
