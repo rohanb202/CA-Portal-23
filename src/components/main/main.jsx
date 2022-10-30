@@ -125,7 +125,6 @@ function Main(props) {
 
           <NavBar />
           <div class="sidepattern">
-            {/* <img src={sidepattern} alt="sidepattern"></img> */}
           </div>
           <div class="outer-main">
             <div class="main">
