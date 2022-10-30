@@ -138,16 +138,16 @@ video{
 }
 
 .sidepattern{
-    position: sticky;
-    width: 44px;
-    margin-left: 10px;
-    margin-right: 20px;;
-    height: 100vh;
-    top: 0;
-    /* display: flex; */
-    float: right;
-    background-image: url("../../svgs/Super\ Side\ Pattern.svg");
+    background-image: url("../../svgs/Super\ Side\ Pattern\ \(1\).svg");
     background-size: 100% auto;
+    float: right;
+    height: 100vh;
+    margin-left: 10px;
+    margin-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 44px;
     z-index: 20;
 }
 
