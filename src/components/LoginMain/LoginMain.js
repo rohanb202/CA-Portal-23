@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stripes from "./stripes.svg";
 import logo from "./logo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-
+import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
 import LoaderCss from "./LoginMain.module.scss"
 
 function LoginMain() {
@@ -13,7 +13,12 @@ function LoginMain() {
   // const [email, setEmail] = useState("")
   // const [password, setPassword] = useState("")
   const [formData, setformData] = useState({email: "", password: ""})
-  let { loginUser } = useContext(AuthContext);
+  let { loginUser, clearTokens } = useContext(AuthContext);
+
+  useEffect(()=>{
+    // console.log("clearing tokens");
+    clearTokens();
+  },[])
 
   const handleChange = (e) => {
     setformData({...formData,[e.target.name]:e.target.value})
@@ -66,7 +71,7 @@ function LoginMain() {
                   "
                   required={true}/>
         </label>
-        <Link to="/ca/forgotpass" className="text-sm text-[#F74061]">
+        <Link to="/forgotpass" className="text-sm text-[#F74061]">
           Forgot password?
         </Link>
         <div className={LoaderCss.LoginBtnAndSpinner}>
@@ -97,6 +102,9 @@ function LoginMain() {
           <Link to="/ca/ambassador-apply"> Sign up</Link>
         </span>
         <Link to="/ca" className="text-sm text-[#F74061]">Back to Home Page</Link>
+        <p>{'( or )'}</p>
+        <LoginWithGoogle />
+
       </form>
     </div>
   );

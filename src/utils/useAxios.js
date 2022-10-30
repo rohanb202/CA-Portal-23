@@ -15,7 +15,7 @@ const useAxios = () => {
     let navigate = useNavigate()
     const controller = new AbortController();
 
-    const {authTokens, setTokenInfo, setAuthTokens, clearTokens} = useContext(AuthContext)
+    const {authTokens, setAuthTokens, clearTokens} = useContext(AuthContext)
 
     const axiosInstance = axios.create({
         baseURL,
@@ -55,7 +55,6 @@ const useAxios = () => {
                     });
 
                 setAuthTokens(response.data)
-                setTokenInfo(jwt_decode(response.data.access))
                 
                 req.headers.Authorization = `Bearer ${response.data.access}`
                 return req
@@ -95,7 +94,7 @@ const useAxios = () => {
 
                 // cancel the request which requires auth and redirect
                 controller.abort()
-                navigate("/ca/login")
+                navigate("/login")
             }
         }
         catch (error) {
@@ -115,7 +114,7 @@ const useAxios = () => {
 
             // cancel the request which requires auth and redirect
             controller.abort()
-            navigate("/ca/login")
+            navigate("/login")
         }
 
     })

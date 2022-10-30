@@ -3,6 +3,18 @@ import { useState, useEffect } from "react";
 import Aboutcss from "./about.module.css"
 import kylogo from "./kylogo.svg"
 import { Link } from "react-router-dom";
+import CountUp from 'react-countup';
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion,useAnimation } from "framer-motion";
+import peopleImg from "./img/Group.svg"
+import trophyImg from "./img/Trophy.svg"
+import hutImg from "./img/Frame.svg"
+
+const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
+    hidden: { opacity: 0, scale: 0 }
+};
 
 function Main(){
     const [navdisplay, setNavDisplay] = useState(0);
@@ -27,6 +39,34 @@ function Main(){
     
         return () => clearInterval(interval);
       }, []);
+
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+    const [startPeopleCount,setStartPeopleCount]=useState(0);
+    const [endPeopleCount,setEndPeopleCount]=useState(70000);
+    const [startHutCount,setStartHutCount]=useState(0);
+    const [endHutCount,setEndHutCount]=useState(350);
+    const [startTrophyCount,setStartTrophyCount]=useState(0);
+    const [endTrophyCount,setEndTrophyCount]=useState(60);
+    useEffect(() => {
+      if (inView) {
+        setStartPeopleCount(0);
+        setEndPeopleCount(70000)
+        setStartHutCount(0);
+        setEndHutCount(350)
+        setStartTrophyCount(0);
+        setEndTrophyCount(60)
+        control.start("visible");
+      } else {
+        setStartPeopleCount(0);
+        setEndPeopleCount(0)
+        setStartHutCount(0);
+        setEndHutCount(0)
+        setStartTrophyCount(0);
+        setEndTrophyCount(0)
+        control.start("hidden");
+      }
+    }, [control, inView]);
 
   function showNav() {
     document.getElementById("mobilenavdropdown").style.height = "100%";
@@ -137,13 +177,76 @@ function Main(){
 
                 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
-                <div className={Aboutcss.aboutContentImg1}></div>
-                <div className={Aboutcss.aboutContentImg2}></div>
-                <div className={Aboutcss.aboutContentImg3}></div>
-                <div className={Aboutcss.aboutContentMobileImg}>
-                <div className={Aboutcss.aboutContentMobileImg1}></div>
-                <div className={Aboutcss.aboutContentMobileImg2}></div>
-                <div className={Aboutcss.aboutContentMobileImg3}></div>
+                <div className="flex justify-evenly">
+                    {/* <div className={Aboutcss.aboutContentCard}> */}
+                <div className={Aboutcss.aboutContentCard}>
+                    <div className="flex justify-center">
+                        <div className={Aboutcss.aboutContentPeopleImg}>
+                            <img src={peopleImg} alt="people"/>
+                        </div>
+                    </div>
+                    <div>
+                    <motion.div ref={ref} initial="hidden" animate={control} variants={boxVariant}>
+                        <div>
+                        <CountUp start={startPeopleCount} end={endPeopleCount} >
+                          {({ countUpRef }) => (
+                            <div className={Aboutcss.aboutContentNumberSection}>
+                              <span className={Aboutcss.aboutContentNumber} ref={countUpRef} />
+                            </div>
+                          )}
+                        </CountUp>
+                        </div>
+                        
+                    </motion.div>
+                    <h5 className={Aboutcss.aboutContentSubHeading}>Footfall</h5>
+                    </div>
+                </div>
+                {/* </div> */}
+                
+                <div className={Aboutcss.aboutContentCard}>
+                    <div className="flex justify-center">
+                        <div className={Aboutcss.aboutContentHutImg}>
+                            <img src={hutImg} alt="people"/>
+                        </div>
+                    </div>
+                    <div>
+                    <motion.div ref={ref} initial="hidden" animate={control} variants={boxVariant}>
+                        <div>
+                        <CountUp start={startHutCount} end={endHutCount} >
+                          {({ countUpRef }) => (
+                            <div className={Aboutcss.aboutContentNumberSection}>
+                              <span className={Aboutcss.aboutContentNumber} ref={countUpRef} />
+                            </div>
+                          )}
+                        </CountUp>
+                        </div>
+                        
+                    </motion.div>
+                    <h5 className={Aboutcss.aboutContentSubHeading}>Colleges</h5>
+                    </div>
+                </div>
+                <div className={Aboutcss.aboutContentTrophyCard}>
+                    <div className="flex justify-center">
+                        <div className={Aboutcss.aboutContentTrophyImg}>
+                            <img src={trophyImg} alt="people"/>
+                        </div>
+                    </div>
+                    <div>
+                    <motion.div ref={ref} initial="hidden" animate={control} variants={boxVariant}>
+                        <div>
+                        <CountUp start={startTrophyCount} end={endTrophyCount} >
+                          {({ countUpRef }) => (
+                            <div className={Aboutcss.aboutContentNumberSection}>
+                              <span className={Aboutcss.aboutContentNumber} ref={countUpRef} />
+                            </div>
+                          )}
+                        </CountUp>
+                        </div>
+                        
+                    </motion.div>
+                    <h5 className={Aboutcss.aboutContentSubHeading}>Events</h5>
+                    </div>
+                </div>
                 </div>
             </div>
             

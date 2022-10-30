@@ -11,7 +11,7 @@ import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 
 function NavBar() {
-  let { userInfo, tokenInfo, logoutUser } = useContext(AuthContext);
+  let { userInfo, logoutUser } = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
@@ -45,23 +45,29 @@ function NavBar() {
         </div>
         <ul className="nav">
           <li onClick={closeNav}>
+            <Link to="/">
+              <span>Home</span>
+            </Link>
+          </li>
+          <li onClick={closeNav}>
             <Link to="/ca">
               <span>Dashboard</span>
             </Link>
           </li>
           {userInfo && (
             <li onClick={closeNav}>
-              <Link to="/ca/profile">
+              <Link to="/profile">
                 <span>Profile</span>
               </Link>
             </li>
           )}
-          <li>
-            <a href="/eventRegistration">
-              <span>Event Registration</span>
-            </a>
-          </li>
-          {tokenInfo !== null && (
+          <li onClick={closeNav}>
+              <Link to="/eventRegistration">
+                  <span>Event Registration</span>
+              </Link>
+          </li> 
+          {userInfo !== null && (
+
             <>
               <li onClick={closeNav}>
                 <Link to="/ca/leaderboard">
@@ -70,19 +76,19 @@ function NavBar() {
               </li>
             </>
           )}
-          {tokenInfo === null && (
+          {userInfo === null && (
             <>
               <li>
-                <Link onClick={closeNav} to="/ca/login">
+                <Link onClick={closeNav} to="/login">
                   <span>Login</span>
                 </Link>
               </li>
             </>
           )}
-          {tokenInfo && (
+          {userInfo && (
             <>
               <div class="logout">
-                <a href="/ca/#">
+                <Link to="/">
                   <span
                     onClick={() => {
                       closeNav();
@@ -91,7 +97,7 @@ function NavBar() {
                   >
                     Logout
                   </span>
-                </a>
+                </Link>
               </div>
             </>
           )}
@@ -109,23 +115,29 @@ function NavBar() {
           </div>
           <ul className="nav">
             <li>
+              <Link to="/">
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
               <Link to="/ca">
                 <span>Dashboard</span>
               </Link>
             </li>
             {userInfo && (
               <li>
-                <Link to="/ca/profile">
+                <Link to="/profile">
                   <span>Profile</span>
                 </Link>
               </li>
             )}
             <li>
-            <a href="/eventRegistration">
+            <Link to="/eventRegistration">
               <span>Event Registration</span>
-            </a>
+            </Link>
           </li>
-            {tokenInfo !== null && (
+            {userInfo !== null && (
+
               <>
                 <li>
                   <Link to="/ca/leaderboard">
@@ -134,21 +146,21 @@ function NavBar() {
                 </li>
               </>
             )}
-            {tokenInfo === null && (
+            {userInfo === null && (
               <>
                 <li>
-                  <Link to="/ca/login">
+                  <Link to="/login">
                     <span>Login</span>
                   </Link>
                 </li>
               </>
             )}
-            {tokenInfo && (
+            {userInfo && (
               <>
                 <div className="logout">
-                  <a href="/ca/#">
+                  <Link to="/">
                     <span onClick={logoutUser}>Logout</span>
-                  </a>
+                  </Link>
                 </div>
               </>
             )}
