@@ -26,7 +26,7 @@ AOS.init();
 // import homepattern from "./home.svg"
 
 function Main(props) {
-  let { userInfo } = useContext(AuthContext);
+  let { tokenInfo } = useContext(AuthContext);
 
   const [style, setStyle] = useState({});
   const [animeover, setAnimeover] = useState(0);
@@ -131,7 +131,7 @@ function Main(props) {
             <div class="main">
               <div class="top">
                 <div class="hello">
-                  Hello {userInfo && userInfo.full_name}!
+                  Hello {tokenInfo && tokenInfo.full_name}!
                 </div>
                 <div class="date">{`${dateNow.getDate()} ${
                   months[dateNow.getMonth()]
@@ -139,7 +139,7 @@ function Main(props) {
                 <div class="bottombar"></div>
               </div>
               <div class="center">
-                {userInfo === null && (
+                {tokenInfo === null && (
                   <>
                     <div class="center-top">
                       <img src={back} alt="back"></img>
