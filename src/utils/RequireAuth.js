@@ -20,7 +20,7 @@ function RequireAuth({ children }) {
     }
     return authTokens
       ? children
-      : <Navigate to="/login"/>;
+      : <Navigate to="/ca/login"/>;
   }
 
 export default RequireAuth
