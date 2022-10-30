@@ -71,7 +71,7 @@ function LoginMain() {
                   "
                   required={true}/>
         </label>
-        <Link to="/ca/forgotpass" className="text-sm text-[#F74061]">
+        <Link to="/forgotpass" className="text-sm text-[#F74061]">
           Forgot password?
         </Link>
         <div className={LoaderCss.LoginBtnAndSpinner}>

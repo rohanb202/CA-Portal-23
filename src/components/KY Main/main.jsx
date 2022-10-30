@@ -40,6 +40,7 @@ function Main(){
                     <li><Link to="/">TEAM</Link></li>
                     <li><Link to="/eventRegistration">EVENTS</Link></li>
                     <li><Link to="/">FAQ</Link></li>
+                    <li><Link to="/ca">CA</Link></li>
                 </ul>
             </div>
             <div className={Maincss.outernav}>
@@ -50,6 +51,7 @@ function Main(){
                             <li className={Maincss.navitem}><Link to="/">TEAM</Link></li>
                             <li className={Maincss.navitem}><Link to="/eventRegistration">EVENTS</Link></li>
                             <li className={Maincss.navitem}><Link to="/">FAQ</Link></li>
+                            <li className={Maincss.navitem}><Link to="/ca">CA</Link></li>
                         </ul>
                     </div>
                     <div className={Maincss.kyprofile}></div>

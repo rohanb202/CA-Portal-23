@@ -94,7 +94,7 @@ const useAxios = () => {
 
                 // cancel the request which requires auth and redirect
                 controller.abort()
-                navigate("/ca/login")
+                navigate("/login")
             }
         }
         catch (error) {
@@ -114,7 +114,7 @@ const useAxios = () => {
 
             // cancel the request which requires auth and redirect
             controller.abort()
-            navigate("/ca/login")
+            navigate("/login")
         }
 
     })
