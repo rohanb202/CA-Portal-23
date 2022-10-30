@@ -17,7 +17,7 @@ import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
 // import Login from './components/Login/Login';
-
+import EventRegistration from "./components/EventsRegistration/EventRegistration";
 // import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,6 +34,7 @@ function App() {
         <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />
         <Route path="/ca/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/ca/login" element={<LoginMain />} />
+        <Route path="/eventRegistration" element={<EventRegistration/>} />
         <Route path="/ca/forgotpass" element={<ForgotPass />} />
       </Routes>
     </>
