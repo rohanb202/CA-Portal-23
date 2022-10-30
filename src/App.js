@@ -33,16 +33,17 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Main />}></Route>
-        <Route path="/ca" element={<Home />}></Route>
-        <Route path="/ca/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
-        <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />
-        <Route path="/ca/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-        <Route path="/ca/login" element={<LoginMain />} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path="/login" element={<LoginMain />} />
         <Route path="/eventRegistration" element={<EventRegistration/>} />
-        <Route path="/ca/forgotpass" element={<ForgotPass />} />
+        <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
         <Route path="/test" element={<TestPage />} />
+        {/* CA Specific Pages */}
+        <Route path="/ca" element={<Home />}></Route>
+        <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />
+        <Route path="/ca/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
 
       </Routes>
     </>
