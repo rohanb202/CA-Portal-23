@@ -5,7 +5,7 @@ import kylogo from "./kylogo.svg"
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { motion,useAnimation } from "framer-motion";
 import peopleImg from "./img/Group.svg"
 import trophyImg from "./img/Trophy.svg"
