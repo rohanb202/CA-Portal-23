@@ -11,7 +11,7 @@ import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 
 function NavBar() {
-  let { userInfo, tokenInfo, logoutUser } = useContext(AuthContext);
+  let { userInfo, logoutUser } = useContext(AuthContext);
 
   const [navdisplay, setNavDisplay] = useState(0);
 
@@ -60,8 +60,9 @@ function NavBar() {
             <a href="/eventRegistration">
               <span>Event Registration</span>
             </a>
-          </li>
-          {tokenInfo !== null && (
+          </li> 
+          {userInfo !== null && (
+
             <>
               <li onClick={closeNav}>
                 <Link to="/ca/leaderboard">
@@ -70,7 +71,7 @@ function NavBar() {
               </li>
             </>
           )}
-          {tokenInfo === null && (
+          {userInfo === null && (
             <>
               <li>
                 <Link onClick={closeNav} to="/ca/login">
@@ -79,7 +80,7 @@ function NavBar() {
               </li>
             </>
           )}
-          {tokenInfo && (
+          {userInfo && (
             <>
               <div class="logout">
                 <a href="/ca/#">
@@ -125,7 +126,8 @@ function NavBar() {
               <span>Event Registration</span>
             </a>
           </li>
-            {tokenInfo !== null && (
+            {userInfo !== null && (
+
               <>
                 <li>
                   <Link to="/ca/leaderboard">
@@ -134,7 +136,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {tokenInfo === null && (
+            {userInfo === null && (
               <>
                 <li>
                   <Link to="/ca/login">
@@ -143,7 +145,7 @@ function NavBar() {
                 </li>
               </>
             )}
-            {tokenInfo && (
+            {userInfo && (
               <>
                 <div className="logout">
                   <a href="/ca/#">
