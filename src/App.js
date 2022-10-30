@@ -25,6 +25,7 @@ import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
 import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
 import TestPage from "./Pages/TestPage";
+import Signup from "./components/Signup/signup";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Main />}></Route>
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/eventRegistration" element={<EventRegistration/>} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
