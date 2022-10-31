@@ -22,7 +22,6 @@ function Signup(){
     async function handleSubmit(e) {
         e.preventDefault();
 
-        setRequesting(true);
         // await loginUser(formData.email, formData.password);
         if(isNaN(formData.year)){
             alert("Year must be a number!");
@@ -33,9 +32,11 @@ function Signup(){
             return;
         }
 
-        if(formData.pass2 === formData.confirm_password){
+        setRequesting(true);
+
+        if(formData.pass2 === formData.confirm_pass){
             axios.post(
-              `${REACT_APP_BASE_BACKEND_URL}/create_user/`,formData,{
+              `${REACT_APP_BASE_BACKEND_URL}/email_reg/`,formData,{
               headers: {
                 'Content-Type':'application/json'
             }})
@@ -108,7 +109,7 @@ function Signup(){
           </div>
         <div className={LoaderCss.main}>
     
-          <form onSubmit={handleSubmit} className="flex flex-col space-y-5 justify-center items-center px-10 w-[100%]">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-5 mb-20 justify-center items-center px-10 w-[100%]">
             <img src={logo} alt="" className="w-2/3 min-w-[18rem]" />
     
             <label className="block w-6/12 min-w-[15rem]">
@@ -126,7 +127,7 @@ function Signup(){
                 type="text" 
                 onChange={handleChange}
                 className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
-                name="full_name"
+                name="name"
                 placeholder="" required={true}/>
             </label>
             <label className="block w-6/12 min-w-[15rem]">
@@ -818,7 +819,7 @@ function Signup(){
                 type="tel" 
                 onChange={handleChange}
                 className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
-                name="mobile"
+                name="mobile_number"
                 placeholder="" required={true}/>
             </label>
             <label className="block w-6/12 min-w-[15rem]">
@@ -828,13 +829,13 @@ function Signup(){
                 onChange={handleChange}
                 className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
                 name="ref"
-                placeholder="" required={true}/>
+                placeholder="" required={false}/>
             </label>
             <label className="block  w-6/12 min-w-[15rem]">
               <span className="text-gray-700">Password</span>
               <input
                 type="password" 
-                name="password1" 
+                name="pass2" 
                 onChange={handleChange}
                 className="
                         mt-1
@@ -851,7 +852,7 @@ function Signup(){
               <span className="text-gray-700">Confirm Password</span>
               <input
                 type="password" 
-                name="password2" 
+                name="confirm_pass" 
                 onChange={handleChange}
                 className="
                         mt-1
@@ -864,16 +865,14 @@ function Signup(){
                       "
                       required={true}/>
             </label>
-            {/* <Link to="/forgotpass" className="text-sm text-[#F74061]">
-              Forgot password?
-            </Link> */}
+
             <div className={LoaderCss.LoginBtnAndSpinner}>
               { !requesting &&
                 <>
             <button
                 id="register"
               type="submit"
-              className="bg-[#F74061] rounded-lg w-36 mb-20 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
+              className="bg-[#F74061] rounded-lg w-36 my-5 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
             >
               Register
             </button>
@@ -890,14 +889,8 @@ function Signup(){
                   <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_08}></div>
                 </div>
             </div>
-            
-            {/* <span className="text-sm text-[#F74061]">
-              <span className="text-[#F79840]">Don't have an account?</span>
-              <Link to="/ca/ambassador-apply"> Sign up</Link>
-            </span>
-            <Link to="/ca" className="text-sm text-[#F74061]">Back to Home Page</Link>
-            <p>{'( or )'}</p>
-            <LoginWithGoogle /> */}
+
+            <Link to="/login" className="text-sm text-[#F74061]">Back to Login Page</Link>
     
           </form>
         </div>
