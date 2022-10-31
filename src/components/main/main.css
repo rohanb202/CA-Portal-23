@@ -133,7 +133,7 @@ video{
     flex-grow:0;
     flex-shrink: 0;
     height: auto;
-    padding: 10px;;
+    padding: 20px;;
     /* width: auto; */
 }
 
@@ -425,6 +425,10 @@ color: #06122E;
     .outer-main{
         margin-left:234px;
     }
+
+    .responsibilitiesAsCampusAmbassadorMob{
+        display: none;
+    }
 }
 @media screen and (max-width: 700px) {
     .kashiyatra{
@@ -481,8 +485,13 @@ color: #06122E;
     .sidepattern{
         margin-right: 10px;;
     }
+
+    .responsibilitiesAsCampusAmbassadorMob{
+        margin-top: -30px;
+    }
     .responsibilitiesAsCampusAmbassador{
-        display: grid;
+        display: none;
+        /* display: grid; */
         grid-template-columns: auto ;
     }
     .responsibilitiesAsCampusAmbassadorColumn{
@@ -491,7 +500,6 @@ color: #06122E;
     .responsibilitiesAsCampusAmbassadorHeading{
         font-size: 1.2rem;
     }
-
 }
 @media screen and (max-width: 400px) {
     .kashiyatra{
@@ -514,7 +522,7 @@ color: #06122E;
         font-size: 15px;;
     }
     .responsibilitiesAsCampusAmbassador{
-        display: grid;
+        display: none;
         grid-template-columns: auto ;
     }
     .responsibilitiesAsCampusAmbassadorColumn{

@@ -95,7 +95,7 @@ text-transform: capitalize;
     top: 0;
     display: flex;
     height: 80px;
-    z-index: 20;
+    z-index: 40;
     background: #098770;
 }
 

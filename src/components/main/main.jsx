@@ -268,6 +268,45 @@ function Main(props) {
                     "
                     ></img>
                   </div>
+                  
+                </div>
+                <div className="responsibilitiesAsCampusAmbassadorMob">
+                  <div className="responsibilitiesAsCampusAmbassadorColumn">
+                    <div className="responsibilitiesAsCampusAmbassadorHeading">
+                      Represent
+                    </div>
+                    <div className="responsibilitiesAsCampusAmbassadorContent">
+                      Represent and exemplify Kashiyatra in your college
+                      among your peers.
+                    </div>
+                  </div>
+                  <div className="responsibilitiesAsCampusAmbassadorColumn">
+                    <div className="responsibilitiesAsCampusAmbassadorHeading">
+                      Publicize
+                    </div>
+                    <div className="responsibilitiesAsCampusAmbassadorContent">
+                      Promote Kashiyatra by publicizing its events through
+                      social media platforms.
+                    </div>
+                  </div>
+                  <div className="responsibilitiesAsCampusAmbassadorColumn">
+                    <div className="responsibilitiesAsCampusAmbassadorHeading">
+                      Conceptualize
+                    </div>
+                    <div className="responsibilitiesAsCampusAmbassadorContent">
+                      Bring forth ideas and proposals as valuable input
+                      for team Kashiyatra.
+                    </div>
+                  </div>
+                  <div className="responsibilitiesAsCampusAmbassadorColumn">
+                    <div className="responsibilitiesAsCampusAmbassadorHeading">
+                      Organize
+                    </div>
+                    <div className="responsibilitiesAsCampusAmbassadorContent">
+                      Conduct workshops and promotional events in your
+                      college for Kashiyatra.
+                    </div>
+                  </div>
                 </div>
                 {props.children}
               </div>
