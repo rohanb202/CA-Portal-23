@@ -45,11 +45,11 @@ function Main() {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const [startPeopleCount, setStartPeopleCount] = useState(0);
-  const [endPeopleCount, setEndPeopleCount] = useState(70000);
+  const [endPeopleCount, setEndPeopleCount] = useState(0);
   const [startHutCount, setStartHutCount] = useState(0);
-  const [endHutCount, setEndHutCount] = useState(350);
+  const [endHutCount, setEndHutCount] = useState(0);
   const [startTrophyCount, setStartTrophyCount] = useState(0);
-  const [endTrophyCount, setEndTrophyCount] = useState(60);
+  const [endTrophyCount, setEndTrophyCount] = useState(0);
   useEffect(() => {
     if (inView) {
       setStartPeopleCount(0);
@@ -60,13 +60,9 @@ function Main() {
       setEndTrophyCount(60);
       control.start("visible");
     } else {
-      setStartPeopleCount(0);
-      setEndPeopleCount(0);
-      setStartHutCount(0);
-      setEndHutCount(0);
-      setStartTrophyCount(0);
-      setEndTrophyCount(0);
-      control.start("hidden");
+      // setStartPeopleCount(0);
+      // setEndPeopleCount(0);
+      // control.start("hidden");
     }
   }, [control, inView]);
 
