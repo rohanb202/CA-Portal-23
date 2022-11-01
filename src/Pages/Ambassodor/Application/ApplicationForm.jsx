@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import './ApplicationForm.css';
 import axios from 'axios';
 // import Sidebar from '../../../components/Sidebar';
@@ -6,13 +6,48 @@ import FormFrame from './SVG/FormFrame.svg';
 import NavBar from '../../../components/navbar/navbar';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import AuthContext from '../../../context/AuthContext';
 
 const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 function Ambassador() {
-  const [formData, setformData] = useState({})
+  const [formData, setformData] = useState({
+    email:"",
+    name:"",
+    gender:"",
+    college:"",
+    year:"",
+    mobile_number:"",
+    whatsapp_number:"",
+    postal_address:"",
+    pincode:"",
+    pass2:"",
+    confirm_password:"",
+    reason:"",
+  })
   const [requesting, setRequesting] = useState(false)
   const navigator = useNavigate();
+
+  const { userInfo } = useContext(AuthContext);
+
+  useEffect(() => {
+    if( userInfo ){
+      if(userInfo.hasCA){
+        navigator("/ca/leaderboard");
+      } else {
+        setformData({
+          ...formData,
+          "email": userInfo.email,
+          "name":userInfo.name,
+          "gender":userInfo.gender,
+          "college":userInfo.college,
+          "year":userInfo.year,
+          "mobile_number":userInfo.mobile_number,
+        })
+      }
+    }
+  }, [])
+  
 
   const handleChange = (e) => {
     setformData({...formData,[e.target.name]:e.target.value})
@@ -20,7 +55,7 @@ function Ambassador() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    
     if(isNaN(formData.year)){
       alert("Year must be a number!");
       return;
@@ -124,15 +159,15 @@ function Ambassador() {
               <form onSubmit={handleSubmit}>
                 <div className="element">
                   <label htmlFor="email">E-Mail:</label>
-                  <input type="text" name='email' onChange={handleChange} placeholder="Email" required={true}/>
+                  <input type="text" name='email' onChange={handleChange} placeholder="Email" value={formData.email} disabled={userInfo?true:false} required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="name">Name:</label>
-                  <input type="text" name='name' onChange={handleChange} placeholder="Name" required={true}/>
+                  <input type="text" name='name' onChange={handleChange} placeholder="Name" value={formData.name} disabled={userInfo?true:false} required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="Gender">Gender:</label>
-                  <input name="gender" placeholder="Gender" list="genders" onChange={handleChange} required={true}/>
+                  <input name="gender" placeholder="Gender" list="genders" onChange={handleChange} value={formData.gender} disabled={userInfo?true:false} required={true}/>
                   <datalist id="genders">
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -141,7 +176,7 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="College">College:</label>
-                  <input type="text" id="id_college" name="college" placeholder="College" list="all_colleges" onChange={handleChange} required={true}/>
+                  <input type="text" id="id_college" name="college" placeholder="College" list="all_colleges" onChange={handleChange} disabled={userInfo?true:false} value={formData.college} required={true}/>
                     <datalist id="all_colleges">
                       <option value="AAA COLLEGE OF ENGINEERING AND TECHNOLOGY">AAA COLLEGE OF ENGINEERING AND TECHNOLOGY</option>
                       <option value="AARVAVART INSTITUTE OF TECHNOLOGY AND MANAGEMENT, LUCKNOW">AARVAVART INSTITUTE OF TECHNOLOGY AND MANAGEMENT, LUCKNOW</option>
@@ -789,7 +824,7 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="year">Year</label>
-                  <input name="year" placeholder="Year" list="years" onChange={handleChange} required={true}/>
+                  <input name="year" placeholder="Year" list="years" onChange={handleChange} value={formData.year} disabled={userInfo?true:false} required={true}/>
                   <datalist id="years">
                     <option value="1">First</option>
                     <option value="2">Second</option>
@@ -800,33 +835,33 @@ function Ambassador() {
                 </div>
                 <div className="element">
                   <label htmlFor="mobile_number">Mobile Number:</label>
-                  <input type="tel" name="mobile_number" placeholder="Mobile Number" onChange={handleChange} required={true}/>
+                  <input type="tel" name="mobile_number" placeholder="Mobile Number" onChange={handleChange} value={formData.mobile_number} disabled={userInfo?true:false} required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="whatsapp_number">Whatsapp Number:</label>
-                  <input type="tel" name="whatsapp_number" placeholder="Whatsapp Number" onChange={handleChange} required={true}/>
+                  <input type="tel" name="whatsapp_number" placeholder="Whatsapp Number" onChange={handleChange} value={formData.whatsapp_number} required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="postal_address">postal address:</label>
                   {/* <input type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true}/> */}
-                  <textarea maxLength={500} type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true} rows={3}/>
+                  <textarea maxLength={500} type="text" name='postal_address' onChange={handleChange} value={formData.postal_address} placeholder="Address" required={true} rows={3}/>
                 </div>
                 <div className="element">
                   <label htmlFor="pincode">pincode:</label>
-                  <input type="text" name='pincode' onChange={handleChange} placeholder="Pincode" required={true}/>
+                  <input type="text" name='pincode' onChange={handleChange} placeholder="Pincode" value={formData.pincode} required={true}/>
                 </div>
                 <div className="element">
                   <label htmlFor="pass2">Password:</label>
-                  <input type="password" name='pass2' onChange={handleChange} placeholder="Password" required={true} minLength={8}/>
+                  <input type="password" name='pass2' onChange={handleChange} placeholder="Password" value={formData.pass2} disabled={userInfo?true:false} required={true} minLength={8}/>
                 </div>
                 <div className="element">
                   <label htmlFor="confirm_password">Confirm Password:</label>
-                  <input type="password" name='confirm_password' placeholder="Confirm password" onChange={handleChange} required={true} minLength={8}/>
+                  <input type="password" name='confirm_password' placeholder="Confirm password" onChange={handleChange} value={formData.confirm_password} disabled={userInfo?true:false} required={true} minLength={8}/>
                 </div>
                 <div className="element">
                   <label htmlFor="reason">reason:</label>
                   {/* <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/> */}
-                  <textarea maxLength={500} type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
+                  <textarea maxLength={500} type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} value={formData.reason} required={true} rows={3}/>
                 </div>
                 {
                   requesting ? 
