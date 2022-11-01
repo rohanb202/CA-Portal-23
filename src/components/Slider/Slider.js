@@ -11,13 +11,10 @@ const Slider = () => {
       image: require("./images/Rectangle121.jpg"),
     },
     {
-      image: require("./images/Rectangle121.jpg"),
+      image: require("./images/imagea.jpg"),
     },
     {
-      image: require("./images/Rectangle121.jpg"),
-    },
-    {
-      image: require("./images/Rectangle121.jpg"),
+      image: require("./images/imageb.jpg"),
     },
   ];
 
