@@ -199,12 +199,12 @@ function Main() {
                 </div>
               </div>
               <div>
-                <motion.div
-                  ref={ref}
-                  initial="hidden"
-                  animate={control}
-                  variants={boxVariant}
-                >
+//                 <motion.div
+//                   ref={ref}
+//                   initial="hidden"
+//                   animate={control}
+//                   variants={boxVariant}
+//                 >
                   <div>
                     <CountUp start={startPeopleCount} end={endPeopleCount}>
                       {({ countUpRef }) => (
@@ -217,7 +217,7 @@ function Main() {
                       )}
                     </CountUp>
                   </div>
-                </motion.div>
+//                 </motion.div>
                 <h5 className={Aboutcss.aboutContentSubHeading}>Footfall</h5>
               </div>
             </div>
@@ -230,12 +230,12 @@ function Main() {
                 </div>
               </div>
               <div>
-                <motion.div
-                  ref={ref}
-                  initial="hidden"
-                  animate={control}
-                  variants={boxVariant}
-                >
+//                 <motion.div
+//                   ref={ref}
+//                   initial="hidden"
+//                   animate={control}
+//                   variants={boxVariant}
+//                 >
                   <div>
                     <CountUp start={startHutCount} end={endHutCount}>
                       {({ countUpRef }) => (
@@ -248,7 +248,7 @@ function Main() {
                       )}
                     </CountUp>
                   </div>
-                </motion.div>
+//                 </motion.div>
                 <h5 className={Aboutcss.aboutContentSubHeading}>Colleges</h5>
               </div>
             </div>
@@ -259,12 +259,12 @@ function Main() {
                 </div>
               </div>
               <div>
-                <motion.div
-                  ref={ref}
-                  initial="hidden"
-                  animate={control}
-                  variants={boxVariant}
-                >
+//                 <motion.div
+//                   ref={ref}
+//                   initial="hidden"
+//                   animate={control}
+//                   variants={boxVariant}
+//                 >
                   <div>
                     <CountUp start={startTrophyCount} end={endTrophyCount}>
                       {({ countUpRef }) => (
@@ -277,7 +277,7 @@ function Main() {
                       )}
                     </CountUp>
                   </div>
-                </motion.div>
+//                 </motion.div>
                 <h5 className={Aboutcss.aboutContentSubHeading}>Events</h5>
               </div>
             </div>
