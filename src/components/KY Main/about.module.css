@@ -16,11 +16,22 @@
     padding-left: 3px;
     padding-right: 3px;
 }
+.aboutSliderHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
 .aboutBorder1{
     padding: 10px;
     background-repeat: no-repeat;
     width: 70px;
     background-image: url("img/Vector\ \(2\).svg");
+}
+.aboutBorder3{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("img/slider1.svg");
 }
 .aboutBorder2{
     padding: 10px;
@@ -29,6 +40,14 @@
     display: flex;
     justify-content: end;
     background-image: url("img/Vector\ \(1\).svg");
+}
+.aboutBorder4{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("img/slider2.svg");
 }
 .aboutContent{
     display: grid;
