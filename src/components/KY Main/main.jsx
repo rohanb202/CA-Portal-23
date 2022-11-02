@@ -105,6 +105,9 @@ function Main() {
             <li>
               <Link to="/">FAQ</Link>
             </li>
+            <li>
+              <Link to="/ca">CA</Link>
+            </li>
           </ul>
         </div>
         <div className={Maincss.outernav}>
@@ -123,6 +126,9 @@ function Main() {
                 <li className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
                 </li>
+                <li className={Maincss.navitem}>
+                <Link to="/ca">CA</Link>
+              </li>
               </ul>
             </div>
             <div className={Maincss.kyprofile}></div>
@@ -150,7 +156,7 @@ function Main() {
             </div>
           </div>
           <div className={Maincss.register}>
-            <button className={Maincss.kyregister}>Register Now</button>
+            <Link to="/login"><button className={Maincss.kyregister}>Register Now</button></Link>
           </div>
         </div>
       </div>
