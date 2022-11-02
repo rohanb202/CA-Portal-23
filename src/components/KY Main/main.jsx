@@ -40,13 +40,13 @@ function Main() {
     setSeconds(Math.floor((time / 1000) % 60));
   };
 
-  useEffect(() => {
-    if(userInfo && userInfo.hasCA){
-      navigate("/ca/leaderboard")
-    } else {
-      navigate("/ca");
-    }
-  }, [])
+  // useEffect(() => {
+  //   if(userInfo && userInfo.ca_id){
+  //     navigate("/ca/leaderboard")
+  //   } else {
+  //     navigate("/ca");
+  //   }
+  // }, [])
   
   useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
