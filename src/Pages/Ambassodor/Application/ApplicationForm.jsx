@@ -29,7 +29,7 @@ function Ambassador() {
   const [requesting, setRequesting] = useState(false)
   const navigator = useNavigate();
 
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, authTokens } = useContext(AuthContext);
   const axiosPrivate = useAxiosPrivate();
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function Ambassador() {
     setformData({...formData,[e.target.name]:e.target.value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     
     if(isNaN(formData.year)){
@@ -81,52 +81,64 @@ function Ambassador() {
     setRequesting(true)
     console.log(formData)
     if(formData.pass2 === formData.confirm_password){
-      axiosPrivate.post(
-        `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
-        headers: {
-          'Content-Type':'application/json'
-      }})
-      .then((response) => {
-        if (response.status === 201){
-          toast.success(response.data.msg, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-          navigator("/ca")
-        } 
-        else if (response.status === 406){
-          toast.error(response.data.msg, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        } 
-        else if (response.status === 226){
-          toast.error(response.data.msg, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        }
-        setRequesting(false)
-      })
-      .catch((error) => {
+      
+      try {
+      let response = {}
+      if(userInfo) {
+          response = await axiosPrivate.post(
+          `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
+          headers: {
+            'Content-Type':'application/json',
+        }})
+      }
+      else {
+          response = await axios.post(
+          `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
+          headers: {
+            'Content-Type':'application/json',
+        }})
+      }
+      
+      if (response.status === 201){
+        toast.success(response.data.msg, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigator("/ca")
+      } 
+      else if (response.status === 406){
+        toast.error(response.data.msg, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } 
+      else if (response.status === 226){
+        toast.error(response.data.msg, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+      setRequesting(false)
+    }
+      catch(error) {
         toast.error('Server Error! Try again later.', {
           position: "top-center",
           autoClose: 3000,
@@ -139,8 +151,9 @@ function Ambassador() {
           });
         
           setRequesting(false)
-      })
-    } else{
+      }
+    } 
+    else{
       alert("password and confirm password should be same")
       setRequesting(false)
     }
