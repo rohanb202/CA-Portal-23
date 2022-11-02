@@ -79,7 +79,7 @@ function Ambassador() {
 
 
     setRequesting(true)
-    console.log(formData)
+    // console.log(formData)
     if(formData.pass2 === formData.confirm_password){
       
       try {
