@@ -1,10 +1,10 @@
 import Maincss from "./main.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import Aboutcss from "./about.module.css";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
@@ -12,6 +12,7 @@ import { motion, useAnimation } from "framer-motion";
 import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
 import hutImg from "./img/Frame.svg";
+import AuthContext from "../../context/AuthContext";
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
@@ -25,6 +26,9 @@ function Main() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
+  const { userInfo } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const deadline = "January, 20, 2023";
 
   const getTime = () => {
@@ -36,6 +40,14 @@ function Main() {
     setSeconds(Math.floor((time / 1000) % 60));
   };
 
+  // useEffect(() => {
+  //   if(userInfo && userInfo.ca_id){
+  //     navigate("/ca/leaderboard")
+  //   } else {
+  //     navigate("/ca");
+  //   }
+  // }, [])
+  
   useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
 

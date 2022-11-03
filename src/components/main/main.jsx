@@ -139,7 +139,7 @@ function Main(props) {
                 <div class="bottombar"></div>
               </div>
               <div class="center">
-                {userInfo === null && (
+                {(userInfo === null || userInfo?.ca_id == null) && (
                   <>
                     <div class="center-top">
                       <img src={back} alt="back"></img>
