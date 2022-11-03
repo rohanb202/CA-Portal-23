@@ -1,201 +1,158 @@
-import React, { useState,useEffect,useContext } from 'react';
-import './ApplicationForm.css';
-import axios from 'axios';
-// import Sidebar from '../../../components/Sidebar';
-import FormFrame from './SVG/FormFrame.svg';
-import NavBar from '../../../components/navbar/navbar';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import stripes from "./stripes.svg";
+import logo from "./logo.svg";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
+import { Link } from "react-router-dom";
+import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
+import LoaderCss from "./signup.module.scss"
 import { toast } from 'react-toastify';
-import AuthContext from '../../../context/AuthContext';
-import useAxiosPrivate from '../../../utils/useAxiosPrivate';
+import axios from 'axios';
 
 const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
-function Ambassador() {
-  const [formData, setformData] = useState({
-    email:"",
-    name:"",
-    gender:"",
-    college:"",
-    year:"",
-    mobile_number:"",
-    whatsapp_number:"",
-    postal_address:"",
-    pincode:"",
-    pass2:"",
-    confirm_password:"",
-    reason:"",
-  })
-  const [requesting, setRequesting] = useState(false)
-  const navigator = useNavigate();
+function Signup(){
+    const [requesting, setRequesting] = useState(false);
+    const [formData, setformData] = useState({})
 
-  const { userInfo, authTokens } = useContext(AuthContext);
-  const axiosPrivate = useAxiosPrivate();
-
-  useEffect(() => {
-    if( userInfo ){
-      if(userInfo.ca_id){
-        navigator("/ca/leaderboard");
-      } else {
-        setformData({
-          ...formData,
-          "email": userInfo.email,
-          "name":userInfo.full_name,
-          "gender":userInfo.gender,
-          "college":userInfo.college,
-          "year":userInfo.year,
-          "mobile_number":userInfo.mobile_number,
-          "pass2": "password",
-          "confirm_password": "password"
-        })
-      }
+    const handleChange = (e) => {
+        setformData({...formData,[e.target.name]:e.target.value})
     }
-  }, [])
-  
-
-  const handleChange = (e) => {
-    setformData({...formData,[e.target.name]:e.target.value})
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
     
-    if(isNaN(formData.year)){
-      alert("Year must be a number!");
-      return;
-    }
-    if(isNaN(formData.mobile_number)){
-      alert("Mobile Number must be a number!");
-      return;
-    }
-    if(isNaN(formData.whatsapp_number)){
-      alert("Whatsapp number must be a number!");
-      return;
-    }
-    if(isNaN(formData.pincode)){
-      alert("Pincode must be a number!");
-      return;
-    }
+    async function handleSubmit(e) {
+        e.preventDefault();
 
+        // await loginUser(formData.email, formData.password);
+        if(isNaN(formData.year)){
+            alert("Year must be a number!");
+            return;
+        }
+        if(isNaN(formData.mobile_number)){
+            alert("Mobile Number must be a number!");
+            return;
+        }
 
-    setRequesting(true)
-    // console.log(formData)
-    if(formData.pass2 === formData.confirm_password){
-      
-      try {
-      let response = {}
-      if(userInfo) {
-          response = await axiosPrivate.post(
-          `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
-          headers: {
-            'Content-Type':'application/json',
-        }})
-      }
-      else {
-          response = await axios.post(
-          `${REACT_APP_BASE_BACKEND_URL}/create_ca/`,formData,{
-          headers: {
-            'Content-Type':'application/json',
-        }})
-      }
-      
-      if (response.status === 201){
-        toast.success(response.data.msg, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-        navigator("/ca")
-      } 
-      else if (response.status === 406){
-        toast.error(response.data.msg, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      } 
-      else if (response.status === 226){
-        toast.error(response.data.msg, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-      setRequesting(false)
+        setRequesting(true);
+
+        if(formData.pass2 === formData.confirm_pass){
+            axios.post(
+              `${REACT_APP_BASE_BACKEND_URL}/email_reg/`,formData,{
+              headers: {
+                'Content-Type':'application/json'
+            }})
+            .then((response) => {
+              if (response.status === 201){
+                toast.success(response.data.msg, {
+                  position: "top-center",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+                navigator("/ca")
+              } 
+              else if (response.status === 406){
+                toast.error(response.data.msg, {
+                  position: "top-center",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+              } 
+              else if (response.status === 226){
+                toast.error(response.data.msg, {
+                  position: "top-center",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+              }
+              setRequesting(false)
+            })
+            .catch((error) => {
+              toast.error('Server Error! Try again later.', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+              
+                setRequesting(false)
+            })
+          } else{
+            alert("password and confirm password should be same")
+            setRequesting(false)
+          }
+          // setRequesting(false);
     }
-      catch(error) {
-        toast.error('Server Error! Try again later.', {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          });
-        
-          setRequesting(false)
-      }
-    } 
-    else{
-      alert("password and confirm password should be same")
-      setRequesting(false)
-    }
-  }
-
-  return (
-    <>
-      <NavBar />
-      <div className="flex flex-shrink-0">
-        <div className="main-application flex flex-col w-[100%]">
-          <div className="form-frame">
-          <img 
-              src={FormFrame} 
-              alt="Frame" />
-          <div className="svg">
-
+    
+    return (
+        <>
+        <div className={LoaderCss.sidestrips}>
+            <img src={stripes} alt="" className="object-cover h-screen" />
+            {/* <div className="h-screen bgStripes"></div> */}
           </div>
-          <div className="main-form">
-            <div className="form">
-              <h3>Campus Ambassador Application</h3>
-              <form onSubmit={handleSubmit}>
-                <div className="element">
-                  <label htmlFor="email">E-Mail:</label>
-                  <input type="text" name='email' onChange={handleChange} placeholder="Email" value={userInfo?userInfo.email:null} disabled={userInfo?true:false} required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="name">Name:</label>
-                  <input type="text" name='name' onChange={handleChange} placeholder="Name" value={userInfo?userInfo.full_name:null} disabled={userInfo?true:false} required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="Gender">Gender:</label>
-                  <input name="gender" placeholder="Gender" list="genders" onChange={handleChange} value={userInfo?userInfo.gender:null} disabled={userInfo?true:false} required={true}/>
-                  <datalist id="genders">
+        <div className={LoaderCss.main}>
+    
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-5 mb-20 justify-center items-center px-10 w-[100%]">
+            <img src={logo} alt="" className="w-2/3 min-w-[18rem]" />
+    
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Email ID</span>
+              <input
+                type="email" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="email"
+                placeholder="" required={true}/>
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Full Name</span>
+              <input
+                type="text" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="name"
+                placeholder="" required={true}/>
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Gender</span>
+              <input
+                type="text" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="gender"
+                placeholder="" list="genders" required={true}/>
+                <datalist id="genders">
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                   </datalist>
-                </div>
-                <div className="element">
-                  <label htmlFor="College">College:</label>
-                  <input type="text" id="id_college" name="college" placeholder="College" list="all_colleges" onChange={handleChange} disabled={userInfo?true:false} value={userInfo?userInfo.college:null} required={true}/>
-                    <datalist id="all_colleges">
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">College</span>
+              <input
+                type="text" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="college"
+                placeholder="" list="all_colleges" required={true}/>
+                <datalist id="all_colleges">
                       <option value="AAA COLLEGE OF ENGINEERING AND TECHNOLOGY">AAA COLLEGE OF ENGINEERING AND TECHNOLOGY</option>
                       <option value="AARVAVART INSTITUTE OF TECHNOLOGY AND MANAGEMENT, LUCKNOW">AARVAVART INSTITUTE OF TECHNOLOGY AND MANAGEMENT, LUCKNOW</option>
                       <option value="ABES ENGINEERING COLLEGE, GHAZIABAD">ABES ENGINEERING COLLEGE, GHAZIABAD</option>
@@ -839,62 +796,106 @@ function Ambassador() {
                       <option value='IIIT Pune' >IIIT Pune</option>
                       <option value='IIIT Ranchi' >IIIT Ranchi</option>
                     </datalist>
-                </div>
-                <div className="element">
-                  <label htmlFor="year">Year</label>
-                  <input name="year" placeholder="Year" list="years" onChange={handleChange} value={userInfo?userInfo.year:null} disabled={userInfo?true:false} required={true}/>
-                  <datalist id="years">
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Year</span>
+              <input
+                type="text" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="year"
+                placeholder="" list="years" required={true}/>
+                <datalist id="years">
                     <option value="1">First</option>
                     <option value="2">Second</option>
                     <option value="3">Third</option>
                     <option value="4">Fourth</option>
                     <option value="5">Fifth</option>
                   </datalist>
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Mobile Number</span>
+              <input
+                type="tel" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="mobile_number"
+                placeholder="" required={true}/>
+            </label>
+            <label className="block w-6/12 min-w-[15rem]">
+              <span className="text-gray-700 whitespace-nowrap">Referral Code</span>
+              <input
+                type="text" 
+                onChange={handleChange}
+                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
+                name="ref"
+                placeholder="" required={false}/>
+            </label>
+            <label className="block  w-6/12 min-w-[15rem]">
+              <span className="text-gray-700">Password</span>
+              <input
+                type="password" 
+                name="pass2" 
+                onChange={handleChange}
+                className="
+                        mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                      "
+                      required={true}/>
+            </label>
+            <label className="block  w-6/12 min-w-[15rem]">
+              <span className="text-gray-700">Confirm Password</span>
+              <input
+                type="password" 
+                name="confirm_pass" 
+                onChange={handleChange}
+                className="
+                        mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                      "
+                      required={true}/>
+            </label>
+
+            <div className={LoaderCss.LoginBtnAndSpinner}>
+              { !requesting &&
+                <>
+            <button
+                id="register"
+              type="submit"
+              className="bg-[#F74061] rounded-lg w-36 my-5 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
+            >
+              Register
+            </button>
+                </>
+              }
+            <div className={(!requesting)?LoaderCss.preloaderFloatingCirclesDisappear:LoaderCss.preloaderFloatingCircles}>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_01}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_02}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_03}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_04}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_05}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_06}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_07}></div>
+                  <div className={LoaderCss.fCircleG} id={LoaderCss.frotateG_08}></div>
                 </div>
-                <div className="element">
-                  <label htmlFor="mobile_number">Mobile Number:</label>
-                  <input type="tel" name="mobile_number" placeholder="Mobile Number" onChange={handleChange} value={userInfo?userInfo.mobile_number:null} disabled={userInfo?true:false} required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="whatsapp_number">Whatsapp Number:</label>
-                  <input type="tel" name="whatsapp_number" placeholder="Whatsapp Number" onChange={handleChange} required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="postal_address">postal address:</label>
-                  {/* <input type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true}/> */}
-                  <textarea maxLength={500} type="text" name='postal_address' onChange={handleChange} placeholder="Address" required={true} rows={3}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="pincode">pincode:</label>
-                  <input type="text" name='pincode' onChange={handleChange} placeholder="Pincode" required={true}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="pass2">Password:</label>
-                  <input type="password" name='pass2' onChange={handleChange} placeholder={userInfo?"*********":"Password"} disabled={userInfo?true:false} required={true} minLength={8}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="confirm_password">Confirm Password:</label>
-                  <input type="password" name='confirm_password' placeholder={userInfo?"*********":"Confirm Password"} onChange={handleChange} value={formData.confirm_password} disabled={userInfo?true:false} required={true} minLength={8}/>
-                </div>
-                <div className="element">
-                  <label htmlFor="reason">reason:</label>
-                  {/* <input type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true}/> */}
-                  <textarea maxLength={500} type="text" name='reason' placeholder='Why should we choose you ?' onChange={handleChange} required={true} rows={3}/>
-                </div>
-                {
-                  requesting ? 
-                  <div className="applying">Applying.... </div> :
-                  <input type="submit" value="Apply" />
-                }
-                
-              </form>
             </div>
-          </div>
-          </div>
+
+            <Link to="/login" className="text-sm text-[#F74061]">Back to Login Page</Link>
+    
+          </form>
         </div>
-      </div>
-    </>
-  );
+        </>
+      );
 }
 
-export default Ambassador
+export default Signup;

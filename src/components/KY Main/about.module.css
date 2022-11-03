@@ -1,0 +1,167 @@
+.aboutSectionBody{
+    background-color: #06122E;
+    /* margin-top: 1000px; */
+    padding-bottom: 70px;
+
+}
+.aboutTitle{
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.aboutPageHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.aboutSliderHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.aboutBorder1{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("img/Vector\ \(2\).svg");
+}
+.aboutBorder3{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("img/slider1.svg");
+}
+.aboutBorder2{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("img/Vector\ \(1\).svg");
+}
+.aboutBorder4{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("img/slider2.svg");
+}
+.aboutContent{
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+.aboutContentText{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.aboutContentPeopleImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+.aboutContentHutImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    margin-bottom: 40px;
+}
+.aboutContentTrophyImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 111px;
+    margin-bottom: 42px;
+}
+.aboutContentNumber{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.aboutContentNumberSection{
+    display: flex;
+    justify-content: center;
+}
+.aboutContentCard{
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    color: #06122E;
+    max-width: 24rem;
+    background-color: #F74061;
+    border-radius: 12px;
+    height: 45vh;
+    margin: 1.5rem;
+}
+.aboutContentTrophyCard{
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+    color: #06122E;
+    max-width: 24rem;
+    background-color: #F74061;
+    border-radius: 12px;
+    height: 45vh;
+    margin: 1.5rem;
+}
+.aboutContentSubHeading{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: #06122E;
+}
+@media screen and (max-width: 1000px){
+    .aboutContent{
+        grid-template-columns: auto ;
+    }
+    .aboutContentPeopleImg{
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
+    .aboutContentHutImg{
+        width: 50px;
+        height: 50px;
+        margin-top: 14px;
+        margin-bottom: 13.5px;
+    }
+    .aboutContentTrophyImg{
+        width: 40px;
+        height: 40px;
+        margin-top: 19px;
+        margin-bottom: 17px;
+    }
+    .aboutContentCard{
+        height: 18vh;
+        margin : 0.3rem;
+    }
+    .aboutContentTrophyCard{
+        height: 18vh;
+        max-width: 15rem;
+    }
+    .aboutContentCard{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .aboutContentTrophyCard{
+        margin : 0.3rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .aboutContentSubHeading{
+        font-size: 1rem;
+    }
+    .aboutContentNumber{
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    .aboutContentText{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}

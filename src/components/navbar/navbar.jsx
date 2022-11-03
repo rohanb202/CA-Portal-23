@@ -46,6 +46,11 @@ function NavBar() {
         <ul className="nav">
           <li onClick={closeNav}>
             <Link to="/">
+              <span>Home</span>
+            </Link>
+          </li>
+          <li onClick={closeNav}>
+            <Link to="/ca">
               <span>Dashboard</span>
             </Link>
           </li>
@@ -56,15 +61,16 @@ function NavBar() {
               </Link>
             </li>
           )}
-          {/* <li>
-            <a href="/#">
-              <span>Event Registration</span>
-            </a>
-          </li> */}
+          <li onClick={closeNav}>
+              <Link to="/eventRegistration">
+                  <span>Event Registration</span>
+              </Link>
+          </li> 
           {userInfo !== null && (
+
             <>
               <li onClick={closeNav}>
-                <Link to="/leaderboard">
+                <Link to="/ca/leaderboard">
                   <span>Ambassador</span>
                 </Link>
               </li>
@@ -82,7 +88,7 @@ function NavBar() {
           {userInfo && (
             <>
               <div class="logout">
-                <a href="/#">
+                <Link to="/">
                   <span
                     onClick={() => {
                       closeNav();
@@ -91,7 +97,7 @@ function NavBar() {
                   >
                     Logout
                   </span>
-                </a>
+                </Link>
               </div>
             </>
           )}
@@ -110,6 +116,11 @@ function NavBar() {
           <ul className="nav">
             <li>
               <Link to="/">
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/ca">
                 <span>Dashboard</span>
               </Link>
             </li>
@@ -120,15 +131,16 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {/* <li>
-              <a href="#">
-                <span>Event Registration</span>
-              </a>
-            </li> */}
+            <li>
+            <Link to="/eventRegistration">
+              <span>Event Registration</span>
+            </Link>
+          </li>
             {userInfo !== null && (
+
               <>
                 <li>
-                  <Link to="/leaderboard">
+                  <Link to="/ca/leaderboard">
                     <span>Ambassador</span>
                   </Link>
                 </li>
@@ -146,9 +158,9 @@ function NavBar() {
             {userInfo && (
               <>
                 <div className="logout">
-                  <a href="/#">
+                  <Link to="/">
                     <span onClick={logoutUser}>Logout</span>
-                  </a>
+                  </Link>
                 </div>
               </>
             )}

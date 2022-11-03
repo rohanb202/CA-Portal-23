@@ -139,7 +139,7 @@ function Main(props) {
                 <div class="bottombar"></div>
               </div>
               <div class="center">
-                {userInfo === null && (
+                {(userInfo === null || userInfo?.ca_id == null) && (
                   <>
                     <div class="center-top">
                       <img src={back} alt="back"></img>
@@ -149,7 +149,7 @@ function Main(props) {
                         data-aos-duration="1000"
                       >
                         <div class="text">Become A Campus Ambassador</div>
-                        <Link to="/ambassador-apply">
+                        <Link to="/ca/ambassador-apply">
                           <button class="apply">
                             <span class="button-text">Apply</span>
                           </button>
