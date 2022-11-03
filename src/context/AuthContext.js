@@ -19,17 +19,13 @@ export const AuthProvider = ({children}) => {
     let navigate = useNavigate()
     
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
-    let [tokenInfo, setTokenInfo] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(JSON.parse(localStorage.getItem('authTokens')).access) : null)
     let [userInfo, setUserInfo] = useState(null)
     let [loading, setLoading] = useState(true)
-
-    // myaxios automatically attaches authToken to Authorization header, and also handles token refreshing if expired.
-    // let myAxios = useAxios()
+    // let [googleCompleteProfile, setGoogleCompleteProfile] = useState(false)
 
 
     let setInfoFromToken = async(access_token) =>{
-
-        // let response = await axios.get('/api/current_user/')
+        try{
         let response = await axios({
             method: 'get',
             url: `${REACT_APP_BASE_BACKEND_URL}/api/current_user/`,
@@ -37,6 +33,7 @@ export const AuthProvider = ({children}) => {
         });
 
         if (response.status == 200) {
+            // console.log("got data!")
             setUserInfo(response.data)
             toast.success(`Welcome ${response.data.full_name}!`, {
                 position: "top-center",
@@ -50,6 +47,7 @@ export const AuthProvider = ({children}) => {
                 });
         }
         else {
+            // console.log("didnt get 200 userdata")
             toast.error('Something went wrong while fetching user data!', {
                 position: "top-center",
                 autoClose: 3000,
@@ -61,12 +59,15 @@ export const AuthProvider = ({children}) => {
                 theme: "light",
                 });
         }
+        }
+        catch(e) {
+            console.error("setuserinfoerror", e);
+        }
             
     }
 
 
     let loginUser = async (email, password)=> {
-        // e.preventDefault()
         try{
             let response = await fetch(`${REACT_APP_BASE_BACKEND_URL}/api/token/`, {
                 method:'POST',
@@ -80,10 +81,8 @@ export const AuthProvider = ({children}) => {
     
             if(response.status === 200){
                 setAuthTokens(data)
-                setTokenInfo(jwt_decode(data.access))
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
-                setInfoFromToken(data.access)
                 navigate("/")
                 toast.success('Logged in successfully!', {
                     position: "top-center",
@@ -139,9 +138,9 @@ export const AuthProvider = ({children}) => {
 
     const clearTokens = () => {
         setAuthTokens(null)
-        setTokenInfo(null)
         localStorage.removeItem('authTokens')
         setUserInfo(null)
+        // console.log("cleared tokens!")
     }
 
     let logoutUser = () => {
@@ -160,20 +159,8 @@ export const AuthProvider = ({children}) => {
 
     }
 
-    let contextData = {
-        tokenInfo:tokenInfo,
-        setTokenInfo: setTokenInfo,
-        authTokens: authTokens,
-        setAuthTokens: setAuthTokens,
-        userInfo:userInfo,
-        loginUser:loginUser,
-        logoutUser:logoutUser,
-        clearTokens: clearTokens,
-    }
-
     let refreshTokens = async() => {
         try {
-            // console.log("making refresh api request")
             const response = await axios.post(`${REACT_APP_BASE_BACKEND_URL}/api/token/refresh/`, {
                 refresh: authTokens?.refresh
               });
@@ -197,13 +184,11 @@ export const AuthProvider = ({children}) => {
 
                 setAuthTokens(response.data)
 
-                if(!userInfo) {
-                    setInfoFromToken(response.data.access)
-                }
+
             }
             else if(response.status == 401) {
                 clearTokens()
-
+                
                 // your session has expired! Please login again.
                 toast.error('Your session has expired! Please login again!', {
                     position: "top-center",
@@ -254,30 +239,43 @@ export const AuthProvider = ({children}) => {
         }
     }
 
+
     useEffect(()=> {  
         if(loading) {
             // will be executed on first try only
-            // toast.success('This is the first load!', {
-            //     position: "top-center",
-            //     autoClose: 3000,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: true,
-            //     draggable: true,
-            //     progress: undefined,
-            //     theme: "light",
-            //     });
             if(authTokens) {
                 refreshTokens();           
             }
         setLoading(false)
         }
 
-        if(authTokens){            
-            setTokenInfo(jwt_decode(authTokens.access))
+        else {
+            // does not run on first load
+            if(authTokens){            
+                if(!userInfo){
+                    setInfoFromToken(authTokens.access);
+                }
+            }
         }
 
-    }, [authTokens, loading])
+    }, [authTokens])
+
+    function testContext() {
+        console.log("HELLO FROM CONTEXT!");
+    }
+
+    let contextData = {
+        authTokens: authTokens,
+        setAuthTokens: setAuthTokens,
+        userInfo:userInfo,
+        loginUser:loginUser,
+        logoutUser:logoutUser,
+        clearTokens: clearTokens,
+        // googleCompleteProfile:googleCompleteProfile,
+        // setGoogleCompleteProfile:setGoogleCompleteProfile,
+        testContext: testContext,
+    }
+
 
 
     return(

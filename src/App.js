@@ -22,6 +22,9 @@ import Payment from "./Pages/Payment/Payment";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
+import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
+import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
+import TestPage from "./Pages/TestPage";
 
 function App() {
   return (
@@ -49,6 +52,10 @@ function App() {
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
+        {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </>
   );
