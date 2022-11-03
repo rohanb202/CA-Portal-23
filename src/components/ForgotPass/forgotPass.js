@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import stripes from "./stripes.svg";
-import logo from "./logo.svg";
-import { ToastContainer, toast } from 'react-toastify';
+import stripes from "../../svgs/stripes.svg";
+import logo from "../../svgs/logo1.svg";
+import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 // import Icon from  "../../img/Group 252.jpg";
 // import logo from "../";
 // import Loginlogo from "./image/Loginlogo.svg";
-import { useContext } from 'react'
-import AuthContext from '../../context/AuthContext'
+// import { useContext } from 'react'
+// import AuthContext from '../../context/AuthContext'
 
 const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
@@ -26,7 +26,7 @@ function ForgotPass() {
             },
             body:JSON.stringify({'email':e.target.email.value})
         })
-        let data = await response.json()
+        // let data = await response.json()
         console.log(response.status)
         if (response.status === 200){
           toast.success('Reset password email sent!', {
@@ -70,7 +70,7 @@ function ForgotPass() {
     setRequesting(false)
 }
 
-  let {loginUser} = useContext(AuthContext)
+  // let {loginUser} = useContext(AuthContext)
   return (
     <>
       <div className="flex items-center justify-center h-screen">

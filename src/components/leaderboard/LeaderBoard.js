@@ -4,7 +4,7 @@ import LeaderBoardCSS from './LeaderBoard.module.css';
 // import './navbar.css'
 import NavBar from "../navbar/navbar";
 // import GOH from './img/GOH.jpg'
-import CopyBtn from './img/Vector.svg';
+import CopyBtn from '../../svgs/Vector.svg';
 import AuthContext from "../../context/AuthContext";
 
 export default function LeaderBoard (){

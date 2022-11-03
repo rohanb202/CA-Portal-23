@@ -19,7 +19,7 @@ body{
     padding: 30px;
     height: 30vh;
     margin-top: 20px;
-    background-image: url('./img/Group\ 273\ Profile.svg');
+    background-image: url('../../svgs/Group\ 273\ Profile.svg');
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,7 +108,7 @@ padding-left: 30px;
 
 .LeaderBoardRightColumn{
     color: white;
-    background-image: url('./img/Group\ 273.svg');
+    background-image: url('../../svgs/Group\ 273\ Profile.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

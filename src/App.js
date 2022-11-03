@@ -16,10 +16,11 @@ import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
+import Payment from "./Pages/Payment/Payment";
 // import Login from './components/Login/Login';
 import EventRegistration from "./components/EventsRegistration/EventRegistration";
 // import { AuthProvider } from './context/AuthContext'
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
@@ -39,9 +40,12 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/eventRegistration" element={<EventRegistration/>} />
         <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/payment" element={<Payment />} />
+        
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
         <Route path="/test" element={<TestPage />} />
+        
         {/* CA Specific Pages */}
         <Route path="/ca" element={<Home />}></Route>
         <Route path="/ca/ambassador-apply" element={<AmbassadorApplyForm />} />

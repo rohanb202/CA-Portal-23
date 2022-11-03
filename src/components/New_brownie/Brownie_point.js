@@ -64,7 +64,7 @@ const Brownie_point = () => {
           className="relative lg:top-5 hidden lg:block"
         />
         <div className="lg:flex  justify-center h-[60%]">
-          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
+          <div data-aos="flip-left" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img src={Side_Pattern} alt="" className="relative left-6" />
             <div className="">
               <img
@@ -102,7 +102,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div data-aos="flip-right" data-aos-delay="200" data-aos-duration="2000" className="flex">
+          <div data-aos="flip-right" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -140,7 +140,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
+          <div data-aos="flip-left" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -179,7 +179,7 @@ const Brownie_point = () => {
             />
           </div>
 
-          <div data-aos="flip-right" data-aos-delay="200" data-aos-duration="2000" className="flex">
+          <div data-aos="flip-right" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
@@ -217,7 +217,7 @@ const Brownie_point = () => {
               className="relative right-6 lg:hidden"
             />
           </div>
-          <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" className="flex">
+          <div data-aos="flip-left" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000" className="flex">
             <img
               src={Side_Pattern}
               alt=""
