@@ -1,24 +1,15 @@
 import "./App.css";
-// import Brownie from "./components/New_brownie/Brownie_point";
-// import Nduty from "./components/New_Duty/Nduty"
-
-// import Contact from './Contact/Contact';
 import LoginMain from "./components/LoginMain/LoginMain";
 import ForgotPass from "./components/ForgotPass/forgotPass";
-// import Main from './components/main/main';
 import Main from "./components/KY Main/main";
 
 import "aos/dist/aos.css";
 
-// import { useEffect, useState } from 'react';
 import Home from "./components/Home";
 import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
-// import Login from './components/Login/Login';
-import EventRegistration from "./components/EventsRegistration/EventRegistration";
-// import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
@@ -26,6 +17,11 @@ import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
 import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
 import TestPage from "./Pages/TestPage";
 import Signup from "./components/Signup/signup";
+import Music from "./components/Music/Music";
+import Literature from "./components/Literature/Literature";
+import Dance from "./components/Dance/Dance";
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -37,7 +33,9 @@ function App() {
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/eventRegistration" element={<EventRegistration/>} />
+        <Route path="/Music" element={<Music />} />
+        <Route path="/Literature" element={<Literature />} />
+        <Route path="/Dance" element={<Dance/>} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}

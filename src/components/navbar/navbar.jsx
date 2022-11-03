@@ -62,7 +62,7 @@ function NavBar() {
             </li>
           )}
           <li onClick={closeNav}>
-              <Link to="/eventRegistration">
+              <Link to="/Dance">
                   <span>Event Registration</span>
               </Link>
           </li> 
@@ -132,7 +132,7 @@ function NavBar() {
               </li>
             )}
             <li>
-            <Link to="/eventRegistration">
+            <Link to="/Dance">
               <span>Event Registration</span>
             </Link>
           </li>
