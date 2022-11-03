@@ -15,6 +15,7 @@ import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
+import Payment from "./Pages/Payment/Payment";
 // import Login from './components/Login/Login';
 
 // import { AuthProvider } from './context/AuthContext'
@@ -28,11 +29,26 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/leaderboard" element={<RequireAuth><LeaderBoard /></RequireAuth>}></Route>
+        <Route
+          path="/leaderboard"
+          element={
+            <RequireAuth>
+              <LeaderBoard />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/ambassador-apply" element={<AmbassadorApplyForm />} />
-        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <Profile />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );
