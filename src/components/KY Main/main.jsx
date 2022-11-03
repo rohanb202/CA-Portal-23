@@ -120,6 +120,17 @@ function Main() {
             <li>
               <Link to="/ca">CA</Link>
             </li>
+            {
+              userInfo?(
+                <li>
+                <Link to="/dashboard">Dashboard</Link>
+                </li>
+              ):(
+                <li>
+                <Link to="/login">Login</Link>
+                </li>
+              )
+            }
           </ul>
         </div>
         <div className={Maincss.outernav}>
@@ -140,7 +151,18 @@ function Main() {
                 </li>
                 <li className={Maincss.navitem}>
                 <Link to="/ca">CA</Link>
-              </li>
+                </li>
+                {
+                  userInfo?(
+                    <li className={Maincss.navitem}>
+                    <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                  ):(
+                    <li className={Maincss.navitem}>
+                    <Link to="/login">Login</Link>
+                    </li>
+                  )
+                }
               </ul>
             </div>
             <div className={Maincss.kyprofile}></div>

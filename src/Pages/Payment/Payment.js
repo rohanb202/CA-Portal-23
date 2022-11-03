@@ -3,8 +3,11 @@ import NavBar from "../../components/navbar/navbar";
 import border from "../../svgs/border.svg";
 import Side_Pattern from "../../img/Side_Pattern.png";
 import MtPattern from "../../img/MtPattern.png";
+import AuthContext from "../../context/AuthContext";
+import { useContext } from "react";
 
 const Payment = () => {
+  const {userInfo} = useContext(AuthContext)
   return (
     <div>
       <NavBar />
@@ -41,9 +44,17 @@ const Payment = () => {
                       • Lorem ipsum
                     </li>
                   </ul>
-                  <div className="px-24 mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
-                    Buy
-                  </div>
+                  {userInfo?(
+                    <a href={`https://www.townscript.com/v2/e/kashiyatra-2023-the-annual-socialcultural-festival-of-iit-bhu-varanasi-314313/booking?td-Registration-With-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`} target="_blank">
+                    <div className="px-24 mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
+                      Buy
+                    </div>
+                    </a>
+                  ):(
+                    <div className="px-24 mt-20 rounded-xl font-bold text-white py-3 bg-[#5c867e]">
+                      Loading....
+                    </div>
+                  )}
                 </div>
                 <img src="" alt="" className="" />
               </div>
@@ -64,9 +75,17 @@ const Payment = () => {
                   • Lorem ipsum
                 </li>
               </ul>
-              <div className="px-24 mt-36 rounded-xl font-bold text-white py-3 bg-[#098770]">
-                Buy
-              </div>
+              {userInfo?(
+                    <a href={`https://www.townscript.com/v2/e/kashiyatra-2023-the-annual-socialcultural-festival-of-iit-bhu-varanasi-314313/booking?td-Registration-With-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`} target="_blank">
+                    <div className="px-24 mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
+                      Buy
+                    </div>
+                    </a>
+                  ):(
+                    <div className="px-24 mt-20 rounded-xl font-bold text-white py-3 bg-[#5c867e]">
+                      Loading....
+                    </div>
+                  )}
             </div>
           </div>
         </div>

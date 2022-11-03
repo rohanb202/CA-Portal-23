@@ -8,6 +8,7 @@ import CopyBtn from './img/Vector.svg';
 import AuthContext from "../../context/AuthContext";
 import { ToastContainer, toast } from 'react-toastify';
 import axios from "../../utils/axios";
+import useAxiosPrivate from "../../utils/useAxiosPrivate";
 import { useEffect } from "react";
 const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
@@ -15,6 +16,7 @@ export default function LeaderBoard (){
     const {userInfo, authTokens} = useContext(AuthContext);
     const [refferals, setrefferals] = useState(null);
     const [leaderboard, setleaderboard] = useState(null);
+    const axiosPrivate = useAxiosPrivate();
     // const [userInfo, setuserInfo] = useState({
     //     full_name:'peter',
     //     ca_id:4,
@@ -22,14 +24,8 @@ export default function LeaderBoard (){
     //     profile_picture:'www.google.com'
     // })
     useEffect(()=>{
-        let response = axios(`${REACT_APP_BASE_BACKEND_URL}/api/list_ca`, {
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json',
-                'Authorization': `Bearer ${authTokens['access']}`
-            },
-            body:JSON.stringify({'user': userInfo.ky_id})
-        }).then((res) => {
+        let response = axiosPrivate.get('/api/list_ca/')
+        .then((res) => {
             console.log(res)
             setrefferals(res.data.referrals);
             console.log(refferals);
