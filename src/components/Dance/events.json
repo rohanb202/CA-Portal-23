@@ -1,0 +1,177 @@
+{
+    "Dance": [
+        {
+            "eventId": 2,
+            "eventName": "CUT-A-RUG",
+            "eventDetails": "Natraj is the name of Shiva that symbolizes dance: the dynamic and static divine flow of energy. It lets you dive deep into the oceans, swim without hurdles and breathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra unveils to you “Cut-A-Rug - the Solo Dance Competition",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 2
+        },
+        {
+            "eventId": 3,
+            "eventName": "ECSTASY",
+            "eventDetails": "Come into an alliance with your partner and arm yourselves with all the grooves and moves, and prove it to us that you got what it takes to be a doublet for each other dancing against the world.",
+            "maxMembers": 2,
+            "minMembers": 2,
+            "parentEvent": 2
+        },
+        {
+            "eventId": 4,
+            "eventName": "BLISS",
+            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to you “Bliss - the Group Dance Competition” where synchronicity, energy and creativity unfold themselves and the stage echoes with the thud of your steps, diverse with every leg yet unified with every beat.",
+            "maxMembers": 15,
+            "minMembers": 5,
+            "parentEvent": 2
+        }
+    ],
+    "Indian Music": [
+        {
+            "eventId": 5,
+            "eventName": "SUR",
+            "eventDetails": "“Music touches us emotionally, where words alone can’t.” So, if you have the voice that can win hearts and steal the show, then get ready to dazzle the stage as we bring forth “SUR: The Solo Singing Event”, where you are given the ideal platform to show your talent and prove your mettle.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 6,
+            "eventName": "RAAGSAMAR",
+            "eventDetails": "If you think you can enthrall the audience by singing on soft acoustic music if unplugged tunes are all you need to set the cool vibes around then don't miss the chance to participate in Unplugged!",
+            "maxMembers": 10,
+            "minMembers": 3,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 7,
+            "eventName": "SANLAYAN",
+            "eventDetails": "There's something in the soft plink of a sitar or the mellifluous notes of a flute that the human voice cannot seem to match. Instrumentalists spend years perfecting their art, to achieve the thrilling pace at which they change notes. Kashiyatra gives you a chance for you to hear and create magic-harmonies with instruments only. Let your emotions radiate and shine in its character through instruments.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        }
+        ,
+        {
+            "eventId": 8,
+            "eventName": "KRITI",
+            "eventDetails": "Kriti is your chance to let your imagination and creativity flow in the form of a beautiful self-composed song. Stand out as that brilliantly clear solo is as you take control over the vocals and mesmerize the audience. The championship is awarded to the performer who presents the best and wins the hearts with their creation.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        }
+        ,
+        {
+            "eventId": 9,
+            "eventName": "ADVAITA",
+            "eventDetails": "If you think you can make the crowd forget themselves in your performance, then this is the place to be. With massive enthusiasm and fearsome competition, this event brings out the best in its participants striving for glory. If you have the band that can’t lose and have a hunger for more, then come and perform against the most formidable bands in India. It is the battle of bands, and the clash is raging hotter than ever.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        }
+    ],
+    "Literary": [
+        {
+            "eventId": 10,
+            "eventName": "Story Writing",
+            "eventDetails": "write a story with amazing plot",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 4
+        },
+        {
+            "eventId": 11,
+            "eventName": "Poem Writing",
+            "eventDetails": "everybody loves poems",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 4
+        }
+    ],
+    "Masquerades": [
+        {
+            "eventId": 12,
+            "eventName": "RANGMANCH",
+            "eventDetails": "Do you have what it takes to dissolve an audience in an ocean of emotions and actions? The colourful lights, cameras & the audience are waiting for you. If you can make your expressions to the next level, then this is where you belong. The stage is set and waiting for your next grand act ",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 2
+        },
+        {
+            "eventId": 13,
+            "eventName": "ASMITA",
+            "eventDetails": "In civilized life, where the happiness, and indeed almost the existence, of man, depends so much upon the opinion of his fellow men, he is always acting a studied part. In a Mono Act, an actor is vulnerable. His total personality is exposed to critical judgment - his intellect, his bearing, his diction, his whole appearance. If you can reveal your emotions in front of the audience, here is your chance.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 2
+        },
+        {
+            "eventId": 14,
+            "eventName": "HULLAD",
+            "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If you can catch the attention & attract people to stay and watch your performance, here is your chance. The art of grabbing the audience’s attention is all that you need. No lights, no mics, only pure ACTION full of energy.",
+            "maxMembers": 15,
+            "minMembers": 5,
+            "parentEvent": 2
+        }
+    ],
+    "Quiz": [
+        {
+            "eventId": 15,
+            "eventName": "ENQUIZTA",
+            "eventDetails": "A total of six intriguing quizzes will be organized during Kashiyatra, namely:• India Quiz • MELA (Music Entertainment Literature Arts) • General Quiz • Sports Quiz • Biz Tech Quiz • TLC (Travel, Living and Culture) Quiz NOTE: Quizmasters for the quizzes will be decided at a later time.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 16,
+            "eventName": "Solo Instrumental",
+            "eventDetails": "one person one instrument",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 17,
+            "eventName": "Band Performance",
+            "eventDetails": "band song with team",
+            "maxMembers": 8,
+            "minMembers": 3,
+            "parentEvent": 3
+        }
+    ],
+    "Fine Arts": [
+        {
+            "eventId": 18,
+            "eventName": "RAPID FIRE",
+            "eventDetails": "“The trouble is you think you have time”-Buddha. Well, you don't! This contest pitches your creativity against the cruel boundaries of time. We decide the rules of the game. We choose when the bell rings. However, it's only you who sets the limits of your imagination and creativity.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 19,
+            "eventName": "SPOIL THE TEES",
+            "eventDetails": "'Daag achche hote hai' Get those spotless white T-Shirts and spoil them. Yeah, you heard it right, put colour on them, soil them, and spoil them. Use paints. Use brushes. Use your hands. It doesn't matter. Just funk them up. Add life to those dull whites. Coz life is too short for boring T-Shirts!",
+            "maxMembers": 3,
+            "minMembers": 1,
+            "parentEvent": 3
+        },
+        {
+            "eventId": 20,
+            "eventName": "FACE PAINTING",
+            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of expression of emotions but away to have fun? If yes, then paint your buddy's face on the given theme to nick prizes away!",
+            "maxMembers": 2,
+            "minMembers": 3,
+            "parentEvent": 3
+        }
+    ],"Western Music": [
+        {
+            "eventId": 21,
+            "eventName": "BATTLE OF BANDS",
+            "eventDetails": "Crosswindz, the oldest battle of bands in India, is one of the Flagship events of Kashiyatra. Since its inception, Crosswindz has been home to major rock bands in India. Mindshift (Sweden), Tiny Fingers (Israel), Demonic Resurrection (Mumbai), Undying Inc (Delhi), Albatross (Mumbai), Underground Authority (Kolkata) have been our past headliners. Some of the past winners include Escape Artist, Diabolical Damage, High Frequency and the Purple Jays. Like the previous year, this year Crosswindz will organize a road trip for multi-city elimination rounds to ensure high-quality participation from bands all over the nation leading to a tight battle to be the best. After the road trips elected bands will compete in the finals to be held in Varanasi. The finals will be the opening act for headliners followed by the announcement of results.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": 3
+        }
+    ]
+}
