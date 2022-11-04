@@ -19,6 +19,7 @@ import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
 // import Login from './components/Login/Login';
 import EventRegistration from "./components/EventsRegistration/EventRegistration";
+import Team from "./components/team/team";
 // import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/login" element={<LoginMain />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/eventRegistration" element={<EventRegistration />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/api/google/callback" element={<GoogleMiddleware />} />
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}

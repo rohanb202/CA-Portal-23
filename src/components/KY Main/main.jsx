@@ -141,7 +141,7 @@ function Main() {
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
                 <li className={Maincss.navitem}>
-                  <Link to="/">TEAM</Link>
+                  <Link to="/team">TEAM</Link>
                 </li>
                 <li className={Maincss.navitem}>
                   <Link to="/eventRegistration">EVENTS</Link>
@@ -334,6 +334,7 @@ function Main() {
         <Slider />
         <div className={Throwcss.blank}> </div>
       </div>
+
     </>
   );
 }
