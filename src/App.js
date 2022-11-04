@@ -26,7 +26,6 @@ function App() {
     <>
       <ToastContainer />
       <Routes>
-
         <Route path="/" element={<Main />}></Route>
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
