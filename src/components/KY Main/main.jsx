@@ -112,7 +112,7 @@ function Main() {
               <Link to="/">TEAM</Link>
             </li>
             <li>
-              <Link to="/eventRegistration">EVENTS</Link>
+              <Link to="/Dance">EVENTS</Link>
             </li>
             <li>
               <Link to="/">FAQ</Link>
@@ -144,7 +144,7 @@ function Main() {
                   <Link to="/team">TEAM</Link>
                 </li>
                 <li className={Maincss.navitem}>
-                  <Link to="/eventRegistration">EVENTS</Link>
+                  <Link to="/Dance">EVENTS</Link>
                 </li>
                 <li className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>

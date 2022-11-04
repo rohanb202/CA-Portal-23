@@ -63,10 +63,11 @@ function NavBar() {
               </Link>
             </li>
           )}
-          {userInfo && (
-            <li onClick={closeNav}>
-              <Link to="/eventRegistration">
-                <span>Event Registration</span>
+
+          <li onClick={closeNav}>
+              <Link to="/Dance">
+                  <span>Event Registration</span>
+
               </Link>
             </li>
           )}
@@ -151,19 +152,30 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {userInfo && (
-              <li>
-                <Link to="/eventRegistration">
-                  <span>Event Registration</span>
-                </Link>
-              </li>
-            )}
+
+            <li>
+            <Link to="/Dance">
+              <span>Event Registration</span>
+            </Link>
+          </li>
+            {userInfo !== null && (
+
+              <>
+                <li>
+                  <Link to="/ca/leaderboard">
+                    <span>Ambassador</span>
+                  </Link>
+                </li>
+              </>
+
+
             {userInfo && (
               <li>
                 <Link to="/payment">
                   <span>Payments</span>
                 </Link>
               </li>
+
             )}
             {
             (userInfo==null || (userInfo?.ca_id==null))?(
