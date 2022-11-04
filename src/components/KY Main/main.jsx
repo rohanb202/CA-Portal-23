@@ -1,6 +1,9 @@
 import Maincss from "./main.module.css";
 import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
+import Testimonialcss from "./testimonial.module.css";
+import TestimonialFrame from "./img/testimonailFrame.svg";
+import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
@@ -357,7 +360,54 @@ function Main() {
         <Slider />
         <div className={Throwcss.blank}> </div>
       </div>
-
+      <div className={Testimonialcss.testimonialSectionBody}>
+        <div className={Testimonialcss.testimonialTitle}>
+          <div className={Testimonialcss.testimonialBorderLeft}></div>
+          <div
+            className={Testimonialcss.testimonialHeading}
+            style={{ color: "#F79840" }}
+          >
+            Testimonails
+          </div>
+          <div className={Testimonialcss.testimonialBorderRight}></div>
+        </div>
+        <div className={Testimonialcss.testimonailsBody}>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={Testimonialcss.blank}> </div>
+      </div>
     </>
   );
 }
