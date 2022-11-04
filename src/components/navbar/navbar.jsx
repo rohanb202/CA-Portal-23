@@ -70,7 +70,7 @@ function NavBar() {
 
               </Link>
             </li>
-          )}
+
           {userInfo && (
             <li onClick={closeNav}>
               <Link to="/payment">
@@ -158,17 +158,6 @@ function NavBar() {
               <span>Event Registration</span>
             </Link>
           </li>
-            {userInfo !== null && (
-
-              <>
-                <li>
-                  <Link to="/ca/leaderboard">
-                    <span>Ambassador</span>
-                  </Link>
-                </li>
-              </>
-
-
             {userInfo && (
               <li>
                 <Link to="/payment">
