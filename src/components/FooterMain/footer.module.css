@@ -1,0 +1,142 @@
+.Lborder {
+  background-image: url("img/FooterBorder2.svg");
+  background-repeat: no-repeat;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-top: 25px;
+  margin-left: 10%;
+
+  margin-bottom: 10px;
+}
+.mainbody {
+  background-color: #f74061;
+}
+.column1{
+    margin-left: 10%;
+}
+.column {
+  margin-top: 15px;
+  width: 33.33%;
+  padding-top: 10px;
+  height: fit-content;
+}
+.row{
+    display: flex;
+}
+
+
+
+h2 {
+  font-family: "Arima Madurai";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #06122e;
+}
+.font {
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+  margin-left: 18px;
+  align-content: center;
+  color: #06122e;
+}
+.font2{
+  margin-bottom: 10px;
+}
+.font3{
+  margin-bottom: 10px;
+}
+
+
+.image {
+  display: flex;
+  flex-direction: row;
+}
+.font1{
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.row1,
+.row2 {
+  padding: 5px;
+  width: 44px;
+}
+
+.ky {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  
+  text-transform: capitalize;
+
+  color: #06122e;
+}
+
+.copyright {
+  position: relative;
+  left: 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  h2{
+    font-size: 12px;
+  }
+  .ky{
+    font-size: 8px;
+    width: auto;
+    overflow: hidden;
+  }
+  .Lborder{
+    width: 100%;
+    margin-left: 0;
+    overflow: hidden;
+  }
+  .font1{
+    margin-right: 25px;
+  }
+  .row1,.row2{
+    width: 35px;
+  }
+  .home{
+    font-size: 8px;
+    line-height: 15px;
+    
+  }
+  .column3{
+    margin-right: 15%;
+  }
+  .font1{
+    margin-right: 35%;
+  }
+  .font2{
+    margin-right: 35%;
+  }
+
+}

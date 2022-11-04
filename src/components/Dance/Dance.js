@@ -121,6 +121,7 @@ function handleEventClick (e){
     return(
 
 
+
       
       
         <div className={DanceCss.eventsBody}>
@@ -215,6 +216,9 @@ function handleEventClick (e){
   </div>
   </Box>
 </Modal> */}
+
+        <div className={DanceCss.eventsBody}>
+
         <div className={DanceCss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>

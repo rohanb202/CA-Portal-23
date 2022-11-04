@@ -44,6 +44,7 @@
     "scrollreveal": "^4.0.9",
     "styled-components": "^5.3.6",
     "tailwind": "^4.0.0",
+    "three": "^0.146.0",
     "tailwind-scrollbar-hide": "^1.1.7",
     "util": "^0.12.5",
     "vanta": "^0.5.24",
