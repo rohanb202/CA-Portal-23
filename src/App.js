@@ -24,7 +24,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
-import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
+import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile";
 import TestPage from "./Pages/TestPage";
 import Signup from "./components/Signup/signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
@@ -61,8 +61,8 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
-        <Route path="/payment" element={<RequireAuth><Payment /></RequireAuth>} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );
