@@ -1,5 +1,5 @@
 import Maincss from "./main.module.css";
-import { useState, useEffect,useContext } from "react";
+import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
@@ -13,6 +13,8 @@ import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
 import hutImg from "./img/Frame.svg";
 import AuthContext from "../../context/AuthContext";
+import NET from "vanta/dist/vanta.net.min"
+import * as THREE from "three"
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
@@ -20,11 +22,32 @@ const boxVariant = {
 };
 
 function Main() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null)
   const [navdisplay, setNavDisplay] = useState(0);
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    if (!vantaEffect){
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          points: 20,
+          maxDistance: 10,
+          spacing: 20,
+          color: 0x75640141,
+          backgroundColor: 0x06122E,
+          THREE
+        })
+      )
+    }
+    return ()=>{
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
 
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -96,7 +119,7 @@ function Main() {
 
   return (
     <>
-      <div className={Maincss.main}>
+      <div className={Maincss.main} ref={vantaRef}>
         <div className={Maincss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
