@@ -78,7 +78,7 @@ function handleEventClick (e){
       }
       // console.log(eventData);
     return(
-        <>
+        <div className={DanceCss.eventsBody}>
         <div className={DanceCss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
@@ -236,6 +236,6 @@ function handleEventClick (e){
         
         </div>
         
-        </>
+        </div>
     );
 }
