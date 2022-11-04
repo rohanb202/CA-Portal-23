@@ -3,6 +3,7 @@ import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
+import FooterMain from "../FooterMain/footer";
 import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
@@ -408,6 +409,7 @@ function Main() {
         </div>
         <div className={Testimonialcss.blank}> </div>
       </div>
+      <FooterMain/>
     </>
   );
 }
