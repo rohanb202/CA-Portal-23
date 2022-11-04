@@ -190,8 +190,8 @@
     
 }
 
-body{
-    height: 100%;
+.eventsBody{
+    height: 100vh;
     background-color: #06122E;
     font-family: 'Arima Madurai', cursive;
 }
