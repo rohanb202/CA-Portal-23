@@ -5,6 +5,18 @@
 .blank{
     height: 2rem;
 }
+.carousal{
+    z-index:50;
+}
+.container{
+    width: 300vw;
+   
+    display: flex;
+    flex-wrap: nowrap;
+    
+    position: relative;
+    z-index: 30;
+  }
 .testimonialTitle{
     display: flex;
     align-items: center;
@@ -42,9 +54,9 @@
 }
 
 .testimonialCard {
-    width: 360px;
+    width: 300px;
     height: 476px;
-    margin: 2rem 36px;
+    margin: 2rem 15px;
     padding: 12px 18px;
     display: flex;
     flex-direction: column;

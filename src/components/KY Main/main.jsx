@@ -4,6 +4,7 @@ import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
 import TestimonialImg from "./img/testimonails/testimonial.jpeg";
+import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
@@ -16,8 +17,13 @@ import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
 import hutImg from "./img/Frame.svg";
 import AuthContext from "../../context/AuthContext";
+import {gsap} from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import NET from "vanta/dist/vanta.net.min"
 import * as THREE from "three"
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
@@ -32,6 +38,54 @@ function Main() {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+
+  const sec1 = useRef(null);
+  const sec2 = useRef(null);
+  const sec3 = useRef(null);
+  const cont = useRef(null);
+
+  // useEffect(()=>{
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   let sections = [sec1.current, sec2.current, sec3.current];
+  //   let container = cont.current;
+    // console.log(container.offsetWidth);
+    // console.log(sections);
+    // let tl=gsap.timeline({scrollTrigger: {
+    //   trigger: container,
+    //   pin: cont.current,
+    //   scrub: 0.1,
+    //   markers:true,
+      
+    //   //snap: directionalSnap(1 /(sections.length - 1)),
+    //   end: `+=${4608}`
+    // }});
+    //  tl.to(sections, {
+    //   xPercent: -100 * (sections.length - 1),
+    //   ease: "none", // <-- IMPORTANT!
+      
+      
+    // });
+  //   let tl=gsap.timeline();
+  //   tl.to(sections, {
+      
+  //     scrollTrigger: {
+  //       // start:"top top",
+  //       trigger:container,
+  //       pin: true,
+  //       invalidateOnRefresh: true,
+  //       anticipatePin: 1,
+  //       scrub: 1.23,
+  //       markers:true,
+  //       end:`+=${container.offsetWidth}` 
+  //     }
+  //   }).to(sections,{
+  //     // xPercent: -100 * (sections.length - 1),
+  //     // ease: "none",
+  //   },">");
+    
+  // }, [])
+
 
   useEffect(() => {
     if (!vantaEffect){
@@ -360,7 +414,7 @@ function Main() {
         <Slider />
         <div className={Throwcss.blank}> </div>
       </div>
-      <div className={Testimonialcss.testimonialSectionBody}>
+      <div className={Testimonialcss.testimonialSectionBody} >
         <div className={Testimonialcss.testimonialTitle}>
           <div className={Testimonialcss.testimonialBorderLeft}></div>
           <div
@@ -371,42 +425,9 @@ function Main() {
           </div>
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
-        <div className={Testimonialcss.testimonailsBody}>
-          <div className={Testimonialcss.testimonialCard}>
-            <img src={TestimonialImg} alt="Image" />
-            <div className={Testimonialcss.testimonialData}>
-              <div className={Testimonialcss.testimonailName}>
-                Peter Parker
-              </div>
-              <div className={Testimonialcss.aboutTestimonail}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-              </div>
-            </div>
-          </div>
-          <div className={Testimonialcss.testimonialCard}>
-            <img src={TestimonialImg} alt="Image" />
-            <div className={Testimonialcss.testimonialData}>
-              <div className={Testimonialcss.testimonailName}>
-                Peter Parker
-              </div>
-              <div className={Testimonialcss.aboutTestimonail}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-              </div>
-            </div>
-          </div>
-          <div className={Testimonialcss.testimonialCard}>
-            <img src={TestimonialImg} alt="Image" />
-            <div className={Testimonialcss.testimonialData}>
-              <div className={Testimonialcss.testimonailName}>
-                Peter Parker
-              </div>
-              <div className={Testimonialcss.aboutTestimonail}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-              </div>
-            </div>
-          </div>
-        </div>
+        <Testimonials/>
         <div className={Testimonialcss.blank}> </div>
+        
       </div>
     </>
   );
