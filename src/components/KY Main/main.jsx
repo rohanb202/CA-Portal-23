@@ -427,7 +427,7 @@ function Main() {
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
         <Testimonials/>
-        <div className={Testimonialcss.blank}> </div>
+        {/* <div className={Testimonialcss.blank}> </div> */}
         
       </div>
       <FooterMain/>
