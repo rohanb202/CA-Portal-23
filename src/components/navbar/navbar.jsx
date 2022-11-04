@@ -49,11 +49,13 @@ function NavBar() {
               <span>Home</span>
             </Link>
           </li>
-          <li onClick={closeNav}>
-            <Link to="/ca">
-              <span>Dashboard</span>
-            </Link>
-          </li>
+          {userInfo && (
+            <li onClick={closeNav}>
+              <Link to="/dashboard">
+                <span>Dashboard</span>
+              </Link>
+            </li>
+          )}
           {userInfo && (
             <li onClick={closeNav}>
               <Link to="/profile">
@@ -61,21 +63,38 @@ function NavBar() {
               </Link>
             </li>
           )}
+
           <li onClick={closeNav}>
               <Link to="/Dance">
                   <span>Event Registration</span>
-              </Link>
-          </li> 
-          {userInfo !== null && (
 
-            <>
+              </Link>
+            </li>
+          )}
+          {userInfo && (
+            <li onClick={closeNav}>
+              <Link to="/payment">
+                <span>Payments</span>
+              </Link>
+            </li>
+          )}
+
+          {
+            (userInfo==null || (userInfo?.ca_id==null))?(
+              <li onClick={closeNav}>
+                <Link to="/ca">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            ): (
               <li onClick={closeNav}>
                 <Link to="/ca/leaderboard">
                   <span>Ambassador</span>
                 </Link>
               </li>
-            </>
-          )}
+            )
+          }
+
           {userInfo === null && (
             <>
               <li>
@@ -119,11 +138,13 @@ function NavBar() {
                 <span>Home</span>
               </Link>
             </li>
-            <li>
-              <Link to="/ca">
-                <span>Dashboard</span>
-              </Link>
-            </li>
+            {userInfo && (
+              <li>
+                <Link to="/dashboard">
+                  <span>Dashboard</span>
+                </Link>
+              </li>
+            )}
             {userInfo && (
               <li>
                 <Link to="/profile">
@@ -131,6 +152,7 @@ function NavBar() {
                 </Link>
               </li>
             )}
+
             <li>
             <Link to="/Dance">
               <span>Event Registration</span>
@@ -145,7 +167,31 @@ function NavBar() {
                   </Link>
                 </li>
               </>
+
+
+            {userInfo && (
+              <li>
+                <Link to="/payment">
+                  <span>Payments</span>
+                </Link>
+              </li>
+
             )}
+            {
+            (userInfo==null || (userInfo?.ca_id==null))?(
+              <li>
+                <Link to="/ca">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            ): (
+              <li>
+                <Link to="/ca/leaderboard">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            )
+          }
             {userInfo === null && (
               <>
                 <li>

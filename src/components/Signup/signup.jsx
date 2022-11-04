@@ -8,12 +8,14 @@ import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
 import LoaderCss from "./signup.module.scss"
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const REACT_APP_BASE_BACKEND_URL = process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 function Signup(){
     const [requesting, setRequesting] = useState(false);
-    const [formData, setformData] = useState({})
+    const [formData, setformData] = useState({});
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setformData({...formData,[e.target.name]:e.target.value})
@@ -52,7 +54,7 @@ function Signup(){
                   progress: undefined,
                   theme: "light",
                 });
-                navigator("/ca")
+                navigate("/")
               } 
               else if (response.status === 406){
                 toast.error(response.data.msg, {

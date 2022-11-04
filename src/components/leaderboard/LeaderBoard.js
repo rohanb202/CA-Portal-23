@@ -6,17 +6,61 @@ import NavBar from "../navbar/navbar";
 // import GOH from './img/GOH.jpg'
 import CopyBtn from './img/Vector.svg';
 import AuthContext from "../../context/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
+import axios from "../../utils/axios";
+import useAxiosPrivate from "../../utils/useAxiosPrivate";
+import { useEffect } from "react";
+const REACT_APP_BASE_BACKEND_URL =  process.env.REACT_APP_BASE_BACKEND_URL || "http://localhost:8000"
 
 export default function LeaderBoard (){
-    const {userInfo} = useContext(AuthContext);
+    const {userInfo, authTokens} = useContext(AuthContext);
     const [refferals, setrefferals] = useState(null);
     const [leaderboard, setleaderboard] = useState(null);
+    const axiosPrivate = useAxiosPrivate();
     // const [userInfo, setuserInfo] = useState({
     //     full_name:'peter',
     //     ca_id:4,
     //     college:'iitbhu',
     //     profile_picture:'www.google.com'
     // })
+    useEffect(()=>{
+        let response = axiosPrivate.get('/api/list_ca/')
+        .then((res) => {
+            console.log(res)
+            setrefferals(res.data.referrals);
+            console.log(refferals);
+            setleaderboard(res.data.cas);
+            console.log(leaderboard)
+        })
+        // let data = response.json()
+        // console.log(response)
+        if (response.status === 200){
+          toast.success('Data fetched successfully', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        }
+        if (response.status === 404){
+          toast.error('Enter correct KY ID', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        }
+    }, [])
+
+    
 
     return(
         <div className={LeaderBoardCSS.LeaderBoardPage}>
@@ -73,8 +117,8 @@ export default function LeaderBoard (){
                                 <div className={LeaderBoardCSS.hoverOnButtons} key={item.ky_id}>
                                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
                                         <h3>{count}</h3>
-                                        <h3>{item.ky_id}</h3>
-                                        <h3>{item.username}</h3>
+                                        <h3>{item["ky_id"]}</h3>
+                                        <h3>{item["full_name"]}</h3>
                                     </div>
                                 </div>
                             )
@@ -145,13 +189,13 @@ export default function LeaderBoard (){
                 }
                 {
                     leaderboard &&
-                    leaderboard.map((item) => {
+                    leaderboard.map((item, index) => {
                         return (
                             <div className={LeaderBoardCSS.hoverOnButtons} key={item.rank}>
                                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                                    <h3>{item.rank}</h3>
-                                    <h3>{item.username}</h3>
-                                    <h3>{item.refferals}</h3>
+                                    <h3>{index+1}</h3>
+                                    <h3>{item["name"]}</h3>
+                                    <h3>{item["reg_num"]}</h3>
                                 </div> 
                             </div>
                         )
