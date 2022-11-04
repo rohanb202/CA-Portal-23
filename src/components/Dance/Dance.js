@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from "react";
+import { useState, useEffect,useContext } from "react";
 
 import kylogo from "./img/kylogo.svg";
 
@@ -10,10 +10,51 @@ import eventData from "./events.json";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import AuthContext from '../../context/AuthContext';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 
 export default function Dance(){
 
+  const [teamNumber,setTeamNumber]=useState(0);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#F74061',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+ 
+
+  const [open1, setOpen1] = React.useState(false);
+  const handleOpen1 = (e) => {
+    setOpen1(true);
+    
+    console.log(e.target.innerText);
+    setTeamNumber(Number(e.target.innerText))
+  }
+  const handleClose1 = (e) => {
+    setAnchorEl(null);
+    console.log(e.target.innerText);
+    setTeamNumber(Number(e.target.innerText))
+    setOpen1(false)};
+    const handleClose2 = (e) => {
+      setAnchorEl(null);
+      setOpen1(false)};
+
+
+
+  const { userInfo } = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -78,7 +119,102 @@ function handleEventClick (e){
       }
       // console.log(eventData);
     return(
-        <>
+
+
+      
+      
+        <div className={DanceCss.eventsBody}>
+
+
+<div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
+  id={"exampleModal69"+teamNumber} tabindex="-1" aria-labelledby="exampleModal69Label" aria-hidden="true">
+  <div class="modal-dialog relative w-auto pointer-events-none ">
+    <div
+      class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current ">
+      <div class="modal-body relative p-4 text-[#06122E] bg-[#F74061] flex items-center justify-center">
+      <div class="w-full max-w-xs flex items-center justify-center">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      {Array(teamNumber).fill(null).map((_,index)=>{
+        return(
+          <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="username">
+              {index===0?"Team Leader":`Team Member ${index}`}
+              
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="KY ID"/>
+          </div>
+        )
+      })}
+      
+      <div class="flex items-center justify-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+       </div>
+      
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade fixed top-[30%] left-0  hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
+  id={"exampleModalRegister"+teamNumber} tabindex="-1" aria-labelledby="exampleModalRegisterLabel" aria-hidden="true">
+  <div class="modal-dialog relative w-auto pointer-events-none ">
+    <div
+      class="modal-content border-none relative flex flex-col w-full outline-none text-current ">
+      <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
+      <div class="w-full max-w-xs flex items-center justify-center">
+    <form class="bg-white px-8 pt-6 pb-8 mb-4">
+    <h3 class="font-medium leading-tight text-xl mt-0 mb-2 text-[#06122E] flex items-center justify-center">You are going to register for this event</h3>
+        
+      
+      <div class="flex items-center justify-center">
+        <button class="px-20 mt-3 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out" type="button">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+       </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+
+           {/* <Modal
+  open={open1}
+  onClose={handleClose1}
+  aria-labelledby={"modal-modal-title" +teamNumber}
+  aria-describedby={"modal-modal-description"+teamNumber}
+>
+  <Box sx={style}>
+  <div class="w-full max-w-xs flex items-center justify-center overflow-y-auto">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      {Array(teamNumber).fill(null).map((_,index)=>{
+        return(
+          <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="username">
+              {index===0?"Team Member Leader":`Team Member${index}`}
+              
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"/>
+          </div>
+        )
+      })}
+      
+      <div class="flex items-center justify-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+  </Box>
+</Modal> */}
         <div className={DanceCss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
@@ -99,6 +235,20 @@ function handleEventClick (e){
             <li>
               <Link to="/">FAQ</Link>
             </li>
+            <li>
+              <Link to="/ca">CA</Link>
+            </li>
+            {
+              userInfo?(
+                <li>
+                <Link to="/dashboard">Dashboard</Link>
+                </li>
+              ):(
+                <li>
+                <Link to="/login">Login</Link>
+                </li>
+              )
+            }
           </ul>
         </div>
         <div className={DanceCss.outernav}>
@@ -172,12 +322,10 @@ function handleEventClick (e){
             <div className={DanceCss.eventCardTitle}>3 PM, Friday</div>
           </div>
           <div className="flex items-center justify-center mt-5 mb-5">
-            {event.maxMembers===event.minMembers?<button className={DanceCss.DanceCardButton}>
-            Register
-            </button>:<>
+            {event.maxMembers===event.minMembers?<button type="button" class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="modal" data-bs-target={"#exampleModalRegister"+teamNumber} onClick={handleClose2}>Register</button>:<>
             <Button
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        id={"demo-positioned-button" + event.eventId}
+        aria-controls={open ? (`demo-positioned-menu${event.eventId}`) : (undefined)}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
@@ -186,8 +334,8 @@ function handleEventClick (e){
         Select Members
       </Button>
       <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
+        id={"demo-positioned-menu" + event.eventId}
+        aria-labelledby={"demo-positioned-button" + event.eventId}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -200,8 +348,18 @@ function handleEventClick (e){
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>1</MenuItem>
-        <MenuItem onClick={handleClose}>2</MenuItem>
+
+        {Array(event.maxMembers-event.minMembers+1).fill(null).map((_,index) =>{
+          return(
+            <MenuItem>
+              <div>
+              <button type="button" class="px-4 py-3 bg-[#06122E] text-[#F74061] font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="modal" data-bs-target={"#exampleModal69"+teamNumber} onClick={handleClose1}>{event.minMembers+index}</button>
+               
+              </div>
+              
+            </MenuItem>
+          )
+        } )}
 
       </Menu>
             </>
@@ -236,6 +394,6 @@ function handleEventClick (e){
         
         </div>
         
-        </>
+        </div>
     );
 }
