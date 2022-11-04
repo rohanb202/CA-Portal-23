@@ -109,7 +109,7 @@
             "eventName": "HULLAD",
             "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If you can catch the attention & attract people to stay and watch your performance, here is your chance. The art of grabbing the audience’s attention is all that you need. No lights, no mics, only pure ACTION full of energy.",
             "maxMembers": 15,
-            "minMembers": 5,
+            "minMembers": 3,
             "parentEvent": 2
         }
     ],
