@@ -17,8 +17,6 @@ import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
 import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile"
 import TestPage from "./Pages/TestPage";
 import Signup from "./components/Signup/signup";
-import Music from "./components/Music/Music";
-import Literature from "./components/Literature/Literature";
 import Dance from "./components/Dance/Dance";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -33,8 +31,6 @@ function App() {
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/Music" element={<Music />} />
-        <Route path="/Literature" element={<Literature />} />
         <Route path="/Dance" element={<Dance/>} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path='/api/google/callback' element={<GoogleMiddleware />}/>

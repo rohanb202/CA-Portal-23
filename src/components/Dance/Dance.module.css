@@ -13,6 +13,10 @@
     transition: all 1s ease;
 }
 
+.btnCss{
+    @apply cursor-pointer text-white transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500;
+}
+
 .mobilenavdropdown img{
     width: 400px;
 }
