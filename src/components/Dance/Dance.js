@@ -85,7 +85,7 @@ export default function Dance(){
       "eventId": "4",
       "eventName": "BLISS",
       "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to you “Bliss - the Group Dance Competition” where synchronicity, energy and creativity unfold themselves and the stage echoes with the thud of your steps, diverse with every leg yet unified with every beat.",
-      "maxMembers": 15,
+      "maxMembers": 35,
       "minMembers": 5,
       "parentEvent": 2
   }
@@ -278,7 +278,7 @@ function handleEventClick (e){
         </div>
        
         <nav>
-            <div className="flex scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
+            <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
                 <h3 className={DanceCss.btnCss} onClick={handleEventClick}>Masquerades</h3>
                 <h3 className={DanceCss.btnCss} onClick={handleEventClick}>Dance</h3>
                 <h3 className={DanceCss.btnCss} onClick={handleEventClick}>Indian Music</h3>
@@ -398,6 +398,7 @@ function handleEventClick (e){
         
         </div>
         
+        </div>
         </div>
     );
 }
