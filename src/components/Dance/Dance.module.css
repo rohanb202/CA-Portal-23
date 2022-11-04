@@ -1,0 +1,366 @@
+.mobilenavdropdown{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    width: 100%;
+    background-color: #F74061;
+    z-index: 40;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.btnCss{
+    @apply cursor-pointer text-white transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500;
+}
+
+.mobilenavdropdown img{
+    width: 400px;
+}
+
+.mobilenavdropdown .title{
+    width: 250px;
+    align-content: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown ul{
+    display: flex;
+    flex-basis: 60%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-content: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown ul li{
+    margin: 10px auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown .logout{
+    font-size: 25px;;
+    margin: 250px auto;
+}
+.mobilenavdropdown ul li{
+    color: #F6F5E9;
+    padding: 20px 30px;
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    /* identical to box height */
+    text-transform: capitalize;
+}
+.backicon{
+    display: flex;
+    height: 50px;
+    width: 100vw;
+    margin-top: 150px;
+    margin-left: 20px;;
+    flex-shrink: 0;
+    z-index: 30;
+    background-image: url("./img/icons8-arrow-50.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobilenav{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    display: flex;
+    height: 80px;
+    z-index: 20;
+    background-color: #F74061;
+}
+
+.mobilenav button{
+    position: absolute;
+    left: 30px;
+    /* top: 20px; */
+    height: 30px;
+    width: 30px;
+    color: #06122E;
+    background-image: url("./img/navicon.svg");
+    background-size: cover;
+    align-self: center;
+}
+
+.mobilenav img{
+    height: 80px;
+    width: 120px;
+    align-self: center;
+    justify-self: center;
+}
+
+.outernav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100wh;
+    padding: 0 20px;
+    background-color: #F74061;
+}
+.navbar{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    /* width: 100wh; */
+    
+}
+
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.kylogo{
+    height: 50px;
+    width: 100px;
+    background-image: url("./img/kylogo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.kyprofile{
+    height: 50px;
+    width: 50px;
+    background-image: url("./img/profilelogo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navlistul{
+    text-decoration: none;
+    display: flex;
+}
+
+.navitem{
+    margin: 0 40px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #06122E;
+}
+
+.outernav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    /* width: 100vw; */
+    margin-top: 3rem;
+    margin-bottom: 4.5rem;
+    padding: 0 20px;
+    background-color: #06122E;
+}
+.navitem2{
+    margin: 0 40px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 50px;
+    color: white;
+}
+.navbar2{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    /* width: 100wh; */
+    
+}
+
+.eventsBody{
+    height: 100%;
+    background-color: #06122E;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.DanceHeading{
+    font-size: 2.5rem;
+    padding-top: 25px;
+    margin-left: 2rem;
+}
+.DanceBorder{
+    margin-left: 2rem;
+    background-image: url("img/Vector\ \(1\).svg");
+    padding: 3.2px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.eventCardBorder{
+    background-image: url("img/cardBorder.svg");
+    padding: 2.5px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.eventPattern1{
+    background-image: url("img/Pattern\ \(1\).svg");
+    padding: 10px;
+    /* position: absolute;
+    z-index: 42; */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-color: #F74061;
+    transform: rotate(-180deg);
+}
+.DanceColumns{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+.eventPattern{
+    background-image: url("img/Pattern\ \(1\).svg");
+    padding: 10px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-color: #F74061;
+}
+.DanceCard{
+    max-width: 25rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    margin: 1rem;
+    border: 25px solid;
+    background-color: #F74061;
+    border-image-source: url("img/Pattern\ \(1\).svg");
+    border-image-slice: 48;
+}
+.eventCardExpandedBorder{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.DanceCard2{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    border: 35px solid;
+    background-color: #F74061;
+    border-image-source: url("img/Pattern\ \(1\).svg");
+    border-image-slice: 48;
+    height: 88vh;
+    width: 40vw;
+}
+.DanceCardOuter2{
+    overflow-y: hidden;
+    /* width: 200%; */
+}
+
+.eventCardInsideText{
+    color: #06122E;
+    font-size:1.2rem;
+    margin-top: 0.75rem;
+    height:16rem;
+    overflow-y: auto;
+    font-weight: bold;
+    /* scrollbar-width: none; */
+}
+.eventCardInsideText::-webkit-scrollbar { 
+    display: none;  
+}
+
+.DanceCardImage{
+    background-image: url("./img/unsplash_GRDpPpKczdY.svg");
+    height: 10rem;
+    /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.DanceCardButton{
+    background-color: #06122E;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 0.5rem; /* 8px */
+    padding-bottom: 0.5rem; 
+    padding-right: 80px;
+    padding-left: 80px;
+    color: #F74061;
+    border-radius: 10px;
+}
+.DanceCardButton:hover{
+    background-color: #1e366e;
+    color: white;
+}
+
+.eventCardTitle{
+    font-weight: bold;
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    line-height: 2.25rem;   
+    color: #06122E;
+}
+
+
+@media screen and (max-width: 1100px){
+    .DanceColumns{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 950px){
+    .DanceColumns{
+        grid-template-columns: auto auto ;
+    }
+}
+@media screen and (max-width: 600px){
+    .DanceColumns{
+        grid-template-columns: auto ;
+    }
+    .DanceCard2{
+        width: 80vw;
+        height: 75vh;
+    }
+    .eventCardExpandedBorder{
+        grid-template-columns: auto auto;
+    }
+    .eventCardInsideText{
+        font-size:1rem;
+    }
+    .eventCardTitle{
+        font-size: 1.5rem;
+    }
+    .DanceCardButton{
+        font-size: 1.1rem;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .mobilenav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .outernav{
+        display: none;
+    }
+}

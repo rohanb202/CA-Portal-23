@@ -1,0 +1,176 @@
+.TeamPage {
+  height: 100vh;
+  background: #06122e;
+}
+.mobilenavdropdown {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  background-color: #f74061;
+  z-index: 40;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.mobilenavdropdown img {
+  width: 400px;
+}
+
+.mobilenavdropdown .title {
+  width: 250px;
+  align-content: center;
+  justify-content: center;
+}
+
+.mobilenavdropdown ul {
+  display: flex;
+  flex-basis: 60%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-content: center;
+  justify-content: center;
+}
+
+.mobilenavdropdown ul li {
+  margin: 10px auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.mobilenavdropdown .logout {
+  font-size: 25px;
+  margin: 250px auto;
+}
+.mobilenavdropdown ul li {
+  color: #f6f5e9;
+  padding: 20px 30px;
+  font-family: "Arima Madurai";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+  /* identical to box height */
+  text-transform: capitalize;
+}
+.backicon {
+  display: flex;
+  height: 50px;
+  width: 100vw;
+  margin-top: 150px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  z-index: 30;
+  background-image: url("./img/icons8-arrow-50.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobilenav {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  display: flex;
+  height: 80px;
+  z-index: 20;
+  background-color: #f74061;
+}
+
+.mobilenav button {
+  position: absolute;
+  left: 30px;
+  /* top: 20px; */
+  height: 30px;
+  width: 30px;
+  color: #06122e;
+  background-image: url("./img/navicon.svg");
+  background-size: cover;
+  align-self: center;
+}
+
+.mobilenav img {
+  height: 80px;
+  width: 120px;
+  align-self: center;
+  justify-self: center;
+}
+
+.outernav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100wh;
+  padding: 0 20px;
+  background-color: #f74061;
+}
+.navbar {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  /* width: 100wh; */
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.kylogo {
+  height: 50px;
+  width: 100px;
+  background-image: url("./img/kylogo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.kyprofile {
+  height: 50px;
+  width: 50px;
+  background-image: url("./img/profilelogo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navlistul {
+  text-decoration: none;
+  display: flex;
+}
+
+.navitem {
+  margin: 0 40px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 50px;
+  color: #06122e;
+}
+
+@media screen and (min-width: 750px) {
+  .mobilenav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .outernav {
+    display: none;
+  }
+  .outerbox {
+    height: 20vh;
+  }
+}

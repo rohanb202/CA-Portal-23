@@ -1,6 +1,10 @@
 import Maincss from "./main.module.css";
-import { useState, useEffect,useContext } from "react";
+import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
+import Testimonialcss from "./testimonial.module.css";
+import TestimonialFrame from "./img/testimonailFrame.svg";
+import FooterMain from "../FooterMain/footer";
+import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
@@ -13,6 +17,8 @@ import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
 import hutImg from "./img/Frame.svg";
 import AuthContext from "../../context/AuthContext";
+import NET from "vanta/dist/vanta.net.min"
+import * as THREE from "three"
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.05 } },
@@ -20,11 +26,32 @@ const boxVariant = {
 };
 
 function Main() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null)
   const [navdisplay, setNavDisplay] = useState(0);
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    if (!vantaEffect){
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          points: 20,
+          maxDistance: 10,
+          spacing: 20,
+          color: 0x75640141,
+          backgroundColor: 0x06122E,
+          THREE
+        })
+      )
+    }
+    return ()=>{
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
 
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -96,7 +123,7 @@ function Main() {
 
   return (
     <>
-      <div className={Maincss.main}>
+      <div className={Maincss.main} ref={vantaRef}>
         <div className={Maincss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
@@ -112,7 +139,7 @@ function Main() {
               <Link to="/">TEAM</Link>
             </li>
             <li>
-              <Link to="/eventRegistration">EVENTS</Link>
+              <Link to="/Dance">EVENTS</Link>
             </li>
             <li>
               <Link to="/">FAQ</Link>
@@ -141,10 +168,10 @@ function Main() {
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
                 <li className={Maincss.navitem}>
-                  <Link to="/">TEAM</Link>
+                  <Link to="/team">TEAM</Link>
                 </li>
                 <li className={Maincss.navitem}>
-                  <Link to="/eventRegistration">EVENTS</Link>
+                  <Link to="/Dance">EVENTS</Link>
                 </li>
                 <li className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
@@ -334,6 +361,55 @@ function Main() {
         <Slider />
         <div className={Throwcss.blank}> </div>
       </div>
+      <div className={Testimonialcss.testimonialSectionBody}>
+        <div className={Testimonialcss.testimonialTitle}>
+          <div className={Testimonialcss.testimonialBorderLeft}></div>
+          <div
+            className={Testimonialcss.testimonialHeading}
+            style={{ color: "#F79840" }}
+          >
+            Testimonails
+          </div>
+          <div className={Testimonialcss.testimonialBorderRight}></div>
+        </div>
+        <div className={Testimonialcss.testimonailsBody}>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+          <div className={Testimonialcss.testimonialCard}>
+            <img src={TestimonialImg} alt="Image" />
+            <div className={Testimonialcss.testimonialData}>
+              <div className={Testimonialcss.testimonailName}>
+                Peter Parker
+              </div>
+              <div className={Testimonialcss.aboutTestimonail}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={Testimonialcss.blank}> </div>
+      </div>
+      <FooterMain/>
     </>
   );
 }

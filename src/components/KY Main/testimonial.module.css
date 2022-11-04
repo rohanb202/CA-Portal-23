@@ -1,0 +1,81 @@
+.testimonialSectionBody{
+    background-color: #06122E;
+    padding-bottom: 0px;
+}
+.blank{
+    height: 2rem;
+}
+.testimonialTitle{
+    display: flex;
+    align-items: center;
+    padding-top: 0rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.testimonialHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.testimonialBorderLeft{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("img/testimonialBorder1.svg");
+}
+
+.testimonialBorderRight{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("img/testimonialBorder2.svg");
+}
+
+.testimonailsBody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonialCard {
+    width: 360px;
+    height: 476px;
+    margin: 2rem 36px;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/testimonailFrame.svg');
+    border-radius: 8px;
+}
+
+.testimonialCard img{
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 16px 0px;
+}
+
+.testimonialData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonailName{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.aboutTestimonail{
+    margin: 8px 0px;
+    font-weight: 500;
+    margin: 0px 12px;
+}
