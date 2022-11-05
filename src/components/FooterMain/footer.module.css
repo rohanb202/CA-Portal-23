@@ -8,7 +8,7 @@
   margin-top: 25px;
   margin-left: 10%;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .mainbody {
   background-color: #f74061;
@@ -115,7 +115,7 @@ h2 {
     font-size: 14px;
   }
   .ky {
-    font-size: 10px;
+    font-size: 11px;
     width: auto;
   }
   .Lborder {
@@ -131,7 +131,7 @@ h2 {
     width: 35px;
   }
   .home {
-    font-size: 10px;
+    font-size: 11px;
     line-height: 15px;
   }
   .column3 {
@@ -147,6 +147,6 @@ h2 {
   .copyright {
     font-size: 8px;
     line-height: 12px;
-    padding-bottom: 2px;
+    padding-bottom: 8px;
   }
 }
