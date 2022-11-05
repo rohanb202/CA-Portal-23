@@ -8,14 +8,14 @@
   margin-top: 25px;
   margin-left: 10%;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .mainbody {
   background-color: #f74061;
   /* margin-top: 10%; */
 }
-.column1{
-    margin-left: 10%;
+.column1 {
+  margin-left: 10%;
 }
 .column {
   margin-top: 15px;
@@ -23,11 +23,9 @@
   padding-top: 10px;
   height: fit-content;
 }
-.row{
-    display: flex;
+.row {
+  display: flex;
 }
-
-
 
 h2 {
   font-family: "Arima Madurai";
@@ -62,19 +60,18 @@ h2 {
   align-content: center;
   color: #06122e;
 }
-.font2{
+.font2 {
   margin-bottom: 10px;
 }
-.font3{
+.font3 {
   margin-bottom: 10px;
 }
-
 
 .image {
   display: flex;
   flex-direction: row;
 }
-.font1{
+.font1 {
   margin-bottom: 5px;
   margin-left: 10px;
 }
@@ -90,54 +87,70 @@ h2 {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  
+
   text-transform: capitalize;
 
   color: #06122e;
 }
 
 .copyright {
-  position: relative;
-  left: 40%;
-  justify-content: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  display: flex;
   align-items: center;
-  padding: 5px;
-  height: 25px;
+  text-transform: capitalize;
+  align-content: center;
+  justify-content: center;
+  color: #06122e;
+  margin-right: 10%;
+  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 700px) {
-  h2{
+  h2 {
     font-size: 12px;
+    white-space: nowrap;
   }
-  .ky{
-    font-size: 8px;
+  .ky {
+    font-size: 11px;
     width: auto;
-    overflow: hidden;
   }
-  .Lborder{
+  .Lborder {
     width: 100%;
     margin-left: 0;
     overflow: hidden;
   }
-  .font1{
+  .font1 {
     margin-right: 25px;
   }
-  .row1,.row2{
+  .row1,
+  .row2 {
     width: 35px;
   }
-  .home{
-    font-size: 8px;
-    line-height: 15px;
-    
+  .home {
+    font-size: 11px;
+    line-height: 20px;
   }
-  .column3{
+  .column3 {
     margin-right: 15%;
   }
-  .font1{
+  .column2 {
+    margin-right: 5%;
+  }
+  .font1 {
     margin-right: 35%;
   }
-  .font2{
+  .font2 {
     margin-right: 35%;
   }
 
+  .copyright {
+    font-size: 8px;
+    line-height: 12px;
+    padding-bottom: 8px;
+  }
 }
