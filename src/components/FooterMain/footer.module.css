@@ -15,7 +15,7 @@
   /* margin-top: 10%; */
 }
 .column1 {
-  margin-left: 10%;
+  margin-right: 4%;
   padding-left: 10%;
 }
 .column2{
@@ -82,12 +82,7 @@ h2 {
 
 .row1,
 .row2 {
-  padding: 5px;
-  width: 44px;
-}
-.row3,
-.row4 {
-  padding: 5px;
+  padding: 4px;
   width: 44px;
 }
 
@@ -136,11 +131,6 @@ h2 {
   }
   .row1,
   .row2 {
-    width: 35px;
-  }
-  .row3,
-  .row4 {
-    padding: 1px;
     width: 35px;
   }
   .home {
