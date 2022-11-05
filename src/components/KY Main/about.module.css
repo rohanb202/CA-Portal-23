@@ -119,6 +119,9 @@
     color: #06122E;
 }
 @media screen and (max-width: 1000px){
+    .aboutTitle{
+        padding-top: 2rem;
+    }
     .aboutContent{
         grid-template-columns: auto ;
     }
