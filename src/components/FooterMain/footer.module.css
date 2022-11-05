@@ -16,6 +16,10 @@
 }
 .column1 {
   margin-left: 10%;
+  padding-left: 10%;
+}
+.column2{
+  margin-left: 5%;
 }
 .column {
   margin-top: 15px;
@@ -106,7 +110,6 @@ h2 {
   align-content: center;
   justify-content: center;
   color: #06122e;
-  margin-right: 10%;
   padding-bottom: 5px;
 }
 
@@ -140,6 +143,9 @@ h2 {
   }
   .column2 {
     margin-right: 5%;
+  }
+  .column1{
+    margin-left: 7%;
   }
   .font1 {
     margin-right: 35%;
