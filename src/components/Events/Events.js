@@ -287,26 +287,29 @@ export default function Events() {
         <nav>
           <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Masquerades
+              TOOLIKA
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Events
+            SAMWAAD
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Indian Music
+            NATRAJ
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Literary
+            MIRAGE
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Quiz
+            ENQUIZTA
             </h3>
 
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Fine Arts
+            CROSSWINDZ
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Western Music
+            BANDISH
+            </h3>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+            ABHINAY
             </h3>
           </div>
         </nav>
@@ -393,7 +396,7 @@ export default function Events() {
                                       onClick={(e) => handleClose2(e, event.maxMembers)}
                                     >
                                       {" "}
-                                      {event.maxMembers == 1
+                                      {event.maxMembers === 1
                                         ? "Register"
                                         : "Enter Team Members"}
                                     </button>
