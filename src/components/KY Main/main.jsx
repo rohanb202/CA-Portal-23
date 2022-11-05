@@ -252,6 +252,7 @@ function Main() {
           </div>
         </div>
         <div className={Maincss.maincontent}>
+        <div className={Maincss.blurbg}></div>
           <div className={Maincss.themebox}>
               <div className={Maincss.themetext}>SAFARNAMA A MYSTICAL VOYAGE</div>
               <div className={Maincss.in}>IN</div>

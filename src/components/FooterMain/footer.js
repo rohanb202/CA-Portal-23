@@ -12,6 +12,7 @@ export default function FooterMain() {
   return (
     <div>
       <div className={Footercss.mainbody}>
+      <div className={Footercss.uborder}></div>
         <div className={Footercss.row}>
           <div className={`${Footercss.column1} ${Footercss.column} `}>
             <h2 className={`${Footercss.font} ${Footercss.font1}`}>Social</h2>
