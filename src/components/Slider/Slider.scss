@@ -9,6 +9,8 @@
 @media screen and (max-width: 600px) {
   .slider {
     height: 30vh;
+    padding-bottom: 25px;
+    padding-top: 25px;
   }
 }
 
@@ -78,12 +80,21 @@
 @media screen and (max-width: 600px) {
   .arrow {
     width: 11.66px;
+    padding-top: 5px;
   }
   .prev {
     width: 11.66px;
+    margin-top: 30%;
+    margin-left: 35.68%;
   }
   .next {
     width: 11.66px;
+    margin-top: 30%;
+    margin-right: 35.68%;
+  }
+  .slide{
+    width: 80%;
+    padding-top: 20px;
   }
 }
 

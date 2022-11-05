@@ -52,18 +52,7 @@ const Slider = () => {
   return (
     <>
       <div className="slider" id="carousel">
-        <img
-          src={left}
-          className="arrow prev"
-          onClick={prevSlide}
-          alt="left-arrow"
-        />
-        <img
-          src={right}
-          className="arrow next"
-          onClick={nextSlide}
-          alt="right-arrow"
-        />
+        
         {sliderData.map((slide, index) => {
           return (
             <div
@@ -78,6 +67,19 @@ const Slider = () => {
             </div>
           );
         })}
+
+        <img
+          src={left}
+          className="arrow prev"
+          onClick={prevSlide}
+          alt="left-arrow"
+        />
+        <img
+          src={right}
+          className="arrow next"
+          onClick={nextSlide}
+          alt="right-arrow"
+        />
       </div>
     </>
   );
