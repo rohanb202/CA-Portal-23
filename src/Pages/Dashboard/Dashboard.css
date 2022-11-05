@@ -1,0 +1,4 @@
+.borderimg{
+        border: 50px solid transparent;
+        border-image: url("../../img/Group 309.png") 50 round;
+}
