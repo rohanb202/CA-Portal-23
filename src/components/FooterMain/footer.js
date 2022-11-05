@@ -38,11 +38,11 @@ export default function FooterMain() {
               Get in Touch
             </h2>
             <div className={Footercss.image}>
-              <span className={Footercss.row1}>
+              <span className={Footercss.row3}>
                 <img src={gmail} className={Footercss.row1} alt="" />
                 <img src={call} className={Footercss.row1} alt="" />
               </span>
-              <span className={Footercss.row2}>
+              <span className={Footercss.row4}>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
                   ky@gmail.com
                 </div>

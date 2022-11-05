@@ -85,13 +85,17 @@ h2 {
   padding: 5px;
   width: 44px;
 }
+.row3,
+.row4 {
+  padding: 5px;
+  width: 44px;
+}
 
 .ky {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-
   text-transform: capitalize;
 
   color: #06122e;
@@ -132,6 +136,11 @@ h2 {
   }
   .row1,
   .row2 {
+    width: 35px;
+  }
+  .row3,
+  .row4 {
+    padding: 1px;
     width: 35px;
   }
   .home {
