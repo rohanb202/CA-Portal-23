@@ -248,7 +248,7 @@ function Main() {
                 }
               </ul>
             </div>
-            <div className={Maincss.kyprofile}></div>
+            <Link to="/login"><div className={Maincss.kyprofile} ></div></Link>
           </div>
         </div>
         <div className={Maincss.maincontent}>
