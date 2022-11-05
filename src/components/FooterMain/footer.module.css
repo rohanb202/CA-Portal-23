@@ -137,15 +137,6 @@ h2 {
     font-size: 11px;
     line-height: 20px;
   }
-  .column3 {
-    margin-right: 17%;
-  }
-  .column2 {
-    margin-right: 5%;
-  }
-  .column1{
-    margin-left: 0%;
-  }
   .font1 {
     margin-right: 35%;
   }
@@ -158,4 +149,13 @@ h2 {
     line-height: 12px;
     padding-bottom: 8px;
   }
+  .column3{
+ position: relative;
+ right: 10%;
+  }
+  .column2{
+    position: relative;
+    right: 8%;
+  }
+
 }
