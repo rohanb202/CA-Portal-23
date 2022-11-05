@@ -22,17 +22,17 @@ $slide-width: 30rem;
   box-sizing: inherit;
 }
 
-ul {
+.carousel__slide-list {
     display: flex;
   list-style-type: none;
   padding: 0;
   
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
 .carousel__wrap {
     // margin-top: 10%;

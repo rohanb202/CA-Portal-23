@@ -87,10 +87,10 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
             <img src={TestimonialImg} alt="Image" />
             <div className={Testimonialcss.testimonialData}>
               <div className={Testimonialcss.testimonailName}>
-                Peter Parker
+                {item.player.title}
               </div>
               <div className={Testimonialcss.aboutTestimonail}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
+                {item.player.desc}
               </div>
             </div>
           </div>
