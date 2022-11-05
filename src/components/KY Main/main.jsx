@@ -191,15 +191,15 @@ function Main() {
             <img src={logo} alt="kashiyatra"></img>
           </div>
           <ul className={Maincss.nav}>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">TEAM</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
             </li>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/ca">CA</Link>
             </li>
@@ -223,15 +223,15 @@ function Main() {
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/events">EVENTS</Link>
                 </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                 <Link to="/ca">CA</Link>
                 </li>

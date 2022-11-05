@@ -6,13 +6,11 @@ import twitter from "./img/twitter.svg";
 import yt from "./img/yt.svg";
 import gmail from "./img/gmail.svg";
 import call from "./img/call.svg";
-import copy from "./img/copyright.svg";
 
 export default function FooterMain() {
   return (
     <div>
       <div className={Footercss.mainbody}>
-      <div className={Footercss.uborder}></div>
         <div className={Footercss.row}>
           <div className={`${Footercss.column1} ${Footercss.column} `}>
             <h2 className={`${Footercss.font} ${Footercss.font1}`}>Social</h2>
