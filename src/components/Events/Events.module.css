@@ -196,12 +196,12 @@
     font-family: 'Arima Madurai', cursive;
 }
 
-.DanceHeading{
+.EventsHeading{
     font-size: 2.5rem;
     padding-top: 25px;
     margin-left: 2rem;
 }
-.DanceBorder{
+.EventsBorder{
     margin-left: 2rem;
     background-image: url("img/Vector\ \(1\).svg");
     padding: 3.2px;
@@ -228,7 +228,7 @@
     background-color: #F74061;
     transform: rotate(-180deg);
 }
-.DanceColumns{
+.EventsColumns{
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
@@ -241,7 +241,7 @@
     justify-content: center;
     background-color: #F74061;
 }
-.DanceCard{
+.EventsCard{
     max-width: 25rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
@@ -258,7 +258,7 @@
     align-items: center;
 
 }
-.DanceCard2{
+.EventsCard2{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
     border: 35px solid;
@@ -268,7 +268,7 @@
     height: 88vh;
     width: 40vw;
 }
-.DanceCardOuter2{
+.EventsCardOuter2{
     overflow-y: hidden;
     /* width: 200%; */
 }
@@ -286,7 +286,7 @@
     display: none;  
 }
 
-.DanceCardImage{
+.EventsCardImage{
     background-image: url("./img/unsplash_GRDpPpKczdY.svg");
     height: 10rem;
     /* background-position: center; */
@@ -294,7 +294,7 @@
   background-size: cover;
 }
 
-.DanceCardButton{
+.EventsCardButton{
     background-color: #06122E;
     font-weight: bold;
     font-size: 1.5rem;
@@ -305,7 +305,7 @@
     color: #F74061;
     border-radius: 10px;
 }
-.DanceCardButton:hover{
+.EventsCardButton:hover{
     background-color: #1e366e;
     color: white;
 }
@@ -321,20 +321,20 @@
 
 
 @media screen and (max-width: 1100px){
-    .DanceColumns{
+    .EventsColumns{
         grid-template-columns: auto auto auto;
     }
 }
 @media screen and (max-width: 950px){
-    .DanceColumns{
+    .EventsColumns{
         grid-template-columns: auto auto ;
     }
 }
 @media screen and (max-width: 600px){
-    .DanceColumns{
+    .EventsColumns{
         grid-template-columns: auto ;
     }
-    .DanceCard2{
+    .EventsCard2{
         width: 80vw;
         height: 75vh;
     }
@@ -347,7 +347,7 @@
     .eventCardTitle{
         font-size: 1.5rem;
     }
-    .DanceCardButton{
+    .EventsCardButton{
         font-size: 1.1rem;
         padding-right: 40px;
         padding-left: 40px;

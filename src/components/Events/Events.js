@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 
 import kylogo from "./img/kylogo.svg";
 
-import DanceCss from "./Dance.module.css";
+import EventsCss from "./Events.module.css";
 import img1 from "./img/unsplash_GRDpPpKczdY.svg";
 import { Link } from "react-router-dom";
 import eventData from "./events.json";
@@ -18,7 +18,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
-export default function Dance() {
+export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
 
   const style = {
@@ -67,7 +67,7 @@ export default function Dance() {
       eventId: "2",
       eventName: "CUT-A-RUG",
       eventDetails:
-        "Natraj is the name of Shiva that symbolizes dance: the dynamic and static divine flow of energy. It lets you dive deep into the oceans, swim without hurdles and breathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra unveils to you “Cut-A-Rug - the Solo Dance Competition",
+        "Natraj is the name of Shiva that symbolizes Events: the dynamic and static divine flow of energy. It lets you dive deep into the oceans, swim without hurdles and breathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra unveils to you “Cut-A-Rug - the Solo Events Competition",
       maxMembers: 1,
       minMembers: 1,
       parentEvent: 2,
@@ -85,7 +85,7 @@ export default function Dance() {
       eventId: "4",
       eventName: "BLISS",
       eventDetails:
-        "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to you “Bliss - the Group Dance Competition” where synchronicity, energy and creativity unfold themselves and the stage echoes with the thud of your steps, diverse with every leg yet unified with every beat.",
+        "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to you “Bliss - the Group Events Competition” where synchronicity, energy and creativity unfold themselves and the stage echoes with the thud of your steps, diverse with every leg yet unified with every beat.",
       maxMembers: 35,
       minMembers: 5,
       parentEvent: 2,
@@ -120,7 +120,7 @@ export default function Dance() {
   }
   // console.log(eventData);
   return (
-    <div className={DanceCss.eventsBody}>
+    <div className={EventsCss.eventsBody}>
       <div
         class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
         id={"exampleModal69" + teamNumber}
@@ -159,7 +159,7 @@ export default function Dance() {
                   <div class="flex items-center justify-center">
                     <button
                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                      type="button"
+                      type="button" data-bs-dismiss="modal"
                     >
                       Register
                     </button>
@@ -227,23 +227,23 @@ export default function Dance() {
 
       
 
-      <div className={DanceCss.eventsBody}>
-        <div className={DanceCss.mobilenav}>
+      <div className={EventsCss.eventsBody}>
+        <div className={EventsCss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
           <img src={kylogo} alt="ky-23"></img>
         </div>
-        <div id="mobilenavdropdown" className={DanceCss.mobilenavdropdown}>
-          <button onClick={closeNav} className={DanceCss.backicon}></button>
-          <div className={DanceCss.title}>
+        <div id="mobilenavdropdown" className={EventsCss.mobilenavdropdown}>
+          <button onClick={closeNav} className={EventsCss.backicon}></button>
+          <div className={EventsCss.title}>
             <img src={kylogo} alt="kashiyatra"></img>
           </div>
-          <ul className={DanceCss.nav}>
+          <ul className={EventsCss.nav}>
             <li>
               <Link to="/">TEAM</Link>
             </li>
             <li>
-              <Link to="/Dance">EVENTS</Link>
+              <Link to="/events">EVENTS</Link>
             </li>
             <li>
               <Link to="/">FAQ</Link>
@@ -262,59 +262,59 @@ export default function Dance() {
             )}
           </ul>
         </div>
-        <div className={DanceCss.outernav}>
-          <div className={DanceCss.navbar}>
+        <div className={EventsCss.outernav}>
+          <div className={EventsCss.navbar}>
             <Link to="/">
-              <div className={DanceCss.kylogo}></div>
+              <div className={EventsCss.kylogo}></div>
             </Link>
-            <div className={DanceCss.navlist}>
-              <ul className={DanceCss.navlistul}>
-                <li className={DanceCss.navitem}>
+            <div className={EventsCss.navlist}>
+              <ul className={EventsCss.navlistul}>
+                <li className={EventsCss.navitem}>
                   <Link to="/">TEAM</Link>
                 </li>
-                <li className={DanceCss.navitem}>
-                  <Link to="/Dance">EVENTS</Link>
+                <li className={EventsCss.navitem}>
+                  <Link to="/events">EVENTS</Link>
                 </li>
-                <li className={DanceCss.navitem}>
+                <li className={EventsCss.navitem}>
                   <Link to="/">FAQ</Link>
                 </li>
               </ul>
             </div>
-            <div className={DanceCss.kyprofile}></div>
+            <div className={EventsCss.kyprofile}></div>
           </div>
         </div>
 
         <nav>
           <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Masquerades
             </h3>
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
-              Dance
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+              Events
             </h3>
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Indian Music
             </h3>
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Literary
             </h3>
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Quiz
             </h3>
 
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Fine Arts
             </h3>
-            <h3 className={DanceCss.btnCss} onClick={handleEventClick}>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Western Music
             </h3>
           </div>
         </nav>
 
-        <div className={DanceCss.DanceColumns}>
+        <div className={EventsCss.EventsColumns}>
           {category.map((event) => {
             return (
-              <div className={DanceCss.DanceCard}>
+              <div className={EventsCss.EventsCard}>
                 <img
                   className="w-full"
                   src={img1}
@@ -336,7 +336,7 @@ export default function Dance() {
                   >
                     3 PM, Friday
                   </div>
-                  <div className={DanceCss.eventCardBorder}></div>
+                  <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base text-white mt-3 text-md "
                     style={{ color: "#06122E" }}
@@ -371,12 +371,12 @@ export default function Dance() {
                             />
                           </div>
                           <div class="modal-body relative p-4 text-[#06122E] bg-[#F74061]">
-                            <div className={DanceCss.eventCardExpandedBorder}>
+                            <div className={EventsCss.eventCardExpandedBorder}>
                               <div>
-                                <div className={DanceCss.eventCardTitle}>
+                                <div className={EventsCss.eventCardTitle}>
                                   {event.eventName}
                                 </div>
-                                <div className={DanceCss.eventCardTitle}>
+                                <div className={EventsCss.eventCardTitle}>
                                   3 PM, Friday
                                 </div>
                               </div>
@@ -464,7 +464,7 @@ export default function Dance() {
                                 )}
                               </div>
                             </div>
-                            <p className={DanceCss.eventCardInsideText}>
+                            <p className={EventsCss.eventCardInsideText}>
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">
