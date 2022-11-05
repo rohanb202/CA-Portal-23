@@ -12,6 +12,7 @@ import Dance from "../../img/dance.png";
 import { useState } from "react";
 import { useEffect } from "react";
 
+// import DashboardCss from "./Dashboard.module.css"
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -104,11 +105,11 @@ const Dashboard = () => {
               className="h-40 relative md:left-0 left-[15%]"
             />
             <div className="mt-10 md:ml-10">
-              <div className="mt-3 text-center md:text-left font-bold md:text-3xl text-2xl text-white">
+              <div className="mt-3 md:text-left font-bold md:text-3xl text-2xl text-white">
                 {/* {userInfo?.full_name} */}
                 Pawan Kumar Sahu
               </div>
-              <div className="mt-3 text-center md:text-left font-bold text-white text-xl">
+              <div className="mt-3 md:text-left font-bold text-white text-xl">
                 {/* {userInfo?.college} */}
                 IIT BHU
               </div>
@@ -120,7 +121,7 @@ const Dashboard = () => {
                 Mail Id: {userInfo?.email}
               </div>
             </div>
-            <div className="md:mt-16 mt-5 md:ml-28 flex md:block">
+            <div className="md:mt-16 mt-6 md:ml-28 flex md:block">
               <div className="font-bold text-white ">
                 {/* KY ID:{userInfo?.ky_id} */}
                 KY ID: #123456
