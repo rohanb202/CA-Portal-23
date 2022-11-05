@@ -135,25 +135,25 @@ function Main() {
             <img src={kylogo} alt="kashiyatra"></img>
           </div>
           <ul className={Maincss.nav}>
-            <li>
+            <li onClick={closeNav}>
               <Link to="/">TEAM</Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="/Dance">EVENTS</Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="/ca">CA</Link>
             </li>
             {
               userInfo?(
-                <li>
+                <li onClick={closeNav}>
                 <Link to="/dashboard">Dashboard</Link>
                 </li>
               ):(
-                <li>
+                <li onClick={closeNav}>
                 <Link to="/login">Login</Link>
                 </li>
               )
@@ -167,25 +167,25 @@ function Main() {
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
-                <li className={Maincss.navitem}>
+                <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
                 </li>
-                <li className={Maincss.navitem}>
+                <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/Dance">EVENTS</Link>
                 </li>
-                <li className={Maincss.navitem}>
+                <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
                 </li>
-                <li className={Maincss.navitem}>
+                <li onClick={closeNav} className={Maincss.navitem}>
                 <Link to="/ca">CA</Link>
                 </li>
                 {
                   userInfo?(
-                    <li className={Maincss.navitem}>
+                    <li onClick={closeNav} className={Maincss.navitem}>
                     <Link to="/dashboard">Dashboard</Link>
                     </li>
                   ):(
-                    <li className={Maincss.navitem}>
+                    <li onClick={closeNav} className={Maincss.navitem}>
                     <Link to="/login">Login</Link>
                     </li>
                   )
