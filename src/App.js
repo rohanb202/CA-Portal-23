@@ -24,7 +24,7 @@ import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile";
 import TestPage from "./Pages/TestPage";
 import Signup from "./components/Signup/signup";
 
-import Dance from "./components/Dance/Dance";
+import Events from "./components/Events/Events";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -62,7 +62,7 @@ function App() {
         <Route path="/login" element={<LoginMain />} />
         <Route path="/signup" element={<Signup />} />
 
-        <Route path="/Dance" element={<Dance/>} />
+        <Route path="/events" element={<Events/>} />
 
         <Route path="/team" element={<Team />} />
 
