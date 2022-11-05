@@ -64,7 +64,7 @@
             "eventId": 9,
             "eventName": "ADVAITA",
             "eventDetails": "If you think you can make the crowd forget themselves in your performance, then this is the place to be. With massive enthusiasm and fearsome competition, this event brings out the best in its participants striving for glory. If you have the band that can’t lose and have a hunger for more, then come and perform against the most formidable bands in India. It is the battle of bands, and the clash is raging hotter than ever.",
-            "maxMembers": 1,
+            "maxMembers": 8,
             "minMembers": 1,
             "parentEvent": 3
         }
