@@ -112,7 +112,8 @@ h2 {
 
 @media screen and (max-width: 700px) {
   h2 {
-    font-size: 14px;
+    font-size: 12px;
+    white-space: nowrap;
   }
   .ky {
     font-size: 11px;
@@ -132,10 +133,13 @@ h2 {
   }
   .home {
     font-size: 11px;
-    line-height: 15px;
+    line-height: 20px;
   }
   .column3 {
     margin-right: 15%;
+  }
+  .column2 {
+    margin-right: 5%;
   }
   .font1 {
     margin-right: 35%;
