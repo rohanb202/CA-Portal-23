@@ -5,7 +5,6 @@ import kylogo from "./img/kylogo.svg";
 
 import EventsCss from "./Events.module.css";
 import img1 from "./img/unsplash_GRDpPpKczdY.svg";
-import { Link } from "react-router-dom";
 import eventData from "./events.json";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -17,6 +16,8 @@ import TextField from "@mui/material/TextField";
 // import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import { Link } from "react-router-dom";
+import useAxiosPrivate from "../../utils/useAxiosPrivate";
 
 export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
@@ -62,35 +63,8 @@ export default function Events() {
     setAnchorEl(null);
   };
 
-  const [category, setCategory] = useState([
-    {
-      eventId: "2",
-      eventName: "CUT-A-RUG",
-      eventDetails:
-        "Natraj is the name of Shiva that symbolizes Events: the dynamic and static divine flow of energy. It lets you dive deep into the oceans, swim without hurdles and breathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra unveils to you “Cut-A-Rug - the Solo Events Competition",
-      maxMembers: 1,
-      minMembers: 1,
-      parentEvent: 2,
-    },
-    {
-      eventId: "3",
-      eventName: "ECSTASY",
-      eventDetails:
-        "Come into an alliance with your partner and arm yourselves with all the grooves and moves, and prove it to us that you got what it takes to be a doublet for each other dancing against the world.",
-      maxMembers: 5,
-      minMembers: 5,
-      parentEvent: 2,
-    },
-    {
-      eventId: "4",
-      eventName: "BLISS",
-      eventDetails:
-        "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to you “Bliss - the Group Events Competition” where synchronicity, energy and creativity unfold themselves and the stage echoes with the thud of your steps, diverse with every leg yet unified with every beat.",
-      maxMembers: 35,
-      minMembers: 5,
-      parentEvent: 2,
-    },
-  ]);
+  const [category, setCategory] = useState(Object.values(eventData)[0]);
+  const axiosPrivate = useAxiosPrivate();
 
   console.log(category);
 
@@ -119,8 +93,16 @@ export default function Events() {
     window.onscroll = function () {};
   }
   // console.log(eventData);
+
+  const [eventToRegister, setEventToRegister] = useState(null);
+  const [memberList, setMemberList] = useState({});
+  const requestRegistration = async () => {
+    
+  }
   return (
     <div className={EventsCss.eventsBody}>
+
+      {/* MODAL DIV WITH MULTIPLE INPUT FIELDS ACCORDING TO NUMBER OF TEAM MEMBERS */}
       <div
         class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
         id={"exampleModal69" + teamNumber}
@@ -143,15 +125,34 @@ export default function Events() {
                             for="username"
                           >
                             {index === 0
-                              ? "Team Leader"
+                              ? "Team Leader (You)"
                               : `Team Member ${index}`}
                           </label>
-                          <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="username"
-                            type="text"
-                            placeholder="KY ID"
-                          />
+                          {
+                            (index === 0)?(
+                              <>
+                              <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username"
+
+                                type="text"
+                                value={userInfo.ky_id}
+                                placeholder="KY ID"
+                                disabled={true}
+                              />
+                              </>
+                            ):(
+                              <>
+                              <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username"
+                                type="text"
+                                placeholder="KY ID"
+                                name={index}
+                              />
+                              </>
+                            )
+                          }
                         </div>
                       );
                     })}
@@ -160,6 +161,7 @@ export default function Events() {
                     <button
                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       type="button" data-bs-dismiss="modal"
+                      onClick={requestRegistration}
                     >
                       Register
                     </button>
@@ -176,6 +178,7 @@ export default function Events() {
         tabindex="-1"
         aria-labelledby="exampleModalRegisterLabel"
         aria-hidden="true">
+
   <div class="modal-dialog relative inset-0 m-auto w-auto pointer-events-none ">
           <div class="modal-content border-none relative inset-0 m-auto flex flex-col w-full outline-none text-current ">
             <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
@@ -196,15 +199,30 @@ export default function Events() {
                               for="username"
                             >
                               {index === 0
-                                ? "Team Leader"
+                                ? "Team Leader (You)"
                                 : `Team Member ${index}`}
                             </label>
-                            <input
-                              class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                              id="username"
-                              type="text"
-                              placeholder="KY ID"
-                            />
+                            { index == 0 ? (
+                              <>
+                                <input
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  id="username"
+                                  type="text"
+                                  placeholder="KY ID"
+                                  value={userInfo.ky_id}
+                                  disabled={true}
+                                />
+                              </>
+                            ):(
+                              <>
+                                <input
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  id="username"
+                                  type="text"
+                                  placeholder="KY ID"
+                                />
+                              </>
+                            )}
                           </div>
                         );
                       })}
@@ -286,7 +304,7 @@ export default function Events() {
 
         <nav>
           <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+            {/* <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Masquerades
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
@@ -307,7 +325,8 @@ export default function Events() {
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Western Music
-            </h3>
+            </h3> */}
+            {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
           </div>
         </nav>
 
@@ -317,7 +336,7 @@ export default function Events() {
               <div className={EventsCss.EventsCard}>
                 <img
                   className="w-full"
-                  src={img1}
+                  src={event.image_URL}
                   alt="Sunset in the mountains"
                 />
                 <div
@@ -334,15 +353,14 @@ export default function Events() {
                     className="font-bold text-xl mb-2"
                     style={{ color: "#06122E" }}
                   >
-                    3 PM, Friday
+                    {event.maxMembers==1?"Individual Event":"Team Event"}
                   </div>
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base text-white mt-3 text-md "
                     style={{ color: "#06122E" }}
                   >
-                    Lorem ipsum dolor sit amet, consectetur Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
+                    {event.eventDetails.substring(0,150)}.....
                   </p>
                   <div className="flex items-center justify-center mt-5 mb-5">
                     <button
@@ -350,6 +368,7 @@ export default function Events() {
                       class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
                       data-bs-toggle="modal"
                       data-bs-target={"#exampleModal" + event.eventId}
+                      onClick={()=>{setEventToRegister(event)}}
                     >
                       Explore{" "}
                     </button>
@@ -366,7 +385,7 @@ export default function Events() {
                           <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-[#F74061]">
                             <img
                               className="w-full"
-                              src={img1}
+                              src={event.image_URL}
                               alt="Sunset in the mountains"
                             />
                           </div>
@@ -377,10 +396,14 @@ export default function Events() {
                                   {event.eventName}
                                 </div>
                                 <div className={EventsCss.eventCardTitle}>
-                                  3 PM, Friday
+                                  {event.maxMembers==1?"Individual Event":"Team Event"}
                                 </div>
                               </div>
                               <div className="flex items-center justify-center mt-5 mb-5">
+
+                                {userInfo?(
+                                  <>
+                                {/* Register, Select Team Members or Enter Team members button in modal */}
                                 {event.maxMembers === event.minMembers ? (
                                   <>
                                     <button
@@ -462,6 +485,22 @@ export default function Events() {
                                     </Menu>
                                   </>
                                 )}
+                                  </>
+                                ):(
+                                  <>
+                                  <Link to="/login">
+                                  <button
+                                      type="button"
+                                      class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
+                                      data-bs-toggle="modal"
+                                    >
+                                      {" "}
+                                      Login
+                                    </button>
+                                    </Link>
+                                  </>
+                                )}
+
                               </div>
                             </div>
                             <p className={EventsCss.eventCardInsideText}>
