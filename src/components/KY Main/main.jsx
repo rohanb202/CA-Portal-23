@@ -3,6 +3,7 @@ import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
+import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
 import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Testimonials from "./testimonials.jsx";
@@ -416,7 +417,7 @@ function Main() {
           <div className={Throwcss.throwBorder3}></div>
           <div
             className={Throwcss.throwSliderHeading}
-            style={{ color: "#F75440" }}
+            style={{ color: "#0D1F2D" }}
           >
             Throwback
           </div>
@@ -430,7 +431,7 @@ function Main() {
           <div className={Testimonialcss.testimonialBorderLeft}></div>
           <div
             className={Testimonialcss.testimonialHeading}
-            style={{ color: "#F79840" }}
+            style={{ color: "#F6F5E9" }}
           >
             Testimonails
           </div>
