@@ -6,9 +6,6 @@ import kylogo from "./img/kylogo.svg";
 import EventsCss from "./Events.module.css";
 import img1 from "./img/unsplash_GRDpPpKczdY.svg";
 import eventData from "./events.json";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import AuthContext from "../../context/AuthContext";
 
 import Box from "@mui/material/Box";
@@ -18,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Link } from "react-router-dom";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
+
 
 export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
@@ -62,6 +60,7 @@ export default function Events() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
 
   const [category, setCategory] = useState(Object.values(eventData)[0]);
   const axiosPrivate = useAxiosPrivate();
@@ -160,6 +159,7 @@ export default function Events() {
                   <div class="flex items-center justify-center">
                     <button
                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+
                       type="button" data-bs-dismiss="modal"
                       onClick={requestRegistration}
                     >
@@ -173,13 +173,15 @@ export default function Events() {
         </div>
       </div>
 
-      <div class="modal fade fixed top-[25%]  hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
+      <div
+        class="modal fade fixed top-[25%]  hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
         id={"exampleModalRegister" + teamNumber}
         tabindex="-1"
         aria-labelledby="exampleModalRegisterLabel"
-        aria-hidden="true">
+        aria-hidden="true"
+      >
+        <div class="modal-dialog relative inset-0 m-auto w-auto pointer-events-none ">
 
-  <div class="modal-dialog relative inset-0 m-auto w-auto pointer-events-none ">
           <div class="modal-content border-none relative inset-0 m-auto flex flex-col w-full outline-none text-current ">
             <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center ">
@@ -230,7 +232,8 @@ export default function Events() {
                     <div class="flex items-center justify-center">
                       <button
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline"
-                        type="button" data-bs-dismiss="modal"
+                        type="button"
+                        data-bs-dismiss="modal"
                       >
                         Register
                       </button>
@@ -241,9 +244,7 @@ export default function Events() {
             </div>
           </div>
         </div>
-</div>
-
-      
+      </div>
 
       <div className={EventsCss.eventsBody}>
         <div className={EventsCss.mobilenav}>
@@ -304,29 +305,36 @@ export default function Events() {
 
         <nav>
           <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
+
             {/* <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               Masquerades
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Events
+              SAMWAAD
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Indian Music
+              NATRAJ
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Literary
+              MIRAGE
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Quiz
+              ENQUIZTA
             </h3>
 
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Fine Arts
+              CROSSWINDZ
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+              BANDISH
+            </h3>
+            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+              ABHINAY
+            </h3>
               Western Music
             </h3> */}
             {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
+
           </div>
         </nav>
 
@@ -360,7 +368,9 @@ export default function Events() {
                     className="text-base text-white mt-3 text-md "
                     style={{ color: "#06122E" }}
                   >
+
                     {event.eventDetails.substring(0,150)}.....
+
                   </p>
                   <div className="flex items-center justify-center mt-5 mb-5">
                     <button
@@ -413,76 +423,132 @@ export default function Events() {
                                       data-bs-target={
                                         "#exampleModalRegister" + teamNumber
                                       }
-                                      onClick={(e) => handleClose2(e, event.maxMembers)}
+                                      onClick={(e) =>
+                                        handleClose2(e, event.maxMembers)
+                                      }
                                     >
                                       {" "}
-                                      {event.maxMembers == 1
+                                      {event.maxMembers === 1
                                         ? "Register"
                                         : "Enter Team Members"}
                                     </button>
                                   </>
                                 ) : (
                                   <>
-                                    <Button
-                                      id={
-                                        "demo-positioned-button" + event.eventId
-                                      }
-                                      aria-controls={
-                                        open
-                                          ? `demo-positioned-menu${event.eventId}`
-                                          : undefined
-                                      }
-                                      aria-haspopup="true"
-                                      aria-expanded={open ? "true" : undefined}
-                                      onClick={handleClick}
-                                      class="px-4 py-3 bg-[#06122E] text-[#F74061] font-medium text-l leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
-                                    >
-                                      Select Members
-                                    </Button>
-                                    <Menu
-                                      id={
-                                        "demo-positioned-menu" + event.eventId
-                                      }
-                                      aria-labelledby={
-                                        "demo-positioned-button" + event.eventId
-                                      }
-                                      anchorEl={anchorEl}
-                                      open={open}
-                                      onClose={handleClose}
-                                      anchorOrigin={{
-                                        vertical: "top",
-                                        horizontal: "left",
-                                      }}
-                                      transformOrigin={{
-                                        vertical: "top",
-                                        horizontal: "left",
-                                      }}
-                                    >
-                                      {Array(
-                                        event.maxMembers - event.minMembers + 1
-                                      )
-                                        .fill(null)
-                                        .map((_, index) => {
-                                          return (
-                                            <MenuItem>
-                                              <div>
-                                                <button
-                                                  type="button"
-                                                  class="px-4 py-3 bg-[#06122E] text-[#F74061] font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
-                                                  data-bs-toggle="modal"
-                                                  data-bs-target={
-                                                    "#exampleModal69" +
-                                                    teamNumber
-                                                  }
-                                                  onClick={handleClose1}
-                                                >
-                                                  {event.minMembers + index}
-                                                </button>
-                                              </div>
-                                            </MenuItem>
-                                          );
-                                        })}
-                                    </Menu>
+                                    <div class="flex justify-center">
+                                      <div>
+                                        <div class="dropdown relative">
+                                          <button
+                                            class="
+          dropdown-toggle
+          px-8
+          py-4
+          bg-[#06122E]
+          text-[#F74061]
+          font-medium
+          text-l
+          leading-tight
+          uppercase
+          rounded
+          shadow-md
+          hover:bg-[#06124F] hover:shadow-lg
+          transition
+          duration-150
+          ease-in-out
+          flex
+          items-center
+          whitespace-nowrap
+        "
+                                            type="button"
+                                            id={
+                                              "dropdownMenuButton1" +
+                                              event.eventId
+                                            }
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                          >
+                                            Select Members
+                                            <svg
+                                              aria-hidden="true"
+                                              focusable="false"
+                                              data-prefix="fas"
+                                              data-icon="caret-down"
+                                              class="w-2 ml-2"
+                                              role="img"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              viewBox="0 0 320 512"
+                                            ></svg>
+                                          </button>
+                                          <ul
+                                            class="
+          dropdown-menu
+          min-w-max
+          absolute
+          hidden
+          bg-[#06122E]
+          text-[#F74061]
+          z-50
+          float-left
+          py-2
+          px-2
+          list-none
+          text-left
+          rounded-lg
+          shadow-lg
+          mt-1
+          hidden
+          m-0
+          bg-clip-padding
+          border-none
+        "
+                                            aria-labelledby={
+                                              "dropdownMenuButton1" +
+                                              event.eventId
+                                            }
+                                          >
+                                            {Array(
+                                              event.maxMembers -
+                                                event.minMembers +
+                                                1
+                                            )
+                                              .fill(null)
+                                              .map((_, index) => {
+                                                return (
+                                                  <li
+                                                    type="button"
+                                                    class="dropdown-toggle
+                                                  px-6
+                                                  py-2.5
+                                                  bg-[#06122E]
+                                                  text-[#F74061]
+                                                  font-medium
+                                                  text-xl
+                                                  leading-tight
+                                                  uppercase
+                                                  rounded
+                                                  shadow-md
+                                                  hover:bg-blue-700 hover:shadow-lg
+                                                  transition
+                                                  duration-150
+                                                  ease-in-out
+                                                  flex
+                                                  items-center
+                                                  whitespace-nowrap"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target={
+                                                      "#exampleModal69" +
+                                                      teamNumber
+                                                    }
+                                                    onClick={handleClose1}
+                                                  >
+                                                    {event.minMembers + index}
+                                                  </li>
+                                                );
+                                              })}
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </>
                                 )}
                                   </>
