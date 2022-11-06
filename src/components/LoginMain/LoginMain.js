@@ -6,6 +6,7 @@ import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
 import LoaderCss from "./LoginMain.module.scss";
+import "./login.css"
 
 function LoginMain() {
   const [requesting, setRequesting] = useState(false);
@@ -32,11 +33,7 @@ function LoginMain() {
   }
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="w-[50vw] hidden md:block">
-        <img src={stripes} alt="" className="object-cover h-screen" />
-        {/* <div className="h-screen bgStripes"></div> */}
-      </div>
+    <div className="flex items-center justify-center h-screen loginbghehe">
 
       <form
         onSubmit={handleClick}
@@ -88,7 +85,7 @@ function LoginMain() {
             <>
               <button
                 type="submit"
-                className="bg-[#F74061] rounded-lg w-36 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
+                className="bg-[#456A9D] rounded-lg w-36 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
               >
                 Login
               </button>
@@ -137,8 +134,9 @@ function LoginMain() {
         </div>
 
         <span className="text-sm text-[#F74061]">
-          <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/signup"> Sign up</Link>
+          <span className="text-[white]">Don't have an account?</span>
+          <span className="signupcol">
+          <Link to="/signup"> Sign up</Link></span>
         </span>
         <Link to="/" className="text-sm text-[#F74061]">
           Back to Home Page
