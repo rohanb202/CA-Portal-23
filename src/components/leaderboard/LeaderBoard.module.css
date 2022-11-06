@@ -46,11 +46,11 @@ body{
 }
 .LeaderBoardCenterColumnPersonName{
     font-size: 2.5rem;
-    margin: -15px;
+    margin: 2px;
 }
 .LeaderBoardCenterColumnCollegeName{
     font-size: 1.5rem;
-    margin: -15px;
+    margin: 2px;
 }
 .copyLeaderBoardBtnDiv{
     padding: 0;
@@ -138,7 +138,7 @@ padding-left: 30px;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
 }
-.LeaderBoardRightColumnContentHeading h2{
+.LeaderBoardRightColumnContentHeading h3{
     padding: 20px;
 }
 .LeaderBoardRightColumnBorder{
@@ -149,11 +149,11 @@ padding-left: 30px;
 }
 .LeaderBoardRightColumnContent{
     display: grid;
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
     padding-top: 15px;
     padding-bottom: 15px;
     grid-template-columns: auto auto auto;
-    justify-content: space-around;
+    /* justify-content: space-evenly; */
 }
 
 .hoverOnButtons :hover{

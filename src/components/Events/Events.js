@@ -460,7 +460,7 @@ export default function Events() {
             return (
               <div className={EventsCss.EventsCard}>
                 <img
-                  className="w-full"
+                  className={EventsCss.EventsCardImg}
                   src={event.image_URL}
                   alt="Sunset in the mountains"
                 />
@@ -511,7 +511,8 @@ export default function Events() {
                         <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current ">
                           <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-[#F74061]">
                             <img
-                              className="w-full"
+                              className={EventsCss.EventsCardImg}
+                              // style={{height:"250px"}}
                               src={event.image_URL}
                               alt="Sunset in the mountains"
                             />

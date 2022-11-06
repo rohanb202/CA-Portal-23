@@ -124,47 +124,18 @@ export default function LeaderBoard (){
                             )
                         })
                     }
-                    {/* <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>1</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
-                    
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>2</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>3</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>4</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div> */}
                 </div>
             </div>
            
             
             <div className={LeaderBoardCSS.LeaderBoardRightColumn}>
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnDiv}>
-                <h1 className={LeaderBoardCSS.LeaderBoardRightColumnHeading}>Leaderboard</h1>
+                <h2 className={LeaderBoardCSS.LeaderBoardRightColumnHeading}>Leaderboard</h2>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeading}>
-                    <h2>Rank</h2>
-                    <h2>Name</h2>
-                    <h2>Referred</h2>
+                    <h3>Rank</h3>
+                    <h3>Name</h3>
+                    <h3>Referred</h3>
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnBorder}></div>
@@ -194,43 +165,14 @@ export default function LeaderBoard (){
                         return (
                             <div className={LeaderBoardCSS.hoverOnButtons} key={item.rank}>
                                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                                    <h3>{index+1}</h3>
-                                    <h3>{item["name"]}</h3>
-                                    <h3>{item["reg_num"]}</h3>
+                                    <div>{index+1}</div>
+                                    <div class="truncate">{item["name"]}</div>
+                                    <div>{item["reg_num"]}</div>
                                 </div> 
                             </div>
                         )
                     })
                 }
-                {/* <div className={LeaderBoardCSS.hoverOnButtons}>
-                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                        <h3>1</h3>
-                        <h3>Lorem</h3>
-                        <h3>Ipsum</h3>
-                    </div> 
-                </div>
-                    
-                <div className={LeaderBoardCSS.hoverOnButtons}>
-                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                        <h3>2</h3>
-                        <h3>Lorem</h3>
-                        <h3>Ipsum</h3>
-                    </div> 
-                </div>
-                <div className={LeaderBoardCSS.hoverOnButtons}>
-                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                        <h3>3</h3>
-                        <h3>Lorem</h3>
-                        <h3>Ipsum</h3>
-                    </div> 
-                </div>
-                <div className={LeaderBoardCSS.hoverOnButtons}>
-                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                        <h3>4</h3>
-                        <h3>Lorem</h3>
-                        <h3>Ipsum</h3>
-                    </div> 
-                </div>     */}
                 </div>
                 
             </div>
