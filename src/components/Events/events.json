@@ -37,10 +37,10 @@
             }
         },
         {
-            "eventId": 33,
-            "eventName": "FACE PAINTING",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
+            "eventId": 38,
+            "eventName": "INK IT!",
+            "image_URL": "https://i.imgur.com/PnYcri1.jpg",
+            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
             "maxMembers": 2,
             "minMembers": 1,
             "parentEvent": {
@@ -61,11 +61,11 @@
             }
         },
         {
-            "eventId": 38,
-            "eventName": "INK IT!",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
-            "maxMembers": 2,
+            "eventId": 37,
+            "eventName": "Live Sketching",
+            "image_URL": "https://i.imgur.com/WE0Qcb8.jpg",
+            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.",
+            "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 8,
@@ -75,7 +75,7 @@
         {
             "eventId": 36,
             "eventName": "SOAP CARVING",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
+            "image_URL": "https://i.imgur.com/kfPB0bO.jpg",
             "eventDetails": "\"l saw the angel in the marble and carved until I set him free.\" - Michelangelo.\r\nThough carving stone is tough, what's easy is carving soap. Moreover, that's\r\nwhy we give you the \"soap\". Just carve your creativity out on these mundane\r\npieces of soap and transform them into pieces of art.",
             "maxMembers": 2,
             "minMembers": 1,
@@ -85,11 +85,11 @@
             }
         },
         {
-            "eventId": 37,
-            "eventName": "Live Sketching",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.",
-            "maxMembers": 1,
+            "eventId": 33,
+            "eventName": "FACE PAINTING",
+            "image_URL": "https://i.imgur.com/NUWKDxe.jpg",
+            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
+            "maxMembers": 2,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 8,
@@ -423,24 +423,24 @@
     ],
     "ABHINAY": [
         {
-            "eventId": 3,
-            "eventName": "HULLAD",
-            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
-            "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If\r\nyou can catch the attention & attract people to stay and watch your performance,\r\nhere is your chance. The art of grabbing the audience’s attention is all that you\r\nneed. No lights, no mics, only pure ACTION full of energy.",
-            "maxMembers": 30,
-            "minMembers": 10,
-            "parentEvent": {
-                "parentEventId": 1,
-                "categoryName": "ABHINAY"
-            }
-        },
-        {
             "eventId": 4,
             "eventName": "CHESTHA",
             "image_URL": "https://i.imgur.com/uuNapHn.jpg",
             "eventDetails": "In the midst of eternal silence where slightest of the sound was finding it very\r\ndifficult to escape, those creatures in the shades of black and white were making\r\nstatements with their mouth stitched and were gradually paving the path for the\r\ncrowd to dive deep into the sea of joyride full of laughter and emotions Reliving\r\nthose golden days when Charlie Chaplin and Marcel Marceau ruled at\r\nKashiyatra un furl their hidden soul beneath you and let your mimed other\r\nchatters that won’t stop ever.",
             "maxMembers": 10,
             "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 1,
+                "categoryName": "ABHINAY"
+            }
+        },
+        {
+            "eventId": 3,
+            "eventName": "HULLAD",
+            "image_URL": "https://i.imgur.com/JPRE0Ad.jpg",
+            "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If\r\nyou can catch the attention & attract people to stay and watch your performance,\r\nhere is your chance. The art of grabbing the audience’s attention is all that you\r\nneed. No lights, no mics, only pure ACTION full of energy.",
+            "maxMembers": 30,
+            "minMembers": 10,
             "parentEvent": {
                 "parentEventId": 1,
                 "categoryName": "ABHINAY"
