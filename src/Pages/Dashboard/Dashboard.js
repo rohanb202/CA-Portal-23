@@ -151,7 +151,7 @@ const Dashboard = () => {
       >
         <Box sx={style}>
           <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-[#F74061]">
-            <img className="w-full" src={img1} alt="Sunset in the mountains" />
+            <img className="w-full" src={userEventDetails?.event.image_URL} alt="Sunset in the mountains" />
           </div>
           <div className="flex items-center justify-evenly mt-2">
             <Typography id="modal-modal-title" variant="h5" component="h2">
@@ -357,7 +357,7 @@ const Dashboard = () => {
                         className="relative left-5"
                       />
                       <div className="">
-                        <img src={Dance} alt="" className="" />
+                        <img src={Dance} alt="" className=""  />
                         <div className="bg-[#F74061] pt-8 pl-16 pb-16">
                           <div className="font-bold text-2xl text-white">
                             {post.event.eventName}/
