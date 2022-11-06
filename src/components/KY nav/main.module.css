@@ -13,14 +13,14 @@
     align-items: center;
     height: 0;
     width: 100%;
-    background-color: #F74061;
-    z-index: 40;
+    background-color: #184d71;
+    z-index: 70;
     overflow: hidden;
     transition: all 1s ease;
 }
 
 .mobilenavdropdown img{
-    width: 180px;
+    width: 100px;
 }
 
 .mobilenavdropdown .title{
@@ -70,7 +70,7 @@
     margin-left: 50px;;
     flex-shrink: 0;
     z-index: 30;
-    background-image: url(./icons8-arrow-50.png);
+    background-image: url("../KY\ Main/icons8-arrow-50.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -86,10 +86,10 @@
     justify-content: center;
     top: 0;
     display: flex;
-    height: 60px;
+    height: 10vh;
     width: 100vw;
     padding: 20px 0;
-    z-index: 20;
+    z-index: 60;
     background-color: transparent;
 }
 
@@ -155,9 +155,9 @@
 }
 
 .kylogo{
-    padding: 10px;;
-    height: 4em;
-    width: 3.5em;
+    /* padding: 10px;; */
+    height: 30px;
+    width: 30px;
     /* background-image: url("../../svgs/Logo.svg"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
@@ -166,7 +166,7 @@
 .kyprofile{
     height: 40px;
     width: 40px;
-    background-image: url("./profilelogo.svg");
+    background-image: url("../KY\ Main/profilelogo.svg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -174,6 +174,7 @@
 .navlistul{
     text-decoration: none;
     display: flex;
+    align-items: center;
 }
 
 .navitem{
@@ -185,8 +186,8 @@
 }
 
 video{
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0; */
     justify-self: center;
     object-fit: cover;
     height: 100vh;
@@ -224,7 +225,7 @@ video{
 }
 @font-face {
     font-family: themeFont;
-    src: url("./CaviarDreams.ttf");
+    src: url("../KY\ Main/CaviarDreams.ttf");
  }
 .themefont{
     display: flex;
@@ -239,7 +240,7 @@ video{
 }
 @font-face {
     font-family: myFirstFont;
-    src: url("./SAMAN___.TTF");
+    src: url("../KY\ Main/SAMAN___.TTF");
  }
 .themetext{
     font-size: 110px;
@@ -265,7 +266,7 @@ video{
 
 @font-face {
     font-family: secondFont;
-    src: url("./coolvetica\ rg.otf");
+    src: url("../KY\ Main/coolvetica\ rg.otf");
  }
 
 .outerbox{
@@ -306,22 +307,22 @@ font-style: normal;
 }
 @font-face {
     font-family: timetextFont;
-    src: url("./coolvetica\ rg.otf");
+    src: url("../KY\ Main/coolvetica\ rg.otf");
  }
 .textbox{
     display: flex;
     justify-content: center;
     align-content: center;
     color: white;
-    
-    font-weight: 700;
+    font-family: timetextFont;
+    font-weight: 400;
     font-size: 36px;
     line-height: 59px;
 }
 
 @font-face {
     font-family: registerFont;
-    src: url("./Inter-Regular.ttf");
+    src: url("../KY\ Main/Inter-Regular.ttf");
  }
 
 .kyregister{

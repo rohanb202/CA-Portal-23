@@ -68,6 +68,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('./img/testimonailFrame.svg');
+    border-radius: 8px;
+    /* border: 20px solid transparent; */
+    /* padding: 15px; */
+    /* border-image: url("../../svgs/testimonialsborder.svg") 30 round; */
+    /* border-image-outset: 20px; */
+    border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch;
+    border-color: #f4be52; border-style: outset; border-width: 20px;
+    border-image-outset: 10px;
     /* background-image: url('./img/testimonailFrame.svg'); */
     /* border-radius: 8px; */
 }

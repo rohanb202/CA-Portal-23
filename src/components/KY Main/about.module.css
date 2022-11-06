@@ -1,10 +1,11 @@
 .aboutSectionBody{
-    background-color: #06122E;
+    background-image: url("./Group\ 346.svg");
     /* margin-top: 1000px; */
     padding-bottom: 70px;
 
 }
 .aboutTitle{
+    /* background-color:#E4C3AD; */
     display: flex;
     align-items: center;
     padding-top: 5rem;
@@ -15,6 +16,7 @@
     font-size: 2.5rem;
     padding-left: 3px;
     padding-right: 3px;
+
 }
 .aboutSliderHeading{
     font-size: 2.5rem;
@@ -25,7 +27,7 @@
     padding: 10px;
     background-repeat: no-repeat;
     width: 70px;
-    background-image: url("img/Vector\ \(2\).svg");
+    background-image: url("./Border-1.svg");
 }
 .aboutBorder3{
     padding: 10px;
@@ -39,7 +41,7 @@
     width: 100%;
     display: flex;
     justify-content: end;
-    background-image: url("img/Vector\ \(1\).svg");
+    background-image: url("./Border-2.svg");
 }
 .aboutBorder4{
     padding: 10px;
@@ -90,25 +92,43 @@
     justify-content: center;
 }
 .aboutContentCard{
-    padding-right: 2.5rem;
+    /* box-sizing: border-box; */
+    padding-right: 2rem;
     padding-left: 2.5rem;
     padding-bottom: 2rem;
-    color: #06122E;
+    color: #3D2645;
     max-width: 24rem;
-    background-color: #F74061;
+    background-color:#E4C3AD;
     border-radius: 12px;
     height: 50vh;
+    /* width: 12rem; */
     margin: 1.5rem;
+    /* border: 30px solid transparent; */
+    /* padding: 15px; */
+    /* border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
+    border-image-slice: 30;
+    border-image-outset: 15px; */
+    border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch;
+    border-color: #f4be52; border-style: outset; border-width: 20px;
+    border-image-outset: 8px;
 }
 .aboutContentTrophyCard{
     padding-right: 3.5rem;
     padding-left: 3.5rem;
-    color: #06122E;
+    color: #3D2645;
     max-width: 24rem;
-    background-color: #F74061;
+    background-color:#E4C3AD;
     border-radius: 12px;
     height: 50vh;
     margin: 1.5rem;
+    /* border: 20px solid transparent;
+    padding: 15px;
+    border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
+    border-image-outset: 15px; */
+    border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch;
+    border-color: #f4be52; border-style: outset; border-width: 20px;
+    border-image-outset: 8px;
+
 }
 .aboutContentSubHeading{
     text-align: center;
@@ -116,9 +136,9 @@
     padding-bottom: 2rem;;
     font-size: 1.563rem;
     font-weight: bold;
-    color: #06122E;
+    color: #3D2645;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1400px){
     .aboutTitle{
         padding-top: 2rem;
     }
@@ -144,12 +164,12 @@
         margin-bottom: 17px;
     }
     .aboutContentCard{
-        height: 18vh;
+        height: 22vh;
         margin : 0.3rem;
     }
     .aboutContentTrophyCard{
-        height: 18vh;
-        max-width: 15rem;
+        height: 22vh;
+        /* max-width: 15rem; */
     }
     .aboutContentCard{
         padding-right: 1.2rem;
@@ -172,6 +192,50 @@
     
 }
 @media screen and (max-width: 600px){
+    .aboutContentPeopleImg{
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
+    .aboutContentHutImg{
+        width: 35px;
+        height: 35px;
+        margin-top: 14px;
+        margin-bottom: 13.5px;
+    }
+    .aboutContentTrophyImg{
+        width: 25px;
+        height: 25px;
+        margin-top: 19px;
+        margin-bottom: 17px;
+    }
+    .aboutContentCard{
+        height:18vh;
+        margin : 0.3rem;
+    }
+    .aboutContentTrophyCard{
+        height: 18vh;
+        /* max-width: 15rem; */
+    }
+    .aboutContentCard{
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+    .aboutContentTrophyCard{
+        margin : 0.3rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .aboutContentSubHeading{
+        font-size: 0.7rem;
+    }
+    .aboutContentNumber{
+        font-size: 0.8rem;
+    }
+    .plus{
+        font-size: 0.8rem;
+    }
     .aboutContentText{
         font-size: 0.8rem;
         font-weight: bold;
