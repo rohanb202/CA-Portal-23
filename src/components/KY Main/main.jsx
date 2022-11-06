@@ -201,7 +201,7 @@ function Main() {
         <div className={Maincss.blurbg}></div>
           <div className={Maincss.themebox}>
               <div className={Maincss.themetext}>SAFARNAMA</div>
-              <div className={Maincss.themefont}><span><img src={line}></img></span>A MYSTICAL VOYAGE<span><img src={line}></img></span></div>
+              <div className={Maincss.themefont}><span><img src={line}></img></span>A Mystical Voyage<span><img src={line}></img></span></div>
               {/* <div className={Maincss.in}>IN</div> */}
           </div>
           <div className={Maincss.timebox}>
@@ -247,13 +247,13 @@ function Main() {
           <div className={Aboutcss.aboutBorder1}></div>
           <div
             className={Aboutcss.aboutPageHeading}
-            style={{ color: "#F74061" }}
+            style={{ color: "white" }}
           >
             About
           </div>
           <div
             className={Aboutcss.aboutPageHeading}
-            style={{ color: "#F74061" }}
+            style={{ color: "white" }}
           >
             Us
           </div>
@@ -274,6 +274,7 @@ function Main() {
             passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.
           </div>
+          <div className={Aboutcss.aboutky}>
           <div className="flex justify-evenly">
             {/* <div className={Aboutcss.aboutContentCard}> */}
             <div className={Aboutcss.aboutContentCard}>
@@ -368,6 +369,7 @@ function Main() {
                 <h5 className={Aboutcss.aboutContentSubHeading}>Events</h5>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

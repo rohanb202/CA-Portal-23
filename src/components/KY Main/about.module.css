@@ -4,16 +4,23 @@
     padding-bottom: 70px;
 
 }
+@font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
 .aboutTitle{
     /* background-color:#E4C3AD; */
+    font-family: themeFont;
     display: flex;
     align-items: center;
     padding-top: 5rem;
     padding-right: 10px;
     padding-left: 10px;
+    color: white
 }
 .aboutPageHeading{
     font-size: 2.5rem;
+    font-weight: 700;
     padding-left: 3px;
     padding-right: 3px;
 
@@ -138,7 +145,17 @@
     font-weight: bold;
     color: #3D2645;
 }
-@media screen and (max-width: 1400px){
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+.aboutky{
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+}
+
+	
+}
+@media screen and (max-width: 1200px){
     .aboutTitle{
         padding-top: 2rem;
     }

@@ -9,7 +9,12 @@
 .blank{
     height: 2rem;
 }
+@font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
 .throwTitle{
+    font-family: themeFont;
     display: flex;
     align-items: center;
     padding-top: 0rem;
@@ -18,6 +23,7 @@
 }
 
 .throwSliderHeading{
+    font-weight: 700;
     font-size: 2.5rem;
     padding-left: 3px;
     padding-right: 3px;

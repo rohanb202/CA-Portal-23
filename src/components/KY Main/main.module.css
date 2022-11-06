@@ -309,12 +309,13 @@ font-style: normal;
     src: url("./coolvetica\ rg.otf");
  }
 .textbox{
+    font-family: timetextFont;
     display: flex;
     justify-content: center;
     align-content: center;
     color: white;
     
-    font-weight: 700;
+    font-weight: 400;
     font-size: 36px;
     line-height: 59px;
 }
