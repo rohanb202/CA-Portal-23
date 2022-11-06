@@ -21,9 +21,13 @@ import AuthContext from "../../context/AuthContext";
 import {gsap} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import NET from "vanta/dist/vanta.net.min"
+import CLOUDS from "vanta/dist/vanta.clouds.min"
 import * as THREE from "three"
 import logo from "../../svgs/Logo.svg"
+import line from "../../svgs/themeline.svg"
+import mouse from "../../svgs/mouse.svg"
+import { Link as ScrollLink } from "react-scroll";
+import Nav from "../KY nav/nav"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -89,24 +93,30 @@ function Main() {
   // }, [])
 
 
-  useEffect(() => {
-    if (!vantaEffect){
-      setVantaEffect(
-        NET({
-          el: vantaRef.current,
-          points: 20,
-          maxDistance: 10,
-          spacing: 20,
-          color: 0x75640141,
-          backgroundColor: 0x06122E,
-          THREE
-        })
-      )
-    }
-    return ()=>{
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
+  // useEffect(() => {
+  //   if (!vantaEffect){
+  //     setVantaEffect(
+  //       CLOUDS({
+  //         el: vantaRef.current,
+  //         mouseControls: true,
+  // touchControls: true,
+  // gyroControls: false,
+  // minHeight: 200.00,
+  // minWidth: 200.00,
+  // scale: 1.00,
+  // speed: 3,
+  // skyColor: 0x06122E,
+  // cloudColor: 0xFEE3E8,
+  // cloudShadowColor: 0x06122E,
+  // texturePath: "./noise.png",
+  //         THREE
+  //       })
+  //     )
+  //   }
+  //   return ()=>{
+  //     if (vantaEffect) vantaEffect.destroy()
+  //   }
+  // }, [vantaEffect])
 
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -160,101 +170,37 @@ function Main() {
     }
   }, [control, inView]);
 
-  function showNav() {
-    document.getElementById("mobilenavdropdown").style.height = "100%";
-    setNavDisplay(1);
-    var x = window.scrollX;
-    var y = window.scrollY;
-    window.onscroll = function () {
-      window.scrollTo(x, y);
-    };
-  }
-  function closeNav() {
-    // console.log("HI")
-    document.getElementById("mobilenavdropdown").style.height = "0";
-    setNavDisplay(0);
-    window.onscroll = function () {};
-  }
+  // function showNav() {
+  //   document.getElementById("mobilenavdropdown").style.height = "100%";
+  //   setNavDisplay(1);
+  //   var x = window.scrollX;
+  //   var y = window.scrollY;
+  //   window.onscroll = function () {
+  //     window.scrollTo(x, y);
+  //   };
+  // }
+  // function closeNav() {
+  //   // console.log("HI")
+  //   document.getElementById("mobilenavdropdown").style.height = "0";
+  //   setNavDisplay(0);
+  //   window.onscroll = function () {};
+  // }
 
   return (
     <>
-      <div className={Maincss.main} ref={vantaRef}>
-        <div className={Maincss.mobilenav}>
-          <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
-          <button onClick={showNav}></button>
-          <img src={logo} alt="ky-23"></img>
-        </div>
-        <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
-          
-          <div className={Maincss.title}>
-          <button onClick={closeNav} className={Maincss.backicon}></button>
-            <img src={logo} alt="kashiyatra"></img>
-          </div>
-          <ul className={Maincss.nav}>
-            <li onClick={closeNav}>
-              <Link to="/">TEAM</Link>
-            </li>
-            <li onClick={closeNav}>
-              <Link to="/Dance">EVENTS</Link>
-            </li>
-            <li onClick={closeNav}>
-              <Link to="/">FAQ</Link>
-            </li>
-            <li onClick={closeNav}>
-              <Link to="/ca">CA</Link>
-            </li>
-            {
-              userInfo?(
-                <li onClick={closeNav}>
-                <Link to="/dashboard">Dashboard</Link>
-                </li>
-              ):(
-                <li onClick={closeNav}>
-                <Link to="/login">Login</Link>
-                </li>
-              )
-            }
-          </ul>
-        </div>
-        <div className={Maincss.outernav}>
-          <div className={Maincss.navbar}>
-            <Link to="/">
-              <div className={Maincss.kylogo}></div>
-            </Link>
-            <div className={Maincss.navlist}>
-              <ul className={Maincss.navlistul}>
-                <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/team">TEAM</Link>
-                </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/Dance">EVENTS</Link>
-                </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/">FAQ</Link>
-                </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
-                <Link to="/ca">CA</Link>
-                </li>
-                {
-                  userInfo?(
-                    <li onClick={closeNav} className={Maincss.navitem}>
-                    <Link to="/dashboard">Dashboard</Link>
-                    </li>
-                  ):(
-                    <li onClick={closeNav} className={Maincss.navitem}>
-                    <Link to="/login">Login</Link>
-                    </li>
-                  )
-                }
-              </ul>
-            </div>
-            <div className={Maincss.kyprofile}></div>
-          </div>
-        </div>
+      <div className={Maincss.main}>
+        <Nav/>
+        <video loop autoPlay muted>
+            <source
+              type="video/mp4"
+              src="https://i.imgur.com/FVEh1Jf.mp4"
+            ></source>
+          </video>
         <div className={Maincss.maincontent}>
           <div className={Maincss.themebox}>
-              <div className={Maincss.themetext}>SAFARNAMA A MYSTICAL VOYAGE</div>
-              <div className={Maincss.in}>IN</div>
+              <div className={Maincss.themetext}>SAFARNAMA</div>
+              <div className={Maincss.themefont}><span><img src={line}></img></span>A MYSTICAL VOYAGE<span><img src={line}></img></span></div>
+              {/* <div className={Maincss.in}>IN</div> */}
           </div>
           <div className={Maincss.timebox}>
             <div className={Maincss.timeboxwrap}>
@@ -262,14 +208,17 @@ function Main() {
                 <div className={Maincss.numbox}>{days}</div>
                 <div className={Maincss.textbox}>Days</div>
               </div>
+              <div className={Maincss.colon}>:</div>
               <div className={Maincss.outerbox}>
                 <div className={Maincss.numbox}>{hours}</div>
                 <div className={Maincss.textbox}>Hours</div>
               </div>
+              <div className={Maincss.colon}>:</div>
               <div className={Maincss.outerbox}>
                 <div className={Maincss.numbox}>{minutes}</div>
                 <div className={Maincss.textbox}>Minutes</div>
               </div>
+              <div className={Maincss.colon}>:</div>
               <div className={Maincss.outerbox}>
                 <div className={Maincss.numbox}>{seconds}</div>
                 <div className={Maincss.textbox}>Seconds</div>
@@ -279,9 +228,19 @@ function Main() {
           <div className={Maincss.register}>
             <Link to="/login"><button className={Maincss.kyregister}>Register Now</button></Link>
           </div>
+          <div className={Maincss.mouse}>
+            <ScrollLink
+                to="about"
+                // onClick={handleClick}
+                spy={true}
+                smooth={true}
+              >
+                <img src={mouse} alt="mouse"></img>
+              </ScrollLink>
+          </div>
         </div>
       </div>
-      <div className={Aboutcss.aboutSectionBody}>
+      <div id="about" className={Aboutcss.aboutSectionBody}>
         <div className={Aboutcss.aboutTitle}>
           <div className={Aboutcss.aboutBorder1}></div>
           <div
