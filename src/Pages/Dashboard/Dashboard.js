@@ -361,7 +361,7 @@ const Dashboard = () => {
                         className="relative left-5"
                       />
                       <div className="">
-                        <img src={Dance} alt="" className=""  />
+                        <img src={post.event.image_URL} alt="" className="w-96 h-54 object-cover"  />
                         <div className="bg-[#F74061] pt-8 pl-16 pb-16">
                           <div className="font-bold text-2xl text-white">
                             {post.event.eventName}/
