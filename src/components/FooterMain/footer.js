@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPlayer from "react-player";
 import Footercss from "./footer.module.css";
 import insta from "./img/insta.svg";
 import fb from "./img/fb.svg";
@@ -12,6 +13,12 @@ export default function FooterMain() {
     <div>
       <div className={Footercss.mainbody}>
         <div className={Footercss.row}>
+        <div className={`${Footercss.column0} ${Footercss.column} `}>
+        <div className={Footercss.fvid}>
+        <ReactPlayer width='495px'
+         height='250px' url='https://www.youtube.com/watch?v=4qjQGb3wqRI' />
+        </div>
+        </div>
           <div className={`${Footercss.column1} ${Footercss.column} `}>
             <h2 className={`${Footercss.font} ${Footercss.font1}`}>Social</h2>
             <div className={Footercss.image}>
