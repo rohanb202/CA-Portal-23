@@ -15,7 +15,11 @@
   /* margin-top: 10%; */
 }
 .column1 {
-  margin-left: 10%;
+  margin-right: 4%;
+  padding-left: 10%;
+}
+.column2{
+  margin-left: 5%;
 }
 .column {
   margin-top: 15px;
@@ -78,7 +82,7 @@ h2 {
 
 .row1,
 .row2 {
-  padding: 5px;
+  padding: 4px;
   width: 44px;
 }
 
@@ -87,7 +91,6 @@ h2 {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-
   text-transform: capitalize;
 
   color: #06122e;
@@ -106,17 +109,16 @@ h2 {
   align-content: center;
   justify-content: center;
   color: #06122e;
-  margin-right: 10%;
   padding-bottom: 5px;
 }
 
 @media screen and (max-width: 700px) {
   h2 {
-    font-size: 12px;
+    font-size: 16px;
     white-space: nowrap;
   }
   .ky {
-    font-size: 11px;
+    font-size: 12px;
     width: auto;
   }
   .Lborder {
@@ -135,12 +137,6 @@ h2 {
     font-size: 11px;
     line-height: 20px;
   }
-  .column3 {
-    margin-right: 15%;
-  }
-  .column2 {
-    margin-right: 5%;
-  }
   .font1 {
     margin-right: 35%;
   }
@@ -149,8 +145,17 @@ h2 {
   }
 
   .copyright {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 12px;
     padding-bottom: 8px;
   }
+  .column3{
+ position: relative;
+ right: 10%;
+  }
+  .column2{
+    position: relative;
+    right: 8%;
+  }
+
 }

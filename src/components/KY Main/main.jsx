@@ -23,6 +23,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import NET from "vanta/dist/vanta.net.min"
 import * as THREE from "three"
+import logo from "../../svgs/Logo.svg"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -148,7 +149,7 @@ function Main() {
       setStartPeopleCount(0);
       setEndPeopleCount(70000);
       setStartHutCount(0);
-      setEndHutCount(350);
+      setEndHutCount(360);
       setStartTrophyCount(0);
       setEndTrophyCount(60);
       control.start("visible");
@@ -181,23 +182,24 @@ function Main() {
         <div className={Maincss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           <button onClick={showNav}></button>
-          <img src={kylogo} alt="ky-23"></img>
+          <img src={logo} alt="ky-23"></img>
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
-          <button onClick={closeNav} className={Maincss.backicon}></button>
+          
           <div className={Maincss.title}>
-            <img src={kylogo} alt="kashiyatra"></img>
+          <button onClick={closeNav} className={Maincss.backicon}></button>
+            <img src={logo} alt="kashiyatra"></img>
           </div>
           <ul className={Maincss.nav}>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">TEAM</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
             </li>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/ca">CA</Link>
             </li>
@@ -221,15 +223,15 @@ function Main() {
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/events">EVENTS</Link>
                 </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                 <Link to="/ca">CA</Link>
                 </li>
@@ -246,10 +248,15 @@ function Main() {
                 }
               </ul>
             </div>
-            <div className={Maincss.kyprofile}></div>
+            <Link to="/login"><div className={Maincss.kyprofile} ></div></Link>
           </div>
         </div>
         <div className={Maincss.maincontent}>
+        <div className={Maincss.blurbg}></div>
+          <div className={Maincss.themebox}>
+              <div className={Maincss.themetext}>SAFARNAMA A MYSTICAL VOYAGE</div>
+              <div className={Maincss.in}>IN</div>
+          </div>
           <div className={Maincss.timebox}>
             <div className={Maincss.timeboxwrap}>
               <div className={Maincss.outerbox}>
@@ -330,6 +337,7 @@ function Main() {
                             className={Aboutcss.aboutContentNumber}
                             ref={countUpRef}
                           />
+                          <span className={Aboutcss.plus}>+</span>
                         </div>
                       )}
                     </CountUp>
@@ -361,6 +369,7 @@ function Main() {
                             className={Aboutcss.aboutContentNumber}
                             ref={countUpRef}
                           />
+                          <span className={Aboutcss.plus}>+</span>
                         </div>
                       )}
                     </CountUp>
@@ -390,6 +399,7 @@ function Main() {
                             className={Aboutcss.aboutContentNumber}
                             ref={countUpRef}
                           />
+                          <span className={Aboutcss.plus}>+</span>
                         </div>
                       )}
                     </CountUp>

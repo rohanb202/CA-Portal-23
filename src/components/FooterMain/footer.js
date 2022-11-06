@@ -6,7 +6,6 @@ import twitter from "./img/twitter.svg";
 import yt from "./img/yt.svg";
 import gmail from "./img/gmail.svg";
 import call from "./img/call.svg";
-import copy from "./img/copyright.svg";
 
 export default function FooterMain() {
   return (

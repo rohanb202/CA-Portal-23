@@ -5,9 +5,17 @@ import kylogo from "./img/kylogo.svg";
 
 import EventsCss from "./Events.module.css";
 import img1 from "./img/unsplash_GRDpPpKczdY.svg";
-import { Link } from "react-router-dom";
 import eventData from "./events.json";
 import AuthContext from "../../context/AuthContext";
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+// import Button from '@mui/material/Button';
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import { Link } from "react-router-dom";
+import useAxiosPrivate from "../../utils/useAxiosPrivate";
+
 
 export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
@@ -53,112 +61,9 @@ export default function Events() {
     setAnchorEl(null);
   };
 
-  const [category, setCategory] = useState([
-    {
-      eventId: 3545,
-      eventName: "RANGBAAZI",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        "“Art is the only way to run away without leaving home” and “Colours are the\r\nbest form of expression”. Wouldn't you agree? Show us your creativity by using\r\ntooth brushes, your fingers etc.to paint but without using a pencil to sketch and\r\na brush to paint. Can you beat the twist?",
-      maxMembers: 2,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3145,
-      eventName: "RAPID FIRE",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        "“The trouble is you think you have time”-Buddha. Well, you don't! This contest\r\npitches your creativity against the cruel boundaries of time. We decide the rules\r\nof the game. We choose when the bell rings. However, it's only you who sets\r\nthe limits of your imagination and creativity",
-      maxMembers: 4,
-      minMembers: 4,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3245,
-      eventName: "SPOIL THE TEES!",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        '"Daag achche hote hai" Get those spotless white T-Shirts and spoil them. Yeah,\r\nyou heard it right, put colour on them, soil them, and spoil them. Use paints.\r\nUse brushes. Use your hands. It doesn\'t matter. Just funk them up. Add life to\r\nthose dull whites. Coz life is too short for boring T-Shirts',
-      maxMembers: 3,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3345,
-      eventName: "FACE PAINTING",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
-      maxMembers: 2,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3445,
-      eventName: "VASTRA SHILP",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        '"Fashion is art, and you are the canvas"- Velvet Paper. So, wake up the Coco\r\nChanel inside you and let your creativity do the talking. Weave out art and style\r\nwith the fabrics of your imagination and yeah – “paper”.',
-      maxMembers: 4,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3845,
-      eventName: "INK IT!",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
-      maxMembers: 2,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3645,
-      eventName: "SOAP CARVING",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        '"l saw the angel in the marble and carved until I set him free." - Michelangelo.\r\nThough carving stone is tough, what\'s easy is carving soap. Moreover, that\'s\r\nwhy we give you the "soap". Just carve your creativity out on these mundane\r\npieces of soap and transform them into pieces of art.',
-      maxMembers: 2,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-    {
-      eventId: 3745,
-      eventName: "Live Sketching",
-      image_URL: "https://i.imgur.com/kDZ15vU.jpg",
-      eventDetails:
-        "Individual event where participants need to sketch a scene in front of\r\nthem.",
-      maxMembers: 1,
-      minMembers: 1,
-      parentEvent: {
-        parentEventId: 8,
-        categoryName: "TOOLIKA",
-      },
-    },
-  ]);
+
+  const [category, setCategory] = useState(Object.values(eventData)[0]);
+  const axiosPrivate = useAxiosPrivate();
 
   console.log(category);
 
@@ -187,8 +92,16 @@ export default function Events() {
     window.onscroll = function () {};
   }
   // console.log(eventData);
+
+  const [eventToRegister, setEventToRegister] = useState(null);
+  const [memberList, setMemberList] = useState({});
+  const requestRegistration = async () => {
+    
+  }
   return (
     <div className={EventsCss.eventsBody}>
+
+      {/* MODAL DIV WITH MULTIPLE INPUT FIELDS ACCORDING TO NUMBER OF TEAM MEMBERS */}
       <div
         class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
         id={"exampleModal69" + teamNumber}
@@ -211,15 +124,34 @@ export default function Events() {
                             for="username"
                           >
                             {index === 0
-                              ? "Team Leader"
+                              ? "Team Leader (You)"
                               : `Team Member ${index}`}
                           </label>
-                          <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="username"
-                            type="text"
-                            placeholder="KY ID"
-                          />
+                          {
+                            (index === 0)?(
+                              <>
+                              <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username"
+
+                                type="text"
+                                value={userInfo.ky_id}
+                                placeholder="KY ID"
+                                disabled={true}
+                              />
+                              </>
+                            ):(
+                              <>
+                              <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username"
+                                type="text"
+                                placeholder="KY ID"
+                                name={index}
+                              />
+                              </>
+                            )
+                          }
                         </div>
                       );
                     })}
@@ -227,8 +159,9 @@ export default function Events() {
                   <div class="flex items-center justify-center">
                     <button
                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                      type="button"
-                      data-bs-dismiss="modal"
+
+                      type="button" data-bs-dismiss="modal"
+                      onClick={requestRegistration}
                     >
                       Register
                     </button>
@@ -248,6 +181,7 @@ export default function Events() {
         aria-hidden="true"
       >
         <div class="modal-dialog relative inset-0 m-auto w-auto pointer-events-none ">
+
           <div class="modal-content border-none relative inset-0 m-auto flex flex-col w-full outline-none text-current ">
             <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center ">
@@ -267,15 +201,30 @@ export default function Events() {
                               for="username"
                             >
                               {index === 0
-                                ? "Team Leader"
+                                ? "Team Leader (You)"
                                 : `Team Member ${index}`}
                             </label>
-                            <input
-                              class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                              id="username"
-                              type="text"
-                              placeholder="KY ID"
-                            />
+                            { index == 0 ? (
+                              <>
+                                <input
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  id="username"
+                                  type="text"
+                                  placeholder="KY ID"
+                                  value={userInfo.ky_id}
+                                  disabled={true}
+                                />
+                              </>
+                            ):(
+                              <>
+                                <input
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  id="username"
+                                  type="text"
+                                  placeholder="KY ID"
+                                />
+                              </>
+                            )}
                           </div>
                         );
                       })}
@@ -356,8 +305,9 @@ export default function Events() {
 
         <nav>
           <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              TOOLIKA
+
+            {/* <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+              Masquerades
             </h3>
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               SAMWAAD
@@ -381,6 +331,10 @@ export default function Events() {
             <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
               ABHINAY
             </h3>
+              Western Music
+            </h3> */}
+            {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
+
           </div>
         </nav>
 
@@ -390,7 +344,7 @@ export default function Events() {
               <div className={EventsCss.EventsCard}>
                 <img
                   className="w-full"
-                  src={img1}
+                  src={event.image_URL}
                   alt="Sunset in the mountains"
                 />
                 <div
@@ -407,16 +361,16 @@ export default function Events() {
                     className="font-bold text-xl mb-2"
                     style={{ color: "#06122E" }}
                   >
-                    3 PM, Friday
+                    {event.maxMembers==1?"Individual Event":"Team Event"}
                   </div>
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base text-white mt-3 text-md "
                     style={{ color: "#06122E" }}
                   >
-                    Lorem ipsum dolor sit amet, consectetur Voluptatibus quia,
-                    nulla! Maiores et perferendis eaque, exercitationem
-                    praesentium nihil.
+
+                    {event.eventDetails.substring(0,150)}.....
+
                   </p>
                   <div className="flex items-center justify-center mt-5 mb-5">
                     <button
@@ -424,6 +378,7 @@ export default function Events() {
                       class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
                       data-bs-toggle="modal"
                       data-bs-target={"#exampleModal" + event.eventId}
+                      onClick={()=>{setEventToRegister(event)}}
                     >
                       Explore{" "}
                     </button>
@@ -440,7 +395,7 @@ export default function Events() {
                           <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-[#F74061]">
                             <img
                               className="w-full"
-                              src={img1}
+                              src={event.image_URL}
                               alt="Sunset in the mountains"
                             />
                           </div>
@@ -451,10 +406,14 @@ export default function Events() {
                                   {event.eventName}
                                 </div>
                                 <div className={EventsCss.eventCardTitle}>
-                                  3 PM, Friday
+                                  {event.maxMembers==1?"Individual Event":"Team Event"}
                                 </div>
                               </div>
                               <div className="flex items-center justify-center mt-5 mb-5">
+
+                                {userInfo?(
+                                  <>
+                                {/* Register, Select Team Members or Enter Team members button in modal */}
                                 {event.maxMembers === event.minMembers ? (
                                   <>
                                     <button
@@ -592,6 +551,22 @@ export default function Events() {
                                     </div>
                                   </>
                                 )}
+                                  </>
+                                ):(
+                                  <>
+                                  <Link to="/login">
+                                  <button
+                                      type="button"
+                                      class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
+                                      data-bs-toggle="modal"
+                                    >
+                                      {" "}
+                                      Login
+                                    </button>
+                                    </Link>
+                                  </>
+                                )}
+
                               </div>
                             </div>
                             <p className={EventsCss.eventCardInsideText}>

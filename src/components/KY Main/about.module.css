@@ -81,6 +81,10 @@
     font-weight: bolder;
     font-size: 2rem;
 }
+.plus{
+    font-size: 2rem;
+    font-weight: bolder;
+}
 .aboutContentNumberSection{
     display: flex;
     justify-content: center;
@@ -88,11 +92,12 @@
 .aboutContentCard{
     padding-right: 2.5rem;
     padding-left: 2.5rem;
+    padding-bottom: 2rem;
     color: #06122E;
     max-width: 24rem;
     background-color: #F74061;
     border-radius: 12px;
-    height: 45vh;
+    height: 50vh;
     margin: 1.5rem;
 }
 .aboutContentTrophyCard{
@@ -102,17 +107,21 @@
     max-width: 24rem;
     background-color: #F74061;
     border-radius: 12px;
-    height: 45vh;
+    height: 50vh;
     margin: 1.5rem;
 }
 .aboutContentSubHeading{
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;;
     font-size: 1.563rem;
     font-weight: bold;
     color: #06122E;
 }
 @media screen and (max-width: 1000px){
+    .aboutTitle{
+        padding-top: 2rem;
+    }
     .aboutContent{
         grid-template-columns: auto ;
     }
@@ -155,6 +164,9 @@
         font-size: 1rem;
     }
     .aboutContentNumber{
+        font-size: 1.2rem;
+    }
+    .plus{
         font-size: 1.2rem;
     }
     
