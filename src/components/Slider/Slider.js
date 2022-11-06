@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import left from "./images/AiOutlineArrowLeft.svg";
 import right from "./images/AiOutlineArrowRight.svg";
 import "./Slider.scss";
+import pattern from "../../svgs/throwbackSidePattern.svg"
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -52,6 +53,7 @@ const Slider = () => {
   return (
     <>
       <div className="slider" id="carousel">
+      <img className="sliderPatternleft" src={pattern}/>
         
         {sliderData.map((slide, index) => {
           return (
@@ -67,6 +69,8 @@ const Slider = () => {
             </div>
           );
         })}
+        <img className="sliderPatternright" src={pattern}/>
+
 
         <img
           src={left}

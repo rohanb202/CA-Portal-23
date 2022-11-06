@@ -66,12 +66,12 @@ const createItem = (position, idx) => {
     switch (position) {
         case length - 1:
         case length + 1:
-            item.styles = {...item.styles, filter: 'grayscale(1)'};
+            // item.styles = {...item.styles, filter: 'grayscale(1)'};
             break;
         case length:
             break;
         default:
-            item.styles = {...item.styles, opacity: 0};
+            // item.styles = {...item.styles, opacity: 0};
             break;
     }
 
@@ -84,7 +84,7 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
     return (
         <li className="carousel__slide-item" style={item.styles}>
             <div className={Testimonialcss.testimonialCard}>
-            <img src={TestimonialImg} alt="Image" />
+            <img className="testimonialCardImg" src={TestimonialImg} alt="Image" />            
             <div className={Testimonialcss.testimonialData}>
               <div className={Testimonialcss.testimonailName}>
                 {item.player.title}

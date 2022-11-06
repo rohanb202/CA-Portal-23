@@ -201,7 +201,7 @@ function Main() {
         <div className={Maincss.blurbg}></div>
           <div className={Maincss.themebox}>
               <div className={Maincss.themetext}>SAFARNAMA</div>
-              <div className={Maincss.themefont}><span><img src={line}></img></span>A MYSTICAL VOYAGE<span><img src={line}></img></span></div>
+              <div className={Maincss.themefont}><span><img src={line}></img></span>A Mystical Voyage<span><img src={line}></img></span></div>
               {/* <div className={Maincss.in}>IN</div> */}
           </div>
           <div className={Maincss.timebox}>
@@ -247,13 +247,13 @@ function Main() {
           <div className={Aboutcss.aboutBorder1}></div>
           <div
             className={Aboutcss.aboutPageHeading}
-            style={{ color: "#F74061" }}
+            style={{ color: "white" }}
           >
             About
           </div>
           <div
             className={Aboutcss.aboutPageHeading}
-            style={{ color: "#F74061" }}
+            style={{ color: "white" }}
           >
             Us
           </div>
