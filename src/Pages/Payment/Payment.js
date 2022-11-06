@@ -25,12 +25,12 @@ const Payment = () => {
                     <div className="text-center text-red-600 font-bold text-3xl">
                       Your Payment Has Been Completed!
                     </div>
-                    <div className="text-left text-[#098770] font-bold text-2xl mt-5">
+                    {/* <div className="text-left text-[#098770] font-bold text-2xl mt-5">
                       {`Pass:\t${userInfo.ticket}`}
                     </div>
                     <div className="text-left text-[#098770] font-bold text-2xl mt-2">
                       {`Payment Amount:\t₹ ${userInfo.paid_amt}`}
-                    </div>
+                    </div> */}
                     {/* <ul className="mt-14">
                   <li className="font-extrabold text-red-600 mt-3">
                     • All Events Registration
