@@ -1,10 +1,11 @@
 .aboutSectionBody{
-    background-color: #06122E;
+    background-image: url("./Group\ 346.svg");
     /* margin-top: 1000px; */
     padding-bottom: 70px;
 
 }
 .aboutTitle{
+    /* background-color:#E4C3AD; */
     display: flex;
     align-items: center;
     padding-top: 5rem;
@@ -15,6 +16,7 @@
     font-size: 2.5rem;
     padding-left: 3px;
     padding-right: 3px;
+
 }
 .aboutSliderHeading{
     font-size: 2.5rem;
@@ -25,7 +27,7 @@
     padding: 10px;
     background-repeat: no-repeat;
     width: 70px;
-    background-image: url("img/Vector\ \(2\).svg");
+    background-image: url("./Border-1.svg");
 }
 .aboutBorder3{
     padding: 10px;
@@ -39,7 +41,7 @@
     width: 100%;
     display: flex;
     justify-content: end;
-    background-image: url("img/Vector\ \(1\).svg");
+    background-image: url("./Border-2.svg");
 }
 .aboutBorder4{
     padding: 10px;
@@ -94,9 +96,9 @@
     padding-right: 2rem;
     padding-left: 2.5rem;
     padding-bottom: 2rem;
-    color: #06122E;
-    max-width: 20rem;
-    background-color: #F74061;
+    color: #3D2645;
+    max-width: 24rem;
+    background-color:#E4C3AD;
     border-radius: 12px;
     height: 50vh;
     /* width: 12rem; */
@@ -113,9 +115,9 @@
 .aboutContentTrophyCard{
     padding-right: 3.5rem;
     padding-left: 3.5rem;
-    color: #06122E;
+    color: #3D2645;
     max-width: 24rem;
-    background-color: #F74061;
+    background-color:#E4C3AD;
     border-radius: 12px;
     height: 50vh;
     margin: 1.5rem;
@@ -134,7 +136,7 @@
     padding-bottom: 2rem;;
     font-size: 1.563rem;
     font-weight: bold;
-    color: #06122E;
+    color: #3D2645;
 }
 @media screen and (max-width: 1400px){
     .aboutTitle{
