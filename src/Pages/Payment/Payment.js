@@ -146,16 +146,24 @@ const Payment = () => {
                   </div>
                   <ul className="mt-14">
                     <li className="font-extrabold text-red-600 mt-3">
-                      • Lorem ipsum dolor sit amet.
+                      • Choose number of tickets you want to buy.
                     </li>
                     <li className="font-extrabold text-red-600 mt-3">
-                      • Lorem ipsum dolor sit amet.
+                      • Enter the name, email and KY ID of the accounts you want to pay for.
+                    </li>
+                    <li className="font-extrabold text-red-600 mt-3">
+                      • Verify that KY ID of all attendees entered correctly.
+                    </li>
+                    <li className="font-extrabold text-red-600 mt-3">
+                      • Complete payment procedure.
                     </li>
                   </ul>
-
+                    
+                  <a href="https://www.townscript.com/v2/e/kashiyatra/booking/tickets" target="_blank">
                   <div className="text-center mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
                     PAY FOR MULTIPLE USERS!!
                   </div>
+                  </a>
                 </div>
               </div>
             </div>
