@@ -1,7 +1,10 @@
 .testimonialSectionBody{
-    background-color: #06122E;
+    /* background-color: #412234; */
     padding-bottom: 100px;
-    
+    padding-top: 40px;
+    background-image: url('./img/testimonialbg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .blank{
     height: 2rem;
@@ -55,6 +58,8 @@
 }
 
 .testimonialCard {
+    background: #FAF3DD;
+    border-radius: 5px;
     width: 300px;
     height: 476px;
     margin: 2rem 15px;
@@ -63,8 +68,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('./img/testimonailFrame.svg');
-    border-radius: 8px;
+    /* background-image: url('./img/testimonailFrame.svg'); */
+    /* border-radius: 8px; */
 }
 
 .testimonialCard img{
