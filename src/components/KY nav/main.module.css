@@ -156,8 +156,8 @@
 
 .kylogo{
     /* padding: 10px;; */
-    height: 130px;
-    width: 130px;
+    height: 50px;
+    width: 50px;
     /* background-image: url("../../svgs/Logo.svg"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
@@ -271,7 +271,7 @@ video{
  }
 
  .kyLogoMobileScreen{
-    height: 130px !important;
+    height: 50px !important;
  }
 
 .outerbox{

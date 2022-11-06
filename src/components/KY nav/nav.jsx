@@ -62,7 +62,7 @@ function Nav() {
               <Link to="/">TEAM</Link>
             </li>
             <li onClick={closeNav}>
-              <Link to="/Dance">EVENTS</Link>
+              <Link to="/events">EVENTS</Link>
             </li>
             <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
@@ -94,7 +94,7 @@ function Nav() {
                   <Link to="/team">TEAM</Link>
                 </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/Dance">EVENTS</Link>
+                  <Link to="/events">EVENTS</Link>
                 </li>
                 {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>

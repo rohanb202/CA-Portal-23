@@ -204,11 +204,11 @@ export default function Events() {
 
                   <div class="mb-2">
                   <label
-                  class="block text-gray-700 text-sm font-bold mb-1"
+                  class="block text-zinc-800 text-sm font-bold mb-1"
                   for="teamname"
                   >Team Name</label>
                   <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
                     id="firstteamname"
                     type="text"
                     placeholder="Team Name"
@@ -220,7 +220,7 @@ export default function Events() {
                       return (
                         <div class="mb-2">
                           <label
-                            class="block text-gray-700 text-sm font-bold mb-1"
+                            class="block text-zinc-800 text-sm font-bold mb-1"
                             for="username"
                           >
                             {index === 0
@@ -231,7 +231,7 @@ export default function Events() {
                             (index === 0)?(
                               <>
                               <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
                                 id="username"
 
                                 type="text"
@@ -295,11 +295,11 @@ export default function Events() {
                   <form class="flex items-center justify-center">
                   <div class="mb-2">
                   <label
-                  class="block text-gray-700 text-sm font-bold mb-1"
+                  class="block text-zinc-800 text-sm font-bold mb-1"
                   for="teamname"
                   >Team Name</label>
                   <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
                     id="secondteamname"
                     type="text"
                     placeholder="Team Name"
@@ -311,7 +311,7 @@ export default function Events() {
                         return (
                           <div class="mb-2">
                             <label
-                              class="block text-gray-700 text-sm font-bold mb-1"
+                              class="block text-zinc-800 text-sm font-bold mb-1"
                               for="username"
                             >
                               {index === 0
@@ -321,7 +321,7 @@ export default function Events() {
                             { index == 0 ? (
                               <>
                                 <input
-                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
                                   id="username"
                                   type="text"
                                   placeholder="KY ID"
@@ -332,7 +332,7 @@ export default function Events() {
                             ):(
                               <>
                                 <input
-                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline secondinputs"
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline secondinputs"
                                   id="username"
                                   type="text"
                                   placeholder="KY ID"
