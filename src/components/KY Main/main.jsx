@@ -128,9 +128,22 @@ function Main() {
     const time = Date.parse(deadline) - Date.now();
 
     setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+    if (days.toString().length ==1){
+      setDays("0"+days)
+    }
     setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+    // console.log(hours.toString().length)
+    if (hours.toString().length ==1){
+      setHours("0"+hours)
+    }
     setMinutes(Math.floor((time / 1000 / 60) % 60));
+    if (minutes.toString().length ==1){
+      setMinutes("0"+minutes)
+    }
     setSeconds(Math.floor((time / 1000) % 60));
+    if (seconds.toString().length ==1){
+      setSeconds("0"+seconds)
+    }
   };
 
   // useEffect(() => {
