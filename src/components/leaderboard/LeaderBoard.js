@@ -97,6 +97,7 @@ export default function LeaderBoard (){
                         <h2>S.No</h2>
                         <h2>KY ID</h2>
                         <h2>Name</h2>
+                        <h2>Payment Status</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
                     {
@@ -119,6 +120,7 @@ export default function LeaderBoard (){
                                         <h3>{count}</h3>
                                         <h3>{item["ky_id"]}</h3>
                                         <h3>{item["full_name"]}</h3>
+                                        <h3>{item["is_paid"]?"Payment completed":"Payment pending"}</h3>
                                     </div>
                                 </div>
                             )
@@ -164,7 +166,7 @@ export default function LeaderBoard (){
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeading}>
                     <h2>Rank</h2>
                     <h2>Name</h2>
-                    <h2>Referred</h2>
+                    <h2>Paid Referrals</h2>
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnBorder}></div>
@@ -196,7 +198,7 @@ export default function LeaderBoard (){
                                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                                     <h3>{index+1}</h3>
                                     <h3>{item["name"]}</h3>
-                                    <h3>{item["reg_num"]}</h3>
+                                    <h3>{item["paid_regs_num"]}</h3>
                                 </div> 
                             </div>
                         )
