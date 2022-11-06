@@ -301,10 +301,11 @@ const Dashboard = () => {
               <div className="font-bold bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 text-center flex justify-center items-center">
                 KY ID:{userInfo?.ky_id}
               </div>
-              <div className="font-extrabold text-l md:mt-16 bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 md:w-52 ">
-                {userInfo?.ticket == null
-                  ? "Payment not completed!"
-                  : userInfo?.ticket}
+              <div className="font-bold text-right text-white md:mt-24 text-xl">
+                {userInfo?.is_paid
+                  ? "Cheers! You are a part of KY '23!"
+                  : "Oops! Complete payment to be a part of KY '23!"
+                }
               </div>
             </div>
           </div>

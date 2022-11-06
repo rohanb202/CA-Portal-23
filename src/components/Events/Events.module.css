@@ -7,7 +7,7 @@
     align-items: center;
     height: 0;
     width: 100%;
-    background-color: #F74061;
+    background-color: #F75440;
     z-index: 40;
     overflow: hidden;
     transition: all 1s ease;
@@ -83,7 +83,7 @@
     display: flex;
     height: 80px;
     z-index: 20;
-    background-color: #F74061;
+    background-color: #F75440;
 }
 
 .mobilenav button{
@@ -112,7 +112,7 @@
     height: 10vh;
     width: 100wh;
     padding: 0 20px;
-    background-color: #F74061;
+    background-color: #F75440;
 }
 .navbar{
     display: flex;
@@ -227,7 +227,7 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    background-color: #F74061;
+    background-color: #F75440;
     transform: rotate(-180deg);
 }
 .EventsColumns{
@@ -241,7 +241,7 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    background-color: #F74061;
+    background-color: #F75440;
 }
 .EventsCard{
     max-width: 25rem;
@@ -265,9 +265,9 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
     /* border: 35px solid; */
-    background-color: #F74061;
-    border: 35px solid transparent;
-    border-image: url("./img/Group\ 349.svg") 50 round;
+    background-color: #F75440;
+    /* border: 35px solid transparent;
+    border-image: url("./img/Group\ 349.svg") 50 round; */
     height: 88vh;
     width: 40vw;
 }
@@ -305,7 +305,7 @@
     padding-bottom: 0.5rem; 
     padding-right: 80px;
     padding-left: 80px;
-    color: #F74061;
+    color: #F75440;
     border-radius: 10px;
 }
 .EventsCardButton:hover{

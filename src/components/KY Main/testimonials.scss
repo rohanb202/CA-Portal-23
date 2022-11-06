@@ -72,7 +72,9 @@ $slide-width: 30rem;
 
 .carousel__slide-item {
     display: flex;
+    position: relative;
     justify-content: center;
+    // align-items: center;
     height: $slide-width;
     margin: 0;
     padding: 1rem;
@@ -98,7 +100,7 @@ $slide-width: 30rem;
 
     &::after {
         align-items: center;
-        background: rgba(black, 0.5);
+        // background: rgba(black, 0.5);
         color: white;
         content: 'read more';
         display: flex;
