@@ -4,16 +4,23 @@
     padding-bottom: 70px;
 
 }
+@font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
 .aboutTitle{
     /* background-color:#E4C3AD; */
+    font-family: themeFont;
     display: flex;
     align-items: center;
     padding-top: 5rem;
     padding-right: 10px;
     padding-left: 10px;
+    color: white
 }
 .aboutPageHeading{
     font-size: 2.5rem;
+    font-weight: 700;
     padding-left: 3px;
     padding-right: 3px;
 
