@@ -60,9 +60,14 @@
   display: flex;
 }
 
+@font-face {
+  font-family: themeFont;
+  src: url("../KY Main/CaviarDreams.ttf");
+}
+
 h2 {
   padding-top: 30px;
-  font-family: "Arima Madurai";
+  font-family: themeFont;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;

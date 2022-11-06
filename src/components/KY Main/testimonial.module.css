@@ -103,8 +103,16 @@
     object-fit: cover;
     margin: 16px 0px;
 }
-
+@font-face {
+    font-family: contentFont;
+    src: url("./Poppins-Regular.otf");
+ }
+ @font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
 .testimonialData{
+    font-family: content-Font;
     position: absolute;
     bottom: 50px;
     display: flex;
@@ -114,6 +122,8 @@
 }
 
 .testimonailName{
+    color: #06122E;
+    font-family: themeFont;
     font-size: 24px;
     font-weight: 700;
 }
