@@ -138,7 +138,7 @@ function LoginMain() {
 
         <span className="text-sm text-[#F74061]">
           <span className="text-[#F79840]">Don't have an account?</span>
-          <Link to="/signup"> Sign up</Link>
+          <Link to="/register"> Sign up</Link>
         </span>
         <Link to="/" className="text-sm text-[#F74061]">
           Back to Home Page
