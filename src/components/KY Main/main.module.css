@@ -81,7 +81,7 @@
 }
 
 .mobilenav{
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: center;
     top: 0;
@@ -313,8 +313,8 @@ font-style: normal;
     justify-content: center;
     align-content: center;
     color: white;
-    font-family: timetextFont;
-    font-weight: 400;
+    
+    font-weight: 700;
     font-size: 36px;
     line-height: 59px;
 }

@@ -1,14 +1,28 @@
 import React from 'react'
 import Maincss from "./main.module.css";
 import { useState, useEffect,useContext, useRef } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import logo from "../../svgs/Logo.svg"
+import BasicMenu from './dropdown';
+// import * as React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 
 function Nav() {
     const { userInfo } = useContext(AuthContext);
     const [navdisplay, setNavDisplay] = useState(0);
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
 
     function showNav() {
@@ -76,32 +90,60 @@ function Nav() {
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/Dance">EVENTS</Link>
                 </li>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                 <Link to="/ca">CA</Link>
                 </li>
-                {
-                  userInfo?(
-                    <li onClick={closeNav} className={Maincss.navitem}>
-                    <Link to="/dashboard">Dashboard</Link>
+                
+                <li>
+                {/* </div> */}
+                {/* <Link to="/login"> */}
+                <div>
+                    <Button
+                        id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                    >
+                        <div className={Maincss.kyprofile}></div>
+                    </Button>
+                    <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        {/* <Link to="/login"><MenuItem onClick={handleClose}>Login</MenuItem></Link> */}
+                        {
+                            userInfo?(
+                                <>
+                                <Link to="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
+                                <Link to="/#"><MenuItem onClick={handleClose}>Logout</MenuItem></Link>
+                                </>
+                            ):(
+                                <Link to="/login"><MenuItem onClick={handleClose}>Login</MenuItem></Link>
+                            )
+                        }
+                        {/* <MenuItem onClick={handleClose}>My account</MenuItem> */}
+                        {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
+                    </Menu>
+                    </div>
                     </li>
-                  ):(
-                    <li onClick={closeNav} className={Maincss.navitem}>
-                    <Link to="/login">Login</Link>
-                    </li>
-                  )
-                }
-              </ul>
-            </div>
-            <div className={Maincss.kyprofile}></div>
+                </ul>
+                </div>
+            {/* </Link> */}
           </div>
         </div>
     </div>

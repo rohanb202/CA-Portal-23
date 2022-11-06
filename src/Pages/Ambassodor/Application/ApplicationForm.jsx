@@ -110,6 +110,18 @@ function Ambassador() {
           progress: undefined,
           theme: "light",
         });
+        if(userInfo) {
+          toast.success("Login again to access ambassador dashboard!", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
         navigator("/ca")
       } 
       else if (response.status === 406){

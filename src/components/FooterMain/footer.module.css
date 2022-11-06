@@ -7,11 +7,11 @@
   width: 80%;
   margin-top: 25px;
   margin-left: 10%;
-
+  color: #F6F5E9;
   margin-bottom: 5px;
 }
 .mainbody {
-  background-color: #f74061;
+  background-color: #2D3047;
   /* margin-top: 10%; */
 }
 .column1 {
@@ -37,7 +37,7 @@ h2 {
   font-weight: 700;
   font-size: 25px;
   text-transform: capitalize;
-  color: #06122e;
+  color: #F6F5E9;
 }
 .font {
   justify-content: center;
@@ -62,7 +62,7 @@ h2 {
   text-transform: capitalize;
   margin-left: 18px;
   align-content: center;
-  color: #06122e;
+  color: #F6F5E9;
 }
 .font2 {
   margin-bottom: 10px;
@@ -93,7 +93,7 @@ h2 {
   font-size: 18px;
   text-transform: capitalize;
 
-  color: #06122e;
+  color: #F6F5E9;
 }
 
 .copyright {
@@ -108,7 +108,7 @@ h2 {
   text-transform: capitalize;
   align-content: center;
   justify-content: center;
-  color: #06122e;
+  color: #F6F5E9;
   padding-bottom: 5px;
 }
 
@@ -137,15 +137,6 @@ h2 {
     font-size: 11px;
     line-height: 20px;
   }
-  .column3 {
-    margin-right: 17%;
-  }
-  .column2 {
-    margin-right: 5%;
-  }
-  .column1{
-    margin-left: 0%;
-  }
   .font1 {
     margin-right: 35%;
   }
@@ -158,4 +149,13 @@ h2 {
     line-height: 12px;
     padding-bottom: 8px;
   }
+  .column3{
+ position: relative;
+ right: 10%;
+  }
+  .column2{
+    position: relative;
+    right: 8%;
+  }
+
 }

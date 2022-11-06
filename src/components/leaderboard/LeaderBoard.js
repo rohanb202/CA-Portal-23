@@ -104,8 +104,8 @@ export default function LeaderBoard (){
                         <div className={LeaderBoardCSS.hoverOnButtons}>
                             <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
                                 <h3>0</h3>
-                                <h3>Coming</h3>
-                                <h3>Soon</h3>
+                                <h3>Loading..</h3>
+                                <h3>...</h3>
                             </div>
                         </div>
                     }
@@ -174,15 +174,16 @@ export default function LeaderBoard (){
                     <div className={LeaderBoardCSS.hoverOnButtons}>
                         <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                             <h3>1</h3>
-                            <h3>{userInfo.full_name}</h3>
-                            <h3>0</h3>
+                            {/* <h3>{userInfo.full_name}</h3> */}
+                            <h3>Loading...</h3>
+                            <h3>Loading...</h3>
                         </div> 
                     </div>
                     <div className={LeaderBoardCSS.hoverOnButtons}>
                         <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                             <h3>2</h3>
-                            <h3>Coming</h3>
-                            <h3>Soon</h3>
+                            <h3>Loading...</h3>
+                            <h3>Loading...</h3>
                         </div> 
                     </div>
                     </>

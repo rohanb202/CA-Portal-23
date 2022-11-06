@@ -1,57 +1,9 @@
 {
     "TOOLIKA": [
         {
-            "eventId": 35,
-            "eventName": "RANGBAAZI",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "“Art is the only way to run away without leaving home” and “Colours are the\r\nbest form of expression”. Wouldn't you agree? Show us your creativity by using\r\ntooth brushes, your fingers etc.to paint but without using a pencil to sketch and\r\na brush to paint. Can you beat the twist?",
-            "maxMembers": 2,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
-            "eventId": 31,
-            "eventName": "RAPID FIRE",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "“The trouble is you think you have time”-Buddha. Well, you don't! This contest\r\npitches your creativity against the cruel boundaries of time. We decide the rules\r\nof the game. We choose when the bell rings. However, it's only you who sets\r\nthe limits of your imagination and creativity",
-            "maxMembers": 4,
-            "minMembers": 4,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
-            "eventId": 32,
-            "eventName": "SPOIL THE TEES!",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "\"Daag achche hote hai\" Get those spotless white T-Shirts and spoil them. Yeah,\r\nyou heard it right, put colour on them, soil them, and spoil them. Use paints.\r\nUse brushes. Use your hands. It doesn't matter. Just funk them up. Add life to\r\nthose dull whites. Coz life is too short for boring T-Shirts",
-            "maxMembers": 3,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
-            "eventId": 33,
-            "eventName": "FACE PAINTING",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
-            "maxMembers": 2,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
             "eventId": 34,
             "eventName": "VASTRA SHILP",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
             "eventDetails": "\"Fashion is art, and you are the canvas\"- Velvet Paper. So, wake up the Coco\r\nChanel inside you and let your creativity do the talking. Weave out art and style\r\nwith the fabrics of your imagination and yeah – “paper”.",
             "maxMembers": 4,
             "minMembers": 1,
@@ -61,10 +13,34 @@
             }
         },
         {
-            "eventId": 38,
-            "eventName": "INK IT!",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
+            "eventId": 31,
+            "eventName": "RAPID FIRE",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
+            "eventDetails": "“The trouble is you think you have time”-Buddha. Well, you don't! This contest\r\npitches your creativity against the cruel boundaries of time. We decide the rules\r\nof the game. We choose when the bell rings. However, it's only you who sets\r\nthe limits of your imagination and creativity",
+            "maxMembers": 4,
+            "minMembers": 4,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 37,
+            "eventName": "Live Sketching",
+            "image_URL": "https://i.imgur.com/WE0Qcb8l.jpg",
+            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 33,
+            "eventName": "FACE PAINTING",
+            "image_URL": "https://i.imgur.com/NUWKDxel.jpg",
+            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
             "maxMembers": 2,
             "minMembers": 1,
             "parentEvent": {
@@ -75,7 +51,7 @@
         {
             "eventId": 36,
             "eventName": "SOAP CARVING",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
+            "image_URL": "https://i.imgur.com/kfPB0bOl.jpg",
             "eventDetails": "\"l saw the angel in the marble and carved until I set him free.\" - Michelangelo.\r\nThough carving stone is tough, what's easy is carving soap. Moreover, that's\r\nwhy we give you the \"soap\". Just carve your creativity out on these mundane\r\npieces of soap and transform them into pieces of art.",
             "maxMembers": 2,
             "minMembers": 1,
@@ -85,11 +61,35 @@
             }
         },
         {
-            "eventId": 37,
-            "eventName": "Live Sketching",
-            "image_URL": "https://i.imgur.com/kDZ15vU.jpg",
-            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.",
-            "maxMembers": 1,
+            "eventId": 38,
+            "eventName": "INK IT!",
+            "image_URL": "https://i.imgur.com/PnYcri1l.jpg",
+            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
+            "maxMembers": 2,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 35,
+            "eventName": "RANGBAAZI",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
+            "eventDetails": "“Art is the only way to run away without leaving home” and “Colours are the\r\nbest form of expression”. Wouldn't you agree? Show us your creativity by using\r\ntooth brushes, your fingers etc.to paint but without using a pencil to sketch and\r\na brush to paint. Can you beat the twist?",
+            "maxMembers": 2,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 32,
+            "eventName": "SPOIL THE TEES!",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
+            "eventDetails": "\"Daag achche hote hai\" Get those spotless white T-Shirts and spoil them. Yeah,\r\nyou heard it right, put colour on them, soil them, and spoil them. Use paints.\r\nUse brushes. Use your hands. It doesn't matter. Just funk them up. Add life to\r\nthose dull whites. Coz life is too short for boring T-Shirts",
+            "maxMembers": 3,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 8,
@@ -99,21 +99,9 @@
     ],
     "SAMWAAD": [
         {
-            "eventId": 20,
-            "eventName": "WHAT'S THE WORD?",
-            "image_URL": "https://i.imgur.com/vfwExBA.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
-            "maxMembers": 2,
-            "minMembers": 2,
-            "parentEvent": {
-                "parentEventId": 7,
-                "categoryName": "SAMWAAD"
-            }
-        },
-        {
             "eventId": 21,
             "eventName": "हिंखोज",
-            "image_URL": "https://i.imgur.com/qT63p24.jpg",
+            "image_URL": "https://i.imgur.com/qT63p24l.jpg",
             "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
             "maxMembers": 2,
             "minMembers": 2,
@@ -125,7 +113,7 @@
         {
             "eventId": 23,
             "eventName": "मधुरिमा",
-            "image_URL": "https://i.imgur.com/ORuqgTj.jpg",
+            "image_URL": "https://i.imgur.com/ORuqgTjl.jpg",
             "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -137,7 +125,7 @@
         {
             "eventId": 24,
             "eventName": "BATTLEFRONT",
-            "image_URL": "https://i.imgur.com/v3U5P8n.jpg",
+            "image_URL": "https://i.imgur.com/v3U5P8nl.jpg",
             "eventDetails": "A multilayered debate competition, staring with turncoats and ending in a one vs\r\none debate tournament, it's bound it be filled with excitement.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -147,11 +135,11 @@
             }
         },
         {
-            "eventId": 25,
-            "eventName": "Just A Minute!",
-            "image_URL": "https://i.imgur.com/2h0pPqo.jpg",
-            "eventDetails": "Taking a cue from the famous BBC Radio 4 show Just A Minute!, be prepared for\r\na fast, fun, chaotic time as you try to stop others from speaking and try to be the\r\nlast man speaking past the one minute mark!",
-            "maxMembers": 1,
+            "eventId": 26,
+            "eventName": "तर्कसंगत",
+            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "maxMembers": 5,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 7,
@@ -161,7 +149,7 @@
         {
             "eventId": 27,
             "eventName": "कर्स्सागोई",
-            "image_URL": "https://i.imgur.com/BEgIy5O.jpg",
+            "image_URL": "https://i.imgur.com/BEgIy5Ol.jpg",
             "eventDetails": "INFORMAL EVENT",
             "maxMembers": 1,
             "minMembers": 1,
@@ -173,7 +161,7 @@
         {
             "eventId": 28,
             "eventName": "SHIPWRECK COVE",
-            "image_URL": "https://i.imgur.com/2h0pPqo.jpg",
+            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
             "eventDetails": "ENGLISH EXTEMPORE\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -185,7 +173,7 @@
         {
             "eventId": 29,
             "eventName": "आशुभाषण",
-            "image_URL": "https://i.imgur.com/nQLZVfu.jpg",
+            "image_URL": "https://i.imgur.com/nQLZVful.jpg",
             "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -197,7 +185,7 @@
         {
             "eventId": 30,
             "eventName": "AJESTERS COURT",
-            "image_URL": "https://i.imgur.com/8hhgDwh.jpg",
+            "image_URL": "https://i.imgur.com/8hhgDwhl.jpg",
             "eventDetails": "(STAND-UP COMEDY)",
             "maxMembers": 1,
             "minMembers": 1,
@@ -207,22 +195,10 @@
             }
         },
         {
-            "eventId": 26,
-            "eventName": "तर्कसंगत",
-            "image_URL": "https://i.imgur.com/2h0pPqo.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
-            "maxMembers": 5,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 7,
-                "categoryName": "SAMWAAD"
-            }
-        },
-        {
-            "eventId": 19,
-            "eventName": "SCRIPTURESQUE",
-            "image_URL": "https://i.imgur.com/0AiXM1P.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventId": 25,
+            "eventName": "Just A Minute!",
+            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
+            "eventDetails": "Taking a cue from the famous BBC Radio 4 show Just A Minute!, be prepared for\r\na fast, fun, chaotic time as you try to stop others from speaking and try to be the\r\nlast man speaking past the one minute mark!",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -233,8 +209,32 @@
         {
             "eventId": 22,
             "eventName": "THE LEGEND OF SIR SPEAK-A-LOT",
-            "image_URL": "https://i.imgur.com/wGqvYHs.jpg",
+            "image_URL": "https://i.imgur.com/wGqvYHsl.jpg",
             "eventDetails": "ENGLISH ELOCUTION-cum-POETRY-SLAM\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 7,
+                "categoryName": "SAMWAAD"
+            }
+        },
+        {
+            "eventId": 20,
+            "eventName": "WHAT'S THE WORD?",
+            "image_URL": "https://i.imgur.com/vfwExBAl.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "maxMembers": 2,
+            "minMembers": 2,
+            "parentEvent": {
+                "parentEventId": 7,
+                "categoryName": "SAMWAAD"
+            }
+        },
+        {
+            "eventId": 19,
+            "eventName": "SCRIPTURESQUE",
+            "image_URL": "https://i.imgur.com/0AiXM1Pl.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -247,7 +247,7 @@
         {
             "eventId": 18,
             "eventName": "CYPHER OF MOBS",
-            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
+            "image_URL": "https://i.imgur.com/xkVBAt7l.jpg",
             "eventDetails": "Street dancing is the trendiest dance form today. It brings you out of the four\r\nwalls into the urban streets and fills the settings with vibes that set every foot on\r\nthe move!\r\nKashiyatra brings best dancers from across the country to come together and\r\ncompete. If you think you have the perfect skill set to set the streets on fire, then\r\ngrab this chance fast for the winner's position is at stake!",
             "maxMembers": 10,
             "minMembers": 5,
@@ -257,21 +257,9 @@
             }
         },
         {
-            "eventId": 15,
-            "eventName": "BLISS",
-            "image_URL": "https://i.imgur.com/1zoLyPu.jpg",
-            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.",
-            "maxMembers": 35,
-            "minMembers": 5,
-            "parentEvent": {
-                "parentEventId": 6,
-                "categoryName": "NATRAJ"
-            }
-        },
-        {
             "eventId": 16,
             "eventName": "CUT-A-RUG",
-            "image_URL": "https://i.imgur.com/tRm8QRA.jpg",
+            "image_URL": "https://i.imgur.com/tRm8QRAl.jpg",
             "eventDetails": "Natraj is the name of Shiva that symbolizes dance: the dynamic and static divine\r\nflow of energy. It lets you dive deep into the oceans, swim without hurdles and\r\nbreathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra\r\nunveils to you “Cut-A-Rug - the Solo Dance Competition”.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -283,10 +271,22 @@
         {
             "eventId": 17,
             "eventName": "ECSTASY",
-            "image_URL": "https://i.imgur.com/FSHaxkb.jpg",
+            "image_URL": "https://i.imgur.com/FSHaxkbl.jpg",
             "eventDetails": "Come into an alliance with your partner and arm yourselves with all the grooves\r\nand moves, and prove it to us that you got what it takes to be a doublet for each\r\nother dancing against the world.",
             "maxMembers": 2,
             "minMembers": 2,
+            "parentEvent": {
+                "parentEventId": 6,
+                "categoryName": "NATRAJ"
+            }
+        },
+        {
+            "eventId": 15,
+            "eventName": "BLISS",
+            "image_URL": "https://i.imgur.com/1zoLyPul.jpg",
+            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.",
+            "maxMembers": 35,
+            "minMembers": 5,
             "parentEvent": {
                 "parentEventId": 6,
                 "categoryName": "NATRAJ"
@@ -295,21 +295,9 @@
     ],
     "MIRAGE": [
         {
-            "eventId": 12,
-            "eventName": "DESIGN ELEGANTE",
-            "image_URL": "https://i.imgur.com/myxGVg3.jpg",
-            "eventDetails": "‘MIRAGE’ -An illusion that bounds every viewer with the ethereal beauty.\r\nMIRAGE gives you an opportunity to bring out the creative designer in you to\r\nchange the fashion statement of India. Wear your designer hats, pick your magic\r\nbrushes, design and present your collection of dresses at Kashiyatra, centered on\r\nincredible themes and got an opportunity to win hefty prizes.",
-            "maxMembers": 20,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 5,
-                "categoryName": "MIRAGE"
-            }
-        },
-        {
             "eventId": 13,
             "eventName": "Mr KY",
-            "image_URL": "https://i.imgur.com/rn1oUun.jpg",
+            "image_URL": "https://i.imgur.com/rn1oUunl.jpg",
             "eventDetails": "While going outdoors, everyone likes to put out the best of them with a secret\r\ndream of being Mr. India or Mr. Universe someday. So, it's time to sizzle things\r\nup. It's time for Mr. KY, a step leading you closer to your dream. A unique\r\nopportunity to be the defining personality. If you think you can stand out from\r\nthe crowd and clinch this coveted title, then participate now and leave an everlasting impression on the mind of every attendant of KY!",
             "maxMembers": 1,
             "minMembers": 1,
@@ -321,9 +309,21 @@
         {
             "eventId": 14,
             "eventName": "MISS KY",
-            "image_URL": "https://i.imgur.com/rn1oUun.jpg",
+            "image_URL": "https://i.imgur.com/rn1oUunl.jpg",
             "eventDetails": "“The stage sets on fire, when the unseen, unforgettable, ultimate accessory and\r\nperception of fashion heralds the arrival of blistering and dynamic girls of this\r\ncountry which finally lead to their charismatic departure.” Kashiyatra brings to\r\nyou all. An opportunity to turn your dreams into reality.\r\nLet the truth be told - each one of us, at some point in our lives, has spent hours\r\nin front of mirrors, wishing to be Miss India or Miss Universe. We bring you a\r\ncompetition that could be a step in fulfilling your dreams, Miss KY.",
             "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 5,
+                "categoryName": "MIRAGE"
+            }
+        },
+        {
+            "eventId": 12,
+            "eventName": "DESIGN ELEGANTE",
+            "image_URL": "https://i.imgur.com/myxGVg3l.jpg",
+            "eventDetails": "‘MIRAGE’ -An illusion that bounds every viewer with the ethereal beauty.\r\nMIRAGE gives you an opportunity to bring out the creative designer in you to\r\nchange the fashion statement of India. Wear your designer hats, pick your magic\r\nbrushes, design and present your collection of dresses at Kashiyatra, centered on\r\nincredible themes and got an opportunity to win hefty prizes.",
+            "maxMembers": 20,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 5,
@@ -335,7 +335,7 @@
         {
             "eventId": 11,
             "eventName": "ENQUIZTA",
-            "image_URL": "https://i.imgur.com/Ex6E91K.jpg",
+            "image_URL": "https://i.imgur.com/Ex6E91Kl.jpg",
             "eventDetails": "A total of six intriguing quizzes will be organized during Kashiyatra, namely:\r\n• India Quiz*\r\n• MELA (Music Entertainment Literature Arts)\r\n• General Quiz\r\n• Sports Quiz\r\n• Biz Tech Quiz\r\n• TLC (Travel, Living and Culture) Quiz",
             "maxMembers": 3,
             "minMembers": 1,
@@ -349,7 +349,7 @@
         {
             "eventId": 10,
             "eventName": "BATTLE OF BANDS",
-            "image_URL": "https://i.imgur.com/XMYD7vq.jpg",
+            "image_URL": "https://i.imgur.com/XMYD7vql.jpg",
             "eventDetails": "Crosswindz, the oldest battle of bands in India, is one of the Flagship events of\r\nKashiyatra. Since its inception, Crosswindz has been home to major rock bands\r\nin India. Mindshift (Sweden), Tiny Fingers (Israel), Demonic Resurrection\r\n(Mumbai), Undying Inc (Delhi), Albatross (Mumbai), Underground Authority\r\n(Kolkata) have been our past headliners. Some of the past winners include\r\nEscape Artist, Diabolical Damage, High Frequency and the Purple Jays. Like\r\nthe previous year, this year Crosswindz will organize a road trip for multi-city\r\nelimination rounds to ensure high-quality participation from bands all over the\r\nnation leading to a tight battle to be the best.\r\nAfter the road trips elected bands will compete in the finals to be held in\r\nVaranasi. The finals will be the opening act for headliners followed by the\r\nannouncement of results.",
             "maxMembers": 20,
             "minMembers": 3,
@@ -363,7 +363,7 @@
         {
             "eventId": 5,
             "eventName": "SUR",
-            "image_URL": "https://i.imgur.com/PYo7Qa0.jpg",
+            "image_URL": "https://i.imgur.com/PYo7Qa0l.jpg",
             "eventDetails": "“Music touches us emotionally, where words alone can’t.” So, if you have the\r\nvoice that can win hearts and steal the show, then get ready to dazzle the stage\r\nas we bring forth “SUR: The Solo Singing Event”, where you are given the\r\nideal platform to show your talent and prove your mettle.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -373,21 +373,9 @@
             }
         },
         {
-            "eventId": 6,
-            "eventName": "RAAGSAMAR",
-            "image_URL": "https://i.imgur.com/QyGrRZ4.jpg",
-            "eventDetails": "If you think you can enthrall the audience by singing on soft acoustic music if\r\nunplugged tunes are all you need to set the cool vibes around then don't miss the\r\nchance to participate in Unplugged!",
-            "maxMembers": 10,
-            "minMembers": 3,
-            "parentEvent": {
-                "parentEventId": 2,
-                "categoryName": "BANDISH"
-            }
-        },
-        {
             "eventId": 8,
             "eventName": "KRITI",
-            "image_URL": "https://i.imgur.com/CBTSjZ7.jpg",
+            "image_URL": "https://i.imgur.com/CBTSjZ7l.jpg",
             "eventDetails": "Kriti is your chance to let your imagination and creativity flow in the form of a\r\nbeautiful self-composed song. Stand out as that brilliantly clear solo is as you\r\ntake control over the vocals and mesmerize the audience. The championship is\r\nawarded to the performer who presents the best and wins the hearts with their\r\ncreation.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -399,8 +387,20 @@
         {
             "eventId": 9,
             "eventName": "ADVAITA",
-            "image_URL": "https://i.imgur.com/xK8icRN.jpg",
+            "image_URL": "https://i.imgur.com/xK8icRNl.jpg",
             "eventDetails": "If you think you can make the crowd forget themselves in your performance,\r\nthen this is the place to be. With massive enthusiasm and fearsome competition,\r\nthis event brings out the best in its participants striving for glory. If you have the\r\nband that can’t lose and have a hunger for more, then come and perform against\r\nthe most formidable bands in India. It is the battle of bands, and the clash is\r\nraging hotter than ever.",
+            "maxMembers": 10,
+            "minMembers": 3,
+            "parentEvent": {
+                "parentEventId": 2,
+                "categoryName": "BANDISH"
+            }
+        },
+        {
+            "eventId": 6,
+            "eventName": "RAAGSAMAR",
+            "image_URL": "https://i.imgur.com/QyGrRZ4l.jpg",
+            "eventDetails": "If you think you can enthrall the audience by singing on soft acoustic music if\r\nunplugged tunes are all you need to set the cool vibes around then don't miss the\r\nchance to participate in Unplugged!",
             "maxMembers": 10,
             "minMembers": 3,
             "parentEvent": {
@@ -411,7 +411,7 @@
         {
             "eventId": 7,
             "eventName": "SANLAYAN",
-            "image_URL": "https://i.imgur.com/cWKm3DG.jpg",
+            "image_URL": "https://i.imgur.com/cWKm3DGl.jpg",
             "eventDetails": "There's something in the soft plink of a sitar or the mellifluous notes of a flute\r\nthat the human voice cannot seem to match. Instrumentalists spend years\r\nperfecting their art, to achieve the thrilling pace at which they change notes.\r\nKashiyatra gives you a chance for you to hear and create magic-harmonies with\r\ninstruments only. Let your emotions radiate and shine in its character through\r\ninstruments.",
             "maxMembers": 1,
             "minMembers": 1,
@@ -425,7 +425,7 @@
         {
             "eventId": 3,
             "eventName": "HULLAD",
-            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
+            "image_URL": "https://i.imgur.com/JPRE0Adl.jpg",
             "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If\r\nyou can catch the attention & attract people to stay and watch your performance,\r\nhere is your chance. The art of grabbing the audience’s attention is all that you\r\nneed. No lights, no mics, only pure ACTION full of energy.",
             "maxMembers": 30,
             "minMembers": 10,
@@ -435,21 +435,9 @@
             }
         },
         {
-            "eventId": 4,
-            "eventName": "CHESTHA",
-            "image_URL": "https://i.imgur.com/uuNapHn.jpg",
-            "eventDetails": "In the midst of eternal silence where slightest of the sound was finding it very\r\ndifficult to escape, those creatures in the shades of black and white were making\r\nstatements with their mouth stitched and were gradually paving the path for the\r\ncrowd to dive deep into the sea of joyride full of laughter and emotions Reliving\r\nthose golden days when Charlie Chaplin and Marcel Marceau ruled at\r\nKashiyatra un furl their hidden soul beneath you and let your mimed other\r\nchatters that won’t stop ever.",
-            "maxMembers": 10,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 1,
-                "categoryName": "ABHINAY"
-            }
-        },
-        {
             "eventId": 2,
             "eventName": "ASMITA",
-            "image_URL": "https://i.imgur.com/axxSG4W.jpg",
+            "image_URL": "https://i.imgur.com/axxSG4Wl.jpg",
             "eventDetails": "In civilized life, where the happiness, and indeed almost the existence, of man,\r\ndepends so much upon the opinion of his fellow men, he is always acting a\r\nstudied part. In a Mono Act, an actor is vulnerable. His total personality is\r\nexposed to critical judgment - his intellect, his bearing, his diction, his whole\r\nappearance. If you can reveal your emotions in front of the audience, here is\r\nyour chance.",
             "maxMembers": 3,
             "minMembers": 1,
@@ -459,9 +447,21 @@
             }
         },
         {
+            "eventId": 4,
+            "eventName": "CHESTHA",
+            "image_URL": "https://i.imgur.com/uuNapHnl.jpg",
+            "eventDetails": "In the midst of eternal silence where slightest of the sound was finding it very\r\ndifficult to escape, those creatures in the shades of black and white were making\r\nstatements with their mouth stitched and were gradually paving the path for the\r\ncrowd to dive deep into the sea of joyride full of laughter and emotions Reliving\r\nthose golden days when Charlie Chaplin and Marcel Marceau ruled at\r\nKashiyatra un furl their hidden soul beneath you and let your mimed other\r\nchatters that won’t stop ever.",
+            "maxMembers": 10,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 1,
+                "categoryName": "ABHINAY"
+            }
+        },
+        {
             "eventId": 1,
             "eventName": "RANGMANCH",
-            "image_URL": "https://i.imgur.com/fcWACMV.jpg",
+            "image_URL": "https://i.imgur.com/fcWACMVl.jpg",
             "eventDetails": "Do you have what it takes to dissolve an audience in an ocean of emotions and\r\nactions? The colourful lights, cameras & the audience are waiting for you. If\r\nyou can make your expressions to the next level, then this is where you belong.\r\nThe stage is set and waiting for your next grand act.",
             "maxMembers": 50,
             "minMembers": 1,
