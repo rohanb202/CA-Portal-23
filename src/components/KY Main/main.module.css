@@ -308,6 +308,11 @@ font-style: normal;
     font-family: timetextFont;
     src: url("./coolvetica\ rg.otf");
  }
+
+ @font-face {
+    font-family: contentFont;
+    src: url("./Poppins-Regular.otf");
+ }
 .textbox{
     font-family: timetextFont;
     display: flex;

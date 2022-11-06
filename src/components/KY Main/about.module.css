@@ -8,6 +8,11 @@
     font-family: themeFont;
     src: url("./CaviarDreams.ttf");
  }
+
+ @font-face {
+    font-family: contentFont;
+    src: url("./Poppins-Regular.otf");
+ }
 .aboutTitle{
     /* background-color:#E4C3AD; */
     font-family: themeFont;
@@ -66,6 +71,7 @@
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 40px;
+    font-family: contentFont;
 }
 
 .aboutContentPeopleImg{
