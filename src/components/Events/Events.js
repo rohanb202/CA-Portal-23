@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Nav from "../KY nav/nav";
 
 
 export default function Events() {
@@ -197,7 +198,7 @@ export default function Events() {
       >
         <div class="modal-dialog relative w-auto pointer-events-none ">
           <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current ">
-            <div class="modal-body relative p-4 text-[#06122E] bg-[#F74061] flex items-center justify-center">
+            <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center">
                 <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
@@ -258,7 +259,7 @@ export default function Events() {
 
                   <div class="flex items-center justify-center">
                     <button
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      class="bg-[#456A9D] hover:bg-[#587eb4] text-[#06122E] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       id="firstregistrationbutton"
 
                       type="button" data-bs-dismiss="modal"
@@ -346,7 +347,7 @@ export default function Events() {
 
                     <div class="flex items-center justify-center">
                       <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline"
+                        class="bg-[#456A9D] hover:bg-[#587eb4] text-[#06122E] font-bold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline"
                         type="button"
                         data-bs-dismiss="modal"
                         id="secondregistrationbutton"
@@ -364,92 +365,10 @@ export default function Events() {
       </div>
 
       <div className={EventsCss.eventsBody}>
-        <div className={EventsCss.mobilenav}>
-          <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
-          <button onClick={showNav}></button>
-          <img src={kylogo} alt="ky-23"></img>
-        </div>
-        <div id="mobilenavdropdown" className={EventsCss.mobilenavdropdown}>
-          <button onClick={closeNav} className={EventsCss.backicon}></button>
-          <div className={EventsCss.title}>
-            <img src={kylogo} alt="kashiyatra"></img>
-          </div>
-          <ul className={EventsCss.nav}>
-            <li>
-              <Link to="/">TEAM</Link>
-            </li>
-            <li>
-              <Link to="/events">EVENTS</Link>
-            </li>
-            <li>
-              <Link to="/">FAQ</Link>
-            </li>
-            <li>
-              <Link to="/ca">CA</Link>
-            </li>
-            {userInfo ? (
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
-            ) : (
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            )}
-          </ul>
-        </div>
-        <div className={EventsCss.outernav}>
-          <div className={EventsCss.navbar}>
-            <Link to="/">
-              <div className={EventsCss.kylogo}></div>
-            </Link>
-            <div className={EventsCss.navlist}>
-              <ul className={EventsCss.navlistul}>
-                <li className={EventsCss.navitem}>
-                  <Link to="/">TEAM</Link>
-                </li>
-                <li className={EventsCss.navitem}>
-                  <Link to="/events">EVENTS</Link>
-                </li>
-                <li className={EventsCss.navitem}>
-                  <Link to="/">FAQ</Link>
-                </li>
-              </ul>
-            </div>
-            <div className={EventsCss.kyprofile}></div>
-          </div>
-        </div>
-
+        <Nav/>
         <nav>
-          <div className="flex items-center justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
+          <div className="flex opacity-40 bg-[#456A9D] items-center py-3 justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
 
-            {/* <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              Masquerades
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              SAMWAAD
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              NATRAJ
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              MIRAGE
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              ENQUIZTA
-            </h3>
-
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              CROSSWINDZ
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              BANDISH
-            </h3>
-            <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
-              ABHINAY
-            </h3>
-              Western Music
-            </h3> */}
             {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
 
           </div>
@@ -466,23 +385,23 @@ export default function Events() {
                 />
                 <div
                   className="mt-1 text-white"
-                  style={{ backgroundColor: "#F74061" }}
+                  style={{ backgroundColor: "white" }}
                 >
                   <div
-                    className="font-bold text-xl mb-2 mt-2"
+                    className="font-bold text-xl mb-2 mt-4 flex items-center justify-center"
                     style={{ color: "#06122E" }}
                   >
                     {event.eventName}
                   </div>
                   <div
-                    className="font-bold text-xl mb-2"
+                    className="font-bold text-xl mb-2 flex items-center justify-center"
                     style={{ color: "#06122E" }}
                   >
                     {event.maxMembers==1?"Individual Event":"Team Event"}
                   </div>
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
-                    className="text-base text-white mt-3 text-md "
+                    className="text-base mt-3 pl-3 text-md flex items-center justify-center "
                     style={{ color: "#06122E" }}
                   >
 
@@ -492,7 +411,7 @@ export default function Events() {
                   <div className="flex items-center justify-center mt-5 mb-5">
                     <button
                       type="button"
-                      class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
+                      class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
                       data-bs-toggle="modal"
                       data-bs-target={"#exampleModal" + event.eventId}
                       onClick={()=>{setEventToRegister(event)}}
@@ -509,7 +428,7 @@ export default function Events() {
                     >
                       <div class="modal-dialog relative w-auto pointer-events-none ">
                         <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current ">
-                          <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-[#F74061]">
+                          <div class="modal-header flex flex-shrink-0 p-0 items-center justify-between bg-white">
                             <img
                               className={EventsCss.EventsCardImg}
                               // style={{height:"250px"}}
@@ -517,7 +436,7 @@ export default function Events() {
                               alt="Sunset in the mountains"
                             />
                           </div>
-                          <div class="modal-body relative p-4 text-[#06122E] bg-[#F74061]">
+                          <div class="modal-body relative p-4 text-[#06122E] bg-white">
                             <div className={EventsCss.eventCardExpandedBorder}>
                               <div>
                                 <div className={EventsCss.eventCardTitle}>
@@ -536,7 +455,7 @@ export default function Events() {
                                   <>
                                     <button
                                       type="button"
-                                      class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
+                                      class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
                                       data-bs-toggle="modal"
                                       data-bs-target={
                                         "#exampleModalRegister" + teamNumber
@@ -561,15 +480,15 @@ export default function Events() {
           dropdown-toggle
           px-8
           py-4
-          bg-[#06122E]
-          text-[#F74061]
+          bg-[#456A9D]
+          text-[#06122E]
           font-medium
           text-l
           leading-tight
           uppercase
           rounded
           shadow-md
-          hover:bg-[#06124F] hover:shadow-lg
+          hover:bg-[#587eb4] hover:shadow-lg
           transition
           duration-150
           ease-in-out
@@ -603,8 +522,8 @@ export default function Events() {
           min-w-max
           absolute
           hidden
-          bg-[#06122E]
-          text-[#F74061]
+          bg-[#456A9D]
+          text-[#06122E]
           z-50
           float-left
           py-2
@@ -637,15 +556,15 @@ export default function Events() {
                                                     class="dropdown-toggle
                                                   px-6
                                                   py-2.5
-                                                  bg-[#06122E]
-                                                  text-[#F74061]
+                                                  bg-[#456A9D]
+                                                  text-[#06122E]
                                                   font-medium
                                                   text-xl
                                                   leading-tight
                                                   uppercase
                                                   rounded
                                                   shadow-md
-                                                  hover:bg-blue-700 hover:shadow-lg
+                                                  hover:bg-[#587eb4] hover:shadow-lg
                                                   transition
                                                   duration-150
                                                   ease-in-out
@@ -675,7 +594,7 @@ export default function Events() {
                                   <Link to="/login">
                                   <button
                                       type="button"
-                                      class="px-20 py-3 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#06124F] active:shadow-lg transition duration-150 ease-in-out"
+                                      class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
                                       data-bs-toggle="modal"
                                     >
                                       {" "}
@@ -693,8 +612,8 @@ export default function Events() {
                             <div class="flex items-center justify-center">
                               <button
                                 type="button"
-                                class="px-20 py-3 mt-2 bg-[#06122E] text-[#F74061] font-medium text-xl leading-tight uppercase rounded shadow-md
-          hover:bg-[#06124F] hover:shadow-lg
+                                class="px-20 py-3 mt-2 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md
+          hover:bg-[#587eb4] hover:shadow-lg
           focus:bg-[#06124F] focus:shadow-lg focus:outline-none focus:ring-0
           active:bg-[#06124F] active:shadow-lg transition duration-150
           ease-in-out"
