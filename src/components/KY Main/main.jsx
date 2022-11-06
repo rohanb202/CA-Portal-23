@@ -3,7 +3,7 @@ import { useState, useEffect,useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
-import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
+// import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
 import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Testimonials from "./testimonials.jsx";
