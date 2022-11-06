@@ -145,7 +145,17 @@
     font-weight: bold;
     color: #3D2645;
 }
-@media screen and (max-width: 1400px){
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+.aboutky{
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+}
+
+	
+}
+@media screen and (max-width: 1200px){
     .aboutTitle{
         padding-top: 2rem;
     }

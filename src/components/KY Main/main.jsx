@@ -274,6 +274,7 @@ function Main() {
             passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.
           </div>
+          <div className={Aboutcss.aboutky}>
           <div className="flex justify-evenly">
             {/* <div className={Aboutcss.aboutContentCard}> */}
             <div className={Aboutcss.aboutContentCard}>
@@ -368,6 +369,7 @@ function Main() {
                 <h5 className={Aboutcss.aboutContentSubHeading}>Events</h5>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

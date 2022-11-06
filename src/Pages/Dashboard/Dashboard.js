@@ -334,9 +334,10 @@ const Dashboard = () => {
                 {/* KY ID: #123456 */}
               </div>
               <div className="font-bold text-right text-white md:mt-24 text-xl">
-                {userInfo?.ticket == null
-                  ? "Payment not completed!"
-                  : userInfo?.ticket}
+                {userInfo?.is_paid
+                  ? "Cheers! You are a part of KY '23!"
+                  : "Oops! Complete payment to be a part of KY '23!"
+                }
               </div>
             </div>
           </div>
