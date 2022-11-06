@@ -15,10 +15,19 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Link } from "react-router-dom";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
+  const [inputDataObject, setInputDataObject] = useState({})
+  const handleInputChange = (e) => {
+    setInputDataObject({...inputDataObject, [e.target.name]: e.target.value})
+  }
+  useEffect(()=>{
+    // console.log(inputDataObject);
+  }, [inputDataObject])
 
   const style = {
     position: "absolute",
@@ -36,12 +45,12 @@ export default function Events() {
   const handleOpen1 = (e) => {
     setOpen1(true);
 
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
     setTeamNumber(Number(e.target.innerText));
   };
   const handleClose1 = (e) => {
     setAnchorEl(null);
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
     setTeamNumber(Number(e.target.innerText));
     setOpen1(false);
   };
@@ -65,7 +74,7 @@ export default function Events() {
   const [category, setCategory] = useState(Object.values(eventData)[0]);
   const axiosPrivate = useAxiosPrivate();
 
-  console.log(category);
+  // console.log(category);
 
   function handleEventClick(e) {
     const eventCategory = e.target.innerText;
@@ -95,8 +104,85 @@ export default function Events() {
 
   const [eventToRegister, setEventToRegister] = useState(null);
   const [memberList, setMemberList] = useState({});
-  const requestRegistration = async () => {
-    
+  const navigate = useNavigate();
+
+  const requestRegistration = async (e) => {
+    let inputs = null;
+    let memberids = [];
+    let teamName = "";
+    if (e.target.id == "firstregistrationbutton") {
+      inputs = document.getElementsByClassName("firstinputs");
+      teamName = document.getElementById("firstteamname").value;  
+    }
+    else {
+      inputs = document.getElementsByClassName("secondinputs");
+      teamName = document.getElementById("secondteamname").value;  
+    }
+    for (let input of inputs) {
+      memberids.push(input.value.toUpperCase());
+    }
+    memberids = memberids.filter(el => el!='')
+    console.log(memberids);
+    console.log(teamName);
+    if(teamName == "") {
+      alert("Please enter a team name!");
+      return;
+    }
+    if(memberids.includes(userInfo.ky_id)){
+      alert("Do not add team leader ID to members list!");
+      return;
+    }
+    if(new Set(memberids).size !== memberids.length) {
+      alert("Do not fill the same KY ID twice!");
+      return;
+    }
+    // console.log(eventToRegister);
+    axiosPrivate.post("/api/teamregister/", {
+      teamName: teamName,
+      eventId: eventToRegister.eventId,
+      otherMembers: memberids
+    })
+    .then((res) => {
+      // console.log("res", res);
+      toast.success(res.data.msg, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      navigate("/dashboard");
+    })
+    .catch((err) => {
+      // console.error("res", err);
+      if (err.response?.data?.msg) {
+        toast.error(err.response?.data?.msg, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast.error("Something went wrong. Try again.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    });
+
   }
   return (
     <div className={EventsCss.eventsBody}>
@@ -114,6 +200,19 @@ export default function Events() {
             <div class="modal-body relative p-4 text-[#06122E] bg-[#F74061] flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center">
                 <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
+                  <div class="mb-2">
+                  <label
+                  class="block text-gray-700 text-sm font-bold mb-1"
+                  for="teamname"
+                  >Team Name</label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="firstteamname"
+                    type="text"
+                    placeholder="Team Name"
+                  />
+                  </div>
                   {Array(teamNumber)
                     .fill(null)
                     .map((_, index) => {
@@ -143,11 +242,12 @@ export default function Events() {
                             ):(
                               <>
                               <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline firstinputs"
                                 id="username"
                                 type="text"
                                 placeholder="KY ID"
-                                name={index}
+                                name={`${index}-1`}
+                                onChange={handleInputChange}
                               />
                               </>
                             )
@@ -159,6 +259,7 @@ export default function Events() {
                   <div class="flex items-center justify-center">
                     <button
                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      id="firstregistrationbutton"
 
                       type="button" data-bs-dismiss="modal"
                       onClick={requestRegistration}
@@ -191,6 +292,18 @@ export default function Events() {
 
                 <div class="flex items-center justify-center ml-4">
                   <form class="flex items-center justify-center">
+                  <div class="mb-2">
+                  <label
+                  class="block text-gray-700 text-sm font-bold mb-1"
+                  for="teamname"
+                  >Team Name</label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="secondteamname"
+                    type="text"
+                    placeholder="Team Name"
+                  />
+                  </div>
                     {Array(teamNumber)
                       .fill(null)
                       .map((_, index) => {
@@ -218,10 +331,12 @@ export default function Events() {
                             ):(
                               <>
                                 <input
-                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  class="shadow appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline secondinputs"
                                   id="username"
                                   type="text"
                                   placeholder="KY ID"
+                                  name={`${index}-2`}
+                                  onChange={handleInputChange}
                                 />
                               </>
                             )}
@@ -234,6 +349,8 @@ export default function Events() {
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline"
                         type="button"
                         data-bs-dismiss="modal"
+                        id="secondregistrationbutton"
+                        onClick={requestRegistration}
                       >
                         Register
                       </button>

@@ -111,6 +111,8 @@ const Dashboard = () => {
           prev.splice(index, 1);
           return prev;
         });
+        setOpen(false);
+        setOpen1(false);
       })
       .catch((err) => {
         // console.error("res", err);
@@ -137,6 +139,8 @@ const Dashboard = () => {
             theme: "light",
           });
         }
+        setOpen(false);
+        setOpen1(false);
       });
   };
 
