@@ -58,15 +58,15 @@ function Nav() {
             <img src={logo} alt="kashiyatra"></img>
           </div>
           <ul className={Maincss.nav}>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">TEAM</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
             </li>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/ca">CA</Link>
             </li>
