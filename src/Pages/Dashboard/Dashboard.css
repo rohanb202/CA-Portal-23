@@ -10,10 +10,21 @@
         font-size: 1.25rem; /* 20px */
         line-height: 1.75rem; /* 28px */
 }
+.dashBoardIITBhu23{
+        margin-top: 1.4rem;
+        color: white;
+        font-weight: bold;
+        font-size: 1.75rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+}
 
 @media screen and (max-width: 600px) {
 
         .dashBoardIITBhu{
+                display: flex;
+                justify-content: center;
+        }
+        .dashBoardIITBhu23{
                 display: flex;
                 justify-content: center;
         }

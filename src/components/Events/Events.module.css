@@ -192,6 +192,7 @@
 
 .eventsBody{
     /* height: 100vh; */
+    background-image: url("./img/Group\ 344.svg");
     background-color: #06122E;
     font-family: 'Arima Madurai', cursive;
 }
@@ -213,6 +214,7 @@
 .eventCardBorder{
     background-image: url("img/cardBorder.svg");
     padding: 2.5px;
+    margin-left: 60px;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -246,10 +248,11 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
     margin: 1rem;
-    border: 25px solid;
-    background-color: #F75440;
-    border-image-source: url("img/Pattern\ \(1\).svg");
-    border-image-slice: 48;
+    background-color: white;
+}
+.EventsCardImg{
+    width: 100%;
+    height: 250px !important;
 }
 .eventCardExpandedBorder{
     display: grid;
@@ -261,10 +264,10 @@
 .EventsCard2{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
-    border: 35px solid;
+    /* border: 35px solid; */
     background-color: #F75440;
-    /* border-image-source: url("img/Pattern\ \(1\).svg");
-    border-image-slice: 48; */
+    /* border: 35px solid transparent;
+    border-image: url("./img/Group\ 349.svg") 50 round; */
     height: 88vh;
     width: 40vw;
 }
