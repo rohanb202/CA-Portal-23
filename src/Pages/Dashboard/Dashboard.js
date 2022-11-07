@@ -281,7 +281,7 @@ const Dashboard = () => {
             <img
               src={userInfo?.profile_picture}
               alt=""
-              className="h-40 relative md:left-0 flex items-center justify-center "
+              className="h-35 relative md:left-0 flex items-center justify-center "
             />
             </div>
             
@@ -298,10 +298,10 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="md: mt-6 md:ml-28 flex justify-between md:block">
-              <div className="font-bold bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 text-center flex justify-center items-center">
+              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 text-center flex justify-center items-center">
                 KY ID:{userInfo?.ky_id}
               </div>
-              <div className="font-bold text-right text-white md:mt-24 text-xl">
+              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded md:w-80 text-center flex justify-center items-center md:mt-24">
                 {userInfo?.is_paid
                   ? "Cheers! You are a part of KY '23!"
                   : "Oops! Complete payment to be a part of KY '23!"
