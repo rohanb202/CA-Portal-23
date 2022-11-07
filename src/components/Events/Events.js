@@ -606,7 +606,7 @@ export default function Events() {
 
                               </div>
                             </div>
-                            <p className={EventsCss.eventCardInsideText}>
+                            <p className={EventsCss.eventCardInsideText} style={{whiteSpace: "pre-line"}}>
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">
