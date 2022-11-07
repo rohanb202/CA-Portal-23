@@ -8,25 +8,17 @@
 .main{
     display: flex;
     justify-content: center;
-    position: absolute;
-    right: 0;
     // bottom: 50px;
-    width: 60vw;
-    margin: 50px 0; 
+    height: 100%;
+    background: url(./skypg.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* transform: scale(1.05); */
     // margin-bottom: 80px;;
+    padding-top: 3%;
 }
 
-@media screen and (max-width:800px) {
-    .sidestrips{
-        display: none;
-    }
-    .main{
-        right: 20%;
-        margin: 50px auto;
-        // justify-self: center;
-        // align-self: center;
-    }
-}
+
 
 .preloaderFloatingCircles {
     position: relative;

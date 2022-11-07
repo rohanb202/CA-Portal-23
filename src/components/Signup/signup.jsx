@@ -105,14 +105,10 @@ function Signup(){
     
     return (
         <>
-        <div className={LoaderCss.sidestrips}>
-            <img src={stripes} alt="" className="object-cover h-screen" />
-            {/* <div className="h-screen bgStripes"></div> */}
-          </div>
         <div className={LoaderCss.main}>
     
           <form onSubmit={handleSubmit} className="flex flex-col space-y-5 mb-20 justify-center items-center px-10 w-[100%]">
-            <img src={logo} alt="" className="w-2/3 min-w-[18rem]" />
+            <img src={logo} alt="" className="w-1/2 min-w-[18rem]" />
     
             <label className="block w-6/12 min-w-[15rem]">
               <span className="text-gray-700 whitespace-nowrap">Email ID</span>
@@ -874,7 +870,7 @@ function Signup(){
             <button
                 id="register"
               type="submit"
-              className="bg-[#F74061] rounded-lg w-36 my-5 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
+              className="bg-[#456A9D] rounded-lg w-36 my-3.5 p-2 text-white font-semibold hover:scale-110 transition-all ease-in-out"
             >
               Register
             </button>
@@ -892,7 +888,7 @@ function Signup(){
                 </div>
             </div>
 
-            <Link to="/login" className="text-sm text-[#F74061]">Back to Login Page</Link>
+            <Link to="/login" className="text-sm text-[white]">Back to Login Page</Link>
     
           </form>
         </div>
