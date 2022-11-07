@@ -72,9 +72,9 @@ export default function FooterMain() {
             <div className={Footercss.home}>
               <a href="#testimonials">Testimonials</a>
             </div>
-            <div className={Footercss.home}>
+            {/* <div className={`{Footercss.home}`}>
               <a href="#sponsors">Sponsors</a>
-            </div>
+            </div> */}
           </div>
           <div className={`${Footercss.column3} ${Footercss.column} `}>
             <h2 className={`${Footercss.font} ${Footercss.font3}`}>
@@ -85,21 +85,22 @@ export default function FooterMain() {
                 <a href="mailto: kashiyatra@iitbhu.ac.in">
                   <img src={gmail} className={Footercss.row1} alt="" />
                 </a>
-                <a href="tel:9876543210 ">
+                <a href="tel:9068674125 ">
                   <img src={call} className={Footercss.row1} alt="" />
                 </a>
               </span>
               <span className={Footercss.row2}>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
-                  <a href="mailto: kashiyatra@iitbhu.ac.in">ky@gmail.com</a>
+                  <a href="mailto: kashiyatra@iitbhu.ac.in">kashiyatra@iitbhu.ac.in</a>
                 </div>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
-                  <a href="tel:9876543210 ">9876543210 </a>
+                  <a href="tel:9068674125 ">9068674125 </a>
                 </div>
               </span>
             </div>
           </div>
         </div>
+        <button ></button>
         <div className={Footercss.Lborder}></div>
         <div className={Footercss.copyright}>© 2023 All Rights Reserved</div>
       </div>

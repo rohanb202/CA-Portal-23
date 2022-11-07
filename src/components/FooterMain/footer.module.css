@@ -31,6 +31,10 @@
   margin-right: 4%;
   padding-left: 10%;
 }
+.column2{
+  position: relative;
+  right: 2%;
+}
 @media screen and (min-width: 1200px){
   .column1{
     position: relative;
@@ -49,6 +53,10 @@
 
 .column2{
   margin-left: 5%;
+}
+.column3{
+  position: relative;
+  right: 8%;
 }
 .column {
   margin-top: 15px;
@@ -98,6 +106,9 @@ h2 {
   margin-left: 18px;
   align-content: center;
   color: #F6F5E9;
+  text-align: center;
+  position: relative;
+  right: 32%;
 }
 .font2 {
   margin-bottom: 10px;
@@ -171,6 +182,9 @@ h2 {
   .home {
     font-size: 11px;
     line-height: 20px;
+    position: relative;
+    text-align: center;
+    right: 16%;
   }
   .font1 {
     margin-right: 35%;
@@ -186,11 +200,15 @@ h2 {
   }
   .column3{
  position: relative;
- right: 10%;
+ right: 21%;
   }
   .column2{
     position: relative;
-    right: 8%;
+    right: 14%;
+  }
+  .column1{
+    position: relative;
+    right: 6%;
   }
 .column0{
   display:none;
