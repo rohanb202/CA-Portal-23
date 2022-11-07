@@ -5,7 +5,7 @@ import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
 // import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
-import TestimonialImg from "./img/testimonails/testimonial.jpeg";
+// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
@@ -127,22 +127,33 @@ function Main() {
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
 
-    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-    if (days.toString().length ==1){
-      setDays("0"+days)
+    // setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+    if (Math.floor(time / (1000 * 60 * 60 * 24))<10){
+      setDays("0"+Math.floor(time / (1000 * 60 * 60 * 24)))
     }
-    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+    else{
+      setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+    }
     // console.log(hours.toString().length)
-    if (hours.toString().length ==1){
-      setHours("0"+hours)
+    if (Math.floor((time / (1000 * 60 * 60)) % 24)<10){
+      setHours("0"+Math.floor((time / (1000 * 60 * 60)) % 24))
     }
-    setMinutes(Math.floor((time / 1000 / 60) % 60));
-    if (minutes.toString().length ==1){
-      setMinutes("0"+minutes)
+    else{
+      setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
     }
-    setSeconds(Math.floor((time / 1000) % 60));
-    if (seconds.toString().length ==1){
-      setSeconds("0"+seconds)
+    
+    if (Math.floor((time / 1000 / 60) % 60)<10){
+      setMinutes("0"+Math.floor((time / 1000 / 60) % 60))
+    }
+    else{
+      setMinutes(Math.floor((time / 1000 / 60) % 60));
+    }
+    
+    if (Math.floor((time / 1000) % 60)<10){
+      setSeconds("0"+Math.floor((time / 1000) % 60))
+    }
+    else{
+      setSeconds(Math.floor((time / 1000) % 60));
     }
   };
 
@@ -274,18 +285,11 @@ function Main() {
         </div>
         <div className={Aboutcss.aboutContent}>
           <div className={Aboutcss.aboutContentText} style={{ color: "white" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+          Kashiyatra, the annual socio-cultural festival of IIT(BHU) Varanasi is a three day fiesta, aimed towards mesmerizing everyone 
+          with enchanting literary, musical and artistic events. It is the largest cultural festival of northern India. IIT(BHU) rests
+          within Asia's biggest residential university, BHU in the holy city of Varanasi. Varanasi, the eternal city, houses plethora 
+          of traditions and has an ecstatic blend of cultures of myriad races. IIT(BHU) Varanasi has been nationally acclaimed for imparting 
+          technical knowledge in diverse fields and it has recently concluded its centenary celebrations.
           </div>
           <div className={Aboutcss.aboutky}>
           <div className="flex justify-evenly">

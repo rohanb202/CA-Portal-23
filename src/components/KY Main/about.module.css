@@ -1,5 +1,7 @@
 .aboutSectionBody{
-    background-image: url("./Group\ 346.svg");
+    background-image: url("./aboutBack.png");
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
     /* margin-top: 1000px; */
     padding-bottom: 70px;
 
@@ -75,18 +77,21 @@
 }
 
 .aboutContentPeopleImg{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 120px;
     margin-bottom: 50px;
 }
 .aboutContentHutImg{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 110px;
     margin-bottom: 40px;
 }
 .aboutContentTrophyImg{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 111px;
@@ -103,6 +108,8 @@
 .aboutContentNumberSection{
     display: flex;
     justify-content: center;
+    position: relative;
+    bottom: 0.8rem;
 }
 .aboutContentCard{
     /* box-sizing: border-box; */
@@ -110,8 +117,13 @@
     padding-left: 2.5rem;
     padding-bottom: 2rem;
     color: #3D2645;
+    width: 15rem;
     max-width: 24rem;
-    background-color:#E4C3AD;
+    background-image: url("./aboutCard.svg");
+    background-size: 50vh 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color:#E4C3AD; */
     border-radius: 12px;
     height: 50vh;
     /* width: 12rem; */
@@ -121,16 +133,21 @@
     /* border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
     border-image-slice: 30;
     border-image-outset: 15px; */
-    border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch;
-    border-color: #f4be52; border-style: outset; border-width: 20px;
-    border-image-outset: 8px;
+    /* border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch; */
+    /* border-color: #f4be52; border-style: outset; border-width: 20px; */
+    /* border-image-outset: 8px; */
 }
 .aboutContentTrophyCard{
     padding-right: 3.5rem;
     padding-left: 3.5rem;
     color: #3D2645;
+    width: 15rem;
     max-width: 24rem;
-    background-color:#E4C3AD;
+    background-image: url("./aboutCard.svg");
+    background-size: 50vh 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color:#E4C3AD; */
     border-radius: 12px;
     height: 50vh;
     margin: 1.5rem;
@@ -138,25 +155,27 @@
     padding: 15px;
     border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
     border-image-outset: 15px; */
-    border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch;
-    border-color: #f4be52; border-style: outset; border-width: 20px;
-    border-image-outset: 8px;
+    /* border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch; */
+    /* border-color: #f4be52; border-style: outset; border-width: 20px; */
+    /* border-image-outset: 8px; */
 
 }
 .aboutContentSubHeading{
+    position: relative;
+    bottom: 0.6rem;
     text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;;
     font-size: 1.563rem;
     font-weight: bold;
     color: #3D2645;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
 .aboutky{
-    -webkit-transform:scale(0.7);
-    -moz-transform:scale(0.7);
-    -ms-transform:scale(0.7);
-    transform:scale(0.7);
+    -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    transform:scale(0.9);
 }
 
 	
@@ -173,30 +192,38 @@
         height: 60px;
         margin-top: 10px;
         margin-bottom: 7px;
+        top: 15px;
     }
     .aboutContentHutImg{
         width: 50px;
         height: 50px;
         margin-top: 14px;
         margin-bottom: 13.5px;
+        top: 15px;
     }
     .aboutContentTrophyImg{
         width: 40px;
         height: 40px;
         margin-top: 19px;
         margin-bottom: 17px;
+        top: 15px;
     }
     .aboutContentCard{
         height: 22vh;
+        width: 10rem;
         margin : 0.3rem;
     }
     .aboutContentTrophyCard{
         height: 22vh;
+        width: 10rem;
+
+        background-size: 18vh 10rem;
         /* max-width: 15rem; */
     }
     .aboutContentCard{
         padding-right: 1.2rem;
         padding-left: 1.2rem;
+        background-size: 18vh 10rem;
     }
     .aboutContentTrophyCard{
         margin : 0.3rem;
@@ -205,9 +232,14 @@
     }
     .aboutContentSubHeading{
         font-size: 1rem;
+        bottom: -10px;
+    }
+    .aboutContentNumberSection{
+        /* font-size: 0.5rem; */
+        bottom: -10px;
     }
     .aboutContentNumber{
-        font-size: 1.2rem;
+        font-size:1.2rem;
     }
     .plus{
         font-size: 1.2rem;
@@ -235,10 +267,14 @@
     }
     .aboutContentCard{
         height:18vh;
+        width: 5rem;
         margin : 0.3rem;
+        background-size: 18vh 8rem;
     }
     .aboutContentTrophyCard{
         height: 18vh;
+        width: 5rem;
+        background-size: 18vh 8rem;
         /* max-width: 15rem; */
     }
     .aboutContentCard{
