@@ -4,7 +4,7 @@ import { useState, useEffect,useContext, useRef } from "react";
 import { Link} from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import logo from "../../svgs/Logo.svg"
-import BasicMenu from './dropdown';
+import BasicMenu from './dropdown.jsx';
 // import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -48,7 +48,7 @@ function Nav() {
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           
           <button onClick={showNav}></button>
-          <img src={logo} alt="ky-23"></img>
+          <img src={logo} alt="ky-23" className={Maincss.kyLogoMobileScreen}></img>
           
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
@@ -62,7 +62,7 @@ function Nav() {
               <Link to="/">TEAM</Link>
             </li>
             <li onClick={closeNav}>
-              <Link to="/Dance">EVENTS</Link>
+              <Link to="/events">EVENTS</Link>
             </li>
             <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
@@ -94,7 +94,7 @@ function Nav() {
                   <Link to="/team">TEAM</Link>
                 </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/Dance">EVENTS</Link>
+                  <Link to="/events">EVENTS</Link>
                 </li>
                 {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/">FAQ</Link>
