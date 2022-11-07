@@ -122,7 +122,7 @@ padding-left: 30px;
 
 }
 .LeaderBoardRightColumnDiv{
-    padding: 90px;
+    padding: 110px;
 }
 .LeaderBoardRightColumnHeading{
     font-size: 2.2rem;
@@ -133,11 +133,21 @@ padding-left: 30px;
     font-size: 1.2rem;
 }
 .LeaderBoardRightColumnContentHeading{
-    display: grid;
-    font-size: 1.3rem !important;
+    display: flex;
+    font-size: 1.2rem !important;
     grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 350px;
 }
+
+.LeaderBoardRightColumnContentHeadingName{
+    padding-left: 40px;
+}
+
+.LeaderBoardCSS.LeaderBoardRightColumnContentHeadingPaid{
+    padding-left: 40px;
+}
+
 .LeaderBoardRightColumnContentHeading h3{
     padding: 20px;
 }

@@ -94,10 +94,10 @@ export default function LeaderBoard (){
                 <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferals}>
                     <div style={{color:"#098770"} }  className={LeaderBoardCSS.LeaderBoardCenterColumnReferalsHeading}>Referals</div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferal}>
-                        <h2>S.No</h2>
-                        <h2>KY ID</h2>
-                        <h2>Name</h2>
-                        <h2>Payment Status</h2>
+                        <h2 style={{color:"#098770"}}>S.No</h2>
+                        <h2 style={{color:"#098770"}}>KY ID</h2>
+                        <h2 style={{color:"#098770"}}>Name</h2>
+                        <h2 style={{color:"#098770"}}>Payment Status</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
                     {
@@ -135,9 +135,9 @@ export default function LeaderBoard (){
                 <h2 className={LeaderBoardCSS.LeaderBoardRightColumnHeading}>Leaderboard</h2>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeading}>
-                    <h2>Rank</h2>
-                    <h2>Name</h2>
-                    <h2>Paid Referrals</h2>
+                    <div>Rank</div>
+                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeadingName}>Name</div>
+                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeadingPaid}>Paid Referrals</div>
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnBorder}></div>
@@ -181,9 +181,9 @@ export default function LeaderBoard (){
             <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferals2}>
                     <h1 style={{color:"#098770"}}>Referals</h1>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferal}>
-                        <h2>S.No</h2>
-                        <h2>KY ID</h2>
-                        <h2>Name</h2>
+                        <h2 style={{color:"#098770"}}>S.No</h2>
+                        <h2 style={{color:"#098770"}}>KY ID</h2>
+                        <h2 style={{color:"#098770"}}>Name</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
                     <div className={LeaderBoardCSS.hoverOnButtons}>
