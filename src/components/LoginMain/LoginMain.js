@@ -6,7 +6,7 @@ import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import LoginWithGoogle from "../../Pages/GoogleLogin/LoginWithGoogle";
 import LoaderCss from "./LoginMain.module.scss";
-import "./login.css"
+import "./login.css";
 
 function LoginMain() {
   const [requesting, setRequesting] = useState(false);
@@ -34,7 +34,6 @@ function LoginMain() {
 
   return (
     <div className="flex items-center justify-center h-screen loginbghehe">
-
       <form
         onSubmit={handleClick}
         className="flex flex-col space-y-5 justify-center items-center px-10"
@@ -77,7 +76,7 @@ function LoginMain() {
             required={true}
           />
         </label>
-        <Link to="/forgotpass" className="text-sm text-[#F74061]">
+        <Link to="/forgotpass" className="text-sm text-[white]">
           Forgot password?
         </Link>
         <div className={LoaderCss.LoginBtnAndSpinner}>
@@ -136,14 +135,14 @@ function LoginMain() {
         <span className="text-sm text-[#F74061]">
           <span className="text-[white]">Don't have an account?</span>
           <span className="signupcol">
-          <Link to="/register"> Sign up</Link></span>
+            <Link to="/register"> Sign up</Link>
+          </span>
         </span>
-        <Link to="/" className="text-sm text-[#F74061]">
+        <Link to="/" className="text-sm text-[white]">
           Back to Home Page
         </Link>
 
         {/* <LoginWithGoogle /> */}
-
       </form>
     </div>
   );
