@@ -85,7 +85,7 @@ export default function FooterMain() {
                 <a href="mailto: kashiyatra@iitbhu.ac.in">
                   <img src={gmail} className={Footercss.row1} alt="" />
                 </a>
-                <a href="tel:123-456-7890">
+                <a href="tel:9876543210 ">
                   <img src={call} className={Footercss.row1} alt="" />
                 </a>
               </span>
@@ -94,7 +94,7 @@ export default function FooterMain() {
                   <a href="mailto: kashiyatra@iitbhu.ac.in">ky@gmail.com</a>
                 </div>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
-                  <a href="tel:123-456-7890">9876543210 </a>
+                  <a href="tel:9876543210 ">9876543210 </a>
                 </div>
               </span>
             </div>
