@@ -202,7 +202,7 @@ function Main() {
 
   return (
     <>
-      <div className={Maincss.main}>
+      <div id="main" className={Maincss.main}>
         <Nav/>
         <video loop autoPlay muted>
             <source
@@ -386,7 +386,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className={Throwcss.throwSectionBody}>
+      <div id="throwback" className={Throwcss.throwSectionBody}>
         <div className={Throwcss.throwTitle}>
           <div className={Throwcss.throwBorder3}></div>
           <div
@@ -400,14 +400,14 @@ function Main() {
         <Slider />
         <div className={Throwcss.blank}> </div>
       </div>
-      <div className={Testimonialcss.testimonialSectionBody} >
+      <div id="testimonials" className={Testimonialcss.testimonialSectionBody} >
         <div className={Testimonialcss.testimonialTitle}>
           <div className={Testimonialcss.testimonialBorderLeft}></div>
           <div
             className={Testimonialcss.testimonialHeading}
             style={{ color: "#F6F5E9" }}
           >
-            Testimonails
+            Testimonials
           </div>
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
