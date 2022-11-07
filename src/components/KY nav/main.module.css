@@ -144,7 +144,7 @@
 }
 
 .navbar img{
-    height: 50px;
+    height: 150px;
 }
 
 .navlist{
@@ -156,8 +156,8 @@
 
 .kylogo{
     /* padding: 10px;; */
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     /* background-image: url("../../svgs/Logo.svg"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
@@ -268,6 +268,10 @@ video{
 @font-face {
     font-family: secondFont;
     src: url("../KY\ Main/coolvetica\ rg.otf");
+ }
+
+ .kyLogoMobileScreen{
+    height: 50px !important;
  }
 
 .outerbox{
