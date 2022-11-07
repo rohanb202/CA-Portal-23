@@ -243,7 +243,7 @@ export default function Events() {
                             ):(
                               <>
                               <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline firstinputs"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline firstinputs"
                                 id="username"
                                 type="text"
                                 placeholder="KY ID"
