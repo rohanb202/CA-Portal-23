@@ -102,7 +102,7 @@ export default function FooterMain() {
         </div>
         <button ></button>
         <div className={Footercss.Lborder}></div>
-        <div className={Footercss.copyright}>© 2023 All Rights Reserved</div>
+        <div className={Footercss.copyright}>© Kashiytra 2023 All Rights Reserved</div>
       </div>
     </div>
   );
