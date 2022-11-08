@@ -94,10 +94,10 @@ export default function LeaderBoard (){
                 <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferals}>
                     <div style={{color:"#098770"} }  className={LeaderBoardCSS.LeaderBoardCenterColumnReferalsHeading}>Referals</div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferal}>
-                        <h2>S.No</h2>
-                        <h2>KY ID</h2>
-                        <h2>Name</h2>
-                        <h2>Payment Status</h2>
+                        <h2 className="text-black/80">S.No</h2>
+                        <h2 className="text-black/80">KY ID</h2>
+                        <h2 className="text-black/80">Name</h2>
+                        <h2 className="text-black/80">Payment Status</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
                     {
@@ -137,7 +137,7 @@ export default function LeaderBoard (){
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContentHeading}>
                     <h2>Rank</h2>
                     <h2>Name</h2>
-                    <h2>Paid Referrals</h2>
+                    <h2>Points</h2>
                 </div>
                 
                 <div className={LeaderBoardCSS.LeaderBoardRightColumnBorder}></div>
