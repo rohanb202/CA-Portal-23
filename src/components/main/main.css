@@ -354,8 +354,8 @@ color: #06122E;
     display: flex;
     /* margin-right: 0;; */
     /* align-items: center; */
-    align-content: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     /* width: 100%; */
     /* background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg'); */
     /* background-size: cover; */
@@ -366,12 +366,19 @@ color: #06122E;
     display: flex;
     /* margin-right: 0;; */
     /* align-items: center; */
-    align-content: flex-start;
-    justify-content: flex-start;
-    /* width: 100%; */
+    /* flex-shrink: 0; */
+    /* flex-grow: 0; */
+    align-items: center;
+    justify-content: center;
+    /* width: 30%; */
     /* background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg'); */
     /* background-size: cover; */
     /* background-position-y: center; */
+}
+
+.rightImgCa img{
+    height: 80%;
+    /* width: 30%; */
 }
 
 .right img{
@@ -415,6 +422,10 @@ color: #06122E;
         display: grid;
         grid-template-columns: auto ;
     }
+    .rightImgCa img{
+        height: 60%;
+        /* width: 30%; */
+    }
 }
 
 @media screen and (min-width: 700px){
@@ -450,6 +461,13 @@ color: #06122E;
     }
     #ca, #portal{
         font-size: 70px;
+    }
+    .rightImgCa img{
+        height: 40%;
+        /* width: 30%; */
+    }
+    .right img{
+        height: 50%;
     }
 
     .center-top img{
