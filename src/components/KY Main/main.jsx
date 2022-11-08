@@ -209,7 +209,7 @@ function Main() {
     <>
       <div id="main" className={Maincss.main}>
         <Nav />
-        <video loop autoPlay muted playinline>
+        <video loop autoPlay muted playsinline>
           <source
             type="video/mp4"
             src="https://i.imgur.com/FVEh1Jf.mp4"
