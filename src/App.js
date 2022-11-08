@@ -11,7 +11,6 @@ import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
-import Payment from "./Pages/Payment/Payment";
 // import Login from './components/Login/Login';
 
 // import Login from './components/Login/Login';

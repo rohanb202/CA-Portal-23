@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import stripes from "./stripes.svg";
+import stripes from "../../svgs/stripes.svg";
 import logo from "./newlogo.svg";
 import "./forgot.css"
 import { ToastContainer, toast } from "react-toastify";
