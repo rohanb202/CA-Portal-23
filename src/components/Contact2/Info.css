@@ -60,19 +60,19 @@
     }
     .contactPageInfoHeading{
 
-        font-size: 2.7rem;
+        font-size: 3rem;
 
     }
     
     .contactCallInfo{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .contactPersonName{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .contactPersonEmail{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
   
   }

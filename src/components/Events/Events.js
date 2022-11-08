@@ -367,11 +367,24 @@ export default function Events() {
       <div className={EventsCss.eventsBody}>
         <Nav/>
         <nav>
-          <div className="flex opacity-40 bg-[#456A9D] items-center py-3 justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
+
+
+<div>
+<div class={EventsCss.outerWrapper}>
+    <div class={EventsCss.innerWrapper}>
+    {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
+    </div>
+  </div>
+  <div class={EventsCss.pseudoTrack}></div>
+</div>
+
+         
+
+          {/* <div className="flex shrink-0 opacity-40 bg-[#456A9D] items-center py-3 justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
 
             {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
 
-          </div>
+          </div> */}
         </nav>
 
         <div className={EventsCss.EventsColumns}>
@@ -402,7 +415,7 @@ export default function Events() {
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base mt-3 pl-3 text-md flex items-center justify-center "
-                    style={{ color: "#06122E" }}
+                    style={{ color: "#06122E", }}
                   >
 
                     {event.eventDetails.substring(0,150)}.....
@@ -606,7 +619,7 @@ export default function Events() {
 
                               </div>
                             </div>
-                            <p className={EventsCss.eventCardInsideText} style={{whiteSpace: "pre-line"}}>
+                            <p className={EventsCss.eventCardInsideText} style={{ whiteSpace: "pre-line"}}>
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">

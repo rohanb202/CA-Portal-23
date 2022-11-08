@@ -11,12 +11,13 @@ import { Routes, Route } from "react-router-dom";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Profile from "./Pages/Profile/Profile";
 import AmbassadorApplyForm from "./Pages/Ambassodor/Application/ApplicationForm";
+// import Login from './components/Login/Login';
 
 // import Login from './components/Login/Login';
 import Team from "./components/team/team";
 // import { AuthProvider } from './context/AuthContext'
-
 import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
@@ -67,7 +68,9 @@ function App() {
         <Route path="/team" element={<Team />} />
 
         <Route path="/forgotpass" element={<ForgotPass />} />
-        <Route path="/api/google/callback" element={<GoogleMiddleware />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path='/api/google/callback' element={<GoogleMiddleware />}/>
         {/* <Route path="/complete-profile" element={<CompleteProfile />} /> */}
         <Route path="/test" element={<TestPage />} />
         {/* CA Specific Pages */}
@@ -81,8 +84,15 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/dashboard" element={
+          <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+        } />
+        <Route path="/payment" element={
+          <RequireAuth>
+              <Payment />
+            </RequireAuth>} />
       </Routes>
     </>
   );

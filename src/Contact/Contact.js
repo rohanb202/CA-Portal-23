@@ -1,7 +1,7 @@
 import React from 'react';
 // import './index.css';
 import FloatingText from './FloatingText';
-import Buttons from './Buttons'
+// import Buttons from './Buttons'
 import Footer from './Footer'
 import Info from "./Info"
 

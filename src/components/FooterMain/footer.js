@@ -106,7 +106,7 @@ export default function FooterMain() {
         <a href="mailto: kashiyatra@iitbhu.ac.in">
         <button className={Footercss.fpay}><img src={gmail} className={Footercss.gm} alt="" />  Genral Queries</button></a></div> */}
         <div className={Footercss.Lborder}></div>
-        <div className={Footercss.copyright}>© 2023 All Rights Reserved</div>
+        <div className={Footercss.copyright}>© Kashiytra 2023 All Rights Reserved</div>
       </div>
     </div>
   );
