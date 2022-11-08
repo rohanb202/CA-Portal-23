@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 function Nav() {
-    const { userInfo } = useContext(AuthContext);
+    const { userInfo, logoutUser } = useContext(AuthContext);
     const [navdisplay, setNavDisplay] = useState(0);
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -130,7 +130,7 @@ function Nav() {
                             userInfo?(
                                 <>
                                 <Link to="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
-                                <Link to="/#"><MenuItem onClick={handleClose}>Logout</MenuItem></Link>
+                                <Link to="/"><MenuItem onClick={()=>{handleClose(); logoutUser();}}>Logout</MenuItem></Link>
                                 </>
                             ):(
                                 <Link to="/login"><MenuItem onClick={handleClose}>Login</MenuItem></Link>

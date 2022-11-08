@@ -56,13 +56,13 @@ function NavBar() {
               </Link>
             </li>
           )}
-          {userInfo && (
+          {/* {userInfo && (
             <li onClick={closeNav}>
               <Link to="/profile">
                 <span>Profile</span>
               </Link>
             </li>
-          )}
+          )} */}
 
           <li onClick={closeNav}>
               <Link to="/events">
@@ -145,13 +145,13 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {userInfo && (
+            {/* {userInfo && (
               <li>
                 <Link to="/profile">
                   <span>Profile</span>
                 </Link>
               </li>
-            )}
+            )} */}
 
             <li>
             <Link to="/events">
