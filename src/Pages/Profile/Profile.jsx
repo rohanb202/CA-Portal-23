@@ -42,7 +42,7 @@ function Profile() {
 
   useEffect(() => {
     if(!userInfo){
-      navigator("/");
+      navigator("/ca");
     }
   }, [userInfo]);
 

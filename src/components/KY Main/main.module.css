@@ -1,0 +1,477 @@
+.main{
+    /* background-color: red; */
+    /* background: transparent; */
+    height: 100%;
+}
+
+.mobilenavdropdown{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    width: 100%;
+    background-color: #F74061;
+    z-index: 40;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.mobilenavdropdown img{
+    width: 180px;
+}
+
+.mobilenavdropdown .title{
+    width: 250px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown ul{
+    display: flex;
+    flex-basis: 60%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-content: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown ul li{
+    margin: 10px auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.mobilenavdropdown .logout{
+    font-size: 25px;;
+    margin: 250px auto;
+}
+.mobilenavdropdown ul li{
+    color: #F6F5E9;
+    padding: 20px 30px;
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    /* identical to box height */
+    text-transform: capitalize;
+}
+.backicon{
+    display: flex;
+    position: absolute;
+    height: 50px;
+    width: 100vw;
+    /* margin-top: 150px; */
+    margin-left: 50px;;
+    flex-shrink: 0;
+    z-index: 30;
+    background-image: url(./icons8-arrow-50.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobilenav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    padding: 20px 0;
+    z-index: 20;
+    background-color: transparent;
+}
+
+.mobilenav button{
+    position: absolute;
+    left: 30px;
+    /* top: 20px; */
+    height: 30px;
+    width: 30px;
+    color: #06122E;
+    background-image: url("../../svgs/navicon.svg");
+    background-size: cover;
+    align-self: center;
+}
+
+.mobilenav img{
+    margin-top: 10px;
+    height: 50px;
+    width: 120px;
+    align-self: center;
+    justify-self: center;
+    /* margin-top: 8px; */
+}
+
+.outernav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100wh;
+    padding: 0 20px;
+    z-index:2;
+    /* background-color: #F74061; */
+    background-color: transparent;
+    /* background: rgba(255, 255, 255, 0); */
+/* border-radius: 16px; */
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+/* backdrop-filter: blur(5px); */
+/* -webkit-backdrop-filter: blur(5px); */
+/* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+.navbar{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    /* width: 100wh; */
+    
+}
+
+.navbar img{
+    height: 50px;
+}
+
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.kylogo{
+    padding: 10px;;
+    height: 4em;
+    width: 3.5em;
+    /* background-image: url("../../svgs/Logo.svg"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+.kyprofile{
+    height: 40px;
+    width: 40px;
+    background-image: url("./profilelogo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navlistul{
+    text-decoration: none;
+    display: flex;
+}
+
+.navitem{
+    margin: 0 40px;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 50px;
+    color: white;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    justify-self: center;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    /* z-index: -1;; */
+    /* background-position: 0; */
+    /* overflow: hidden; */
+    /* z-index: -1;
+    backdrop-filter: blur(5px); */
+    /* -o-filter: blur(4px); */
+    /* filter: blur(4px); */
+}
+
+.maincontent{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.themebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 6%;
+    color:#A89ED8;
+    font-size: 140px;
+    font-weight: bolder;
+}
+@font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
+.themefont{
+    display: flex;
+    justify-content: center;
+    font-family: themeFont;
+    color: white;
+    font-size: 40px;;
+}
+.themefont span{
+    display: flex;
+    justify-content: center;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url("./SAMAN___.TTF");
+ }
+.themetext{
+    font-size: 110px;
+    font-family: myFirstFont;
+   /* color: darkgreen; */
+}
+.in{
+    font-size: 20px;;
+}
+
+.timebox{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    width: 100%;
+    padding: 0 20%;
+    margin-top: 60px;
+}
+
+.timeboxwrap{
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url("./coolvetica\ rg.otf");
+ }
+
+.outerbox{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.colon{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-family: secondFont;
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 105px;
+    color: white;
+    margin-top: 0.3em;;
+}
+
+.numbox{
+    font-family: secondFont;
+font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
+    /* border: 5px solid #F74061; */
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 105px;
+    color: white;
+    /* border-width: 20px; */
+}
+@font-face {
+    font-family: timetextFont;
+    src: url("./coolvetica\ rg.otf");
+ }
+
+ @font-face {
+    font-family: contentFont;
+    src: url("./Poppins-Regular.otf");
+ }
+.textbox{
+    font-family: timetextFont;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+@font-face {
+    font-family: registerFont;
+    src: url("./Inter-Regular.ttf");
+ }
+
+.kyregister{
+    font-family: registerFont;
+    display: flex;
+    height: 40px;
+    width: 250px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 11px;
+    /* font-family: 'Inter'; */
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 20.2081px;
+    line-height: 28px;
+    color: #F6F5E9;
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.mouse img{
+    background: transparent;
+    height: 40px;;
+    margin-bottom: 50px;;
+}
+
+@media screen and (max-width: 1080px) {
+    .timebox{
+        padding: 0 15%;
+    }
+    .outerbox{
+        height: 25vh;
+    }
+    .numbox{
+        height: 120px;
+        width: 120px;
+        font-size: 70px;
+    }
+    .colon{
+        font-size: 70px;
+        margin-top: 0.1em;
+    }
+    .textbox{
+        font-size: 30px ;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .mobilenav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .themebox{
+        margin-top: 20%;
+    }
+    .themetext{
+        font-size: 0.5em;
+        margin-top: 15%;
+    }
+    .themefont{
+        font-size: 0.2em;
+    }
+    .themefont img{
+        width: 30px;
+    }
+    .in{
+        font-size: 18px;
+    }
+    .outernav{
+        display: none;
+    }
+    .outerbox{
+        height: 20vh;
+    }
+    .timebox{
+        padding: 0 10%;
+    }
+    .numbox{
+        height: 100px;
+        width: 100px;
+        font-size: 60px;
+        /* border-radius: 20px; */
+    }
+    .colon{
+        font-size: 60px;
+        margin-top: -12px;
+    }
+    .textbox{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .themebox{
+        margin-top: 20%;
+    }
+    .themetext{
+        font-size: 0.4em;
+        margin-top: 15%;
+    }
+    .themefont{
+        font-size: 0.15em;
+    }
+    .themefont img{
+        width: 20px;
+    }
+    /* .themebox{
+        font-size: 20px;
+        margin-top: 15%;
+    } */
+    .in{
+        font-size: 15px;
+    }
+    /* .maincontent{
+        height: 50vh;
+    } */
+    .outerbox{
+        height: 15vh;
+    }
+    .timebox{
+        padding: 0 10%;
+    }
+    .numbox{
+        height: 60px;
+        width: 60px;
+        font-size: 40px;
+        /* border-radius: 10px; */
+        /* border-width: 3px; */
+    }
+    .colon{
+        font-size: 40px;
+        margin-top: -25px;
+    }
+    .textbox{
+        font-size: 15px;
+    }
+    .kyregister{
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}

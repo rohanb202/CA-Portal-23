@@ -14,8 +14,8 @@ import { useEffect, useState } from "react";
 // import kylogo from "./KY Logo.svg"
 // import navicon from "./navicon.svg"
 import back from "../../svgs/back.svg";
-import whyCAImage from "../../svgs/why ca_Mesa de trabajo 1 1.svg";
-import right from "../../svgs/why CA_Mesa de trabajo 1 1-cropped.svg";
+import whyCAImage from "./why ca_Mesa de trabajo 1 1.png";
+import right from "./why CA_Mesa de trabajo 1 1-cropped.png";
 import responsibility from "../../img/responsibility.png";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
@@ -28,8 +28,8 @@ AOS.init();
 function Main(props) {
   let { userInfo } = useContext(AuthContext);
 
-  const [ setStyle] = useState({});
-  const [setAnimeover] = useState(0);
+  const [style, setStyle] = useState({});
+  const [animeover, setAnimeover] = useState(0);
   const [videoOn, setVideoOn] = useState(1);
 
   const style1 = {
@@ -125,6 +125,7 @@ function Main(props) {
 
           <NavBar />
           <div class="sidepattern">
+            {/* <img src={sidepattern} alt="sidepattern"></img> */}
           </div>
           <div class="outer-main">
             <div class="main">
@@ -138,7 +139,7 @@ function Main(props) {
                 <div class="bottombar"></div>
               </div>
               <div class="center">
-                {userInfo === null && (
+                {(userInfo === null || userInfo?.ca_id == null) && (
                   <>
                     <div class="center-top">
                       <img src={back} alt="back"></img>
@@ -148,7 +149,7 @@ function Main(props) {
                         data-aos-duration="1000"
                       >
                         <div class="text">Become A Campus Ambassador</div>
-                        <Link to="/ambassador-apply">
+                        <Link to="/ca/ambassador-apply">
                           <button class="apply">
                             <span class="button-text">Apply</span>
                           </button>
@@ -267,45 +268,6 @@ function Main(props) {
                       className="w-40 lg:w-[80%] lg:ml-16 mt-20
                     "
                     ></img>
-                  </div>
-                  
-                </div>
-                <div className="responsibilitiesAsCampusAmbassadorMob">
-                  <div className="responsibilitiesAsCampusAmbassadorColumn">
-                    <div className="responsibilitiesAsCampusAmbassadorHeading">
-                      Represent
-                    </div>
-                    <div className="responsibilitiesAsCampusAmbassadorContent">
-                      Represent and exemplify Kashiyatra in your college
-                      among your peers.
-                    </div>
-                  </div>
-                  <div className="responsibilitiesAsCampusAmbassadorColumn">
-                    <div className="responsibilitiesAsCampusAmbassadorHeading">
-                      Publicize
-                    </div>
-                    <div className="responsibilitiesAsCampusAmbassadorContent">
-                      Promote Kashiyatra by publicizing its events through
-                      social media platforms.
-                    </div>
-                  </div>
-                  <div className="responsibilitiesAsCampusAmbassadorColumn">
-                    <div className="responsibilitiesAsCampusAmbassadorHeading">
-                      Conceptualize
-                    </div>
-                    <div className="responsibilitiesAsCampusAmbassadorContent">
-                      Bring forth ideas and proposals as valuable input
-                      for team Kashiyatra.
-                    </div>
-                  </div>
-                  <div className="responsibilitiesAsCampusAmbassadorColumn">
-                    <div className="responsibilitiesAsCampusAmbassadorHeading">
-                      Organize
-                    </div>
-                    <div className="responsibilitiesAsCampusAmbassadorContent">
-                      Conduct workshops and promotional events in your
-                      college for Kashiyatra.
-                    </div>
                   </div>
                 </div>
                 {props.children}

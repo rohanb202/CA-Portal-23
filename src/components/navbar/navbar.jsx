@@ -1,7 +1,7 @@
 // import { Link } from 'react-scroll'
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import kashiyatra from "../../svgs/KY Header Logo.svg";
+import kashiyatra from "./kyheader.svg";
 import kylogo from "../../svgs/KY Logo.svg";
 import { useState } from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -46,30 +46,55 @@ function NavBar() {
         <ul className="nav">
           <li onClick={closeNav}>
             <Link to="/">
-              <span>Dashboard</span>
+              <span>Home</span>
             </Link>
           </li>
           {userInfo && (
+            <li onClick={closeNav}>
+              <Link to="/dashboard">
+                <span>Dashboard</span>
+              </Link>
+            </li>
+          )}
+          {/* {userInfo && (
             <li onClick={closeNav}>
               <Link to="/profile">
                 <span>Profile</span>
               </Link>
             </li>
+          )} */}
+
+          <li onClick={closeNav}>
+              <Link to="/events">
+                  <span>Event Registration</span>
+
+              </Link>
+            </li>
+
+          {userInfo && (
+            <li onClick={closeNav}>
+              <Link to="/payment">
+                <span>Payments</span>
+              </Link>
+            </li>
           )}
-          {/* <li>
-            <a href="/#">
-              <span>Event Registration</span>
-            </a>
-          </li> */}
-          {userInfo !== null && (
-            <>
+
+          {
+            (userInfo==null || (userInfo?.ca_id==null))?(
               <li onClick={closeNav}>
-                <Link to="/leaderboard">
+                <Link to="/ca">
                   <span>Ambassador</span>
                 </Link>
               </li>
-            </>
-          )}
+            ): (
+              <li onClick={closeNav}>
+                <Link to="/ca/leaderboard">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            )
+          }
+
           {userInfo === null && (
             <>
               <li>
@@ -82,7 +107,7 @@ function NavBar() {
           {userInfo && (
             <>
               <div class="logout">
-                <a href="/#">
+                <Link to="/">
                   <span
                     onClick={() => {
                       closeNav();
@@ -91,7 +116,7 @@ function NavBar() {
                   >
                     Logout
                   </span>
-                </a>
+                </Link>
               </div>
             </>
           )}
@@ -110,30 +135,52 @@ function NavBar() {
           <ul className="nav">
             <li>
               <Link to="/">
-                <span>Dashboard</span>
+                <span>Home</span>
               </Link>
             </li>
             {userInfo && (
+              <li>
+                <Link to="/dashboard">
+                  <span>Dashboard</span>
+                </Link>
+              </li>
+            )}
+            {/* {userInfo && (
               <li>
                 <Link to="/profile">
                   <span>Profile</span>
                 </Link>
               </li>
+            )} */}
+
+            <li>
+            <Link to="/events">
+              <span>Event Registration</span>
+            </Link>
+          </li>
+            {userInfo && (
+              <li>
+                <Link to="/payment">
+                  <span>Payments</span>
+                </Link>
+              </li>
+
             )}
-            {/* <li>
-              <a href="#">
-                <span>Event Registration</span>
-              </a>
-            </li> */}
-            {userInfo !== null && (
-              <>
-                <li>
-                  <Link to="/leaderboard">
-                    <span>Ambassador</span>
-                  </Link>
-                </li>
-              </>
-            )}
+            {
+            (userInfo==null || (userInfo?.ca_id==null))?(
+              <li>
+                <Link to="/ca">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            ): (
+              <li>
+                <Link to="/ca/leaderboard">
+                  <span>Ambassador</span>
+                </Link>
+              </li>
+            )
+          }
             {userInfo === null && (
               <>
                 <li>
@@ -146,9 +193,9 @@ function NavBar() {
             {userInfo && (
               <>
                 <div className="logout">
-                  <a href="/#">
+                  <Link to="/">
                     <span onClick={logoutUser}>Logout</span>
-                  </a>
+                  </Link>
                 </div>
               </>
             )}

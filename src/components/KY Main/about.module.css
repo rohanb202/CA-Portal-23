@@ -1,0 +1,302 @@
+.aboutSectionBody{
+    background-image: url("./aboutBack.png");
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+    /* margin-top: 1000px; */
+    padding-bottom: 70px;
+
+}
+@font-face {
+    font-family: themeFont;
+    src: url("./CaviarDreams.ttf");
+ }
+
+ @font-face {
+    font-family: contentFont;
+    src: url("./Poppins-Regular.otf");
+ }
+.aboutTitle{
+    /* background-color:#E4C3AD; */
+    font-family: themeFont;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white
+}
+.aboutPageHeading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+.aboutSliderHeading{
+    font-size: 2.5rem;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.aboutBorder1{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("./Border-1.svg");
+}
+.aboutBorder3{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 70px;
+    background-image: url("img/slider1.svg");
+}
+.aboutBorder2{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("./Border-2.svg");
+}
+.aboutBorder4{
+    padding: 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url("img/slider2.svg");
+}
+.aboutContent{
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+.aboutContentText{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 40px;
+    font-family: contentFont;
+}
+
+.aboutContentPeopleImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+.aboutContentHutImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    margin-bottom: 40px;
+}
+.aboutContentTrophyImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 111px;
+    margin-bottom: 42px;
+}
+.aboutContentNumber{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.plus{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.aboutContentNumberSection{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0.8rem;
+}
+.aboutContentCard{
+    /* box-sizing: border-box; */
+    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+    color: #3D2645;
+    width: 15rem;
+    max-width: 24rem;
+    background-image: url("./aboutCard.svg");
+    background-size: 50vh 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color:#E4C3AD; */
+    border-radius: 12px;
+    height: 50vh;
+    /* width: 12rem; */
+    margin: 1.5rem;
+    /* border: 30px solid transparent; */
+    /* padding: 15px; */
+    /* border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
+    border-image-slice: 30;
+    border-image-outset: 15px; */
+    /* border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch; */
+    /* border-color: #f4be52; border-style: outset; border-width: 20px; */
+    /* border-image-outset: 8px; */
+}
+.aboutContentTrophyCard{
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+    color: #3D2645;
+    width: 15rem;
+    max-width: 24rem;
+    background-image: url("./aboutCard.svg");
+    background-size: 50vh 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color:#E4C3AD; */
+    border-radius: 12px;
+    height: 50vh;
+    margin: 1.5rem;
+    /* border: 20px solid transparent;
+    padding: 15px;
+    border-image: url("../../svgs/aboutCardBorder.svg") 20 round;
+    border-image-outset: 15px; */
+    /* border-image: url('../../svgs/testimonialsborder.svg') 30 30 30 30 stretch stretch; */
+    /* border-color: #f4be52; border-style: outset; border-width: 20px; */
+    /* border-image-outset: 8px; */
+
+}
+.aboutContentSubHeading{
+    position: relative;
+    bottom: 0.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;;
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: #3D2645;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+.aboutky{
+    -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    transform:scale(0.9);
+}
+
+	
+}
+@media screen and (max-width: 1200px){
+    .aboutTitle{
+        padding-top: 2rem;
+    }
+    .aboutContent{
+        grid-template-columns: auto ;
+    }
+    .aboutContentPeopleImg{
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 7px;
+        top: 15px;
+    }
+    .aboutContentHutImg{
+        width: 50px;
+        height: 50px;
+        margin-top: 14px;
+        margin-bottom: 13.5px;
+        top: 15px;
+    }
+    .aboutContentTrophyImg{
+        width: 40px;
+        height: 40px;
+        margin-top: 19px;
+        margin-bottom: 17px;
+        top: 15px;
+    }
+    .aboutContentCard{
+        height: 22vh;
+        width: 10rem;
+        margin : 0.3rem;
+    }
+    .aboutContentTrophyCard{
+        height: 22vh;
+        width: 10rem;
+
+        background-size: 18vh 10rem;
+        /* max-width: 15rem; */
+    }
+    .aboutContentCard{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+        background-size: 18vh 10rem;
+    }
+    .aboutContentTrophyCard{
+        margin : 0.3rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .aboutContentSubHeading{
+        font-size: 1rem;
+        bottom: -10px;
+    }
+    .aboutContentNumberSection{
+        /* font-size: 0.5rem; */
+        bottom: -10px;
+    }
+    .aboutContentNumber{
+        font-size:1.2rem;
+    }
+    .plus{
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    .aboutContentPeopleImg{
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
+    .aboutContentHutImg{
+        width: 35px;
+        height: 35px;
+        margin-top: 14px;
+        margin-bottom: 13.5px;
+    }
+    .aboutContentTrophyImg{
+        width: 25px;
+        height: 25px;
+        margin-top: 19px;
+        margin-bottom: 17px;
+    }
+    .aboutContentCard{
+        height:18vh;
+        width: 5rem;
+        margin : 0.3rem;
+        background-size: 18vh 8rem;
+    }
+    .aboutContentTrophyCard{
+        height: 18vh;
+        width: 5rem;
+        background-size: 18vh 8rem;
+        /* max-width: 15rem; */
+    }
+    .aboutContentCard{
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+    .aboutContentTrophyCard{
+        margin : 0.3rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .aboutContentSubHeading{
+        font-size: 0.7rem;
+    }
+    .aboutContentNumber{
+        font-size: 0.8rem;
+    }
+    .plus{
+        font-size: 0.8rem;
+    }
+    .aboutContentText{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}

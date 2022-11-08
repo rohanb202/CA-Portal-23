@@ -180,6 +180,7 @@ text-transform: capitalize;
 }
 
 .logout{
+    /* margin: 250px 0 0 0; */
     margin: 250px 0;
     /* position: absolute; */
     /* bottom: 8%; */

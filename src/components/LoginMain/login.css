@@ -1,0 +1,15 @@
+.loginbghehe{
+    background: url(./skypg.png);
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* transform: scale(1.05); */
+    overflow: hidden;
+
+}
+.text-gray-700{
+    color: white;
+}
+.signupcol{
+    color: #E3E7AF;
+}

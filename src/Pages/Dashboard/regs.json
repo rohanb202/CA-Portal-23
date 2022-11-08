@@ -1,0 +1,126 @@
+[
+    {
+        "teamName": "Vysakh",
+        "teamId": 1,
+        "event": {
+            "eventId": 1,
+            "eventName": "Solo Dance",
+            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
+            "eventDetails": "solo",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 1,
+                "categoryName": "Dance"
+            }
+        },
+        "teamLeader": {
+            "ky_id": "KY0102",
+            "email": "av.vysakh.cse20@itbhu.ac.in",
+            "full_name": "A V Vysakh",
+            "gender": null,
+            "college": "IIT (BHU) VARANASI",
+            "year": 2,
+            "mobile_number": 7561034050,
+            "is_paid": true
+        },
+        "members": [
+            {
+                "ky_id": "KY0102",
+                "email": "av.vysakh.cse20@itbhu.ac.in",
+                "full_name": "A V Vysakh",
+                "gender": null,
+                "college": "IIT (BHU) VARANASI",
+                "year": 2,
+                "mobile_number": 7561034050,
+                "is_paid": true
+            }
+        ]
+    },
+    {
+        "teamName": "Vysakh",
+        "teamId": 2,
+        "event": {
+            "eventId": 2,
+            "eventName": "Duo Dance",
+            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
+            "eventDetails": "duo",
+            "maxMembers": 2,
+            "minMembers": 2,
+            "parentEvent": {
+                "parentEventId": 1,
+                "categoryName": "Dance"
+            }
+        },
+        "teamLeader": {
+            "ky_id": "KY0102",
+            "email": "av.vysakh.cse20@itbhu.ac.in",
+            "full_name": "A V Vysakh",
+            "gender": null,
+            "college": "IIT (BHU) VARANASI",
+            "year": 2,
+            "mobile_number": 7561034050,
+            "is_paid": true
+        },
+        "members": [
+            {
+                "ky_id": "KY0102",
+                "email": "av.vysakh.cse20@itbhu.ac.in",
+                "full_name": "A V Vysakh",
+                "gender": null,
+                "college": "IIT (BHU) VARANASI",
+                "year": 2,
+                "mobile_number": 7561034050,
+                "is_paid": true
+            },
+            {
+                "ky_id": "KY0103",
+                "email": "testdummy1@gmail.com",
+                "full_name": "First Dummy",
+                "gender": "Male",
+                "college": "ADITYA INSTITUTE OF TECHNOLOGY, MADANAPALLE",
+                "year": 1,
+                "mobile_number": 7561034050,
+                "is_paid": true
+            }
+        ]
+    },
+    {
+        "teamName": "Vysakh",
+        "teamId": 3,
+        "event": {
+            "eventId": 3,
+            "eventName": "Drawing",
+            "image_URL": "https://i.imgur.com/xkVBAt7.jpg",
+            "eventDetails": "arts",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 2,
+                "categoryName": "Arts"
+            }
+        },
+        "teamLeader": {
+            "ky_id": "KY0102",
+            "email": "av.vysakh.cse20@itbhu.ac.in",
+            "full_name": "A V Vysakh",
+            "gender": null,
+            "college": "IIT (BHU) VARANASI",
+            "year": 2,
+            "mobile_number": 7561034050,
+            "is_paid": true
+        },
+        "members": [
+            {
+                "ky_id": "KY0102",
+                "email": "av.vysakh.cse20@itbhu.ac.in",
+                "full_name": "A V Vysakh",
+                "gender": null,
+                "college": "IIT (BHU) VARANASI",
+                "year": 2,
+                "mobile_number": 7561034050,
+                "is_paid": true
+            }
+        ]
+    }
+]

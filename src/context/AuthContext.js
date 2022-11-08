@@ -83,7 +83,8 @@ export const AuthProvider = ({children}) => {
                 setAuthTokens(data)
                 localStorage.setItem('authTokens', JSON.stringify(data))
 
-                navigate("/")
+                navigate("/dashboard")
+
                 toast.success('Logged in successfully!', {
                     position: "top-center",
                     autoClose: 3000,
