@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import stripes from "./stripes.svg";
-import logo from "./logo.svg";
+import stripes from "../../svgs/stripes.svg";
+import logo from "./newlogo.svg";
 import "./forgot.css"
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";

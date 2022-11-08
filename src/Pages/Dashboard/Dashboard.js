@@ -22,10 +22,19 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
 import { toast } from "react-toastify";
+import { BeakerIcon,PhoneIcon} from '@heroicons/react/solid'
 
 // import Box from '@mui/material/Box';
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
+function EnvelopeIcon(){
+  return(
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+</svg>);
+}
+
 
 const style = {
   position: "absolute",
@@ -41,7 +50,25 @@ const style = {
   // borderImg:"url(./img/Group 349.svg) 50 round",
   p: 4,
 };
+const style2 = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 500,
+  bgcolor: "#ffffff",
+  // border: "2px solid #000",
+  boxShadow: 24,
+  color: "#06122E",
+  // border: "35px solid transparent",
+  // borderImg:"url(./img/Group 349.svg) 50 round",
+  p: 4,
+};
 const Dashboard = () => {
+
+  const [openContact, setOpenContact] = React.useState(false);
+  const handleOpenContact = () => setOpenContact(true);
+  const handleCloseContact = () => setOpenContact(false);
   // HOOKS FOR INFO AND UI
   const [PersonData, setPersonData] = useState([]);
   const [userIsTeamLeader, setUserIsTeamLeader] = useState(true);
@@ -265,13 +292,17 @@ const Dashboard = () => {
       <NavBar />
       <div className="flex flex-shrink-0">
         <div className="main-application flex flex-col w-[100%]">
-          <div className="mt-5">
+          <div className="mt-5 flex justify-between items-center ">
+            <div>
             <p className="text-[#F74061] font-bold text-3xl">
               Hello {userInfo?.full_name}
             </p>
-            <div className="font-bold ">28 February</div>
+            {/* <div className="font-bold ">28 February</div> */}
+            </div>
+            <button className="flex pr-5 justify-center text-xl md:text-2xl text-[#F74061] font-extrabold" onClick={handleOpenContact}>Contact Us</button>
           </div>
           <img className="border" src={border} alt="Bottom Border" />
+          
         </div>
       </div>
       <div className="">
@@ -313,9 +344,13 @@ const Dashboard = () => {
       </div>
 
       <div className="md:ml-60 relative mt-14">
+        
         <div className="font-bold text-[#F74061] text-3xl text-center md:text-left">
           Your Registrations
         </div>
+      
+        
+        
         <div className={Dashboard2Css.Dashboard2Columns}>
           {PersonData.length != 0 ? (
             <>
@@ -351,7 +386,7 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <div className="text-center mt-4 text-red-600 font-bold text-xl">
+              <div className="text-center md:text-left  mt-4 text-red-600 font-bold text-xl">
                 You have not registered for any events! Register at{" "}
                 <Link to="/events">Events Registration</Link>
               </div>
@@ -359,7 +394,52 @@ const Dashboard = () => {
           )}
         </div>
       </div>
-      <Contact/>
+      {/* <div className="flex  justify-center items-center w-full">
+        <button className="flex  justify-center text-2xl text-[#F74061] bg-white p-4 rounded-lg font-semibold" onClick={handleOpenContact}> Click Here to Contact</button>
+      </div> */}
+      <Modal
+      
+        open={openContact}
+        onClose={handleCloseContact}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        // className="absolute inset-0 m-auto"
+      >
+        <Box sx={style2}>
+      <div className="flex w-full justify-center items-center ">
+        <div className="border-4 p-5 border-[#F74061] bg-white">
+        <div className="text-center">
+          <h1 className="text-5xl font-semibold text-[#F74061] ">Contact</h1>
+        </div>
+        <div className="flex justify-center items-center text-xl md:text-2xl py-2 whitespace-nowrap">
+          For Registrations and Payments
+        </div>
+        <div className='flex flex-col space-y-5 items-center py-2'>
+                <div className="flex space-x-2">
+                  <EnvelopeIcon className="w-5"/>
+                  <a href='mailto:publicity@kashiyatra.all' className='flex justify-center w-full text-2xl'>publicity@kashiyatra.org</a>
+                </div>
+                
+                <h3 className='contactPersonName'>Rudrarpit Patra</h3>
+                {/* <a href='mailto:rudrarpit.patra.mec19@iitbhu.ac.in' className='contactPersonEmail'>rudrarpit.patra.mec19@iitbhu.ac.in</a> */}
+                <div className="flex">
+                  <PhoneIcon className="w-5"/>
+                  <a href="tel:8763811512" className='contactCallInfo'>8763811512</a>
+                </div>
+                <div className="w-[50%] h-[2px] bg-black "></div>
+                <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
+                {/* <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a> */}
+                <div className="flex">
+                  <PhoneIcon className="w-5"/>
+                  <a href="tel:9838660830" className='contactCallInfo'>9838660830</a>
+                </div>
+            </div>
+
+      </div>
+      
+      </div>
+      </Box>
+      </Modal>
     </div>
   );
 };

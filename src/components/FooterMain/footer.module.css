@@ -10,6 +10,32 @@
   color: #F6F5E9;
   margin-bottom: 5px;
 }
+.fpay{
+  border: solid 0.2px;
+  padding: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border-radius: 16px;
+  margin-right: 15px;
+  background:transparent;
+  display: flex;
+  flex-direction: row;
+}
+.gm{
+  padding-right: 5px;
+  transform: scale(0.8);
+}
+.buttonf{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
 .mainbody {
   background-color: #2D3047;
   /* margin-top: 10%; */
@@ -48,6 +74,11 @@
 @media screen and (max-width: 1200px){
   .column0{
     display: none;
+  }
+  .buttonf{
+    position: relative;
+    left: 30%;
+    margin-top: 30px;
   }
 }
 
@@ -137,7 +168,6 @@ h2 {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  text-transform: capitalize;
 
   color: #F6F5E9;
 }
@@ -214,5 +244,13 @@ h2 {
   display:none;
 
 }
-
+.fpay{
+  transform: scale(0.5);
+}
+.buttonf
+{
+  position: relative;
+  left: 0%;
+  
+}
 }

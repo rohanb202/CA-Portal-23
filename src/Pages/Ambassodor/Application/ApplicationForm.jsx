@@ -2,7 +2,7 @@ import React, { useState,useEffect,useContext } from 'react';
 import './ApplicationForm.css';
 import axios from 'axios';
 // import Sidebar from '../../../components/Sidebar';
-import FormFrame from './SVG/FormFrame.svg';
+import FormFrame from '../../../svgs/FormFrame.svg';
 import NavBar from '../../../components/navbar/navbar';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';

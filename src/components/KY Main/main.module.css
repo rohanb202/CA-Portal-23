@@ -100,7 +100,7 @@
     height: 30px;
     width: 30px;
     color: #06122E;
-    background-image: url("../main/navicon.svg");
+    background-image: url("../../svgs/navicon.svg");
     background-size: cover;
     align-self: center;
 }
