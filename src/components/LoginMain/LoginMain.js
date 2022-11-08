@@ -36,7 +36,7 @@ function LoginMain() {
     <div className="flex items-center justify-center h-screen loginbghehe">
       <form
         onSubmit={handleClick}
-        className="flex flex-col space-y-5 justify-center items-center px-10"
+        className="flex flex-col space-y-5 justify-center items-center px-10 formhi"
       >
         <img src={logo} alt="" className="w-[60%] min-w-[18rem]" />
         <div className="pt-4">
