@@ -69,12 +69,12 @@ const sleep = (ms = 0) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const createItem = (position, idx) => {
+const createItem = (position, idx, activeIdx) => {
     const item = {
         styles: {
             transform: `translateX(${position * slideWidth}rem)`,
         },
-        player: _items[idx].player,
+        player: _items[activeIdx].player,
     };
 
     switch (position) {
@@ -119,6 +119,39 @@ const Carousel = () => {
     const [isTicking, setIsTicking] = React.useState(false);
     const [activeIdx, setActiveIdx] = React.useState(0);
     const bigLength = items.length;
+    const [touchStart, setTouchStart] = React.useState(null)
+    const [touchEnd, setTouchEnd] = React.useState(null)
+
+    // the required distance between touchStart and touchEnd to be detected as a swipe
+    const minSwipeDistance = 50 
+
+    const onTouchStart = (e) => {
+    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX)
+    }
+
+    const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return
+        const distance = touchStart - touchEnd
+        const isLeftSwipe = distance > minSwipeDistance
+        const isRightSwipe = distance < -minSwipeDistance
+        if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
+        if (isLeftSwipe){
+            if (activeIdx === length-1)setActiveIdx(0);
+            else setActiveIdx(activeIdx+1);
+
+            console.log(activeIdx, length-1)
+        }
+        if (isRightSwipe){
+            if (activeIdx === 0)setActiveIdx(length-1)
+            else setActiveIdx(activeIdx-1);
+
+            console.log(activeIdx)
+        }
+    // add your conditional logic here
+    }
 
     const prevClick = (jump = 1) => {
         if (!isTicking) {
@@ -159,7 +192,7 @@ const Carousel = () => {
                 {/* <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
                     <i className="carousel__btn-arrow carousel__btn-arrow--left" />
                 </button> */}
-                <div className="carousel__container">
+                <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className="carousel__container">
                     <ul className="carousel__slide-list">
                         {items.map((pos, i) => (
                             <CarouselSlideItem
