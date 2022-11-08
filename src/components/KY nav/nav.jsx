@@ -46,9 +46,11 @@ function Nav() {
     <div>
         <div className={Maincss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
-          
+        
           <button onClick={showNav}></button>
+          <Link to="/">
           <img src={logo} alt="ky-23" className={Maincss.kyLogoMobileScreen}></img>
+          </Link>
           
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
