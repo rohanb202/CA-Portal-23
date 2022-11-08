@@ -415,7 +415,7 @@ export default function Events() {
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base mt-3 pl-3 text-md flex items-center justify-center "
-                    style={{ color: "#06122E" }}
+                    style={{ color: "#06122E", }}
                   >
 
                     {event.eventDetails.substring(0,150)}.....
@@ -619,7 +619,7 @@ export default function Events() {
 
                               </div>
                             </div>
-                            <p className={EventsCss.eventCardInsideText}>
+                            <p className={EventsCss.eventCardInsideText} style={{ whiteSpace: "pre-line"}}>
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">
