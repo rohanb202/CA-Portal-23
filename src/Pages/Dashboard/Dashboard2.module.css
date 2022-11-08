@@ -16,6 +16,37 @@
     justify-content: center;
     width: 80%;
 }
+.Dashboard2KyIdCheersDiv{
+    margin-left: 7rem;
+    margin-top: 1.5rem;
+}
+
+.Dashboard2KyId{
+    font-weight: bold;
+    margin-right: 0.5rem;
+    background-color: white;
+    color: #F74061;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+}
+
+.Dashboard2Cheers{
+    font-weight: bold;
+    margin-top: 6rem ;
+    margin-right: 0.5rem;
+    background-color: white;
+    color: #F74061;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+}
 
 .Dashboard2Columns{
     display: grid;
@@ -123,6 +154,13 @@
         grid-template-columns: auto auto ;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .Dashboard2KyIdCheersDiv{
+        margin-left: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 600px){
     .Dashboard2Columns{
         grid-template-columns: auto ;
@@ -146,6 +184,20 @@
         padding-left: 40px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .Dashboard2KyIdCheersDiv{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.2rem;
+    }
+    .Dashboard2Cheers{
+        font-weight: bold;
+        margin-top: 0.2rem ;
+        
+    }
+}
+
 @media screen and (min-width: 750px) {
     .mobilenav{
         display: none;

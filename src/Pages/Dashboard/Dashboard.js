@@ -297,11 +297,11 @@ const Dashboard = () => {
                 Mail Id: {userInfo?.email}
               </div>
             </div>
-            <div className="md: mt-6 md:ml-28 flex justify-between md:block">
-              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 text-center flex justify-center items-center">
+            <div className={Dashboard2Css.Dashboard2KyIdCheersDiv}>
+              <div className={Dashboard2Css.Dashboard2KyId}>
                 KY ID:{userInfo?.ky_id}
               </div>
-              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded md:w-80 text-center flex justify-center items-center md:mt-24">
+              <div className={Dashboard2Css.Dashboard2Cheers}>
                 {userInfo?.is_paid
                   ? "Cheers! You are a part of KY '23!"
                   : "Oops! Complete payment to be a part of KY '23!"
