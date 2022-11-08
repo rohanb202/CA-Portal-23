@@ -74,7 +74,7 @@ const createItem = (position, idx, activeIdx) => {
         styles: {
             transform: `translateX(${position * slideWidth}rem)`,
         },
-        player: _items[activeIdx].player,
+        player: _items[idx].player,
     };
 
     switch (position) {
@@ -139,16 +139,12 @@ const Carousel = () => {
         const isRightSwipe = distance < -minSwipeDistance
         if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
         if (isLeftSwipe){
-            if (activeIdx === length-1)setActiveIdx(0);
-            else setActiveIdx(activeIdx+1);
-
-            console.log(activeIdx, length-1)
+            nextClick(1)
+            // console.log(activeIdx, length-1)
         }
         if (isRightSwipe){
-            if (activeIdx === 0)setActiveIdx(length-1)
-            else setActiveIdx(activeIdx-1);
-
-            console.log(activeIdx)
+            prevClick(1);
+            // console.log(activeIdx)
         }
     // add your conditional logic here
     }
