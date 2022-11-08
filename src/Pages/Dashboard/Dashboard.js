@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import img1 from "./img/unsplash_GRDpPpKczdY.svg";
 import { Link } from "react-router-dom";
-
+import Contact from "../../components/Contact2/Contact";
 import Dashboard2Css from "./Dashboard2.module.css";
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -359,6 +359,7 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+      <Contact/>
     </div>
   );
 };

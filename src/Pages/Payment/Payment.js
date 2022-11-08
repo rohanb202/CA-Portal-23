@@ -4,6 +4,7 @@ import NavBar from "../../components/navbar/navbar";
 import border from "../../svgs/border.svg";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
+import Contact from "../../components/Contact2/Contact";
 
 const Payment = () => {
   const { userInfo } = useContext(AuthContext);
@@ -170,6 +171,7 @@ const Payment = () => {
           </div>
         </div>
       </div>
+      <Contact/>
     </div>
   );
 };
