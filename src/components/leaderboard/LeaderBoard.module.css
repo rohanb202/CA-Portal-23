@@ -109,10 +109,11 @@ padding-left: 30px;
 
 .LeaderBoardRightColumn{
     color: white;
-    background-image: url('../../svgs/Group\ 273\ Profile.svg');
+    background-image: url('./img/Group\ 304.png');
     background-position: center;
     /* background-repeat: no-repeat; */
     background-size: cover;
+    background-repeat: repeat;
     /* height: 100%; */
     font-size: 0.8rem;
     /* padding: 50px; */

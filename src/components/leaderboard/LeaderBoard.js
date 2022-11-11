@@ -179,42 +179,40 @@ export default function LeaderBoard (){
                 
             </div>
             <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferals2}>
-                    <h1 style={{color:"#098770"}}>Referals</h1>
+            <div style={{color:"#098770"} }  className={LeaderBoardCSS.LeaderBoardCenterColumnReferalsHeading}>Referals</div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferal}>
-                        <h2>S.No</h2>
-                        <h2>KY ID</h2>
-                        <h2>Name</h2>
+                        <h2 className="text-black/80">S.No</h2>
+                        <h2 className="text-black/80">KY ID</h2>
+                        <h2 className="text-black/80">Name</h2>
+                        <h2 className="text-black/80">Payment Status</h2>
                     </div>
                     <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalBorder}></div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>1</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
+                    {
+                        !refferals && 
+                        <div className={LeaderBoardCSS.hoverOnButtons}>
+                            <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
+                                <h3>0</h3>
+                                <h3>Loading..</h3>
+                                <h3>...</h3>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>2</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>3</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
-                    <div className={LeaderBoardCSS.hoverOnButtons}>
-                        <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
-                            <h3>4</h3>
-                            <h3>Lorem</h3>
-                            <h3>Ipsum</h3>
-                        </div>
-                    </div>
+                    }
+                    {
+                        refferals &&
+                        refferals.map((item,count=0) => {
+                            count += 1;
+                            return (
+                                <div className={LeaderBoardCSS.hoverOnButtons} key={item.ky_id}>
+                                    <div className={LeaderBoardCSS.LeaderBoardCenterColumnReferalContent}>
+                                        <h3>{count}</h3>
+                                        <h3>{item["ky_id"]}</h3>
+                                        <h3>{item["full_name"]}</h3>
+                                        <h3>{item["is_paid"]?"Payment completed":"Payment pending"}</h3>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
         </div>
     );
