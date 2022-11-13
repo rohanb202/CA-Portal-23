@@ -132,7 +132,7 @@ function LoginMain() {
           </div>
         </div>
 
-        <span className="text-sm text-[#F74061]">
+        <span className="text-sm text-[#F74061] accounta">
           <span className="text-[white]">Don't have an account?</span>
           <span className="signupcol">
             <Link to="/register"> Sign up</Link>

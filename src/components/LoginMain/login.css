@@ -10,10 +10,10 @@
 }
 
 .formhi{
-    -webkit-transform:scale(0.84);
--moz-transform:scale(0.84);
--ms-transform:scale(0.84);
-transform:scale(0.84);
+    -webkit-transform:scale(0.88);
+-moz-transform:scale(0.88);
+-ms-transform:scale(0.88);
+transform:scale(0.88);
 padding-bottom: 3%;
 
 }
@@ -22,4 +22,8 @@ padding-bottom: 3%;
 }
 .signupcol{
     color: #E3E7AF;
+}
+.accounta{
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
