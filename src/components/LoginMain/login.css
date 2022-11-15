@@ -1,9 +1,11 @@
+
 .loginbghehe{
     background: url(./skypg.png);
     height: 100vh;
     /* background-repeat: no-repeat; */
     background-size: cover;
     /* transform: scale(1.05); */
+
 }
 
 .formhi{
@@ -11,6 +13,7 @@
 -moz-transform:scale(0.86);
 -ms-transform:scale(0.86);
 transform:scale(0.86);
+
 
 }
     
@@ -21,4 +24,8 @@ transform:scale(0.86);
 }
 .signupcol{
     color: #E3E7AF;
+}
+.accounta{
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
