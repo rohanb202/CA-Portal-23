@@ -205,7 +205,7 @@ export default function LeaderBoard (){
                                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                                     <div>{index+1+5}</div>
                                     <div class="truncate">{item["name"]}</div>
-                                    <div>{item["reg_num"]}</div>
+                                    <div>{item["points"]}</div>
                                 </div> 
                             </div>
                         )
