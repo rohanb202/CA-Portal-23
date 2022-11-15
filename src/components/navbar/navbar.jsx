@@ -16,7 +16,7 @@ function NavBar() {
   const [navdisplay, setNavDisplay] = useState(0);
 
   function showNav() {
-    document.querySelector(".mobile-nav-dropdown").style.display = "flex";
+    document.querySelector(".mobile-nav-dropdown").style.height = "100%";
     setNavDisplay(1);
     var x = window.scrollX;
     var y = window.scrollY;
@@ -26,7 +26,7 @@ function NavBar() {
   }
   function closeNav() {
     // console.log("HI")
-    document.querySelector(".mobile-nav-dropdown").style.display = "none";
+    document.querySelector(".mobile-nav-dropdown").style.height = "0";
     setNavDisplay(0);
     window.onscroll = function () {};
   }
@@ -39,9 +39,9 @@ function NavBar() {
         <img src={kylogo} alt="ky-23"></img>
       </div>
       <div className="mobile-nav-dropdown">
-        <button onClick={closeNav} className="back-icon"></button>
         <div className="title">
-          <img src={kashiyatra} alt="kashiyatra"></img>
+          <button onClick={closeNav} className="back-icon"></button>
+          <div className="mobile-nav-kylogo"><img src={kashiyatra} alt="kashiyatra"></img></div>
         </div>
         <ul className="nav">
           <li onClick={closeNav}>

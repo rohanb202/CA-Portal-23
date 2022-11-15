@@ -23,6 +23,7 @@ import Modal from "@mui/material/Modal";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
 import { toast } from "react-toastify";
 import { BeakerIcon,PhoneIcon} from '@heroicons/react/solid'
+// import ClearIcon from '@mui/icons-material/Clear';
 
 // import Box from '@mui/material/Box';
 import Alert from "@mui/material/Alert";
@@ -328,11 +329,11 @@ const Dashboard = () => {
                 Mail Id: {userInfo?.email}
               </div>
             </div>
-            <div className="md: mt-6 md:ml-28 flex justify-between md:block">
-              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded w-32 text-center flex justify-center items-center">
+            <div className={Dashboard2Css.Dashboard2KyIdCheersDiv}>
+              <div className={Dashboard2Css.Dashboard2KyId}>
                 KY ID:{userInfo?.ky_id}
               </div>
-              <div className="font-bold mr-2 bg-white text-[#F74061] font-bold py-2 px-2 rounded md:w-80 text-center flex justify-center items-center md:mt-24">
+              <div className={Dashboard2Css.Dashboard2Cheers}>
                 {userInfo?.is_paid
                   ? "Cheers! You are a part of KY '23!"
                   : "Oops! Complete payment to be a part of KY '23!"
@@ -407,9 +408,17 @@ const Dashboard = () => {
       >
         <Box sx={style2}>
       <div className="flex w-full justify-center items-center ">
+        
         <div className="border-4 p-5 border-[#F74061] bg-white">
-        <div className="text-center">
-          <h1 className="text-5xl font-semibold text-[#F74061] ">Contact</h1>
+          <div className="flex justify-end">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F74061" className="w-6 h-6 " onClick={handleCloseContact} style={{cursor:"pointer"}}>
+  <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />
+</svg>
+          </div>
+        
+        <div className="text-center flex justify-center">
+          <h1 className="text-5xl font-semibold text-[#F74061] ">Contact 
+</h1>
         </div>
         <div className="flex justify-center items-center text-xl md:text-2xl py-2 whitespace-nowrap">
           For Registrations and Payments

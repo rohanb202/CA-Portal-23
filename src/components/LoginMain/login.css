@@ -6,17 +6,19 @@
     background-size: cover;
     /* transform: scale(1.05); */
 
-
 }
 
 .formhi{
-    -webkit-transform:scale(0.88);
--moz-transform:scale(0.88);
--ms-transform:scale(0.88);
-transform:scale(0.88);
-padding-bottom: 3%;
+    -webkit-transform:scale(0.86);
+-moz-transform:scale(0.86);
+-ms-transform:scale(0.86);
+transform:scale(0.86);
+
 
 }
+    
+
+
 .text-gray-700{
     color: white;
 }

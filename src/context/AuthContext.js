@@ -97,7 +97,7 @@ export const AuthProvider = ({children}) => {
                     });
             }
             else if (response.status == 401) {
-                toast.error('Login failed! Please check your credentials, or activate your account from email if not done!', {
+                toast.error('Login failed! Please check your credentials!', {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
