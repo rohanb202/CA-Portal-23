@@ -162,6 +162,8 @@ export default function LeaderBoard (){
                     </>
                 }
                 {/* HARDCODED ENTRIES */}
+                { leaderboard && 
+                <>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>1</div>
@@ -197,6 +199,9 @@ export default function LeaderBoard (){
                         <div>665</div>
                     </div> 
                 </div>
+                </>
+
+                }
                 {
                     leaderboard &&
                     leaderboard.slice(0,5).map((item, index) => {
