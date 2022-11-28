@@ -168,35 +168,35 @@ export default function LeaderBoard (){
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>1</div>
                         <div class="truncate">Samar Jain</div>
-                        <div>920</div>
+                        <div>955</div>
                     </div> 
                 </div>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>2</div>
                         <div class="truncate">Anant Singh</div>
-                        <div>880</div>
-                    </div> 
-                </div>
-                <div className={LeaderBoardCSS.hoverOnButtons}>
-                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                        <div>5</div>
-                        <div class="truncate">Rajat Shukla</div>
-                        <div>835</div>
+                        <div>910</div>
                     </div> 
                 </div>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>3</div>
-                        <div class="truncate">Harshit Randhawa</div>
-                        <div>820</div>
+                        <div class="truncate">Rajat Shukla</div>
+                        <div>855</div>
                     </div> 
                 </div>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>4</div>
+                        <div class="truncate">Harshit Randhawa</div>
+                        <div>835</div>
+                    </div> 
+                </div>
+                <div className={LeaderBoardCSS.hoverOnButtons}>
+                    <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
+                        <div>5</div>
                         <div class="truncate">Rohan Kumar</div>
-                        <div>815</div>
+                        <div>820</div>
                     </div> 
                 </div>
                 </>
