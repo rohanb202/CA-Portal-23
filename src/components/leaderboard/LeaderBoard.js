@@ -178,7 +178,7 @@ export default function LeaderBoard (){
                         <div>910</div>
                     </div> 
                 </div>
-                <div className={LeaderBoardCSS.hoverOnButtons}>
+                {/* <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>3</div>
                         <div class="truncate">Rajat Shukla</div>
@@ -198,17 +198,17 @@ export default function LeaderBoard (){
                         <div class="truncate">Rohan Kumar</div>
                         <div>820</div>
                     </div> 
-                </div>
+                </div> */}
                 </>
 
                 }
                 {
                     leaderboard &&
-                    leaderboard.slice(0,5).map((item, index) => {
+                    leaderboard.slice(0,8).map((item, index) => {
                         return (
                             <div className={LeaderBoardCSS.hoverOnButtons} key={item.rank}>
                                 <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
-                                    <div>{index+1+5}</div>
+                                    <div>{index+1+2}</div>
                                     <div class="truncate">{item["name"]}</div>
                                     <div>{item["points"]}</div>
                                 </div> 
