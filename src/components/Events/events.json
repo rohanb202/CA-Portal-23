@@ -1,18 +1,6 @@
 {
     "TOOLIKA": [
         {
-            "eventId": 38,
-            "eventName": "INK IT!",
-            "image_URL": "https://i.imgur.com/PnYcri1l.jpg",
-            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!\r\n\r\nRULES\r\nTime limit - 2 hours.\r\n1. A team of maximum two members.\r\n2. A4 sheets, sketch pens, paints, brushes, etc. will be provided.\r\n No additional materials are allowed",
-            "maxMembers": 2,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
             "eventId": 37,
             "eventName": "Live Sketching",
             "image_URL": "https://i.imgur.com/WE0Qcb8l.jpg",
