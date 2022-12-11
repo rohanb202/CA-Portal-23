@@ -137,7 +137,7 @@ const Payment = () => {
                     </div>
                     <div className="text-center text-[#098770] font-bold text-2xl mt-2">
                     <span className="line-through text-red-500 text-xl px-1">₹ 2500</span>
-                      ₹ 2100
+                      ₹ 2200
                     </div>
                     <ul className="mt-14">
                       <li className="font-extrabold text-red-600 mt-3">
