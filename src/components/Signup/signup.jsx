@@ -587,6 +587,9 @@ function Signup() {
               <option value="FACULTY OF SOCIAL SCIENCE (FSS) BHU">
                 FACULTY OF SOCIAL SCIENCE (FSS) BHU
               </option>
+              <option value="FACULTY OF VISUAL ARTS, BHU">
+                FACULTY OF VISUAL ARTS, BHU
+              </option>
               <option value="FEDERAL POLYTECHNIC, ILARO">
                 FEDERAL POLYTECHNIC, ILARO
               </option>
