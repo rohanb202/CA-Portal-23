@@ -168,14 +168,14 @@ export default function LeaderBoard (){
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>1</div>
                         <div class="truncate">Samar Jain</div>
-                        <div>955</div>
+                        <div>1180</div>
                     </div> 
                 </div>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>2</div>
                         <div class="truncate">Anant Singh</div>
-                        <div>910</div>
+                        <div>1055</div>
                     </div> 
                 </div>
                 {/* <div className={LeaderBoardCSS.hoverOnButtons}>
