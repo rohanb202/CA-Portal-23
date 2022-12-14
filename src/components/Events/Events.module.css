@@ -68,7 +68,7 @@
 .mobilenavdropdown ul li{
     color: #F6F5E9;
     padding: 20px 30px;
-    font-family: 'Arima Madurai';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -213,7 +213,7 @@
     /* height: 100vh; */
     background-image: url("./img/Group\ 344.svg");
     background-color: #06122E;
-    font-family: 'Arima Madurai', cursive;
+    font-family: 'Poppins', cursive;
 }
 
 .EventsHeading{

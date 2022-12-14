@@ -48,14 +48,19 @@ function Nav() {
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
           
           <button onClick={showNav}></button>
+          <Link to="/">
           <img src={logo} alt="ky-23" className={Maincss.kyLogoMobileScreen}></img>
+          </Link>
+          
           
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
           
           <div className={Maincss.title}>
           <button onClick={closeNav} className={Maincss.backicon}></button>
-            <img src={logo} alt="kashiyatra"></img>
+          <Link to="/">
+          <img src={logo} alt="ky-23" ></img>
+          </Link>
           </div>
           <ul className={Maincss.nav}>
             <li onClick={closeNav}>

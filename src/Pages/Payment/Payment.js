@@ -59,7 +59,7 @@ const Payment = () => {
                       Registration Without Food
                     </div>
                     <div className="text-center text-[#098770] font-bold text-2xl mt-2">
-                      ₹ 1800
+                      ₹ 1800 <span className="line-through">2000</span>
                     </div>
                     <ul className="mt-14">
                       <li className="font-extrabold text-red-600 mt-3">
@@ -98,7 +98,7 @@ const Payment = () => {
                       Registration With Food
                     </div>
                     <div className="text-center text-[#098770] font-bold text-2xl mt-2">
-                      ₹ 2100
+                      ₹ 2100<span className="line-through">2500</span>
                     </div>
                     <ul className="mt-14">
                       <li className="font-extrabold text-red-600 mt-3">
