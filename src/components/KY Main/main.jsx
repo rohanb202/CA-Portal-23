@@ -1,3 +1,7 @@
+import React from "react";
+import { lazy, Suspense} from "react";
+// import Slider from "../Slider/Slider";
+// const Slider = lazy(() => import('../Slider/Slider'));
 import Maincss from "./main.module.css";
 import { useState, useEffect, useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
@@ -8,7 +12,8 @@ import FooterMain from "../FooterMain/footer";
 // import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
-import Slider from "../Slider/Slider";
+// import Slider from "../Slider/Slider";
+
 import kylogo from "./kylogo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
@@ -29,6 +34,7 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
+const Slider = React.lazy(() => import('../Slider/Slider'));
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -403,8 +409,11 @@ function Main() {
             Throwback
           </div>
           <div className={Throwcss.throwBorder4}></div>
+         
         </div>
+        <Suspense>
         <Slider />
+        </Suspense>
         <div className={Throwcss.blank}> </div>
       </div>
       <div id="testimonials" className={Testimonialcss.testimonialSectionBody}>
