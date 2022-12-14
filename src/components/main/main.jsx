@@ -7,15 +7,15 @@ import NavBar from "../navbar/navbar";
 // import Contact from '../../Contact/Contact';
 import { Link } from "react-router-dom";
 //import sample from "./Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4";
-import kashiyatra from "./kashiyatra.svg";
-import mouse from "./mouse.svg";
+import kashiyatra from "../../svgs/kashiyatra.svg";
+import mouse from "../../svgs/mouse.svg";
 import { useEffect, useState } from "react";
 // import sidepattern from "../navbar/Super Side Pattern.svg";
 // import kylogo from "./KY Logo.svg"
 // import navicon from "./navicon.svg"
-import back from "./back.svg";
-import whyCAImage from "./why ca_Mesa de trabajo 1 1.svg";
-import right from "./why CA_Mesa de trabajo 1 1-cropped.svg";
+import back from "../../svgs/back.svg";
+import whyCAImage from "./why ca_Mesa de trabajo 1 1.png";
+import right from "./why CA_Mesa de trabajo 1 1-cropped.png";
 import responsibility from "../../img/responsibility.png";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
@@ -93,7 +93,7 @@ function Main(props) {
           </div>
           {/* </div>} */}
 
-          <video loop autoPlay muted>
+          <video loop autoPlay muted playinline>
             <source
               type="video/mp4"
               src="https://i.imgur.com/jim03K9.mp4"
@@ -130,9 +130,7 @@ function Main(props) {
           <div class="outer-main">
             <div class="main">
               <div class="top">
-                <div class="hello">
-                  Hello {userInfo && userInfo.full_name}!
-                </div>
+                <div class="hello">Hello {userInfo && userInfo.full_name}!</div>
                 <div class="date">{`${dateNow.getDate()} ${
                   months[dateNow.getMonth()]
                 }`}</div>
@@ -190,11 +188,11 @@ function Main(props) {
                   <div class="left">
                     <div class="left-title">Why Campus Ambassador?</div>
                     <div class="desc">
-                      For bringing together a fest which encircles diversity like
-                      never before we are reaching out to colleges across the
-                      country. The selected Campus Ambassador in his/her tenure
-                      will represent Kashiyatra, IIT(BHU) in his/her college and
-                      will become an integral member of the team.
+                      For bringing together a fest which encircles diversity
+                      like never before we are reaching out to colleges across
+                      the country. The selected Campus Ambassador in his/her
+                      tenure will represent Kashiyatra, IIT(BHU) in his/her
+                      college and will become an integral member of the team.
                       <ul className="whyCampusAmbassadorContent">
                         <li> Become a leader </li>
                         <li> Update your organisational </li>

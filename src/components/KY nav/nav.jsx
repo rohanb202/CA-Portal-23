@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 function Nav() {
-    const { userInfo } = useContext(AuthContext);
+    const { userInfo, logoutUser } = useContext(AuthContext);
     const [navdisplay, setNavDisplay] = useState(0);
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,12 +46,11 @@ function Nav() {
     <div>
         <div className={Maincss.mobilenav}>
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
-          
+        
           <button onClick={showNav}></button>
           <Link to="/">
           <img src={logo} alt="ky-23" className={Maincss.kyLogoMobileScreen}></img>
           </Link>
-          
           
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
@@ -63,15 +62,15 @@ function Nav() {
           </Link>
           </div>
           <ul className={Maincss.nav}>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">TEAM</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
             </li>
-            <li onClick={closeNav}>
+            {/* <li onClick={closeNav}>
               <Link to="/">FAQ</Link>
-            </li>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/ca">CA</Link>
             </li>
@@ -135,7 +134,7 @@ function Nav() {
                             userInfo?(
                                 <>
                                 <Link to="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
-                                <Link to="/#"><MenuItem onClick={handleClose}>Logout</MenuItem></Link>
+                                <Link to="/"><MenuItem onClick={()=>{handleClose(); logoutUser();}}>Logout</MenuItem></Link>
                                 </>
                             ):(
                                 <Link to="/login"><MenuItem onClick={handleClose}>Login</MenuItem></Link>

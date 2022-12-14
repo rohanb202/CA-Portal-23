@@ -9,13 +9,52 @@ const Slider = () => {
 
   const sliderData = [
     {
-      image: require("./images/Rectangle121.jpg"),
+      image: require("./throwback/1.jpg"),
     },
     {
-      image: require("./images/imagea.jpg"),
+      image: require("./throwback/2.png"),
     },
     {
-      image: require("./images/imageb.jpg"),
+      image: require("./throwback/3.jpg"),
+    },
+    {
+      image: require("./throwback/4.jpg"),
+    },
+    {
+      image: require("./throwback/5.jpg"),
+    },
+    {
+      image: require("./throwback/6.jpg"),
+    },
+    {
+      image: require("./throwback/7.jpg"),
+    },
+    {
+      image: require("./throwback/8.jpg"),
+    },
+    {
+      image: require("./throwback/9.jpg"),
+    },
+    {
+      image: require("./throwback/10.jpg"),
+    },
+    {
+      image: require("./throwback/11.jpg"),
+    },
+    {
+      image: require("./throwback/12.jpg"),
+    },
+    {
+      image: require("./throwback/13.jpg"),
+    },
+    {
+      image: require("./throwback/14.jpg"),
+    },
+    {
+      image: require("./throwback/15.jpg"),
+    },
+    {
+      image: require("./throwback/16.jpg"),
     },
   ];
 

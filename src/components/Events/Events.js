@@ -243,7 +243,7 @@ export default function Events() {
                             ):(
                               <>
                               <input
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline firstinputs"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline firstinputs"
                                 id="username"
                                 type="text"
                                 placeholder="KY ID"
@@ -415,7 +415,7 @@ export default function Events() {
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base mt-3 pl-3 text-md flex items-center justify-center "
-                    style={{ color: "#06122E" }}
+                    style={{ color: "#06122E", }}
                   >
 
                     {event.eventDetails.substring(0,150)}.....
@@ -619,7 +619,7 @@ export default function Events() {
 
                               </div>
                             </div>
-                            <p className={EventsCss.eventCardInsideText}>
+                            <p className={EventsCss.eventCardInsideText} style={{ whiteSpace: "pre-line"}}>
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">

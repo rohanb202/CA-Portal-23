@@ -84,7 +84,7 @@ video{
     background-repeat: no-repeat;
     /* background-position: center; */
     /* background-clip: border-box; */
-    background-image: url("./Super\ Side\ Pattern.svg");
+    background-image: url("../../svgs/Super\ Side\ Pattern.svg");
 }
 
 .right-pattern{
@@ -99,7 +99,7 @@ video{
     background-repeat: no-repeat;
     /* background-position: center; */
     /* background-clip: border-box; */
-    background-image: url("./Super\ Side\ Pattern.svg");
+    background-image: url("../../svgs/Super\ Side\ Pattern.svg");
 }
 
 
@@ -133,21 +133,21 @@ video{
     flex-grow:0;
     flex-shrink: 0;
     height: auto;
-    padding: 10px;;
+    padding: 20px;;
     /* width: auto; */
 }
 
 .sidepattern{
-    position: sticky;
-    width: 44px;
-    margin-left: 10px;
-    margin-right: 20px;;
-    height: 100vh;
-    top: 0;
-    /* display: flex; */
-    float: right;
-    background-image: url('../navbar/Super\ Side\ Pattern.svg');
+    background-image: url("../../svgs/Super\ Side\ Pattern\ \(1\).svg");
     background-size: 100% auto;
+    float: right;
+    height: 100vh;
+    margin-left: 10px;
+    margin-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 44px;
     z-index: 20;
 }
 
@@ -292,7 +292,7 @@ color: #06122E;
     /* width: 100%; */
     height: 5px;;
     /* left: 235px; */
-    background-image: url('./bottombar.svg');
+    background-image: url("../../svgs/bottombar.svg");
     z-index: 1;
 }
 
@@ -354,8 +354,8 @@ color: #06122E;
     display: flex;
     /* margin-right: 0;; */
     /* align-items: center; */
-    align-content: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     /* width: 100%; */
     /* background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg'); */
     /* background-size: cover; */
@@ -366,12 +366,19 @@ color: #06122E;
     display: flex;
     /* margin-right: 0;; */
     /* align-items: center; */
-    align-content: flex-start;
-    justify-content: flex-start;
-    /* width: 100%; */
+    /* flex-shrink: 0; */
+    /* flex-grow: 0; */
+    align-items: center;
+    justify-content: center;
+    /* width: 30%; */
     /* background-image: url('./why\ CA_Mesa\ de\ trabajo\ 1\ 1.svg'); */
     /* background-size: cover; */
     /* background-position-y: center; */
+}
+
+.rightImgCa img{
+    height: 80%;
+    /* width: 30%; */
 }
 
 .right img{
@@ -415,6 +422,10 @@ color: #06122E;
         display: grid;
         grid-template-columns: auto ;
     }
+    .rightImgCa img{
+        height: 60%;
+        /* width: 30%; */
+    }
 }
 
 @media screen and (min-width: 700px){
@@ -424,6 +435,10 @@ color: #06122E;
 
     .outer-main{
         margin-left:234px;
+    }
+
+    .responsibilitiesAsCampusAmbassadorMob{
+        display: none;
     }
 }
 @media screen and (max-width: 700px) {
@@ -446,6 +461,13 @@ color: #06122E;
     }
     #ca, #portal{
         font-size: 70px;
+    }
+    .rightImgCa img{
+        height: 40%;
+        /* width: 30%; */
+    }
+    .right img{
+        height: 50%;
     }
 
     .center-top img{
@@ -481,8 +503,13 @@ color: #06122E;
     .sidepattern{
         margin-right: 10px;;
     }
+
+    .responsibilitiesAsCampusAmbassadorMob{
+        margin-top: -30px;
+    }
     .responsibilitiesAsCampusAmbassador{
-        display: grid;
+        display: none;
+        /* display: grid; */
         grid-template-columns: auto ;
     }
     .responsibilitiesAsCampusAmbassadorColumn{
@@ -491,7 +518,6 @@ color: #06122E;
     .responsibilitiesAsCampusAmbassadorHeading{
         font-size: 1.2rem;
     }
-
 }
 @media screen and (max-width: 400px) {
     .kashiyatra{
@@ -514,7 +540,7 @@ color: #06122E;
         font-size: 15px;;
     }
     .responsibilitiesAsCampusAmbassador{
-        display: grid;
+        display: none;
         grid-template-columns: auto ;
     }
     .responsibilitiesAsCampusAmbassadorColumn{

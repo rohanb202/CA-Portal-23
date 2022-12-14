@@ -19,7 +19,7 @@ body{
     padding: 30px;
     height: 30vh;
     margin-top: 20px;
-    background-image: url('./img/Group\ 273\ Profile.svg');
+    background-image: url('../../svgs/Group\ 273\ Profile.svg');
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,6 +72,7 @@ padding-left: 30px;
 }
 .LeaderBoardCenterColumnReferals{
     margin: 50px;
+    /* color: black; */
 }
 .LeaderBoardCenterColumnReferalsHeading{
     font-size: 2.5rem;
@@ -108,10 +109,11 @@ padding-left: 30px;
 
 .LeaderBoardRightColumn{
     color: white;
-    background-image: url('./img/Group\ 273.svg');
+    background-image: url('./img/Group\ 304.png');
     background-position: center;
     /* background-repeat: no-repeat; */
     background-size: cover;
+    background-repeat: repeat;
     /* height: 100%; */
     font-size: 0.8rem;
     /* padding: 50px; */
@@ -133,8 +135,9 @@ padding-left: 30px;
     font-size: 1.2rem;
 }
 .LeaderBoardRightColumnContentHeading{
-    display: flex;
-    font-size: 1.2rem !important;
+    display: grid;
+    font-size: 1.3rem !important;
+    
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     width: 350px;

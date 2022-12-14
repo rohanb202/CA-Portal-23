@@ -1,24 +1,12 @@
 {
     "TOOLIKA": [
         {
-            "eventId": 34,
-            "eventName": "VASTRA SHILP",
-            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
-            "eventDetails": "\"Fashion is art, and you are the canvas\"- Velvet Paper. So, wake up the Coco\r\nChanel inside you and let your creativity do the talking. Weave out art and style\r\nwith the fabrics of your imagination and yeah – “paper”.",
-            "maxMembers": 4,
+            "eventId": 38,
+            "eventName": "INK IT!",
+            "image_URL": "https://i.imgur.com/PnYcri1l.jpg",
+            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!\r\n\r\nRULES\r\nTime limit - 2 hours.\r\n1. A team of maximum two members.\r\n2. A4 sheets, sketch pens, paints, brushes, etc. will be provided.\r\n No additional materials are allowed",
+            "maxMembers": 2,
             "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
-            "eventId": 31,
-            "eventName": "RAPID FIRE",
-            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
-            "eventDetails": "“The trouble is you think you have time”-Buddha. Well, you don't! This contest\r\npitches your creativity against the cruel boundaries of time. We decide the rules\r\nof the game. We choose when the bell rings. However, it's only you who sets\r\nthe limits of your imagination and creativity",
-            "maxMembers": 4,
-            "minMembers": 4,
             "parentEvent": {
                 "parentEventId": 8,
                 "categoryName": "TOOLIKA"
@@ -28,7 +16,7 @@
             "eventId": 37,
             "eventName": "Live Sketching",
             "image_URL": "https://i.imgur.com/WE0Qcb8l.jpg",
-            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.",
+            "eventDetails": "Individual event where participants need to sketch a scene in front of\r\nthem.\r\n\r\nRULES:\r\n1. Medium: Graphite pencils (will be provided)\r\n2. Drawing Sheet: - Off-White A3 sheet\r\n3. All the relevant materials will be provided on the spot.\r\n4. Use of scale is not allowed in live sketching\r\n5. A thick cardboard will be provided, that can serve as a base while drawing.\r\n6. No external help (e.g. internet/photograph on phone or camera) is allowed\r\nduring the event.\r\n7. Judging Criteria: Proportion & Perspective, Composition and\r\nComponents, Shading.\r\n8. The decision of the judges will be final and abiding",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -40,9 +28,33 @@
             "eventId": 33,
             "eventName": "FACE PAINTING",
             "image_URL": "https://i.imgur.com/NUWKDxel.jpg",
-            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!",
+            "eventDetails": "Ever thought about art in a quirky way? That it is not always a serious issue of\r\nexpression of emotions but away to have fun? If yes, then paint your buddy's\r\nface on the given theme to nick prizes away!\r\n\r\nRULES\r\nTime limit - 2 hours.\r\n1. A team of maximum two members.\r\n2. A4 sheet, poster colours, tissue paper, brushes and relevant materials will\r\nbe provided. No external materials are allowed.\r\n3. Judging Criteria: Creativity, uniqueness, relevance to the theme.\r\n4. The decisions of the judges will be final and abiding.",
             "maxMembers": 2,
             "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 34,
+            "eventName": "VASTRA SHILP",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
+            "eventDetails": "\"Fashion is art, and you are the canvas\"- Velvet Paper. So, wake up the Coco\r\nChanel inside you and let your creativity do the talking. Weave out art and style\r\nwith the fabrics of your imagination and yeah – “paper”.\r\n\r\nRULES\r\nTime limit: 3 hours.\r\n1. A team of maximum four members.\r\n2. The theme will be given on the spot.\r\n3. All the relevant materials (coloured sheets, Fevicol, etc.) will be provided.\r\n4. No other material is allowed.\r\n5. Judging Criteria: Creativity, Relevance to the theme, Uniqueness,\r\nFinishing, Style.\r\n6. The decision of the judges will be final & abiding.",
+            "maxMembers": 4,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 8,
+                "categoryName": "TOOLIKA"
+            }
+        },
+        {
+            "eventId": 31,
+            "eventName": "RAPID FIRE",
+            "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
+            "eventDetails": "“The trouble is you think you have time”-Buddha. Well, you don't! This contest\r\npitches your creativity against the cruel boundaries of time. We decide the rules\r\nof the game. We choose when the bell rings. However, it's only you who sets\r\nthe limits of your imagination and creativity.\r\n\r\nRULES\r\nTime limit: 4 hours\r\n1. Three contests to be completed within the given timeframe.\r\n2. The contests and theme to be declared on the spot.\r\n3. Participants need to participate in teams of four.\r\n4. All materials will be provided on the spot.\r\n5. Judging Criteria: Creativity, Neatness, Relevance to the theme, Artistic\r\nskills and Overall appeal.\r\n6. The decision of the judges will be final & abiding.",
+            "maxMembers": 4,
+            "minMembers": 4,
             "parentEvent": {
                 "parentEventId": 8,
                 "categoryName": "TOOLIKA"
@@ -52,19 +64,7 @@
             "eventId": 36,
             "eventName": "SOAP CARVING",
             "image_URL": "https://i.imgur.com/kfPB0bOl.jpg",
-            "eventDetails": "\"l saw the angel in the marble and carved until I set him free.\" - Michelangelo.\r\nThough carving stone is tough, what's easy is carving soap. Moreover, that's\r\nwhy we give you the \"soap\". Just carve your creativity out on these mundane\r\npieces of soap and transform them into pieces of art.",
-            "maxMembers": 2,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 8,
-                "categoryName": "TOOLIKA"
-            }
-        },
-        {
-            "eventId": 38,
-            "eventName": "INK IT!",
-            "image_URL": "https://i.imgur.com/PnYcri1l.jpg",
-            "eventDetails": "Design a unique tattoo with some fantastic ideas, artwork and style. Get ready\r\nto define the concept of body art!",
+            "eventDetails": "\"l saw the angel in the marble and carved until I set him free.\" - Michelangelo.\r\nThough carving stone is tough, what's easy is carving soap. Moreover, that's\r\nwhy we give you the \"soap\". Just carve your creativity out on these mundane\r\npieces of soap and transform them into pieces of art.\r\n\r\nRULES\r\n\r\nTime limit: 3 hours\r\n1. A team of maximum two members.\r\n2. The theme will be given on the spot.\r\n3. Cutters, Soap, Toothpicks, etc. will be provided.\r\n4. No additional materials are allowed.\r\n5. Judging Criteria: Creativity, Carving skills, Complexity of design,\r\nRepresentation of the theme.\r\n6. The decision of the judges will be final & abiding.",
             "maxMembers": 2,
             "minMembers": 1,
             "parentEvent": {
@@ -76,7 +76,7 @@
             "eventId": 35,
             "eventName": "RANGBAAZI",
             "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
-            "eventDetails": "“Art is the only way to run away without leaving home” and “Colours are the\r\nbest form of expression”. Wouldn't you agree? Show us your creativity by using\r\ntooth brushes, your fingers etc.to paint but without using a pencil to sketch and\r\na brush to paint. Can you beat the twist?",
+            "eventDetails": "“Art is the only way to run away without leaving home” and “Colours are the\r\nbest form of expression”. Wouldn't you agree? Show us your creativity by using\r\ntooth brushes, your fingers etc.to paint but without using a pencil to sketch and\r\na brush to paint. Can you beat the twist?\r\n\r\nRULES\r\nTime limit - 2 Hours.\r\n1. A team of maximum two members.\r\n2. The theme will be given on the spot.\r\n3. A4 sheets, poster colours and relevant materials will be provided on the\r\nspot.\r\n4. No other material is allowed.\r\n5. Judging criteria: Creativity, relevance to the theme, uniqueness.\r\n6. The decision of judges will be final and abiding.",
             "maxMembers": 2,
             "minMembers": 1,
             "parentEvent": {
@@ -88,7 +88,7 @@
             "eventId": 32,
             "eventName": "SPOIL THE TEES!",
             "image_URL": "https://i.imgur.com/kDZ15vUl.jpg",
-            "eventDetails": "\"Daag achche hote hai\" Get those spotless white T-Shirts and spoil them. Yeah,\r\nyou heard it right, put colour on them, soil them, and spoil them. Use paints.\r\nUse brushes. Use your hands. It doesn't matter. Just funk them up. Add life to\r\nthose dull whites. Coz life is too short for boring T-Shirts",
+            "eventDetails": "\"Daag achche hote hai\" Get those spotless white T-Shirts and spoil them. Yeah,\r\nyou heard it right, put colour on them, soil them, and spoil them. Use paints.\r\nUse brushes. Use your hands. It doesn't matter. Just funk them up. Add life to\r\nthose dull whites. Coz life is too short for boring T-Shirts.\r\n\r\nRULES\r\nTime limit: 3 hours\r\n1. A team of maximum three members.\r\n2. The theme will be given on the spot.\r\n3. Fabric colour, T-shirts, brushes, etc. will be provided.\r\n4. No additional materials are allowed.\r\n5. Judging Criteria: Creativity, Relevance to theme, Wear-ability, Visuality.\r\n6. The decision of the judges will be final &abiding.",
             "maxMembers": 3,
             "minMembers": 1,
             "parentEvent": {
@@ -102,7 +102,7 @@
             "eventId": 21,
             "eventName": "हिंखोज",
             "image_URL": "https://i.imgur.com/qT63p24l.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n1. ह िंदी साह त्य जगत और भाषा सेसिंबिंधित प ेलियािं और प्रश्न मजेदार\r\nअिंदाज मेंप\r\nूछेजाएिंगे।\r\n2. य प्रततयोधगता प्रततयोधगयों के जोड़ेमें ोगी।\r\n3. एकि प्रततयोधगयों के जोड़ेप्रततयोधगता के दौरान\r\nबना हदयेजाएँगे।\r\n4. अततररक्त तनयम प्रततयोधगता के दौरान प्रेषषत ककए जाएिंगे।",
             "maxMembers": 2,
             "minMembers": 2,
             "parentEvent": {
@@ -111,10 +111,10 @@
             }
         },
         {
-            "eventId": 23,
-            "eventName": "मधुरिमा",
-            "image_URL": "https://i.imgur.com/ORuqgTjl.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventId": 25,
+            "eventName": "Just A Minute!",
+            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
+            "eventDetails": "Taking a cue from the famous BBC Radio 4 show Just A Minute!, be prepared for\r\na fast, fun, chaotic time as you try to stop others from speaking and try to be the\r\nlast man speaking past the one minute mark!\r\n\r\nRULES:\r\n1) All participants compete in an individual capacity\r\n2) Rules of a JAM will be explained on the spot\r\n3) The preliminary rounds will have only a dry round, whereas the finals will have\r\nstory and disconnect rounds too.\r\n4) Judging is based on JAM norms for each round, with points for pointing out\r\nerrors, speaking, as well as being the last person to be speaking. Further points are\r\nawarded for finding disconnects in the disconnect round.\r\n5) There are three rules is JAM: JAM God is god, JAM God is god, and JAM God\r\nis god!",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -126,20 +126,8 @@
             "eventId": 24,
             "eventName": "BATTLEFRONT",
             "image_URL": "https://i.imgur.com/v3U5P8nl.jpg",
-            "eventDetails": "A multilayered debate competition, staring with turncoats and ending in a one vs\r\none debate tournament, it's bound it be filled with excitement.",
+            "eventDetails": "A multilayered debate competition, staring with turncoats and ending in a one vs\r\none debate tournament, it's bound it be filled with excitement.\r\n\r\nRULES: \r\nA multilayered debate competition, staring with turncoats and ending in a one vs\r\none debate tournament, it's bound it be filled with excitement.\r\n1. All participants compete in an individual capacity\r\n2. All motions will be given on the spot\r\n3. Usage of the internet or other resources aren't allowed\r\n4. The prelims will be turncoats and the finals will be a one vs one debate format,\r\nwhich will be explained during the event.\r\n5. Judging will be based on parliamentary debate (APD) norms. Weightage is\r\ngiven to arguments and connections, to speaking structure, and least to speaking\r\nstyle.",
             "maxMembers": 1,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 7,
-                "categoryName": "SAMWAAD"
-            }
-        },
-        {
-            "eventId": 26,
-            "eventName": "तर्कसंगत",
-            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
-            "maxMembers": 5,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 7,
@@ -150,19 +138,7 @@
             "eventId": 27,
             "eventName": "कर्स्सागोई",
             "image_URL": "https://i.imgur.com/BEgIy5Ol.jpg",
-            "eventDetails": "INFORMAL EVENT",
-            "maxMembers": 1,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 7,
-                "categoryName": "SAMWAAD"
-            }
-        },
-        {
-            "eventId": 28,
-            "eventName": "SHIPWRECK COVE",
-            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
-            "eventDetails": "ENGLISH EXTEMPORE\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventDetails": "INFORMAL EVENT\r\n\r\n1. क ातनयाँ म-आपबचपनसे ीपढ़ते-सु\r\nनतआे र े ैं।क\r\nु\r\nछक ातनयाँ\r\nतजु\r\nबेसजे न्मिेती ैं, तोक\r\nु\r\nछिेखककीकलपनास।ेक्याआपकेपास ै\r\nकोईक ानी?\r\n2. आइएऔर8लमनिकीसमय-सीमामेंसु\r\nनाइएअपनीक ानी।\r\n3. प्रथमराउिं डमेंआपको मारेद्वाराहदयेगयेषवषयोंपरक ानीलिखकर\r\nthelitclub.iitbhu@gmail.com परभेजनी ोगी। - उसके बादचयतनत\r\nप्रततभाधगयोंकोअगिेराउिंडमेंव क ानीसु\r\nनानके ामौकालमिेगा।",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -174,7 +150,19 @@
             "eventId": 29,
             "eventName": "आशुभाषण",
             "image_URL": "https://i.imgur.com/nQLZVful.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\n1. मौका ैधचत्रोंके धचत्रािंकनका, परिफ़्जोंसे।\r\n2. मिंच ोगाआपका, माइक ोगीआपकी, समय ोगाआपका, बसधचत्र मारा।\r\n3. 60सेकिं डसोचनेके लिएऔर120सेकिं डभाषणदेनेके लिएलमिेंगे।\r\n4. रचनात्मकताएविंप्रस्तत\r\nुतकरणकेआिारपरतनणया ोग",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 7,
+                "categoryName": "SAMWAAD"
+            }
+        },
+        {
+            "eventId": 19,
+            "eventName": "SCRIPTURESQUE",
+            "image_URL": "https://i.imgur.com/0AiXM1Pl.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n1. There'll be four sub-events under this - English Poetry Writing, English\r\nProse Writing, Hindi Poetry Writing, and Hindi Prose Writing.\r\n2. Topics will be given on the spot and 1.5-hour writing time is provided.\r\n3. Judging criteria include Creativity, Style, and Relevance to the topic.\r\n4. All the sub-events will be judged separately.\r\n5. Any plagiarism will result in disqualification.\r\n6. The decision of the judges is final.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -186,7 +174,7 @@
             "eventId": 30,
             "eventName": "AJESTERS COURT",
             "image_URL": "https://i.imgur.com/8hhgDwhl.jpg",
-            "eventDetails": "(STAND-UP COMEDY)",
+            "eventDetails": "(STAND-UP COMEDY)\r\nParticipants have to prepare a sketch that is to be performed in front of the live\r\naudience.\r\n\r\nRULES\r\n1. The stage is all yours for FIVE minutes.\r\n2. Any plagiarism will lead to immediate is qualification.\r\n3. Any form of pre-recorded music is not allowed during the performance.\r\n4. Props are allowed but carry no point. Participants can use it to enhance\r\nthe performance.\r\n5. Visual aids (slides/videos/pictures) are not to be used.\r\n6. Any form of mono acting will lead to deduction of marks.\r\n7. The performance can be in Hindi or English or both.\r\n8. Obscenity is left to judges’ discretion.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -195,10 +183,34 @@
             }
         },
         {
-            "eventId": 25,
-            "eventName": "Just A Minute!",
+            "eventId": 28,
+            "eventName": "SHIPWRECK COVE",
             "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
-            "eventDetails": "Taking a cue from the famous BBC Radio 4 show Just A Minute!, be prepared for\r\na fast, fun, chaotic time as you try to stop others from speaking and try to be the\r\nlast man speaking past the one minute mark!",
+            "eventDetails": "ENGLISH EXTEMPORE\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n\r\nPreliminary Round\r\n1. A hypothetical scenario presented depicts a ship full of famous\r\npersonalities that are wrecked and sinking. The judges (captains) have\r\nlimited life jackets remaining for the passengers.\r\n2. A personality is allotted to each contestant ONE minute before speaking,\r\nfor preparation.\r\n3. Participants must convince the captains as to why they deserve to be\r\nsaved (while sticking to their character). The speaking time is TWO\r\nminutes.\r\n4. Judging criteria include wit, delivery, and character portrayal.\r\n5. Witty innuendoes will earn you bonus points.\r\n\r\nFinal Round\r\n1. All the rules of the preliminary round apply to the final round.\r\n2. An additional reply session will take place, where each contestant must\r\nconvince the judges why the other passengers deserve to drown.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 7,
+                "categoryName": "SAMWAAD"
+            }
+        },
+        {
+            "eventId": 26,
+            "eventName": "तर्कसंगत",
+            "image_URL": "https://i.imgur.com/2h0pPqol.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nप्रथम चरण\r\n1. पजिं ीक\r\nृत प्रततभाधगयों को चार-पािंच सदस्यों के पैनि आविंहित ककए जाएिंगे।\r\n2. प्रततयोधगता के दौरान पररचचााके लिए एक षवषय हदया जाएगा जजसके पक्षषवपक्ष के बारे मेंषवचार करनेके लिए प्रततभाधगयों को पािंच लमनि का समय\r\nलमिेगा।\r\n3. इसके उपरािंत दस लमनि ििंबी पैनि पररचचाा ोगी जजसके दौरान प्रत्येक\r\nप्रततभागी एक स्वस्थ चचाामेंप्रततभाग करते ु\r\nए अपनेतका एवम्षवचार प्रस्ततु\r\nकरके एक ताकका क तनष्कषापर प ु\r\nिंचनेका प्रयत्न करना ोगा।\r\n4. प्रत्येक प्रततभागी का म\r\nू\r\nलयाकिं न प्रस्तु\r\nतत और तकों की गण\r\nु\r\nवत्ता के आिार पर\r\n ोगा।\r\n5. तनणाायक मिंडि का तनणाय अिंततम ोगा तथा ककसी भी प्रकार की अभद्रता का\r\nपररणाम प्रततयोधगता ेतुयोग्यता का नन ोगा।\r\n6. नोि- य एक िीम प्रततस्पिाा न ीिं ै। षवलभन्न कॉिेजों से आए अके िे\r\nप्रततभागी भी पैनि का ह स्सा बन सकते ैं।\r\nदसू रा चरण\r\n1. प्रथम चरण के उपरािंत सभी वाद षववाद सिंसदीय वाद षववाद पद्ितत के\r\nअन\r\nु\r\nरूप ककए जाएिंगे।\r\n2. चयतनत प्रततभाधगयों को मौके पर ी तनयम और षवषय बताए जाएिंगे।\r\n3. षवजेता का चयन प्रस्तुत ककए गए तका, प्रस्तु\r\nतत का ढिंग और तरीके पर\r\n ककया जाएगा।",
+            "maxMembers": 5,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 7,
+                "categoryName": "SAMWAAD"
+            }
+        },
+        {
+            "eventId": 23,
+            "eventName": "मधुरिमा",
+            "image_URL": "https://i.imgur.com/ORuqgTjl.jpg",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n1. Contestants can choose to recite any self-composed poetry on any topic.\r\n2. The poem along with its title and writer name and contact number has to be\r\nsent at thelitclub.iitbhu@gmail.com.\r\n3. The selected pieces will be given a chance to perform their poetries in front\r\nof the judging panel with a maximum peaking time of 5minutes.\r\n4. Participants will be judged on their content and delivery. Any plagiarism\r\nwill result in disqualification.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -210,7 +222,7 @@
             "eventId": 22,
             "eventName": "THE LEGEND OF SIR SPEAK-A-LOT",
             "image_URL": "https://i.imgur.com/wGqvYHsl.jpg",
-            "eventDetails": "ENGLISH ELOCUTION-cum-POETRY-SLAM\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventDetails": "ENGLISH ELOCUTION-cum-POETRY-SLAM\r\n\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n1. The English Poetry Slam and the English Elocution will be judged as\r\ndistinct events. Participants can take part in either one or both of these\r\nevents.\r\n2. The participants will be required to compose an original poem for the\r\nPoetry Slam and an original speech for the Elocution.\r\n3. The participants have the freedom to choose a theme of their choice for\r\nboth events. The maximum time for recitation in both events is Five\r\nminutes.\r\n4. Participants will be judged on the basis of their content and delivery.\r\n5. Any plagiarism will result in immediate disqualification.\r\n6. Decisions taken by the judges are final and binding",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -222,21 +234,9 @@
             "eventId": 20,
             "eventName": "WHAT'S THE WORD?",
             "image_URL": "https://i.imgur.com/vfwExBAl.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
+            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.\r\n\r\nRULES\r\n1. Contestants compete in teams of 2.\r\n2. A questionnaire containing various word puzzles and riddles is presented.\r\n3. Teams have 1 hour to solve all the questions.",
             "maxMembers": 2,
             "minMembers": 2,
-            "parentEvent": {
-                "parentEventId": 7,
-                "categoryName": "SAMWAAD"
-            }
-        },
-        {
-            "eventId": 19,
-            "eventName": "SCRIPTURESQUE",
-            "image_URL": "https://i.imgur.com/0AiXM1Pl.jpg",
-            "eventDetails": "\"Witness the Oeuvres of Lord L’oquent\" History has shown that those who\r\ninfluence all others with words always reign supreme. So often, these souls\r\nchallenge each other to test the sharpness of their tongues and the genius of their\r\nminds. Such conflicts result in the most devastating of all battles, a battle of\r\nideas, a clashing of principles. Ascend to the halls of Valhalla through your wit\r\nand oratory abilities. Challenge Cicero himself at the podium and prove once\r\nand for all that none stand above you in the grand old art of using words to sway\r\nminds.",
-            "maxMembers": 1,
-            "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 7,
                 "categoryName": "SAMWAAD"
@@ -245,10 +245,22 @@
     ],
     "NATRAJ": [
         {
+            "eventId": 17,
+            "eventName": "ECSTASY",
+            "image_URL": "https://i.imgur.com/FSHaxkbl.jpg",
+            "eventDetails": "Come into an alliance with your partner and arm yourselves with all the grooves\r\nand moves, and prove it to us that you got what it takes to be a doublet for each\r\nother dancing against the world.\r\n\r\nRULES\r\nPreliminary Round\r\nTime limit: 2 minutes. Exceeding this will lead to penalization in marks.\r\n1. All dance forms are allowed.\r\n2. There is no gender restriction.\r\n3. Participants can use props suited to their performance. Props which might\r\ncause in convenience to the other teams or cause damage to the stage or\r\nthe surroundings, will not be entertained under any circumstance (this\r\napplies to any fluid, flame, powders, colours, confetti, glass etc.).\r\n4. Participants are required to give the corresponding edited audio songs of\r\nboth the rounds in .mp3 format, in PENDRIVES ONLY and must be\r\nsubmitted at the time of registration.\r\n5. The decision of the judges and the coordinators will be considered as\r\nfinal and binding and will not be changed under any circumstances.\r\n\r\nFinal Round\r\nTime limit: 5 minutes. Exceeding this will lead to penalization in marks.\r\n1. Use of water, fire and glass is prohibited.\r\n2. Participants are required to give the corresponding edited audio songs of\r\nboth the rounds in .mp3 format, in PENDRIVES ONLY and must be\r\nsubmitted at the time of registration.\r\n3. Any specific requirements regarding lights and smoke must be discussed\r\nwith organizers well in advance.\r\n[NOTE: The pen-drive must contain two tracks, one for preliminary & other\r\nfor final. Named: ECS-participant1,participant2-round (PRELIMS/ FINAL),\r\ne.g.: ECS-John,Jane-FINAL indicates John & Jane’s track for FINAL round]",
+            "maxMembers": 2,
+            "minMembers": 2,
+            "parentEvent": {
+                "parentEventId": 6,
+                "categoryName": "NATRAJ"
+            }
+        },
+        {
             "eventId": 18,
             "eventName": "CYPHER OF MOBS",
             "image_URL": "https://i.imgur.com/xkVBAt7l.jpg",
-            "eventDetails": "Street dancing is the trendiest dance form today. It brings you out of the four\r\nwalls into the urban streets and fills the settings with vibes that set every foot on\r\nthe move!\r\nKashiyatra brings best dancers from across the country to come together and\r\ncompete. If you think you have the perfect skill set to set the streets on fire, then\r\ngrab this chance fast for the winner's position is at stake!",
+            "eventDetails": "Street dancing is the trendiest dance form today. It brings you out of the four\r\nwalls into the urban streets and fills the settings with vibes that set every foot on\r\nthe move!\r\nKashiyatra brings best dancers from across the country to come together and\r\ncompete. If you think you have the perfect skill set to set the streets on fire, then\r\ngrab this chance fast for the winner's position is at stake!\r\n\r\nRULES\r\n1. Minimum 5 and maximum 10 dancers per team.\r\n2. All the participating teams should send a playlist containing five songs on\r\nwhich they would like to perform in the street dance faceoff.\r\n3. These playlists once collected from all the participating teams will be\r\nshuffled entirely and played at random for the faceoff.\r\n4. The faceoff can have a solo dancer, duo or the entire team.\r\n5. There will be only knock out rounds. The last two best teams remaining\r\nwill faceoff for the winner position.\r\n6. Teams should bring their portable music systems for practice.\r\n7. The dance floor area must be in the same condition after the\r\nperformances as before.\r\n8. No props will be provided.\r\n9. Individuality and originality of the dance are encouraged as well as\r\ninteraction and contact with the spectators and the other dancers.\r\n10.Dancers are not restricted from performing any move, but they must be\r\naware that it is their responsibility to ensure that they do not perform\r\ncritical steps that could injure themselves or others. Coordinators have the\r\nright to bring in safety restriction.",
             "maxMembers": 10,
             "minMembers": 5,
             "parentEvent": {
@@ -260,21 +272,9 @@
             "eventId": 16,
             "eventName": "CUT-A-RUG",
             "image_URL": "https://i.imgur.com/tRm8QRAl.jpg",
-            "eventDetails": "Natraj is the name of Shiva that symbolizes dance: the dynamic and static divine\r\nflow of energy. It lets you dive deep into the oceans, swim without hurdles and\r\nbreathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra\r\nunveils to you “Cut-A-Rug - the Solo Dance Competition”.",
+            "eventDetails": "Natraj is the name of Shiva that symbolizes dance: the dynamic and static divine\r\nflow of energy. It lets you dive deep into the oceans, swim without hurdles and\r\nbreathe freely. So, loosen up yourself and go solo on the stage as Kashiyatra\r\nunveils to you “Cut-A-Rug - the Solo Dance Competition”.\r\n\r\nRULES\r\n1. All dance forms are allowed.\r\n2. There will be three rounds present in the competition.\r\n3. In the first round, participants will perform for not more than 1 minute.\r\nThe performance must be a part of the routine that is to be presented in\r\nthe second round.\r\n4. In the second round, participants will have 4 minutes (maximum) to\r\nperform.\r\n5. The final round will be a one-on-one face-off competition in which the\r\nfinalists will perform on the spot to a music piece randomly selected\r\nwhich will be given to the participant 5 minutes before their performance.\r\n6. Participants can use props suited to their performance. Use of any fluid,\r\nflame, powders, glass and colours is not allowed.\r\n7. Participants are required to give the corresponding edited audio songs in\r\n.mp3 format, in PENDRIVES ONLY along and must be submitted at the\r\ntime of registration. Other devices such as CDs or mobile phones etc. will\r\nnot be accepted.\r\n8. The decision of the judges and the coordinators will be considered as\r\nfinal and binding and will not be changed under any circumstance.\r\n[NOTE: The pen-drive must contain two tracks, one for the first round and the\r\nother for a second. Named as: CAR-your_name-round_name\r\n(PRELIMS/FINAL), e.g., CAR-P_Ashutosh-PRELIMS indicates P Ashutosh’s\r\ntrack for PRELIMINARY round]",
             "maxMembers": 1,
             "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 6,
-                "categoryName": "NATRAJ"
-            }
-        },
-        {
-            "eventId": 17,
-            "eventName": "ECSTASY",
-            "image_URL": "https://i.imgur.com/FSHaxkbl.jpg",
-            "eventDetails": "Come into an alliance with your partner and arm yourselves with all the grooves\r\nand moves, and prove it to us that you got what it takes to be a doublet for each\r\nother dancing against the world.",
-            "maxMembers": 2,
-            "minMembers": 2,
             "parentEvent": {
                 "parentEventId": 6,
                 "categoryName": "NATRAJ"
@@ -284,7 +284,7 @@
             "eventId": 15,
             "eventName": "BLISS",
             "image_URL": "https://i.imgur.com/1zoLyPul.jpg",
-            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.",
+            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.\r\n\r\nRULES\r\nPreliminary Round\r\nTime limit: 3-5 minutes. Exceeding this will lead to penalization in marks.\r\nTeam size:- Minimum of 5 and a maximum of 35 members are allowed in a\r\nteam, with at least 3 and at most 20 members on stage at any point during the\r\nperformance.\r\n1. All dance forms except folk are allowed.\r\n2. Participants can use props suited to their performance. Props which might\r\ncause in convenience to the other teams or cause damage to the stage or\r\nthe surroundings, will not be entertained under any circumstance (this\r\napplies to any fluid, flame, powders, colours, confetti, glass etc.).\r\n3. The performance must be a part of their out in esthetic to be presented in\r\nthe final round.\r\n4. Participants are required to give the corresponding edited audio songs of\r\nboth the rounds in .mp3 format, in PENDRIVES ONLY and must be\r\nsubmitted at the time of registration. Other devices such as CDs or mobile\r\nphones etc. will not be accepted.\r\n5. The decision of the judges and the coordinators will be considered as\r\nfinal and binding and will not be changed under any circumstances.\r\n6. The obscenity of any kind will lead to immediate disqualification.\r\n\r\nFinal Round\r\nStage setting time: 2 minutes (maximum).\r\nTime limit: 6-10 minutes. Exceeding this will lead to penalization in marks.\r\n1. Participants can use props suited to their performance.\r\n2. Participants are required to give the corresponding edited audio songs in\r\n.mp3 format, in PENDRIVES ONLY along with the final round track and\r\nmust be submitted at the time of registration.\r\n3. No substitutions are allowed. Only the same team that was registered for\r\nthe eliminations will be allowed to perform in the finals if it qualifies.\r\n4. Any specific requirements regarding lights and smoke must be discussed\r\nwith organizers well in advance.\r\n[NOTE: The pen-drive must contain two tracks, one for preliminary round and\r\nthe other for final. Named as: BLISS-your_group_name/college_name-round\r\n(PRELIMS/FINAL), e.g.: BLISS-IITBHU-PRELIMS indicates IITBHU’s track\r\nfor PRELIMINARY round]",
             "maxMembers": 35,
             "minMembers": 5,
             "parentEvent": {
@@ -298,7 +298,7 @@
             "eventId": 13,
             "eventName": "Mr KY",
             "image_URL": "https://i.imgur.com/rn1oUunl.jpg",
-            "eventDetails": "While going outdoors, everyone likes to put out the best of them with a secret\r\ndream of being Mr. India or Mr. Universe someday. So, it's time to sizzle things\r\nup. It's time for Mr. KY, a step leading you closer to your dream. A unique\r\nopportunity to be the defining personality. If you think you can stand out from\r\nthe crowd and clinch this coveted title, then participate now and leave an everlasting impression on the mind of every attendant of KY!",
+            "eventDetails": "While going outdoors, everyone likes to put out the best of them with a secret\r\ndream of being Mr. India or Mr. Universe someday. So, it's time to sizzle things\r\nup. It's time for Mr. KY, a step leading you closer to your dream. A unique\r\nopportunity to be the defining personality. If you think you can stand out from\r\nthe crowd and clinch this coveted title, then participate now and leave an everlasting impression on the mind of every attendant of KY!\r\n\r\nRULES\r\nPreliminary Round\r\n1. The participants need to showcase their talent by carrying their dresses\r\nelegantly and walking just like a King on the red carpet.\r\n2. Individuals are free to choose the style of their outfits.\r\n3. After the walk, participants have to give their introduction.\r\n4. Judging criteria: Walk, Dress and Personality.\r\n5. The decision of the judges and organizers will be final &abiding.\r\n6. The obscenity of any kind is not allowed and will lead to immediate\r\ndisqualification.\r\n\r\nFinal Round\r\n1. The participants need to showcase their talent by carrying their dresses\r\nelegantly and walking just like a King.\r\n2. There is a Questionnaire Round. The participants would need to impress\r\nthe judges with out of the box answers to their questions.\r\n3. Participants will be judged on their ability to project their personality and\r\nproject his views.\r\n4. The decision of the judges and organizers will be final &abiding.\r\n5. The obscenity of any kind is not allowed and will lead to immediate\r\ndisqualification.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -310,7 +310,7 @@
             "eventId": 14,
             "eventName": "MISS KY",
             "image_URL": "https://i.imgur.com/rn1oUunl.jpg",
-            "eventDetails": "“The stage sets on fire, when the unseen, unforgettable, ultimate accessory and\r\nperception of fashion heralds the arrival of blistering and dynamic girls of this\r\ncountry which finally lead to their charismatic departure.” Kashiyatra brings to\r\nyou all. An opportunity to turn your dreams into reality.\r\nLet the truth be told - each one of us, at some point in our lives, has spent hours\r\nin front of mirrors, wishing to be Miss India or Miss Universe. We bring you a\r\ncompetition that could be a step in fulfilling your dreams, Miss KY.",
+            "eventDetails": "“The stage sets on fire, when the unseen, unforgettable, ultimate accessory and\r\nperception of fashion heralds the arrival of blistering and dynamic girls of this\r\ncountry which finally lead to their charismatic departure.” Kashiyatra brings to\r\nyou all. An opportunity to turn your dreams into reality.\r\nLet the truth be told - each one of us, at some point in our lives, has spent hours\r\nin front of mirrors, wishing to be Miss India or Miss Universe. We bring you a\r\ncompetition that could be a step in fulfilling your dreams, Miss KY.\r\n\r\nRULES\r\nPreliminary Round\r\n1. The participants need to showcase their talent by carrying their dresses\r\nelegantly and walking just like a Queen on the red carpet.\r\n2. Individuals are free to choose the style of their outfits.\r\n3. After that, participants have to give their introduction.\r\n4. Judging criteria: Walk, Dress and Personality.\r\n5. The decision of the judges and organizers will be final &abiding.\r\n6. The obscenity of any kind is not allowed and will lead to immediate\r\ndisqualification.\r\n\r\nFinal Round\r\n1. The participants need to show case their talent by carrying their dresses\r\nelegantly and walking just like a Queen.\r\n2. There will be a Questionnaire Round. The Participants would need to\r\nimpress the judges with out of the box answers to their questions.\r\n3. Participants will be judged on their ability to project their personality and\r\nproject her views.\r\n4. The decision of the judges and organizers will be final & abiding.\r\n5. The obscenity of any kind is not allowed and will lead to immediate\r\ndisqualification.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -322,7 +322,7 @@
             "eventId": 12,
             "eventName": "DESIGN ELEGANTE",
             "image_URL": "https://i.imgur.com/myxGVg3l.jpg",
-            "eventDetails": "‘MIRAGE’ -An illusion that bounds every viewer with the ethereal beauty.\r\nMIRAGE gives you an opportunity to bring out the creative designer in you to\r\nchange the fashion statement of India. Wear your designer hats, pick your magic\r\nbrushes, design and present your collection of dresses at Kashiyatra, centered on\r\nincredible themes and got an opportunity to win hefty prizes.",
+            "eventDetails": "‘MIRAGE’ -An illusion that bounds every viewer with the ethereal beauty.\r\nMIRAGE gives you an opportunity to bring out the creative designer in you to\r\nchange the fashion statement of India. Wear your designer hats, pick your magic\r\nbrushes, design and present your collection of dresses at Kashiyatra, centered on\r\nincredible themes and got an opportunity to win hefty prizes.\r\n\r\nRULES\r\n1. There is no limit on the number of designers in the team. They are\r\nsupposed to represent their designs through models.\r\n2. A team should consist of a minimum of 8 models (apart from designers).\r\nThe team members can be from the same or a different institution.\r\n3. Each team will have to choose a theme and costumes/dresses should be\r\ncentered on the selected theme. There is no restriction on the theme* and\r\nyou can freely make use of any means to choose one.\r\nHere are some suggestions: Any Indian Mythology (Maheshmati,\r\nBajiraoMastani, Jodha Akbar), Recycling, Mismatch, Animals in Cage,\r\nEthnic, ShahiLibaaz, Being Banarasi.\r\n4. The participating teams will have to get themselves registered for\r\nparticipation either online or through Campus Ambassador of your\r\ncollege.\r\n5. Participating teams will have to submit a written document which should\r\ncontain a summary of the theme elaborating the relation of their dress\r\ncollection to the chosen theme, formation and music for a walk, prior to\r\nthe event. Email your document toevents.kashiyatra@gmail.com.\r\n6. There will be two rounds - Prelims and Finals.\r\n7. For prelims: Each team will be allotted a time slot of 4-6 minutes for the\r\nonstage performance. Exceeding the time will lead to penalization.\r\n8. For finals: Each team will be allotted a time slot of maximum 8 minutes\r\nfor the onstage performance. Exceeding the time will lead to penalization.\r\n9. Teams are suggested to inform the organizers of any props they are\r\nplanning to use. Use of water, fire, pets or any hazardous materials is not\r\nallowed. Teams are instructed to consult with the organizers before using\r\nany such material.\r\n10.Teams will have to bring their music for the walk in a pen-drive and\r\nsubmit it at least 30 minutes prior to the event.\r\n11.The teams will be judged on the following basis:\r\n• Theme\r\n• Design of the dress\r\n• Walk\r\n• Music\r\n• Formation on the stage\r\n• Written document submitted at the time of registration\r\n12. Failure in portraying the chosen theme will lead to negative\r\npoints.\r\n13. The decision of the judges will be final & abiding.\r\n14. The obscenity of any kind is not allowed and will lead to immediate\r\ndisqualification.",
             "maxMembers": 20,
             "minMembers": 1,
             "parentEvent": {
@@ -336,7 +336,7 @@
             "eventId": 11,
             "eventName": "ENQUIZTA",
             "image_URL": "https://i.imgur.com/Ex6E91Kl.jpg",
-            "eventDetails": "A total of six intriguing quizzes will be organized during Kashiyatra, namely:\r\n• India Quiz*\r\n• MELA (Music Entertainment Literature Arts)\r\n• General Quiz\r\n• Sports Quiz\r\n• Biz Tech Quiz\r\n• TLC (Travel, Living and Culture) Quiz",
+            "eventDetails": "A total of six intriguing quizzes will be organized during Kashiyatra, namely:\r\n• India Quiz*\r\n• MELA (Music Entertainment Literature Arts)\r\n• General Quiz\r\n• Sports Quiz\r\n• Biz Tech Quiz\r\n• TLC (Travel, Living and Culture) Quiz\r\n\r\nRULES\r\n1. Each team will have a maximum of 3members.\r\n2. The event will take place in two rounds, prelims followed by the finals.\r\n3. All the team members of a team must be from the same college.\r\n4. Eight teams from the prelims will qualify for the finals.\r\n5. In the finals, the quizmaster will explain detailed rules before conducting\r\nevery round.\r\n6. Use of any unfair means is strictly prohibited and will lead to immediate\r\ndisqualification.\r\n7. The quiz master's decision is final and binding.",
             "maxMembers": 3,
             "minMembers": 1,
             "parentEvent": {
@@ -350,7 +350,7 @@
             "eventId": 10,
             "eventName": "BATTLE OF BANDS",
             "image_URL": "https://i.imgur.com/XMYD7vql.jpg",
-            "eventDetails": "Crosswindz, the oldest battle of bands in India, is one of the Flagship events of\r\nKashiyatra. Since its inception, Crosswindz has been home to major rock bands\r\nin India. Mindshift (Sweden), Tiny Fingers (Israel), Demonic Resurrection\r\n(Mumbai), Undying Inc (Delhi), Albatross (Mumbai), Underground Authority\r\n(Kolkata) have been our past headliners. Some of the past winners include\r\nEscape Artist, Diabolical Damage, High Frequency and the Purple Jays. Like\r\nthe previous year, this year Crosswindz will organize a road trip for multi-city\r\nelimination rounds to ensure high-quality participation from bands all over the\r\nnation leading to a tight battle to be the best.\r\nAfter the road trips elected bands will compete in the finals to be held in\r\nVaranasi. The finals will be the opening act for headliners followed by the\r\nannouncement of results.",
+            "eventDetails": "Crosswindz, the oldest battle of bands in India, is one of the Flagship events of\r\nKashiyatra. Since its inception, Crosswindz has been home to major rock bands\r\nin India. Mindshift (Sweden), Tiny Fingers (Israel), Demonic Resurrection\r\n(Mumbai), Undying Inc (Delhi), Albatross (Mumbai), Underground Authority\r\n(Kolkata) have been our past headliners. Some of the past winners include\r\nEscape Artist, Diabolical Damage, High Frequency and the Purple Jays. Like\r\nthe previous year, this year Crosswindz will organize a road trip for multi-city\r\nelimination rounds to ensure high-quality participation from bands all over the\r\nnation leading to a tight battle to be the best.\r\nAfter the road trips elected bands will compete in the finals to be held in\r\nVaranasi. The finals will be the opening act for headliners followed by the\r\nannouncement of results.\r\n\r\nRULES\r\nThe competition will be held in two phases, zonal in various cities and the finals\r\nin Varanasi.\r\nZonal (subject to change as per venue)\r\n1. The competition is open to all English semi-professional bands.\r\n2. Each band would be given a playing time of 25 minutes, inclusive of\r\nsound set-up.\r\n3. Basic sound equipment and a standard drum-kit will be provided; bands\r\nare however advised to bring their guitars, keyboards, and additional\r\nequipment.\r\n4. There is no upper limit for the number of members in a band, however, at\r\nany point in time, at least three members need to be on the stage.\r\n5. No pre-recorded audio or MIDI interfaces are allowed. However, bands\r\ncan use looper pedals for live looping.\r\n6. All songs much have their lyrics written in English.\r\n7. The judge’s decision will be final.\r\n8. Based on the participation, we will select a maximum of two bands who\r\nwill advance for the finals in Varanasi. (we can choose more bands on the\r\nparticular recommendation of judges)\r\n\r\nFinals\r\n1. Every band should have at least one original composition.\r\n2. Varanasi zonal will be held during Kashiyatra. The bands which have\r\nalready participated in any other zonal can also join in the Varanasi\r\nZonal.\r\n3. The finals will be held in Varanasi during Kashiyatra. All the bands have\r\nto arrange their travel up to Varanasi.\r\n4. Bands will be given 15 minutes time before their performances for sound\r\nsetup. They can save the patches at that moment for their performances.\r\n5. Theperformancetimeislimitedto20minutesperband.Theperformances will\r\nbe right before the headlining act by Guest Bands.\r\n6. No pre-recorded audio or MIDI interfaces are allowed. However, bands\r\ncan use looper pedals for live looping.\r\n7. All songs much have their lyrics written in English.\r\n8. The judge’s decision will be final; the judges would announce the results\r\nright after the headlining act of that day.\r\n9. Any change in the above rules will be notified to the concerned band\r\nprior to their performances.",
             "maxMembers": 20,
             "minMembers": 3,
             "parentEvent": {
@@ -361,46 +361,10 @@
     ],
     "BANDISH": [
         {
-            "eventId": 5,
-            "eventName": "SUR",
-            "image_URL": "https://i.imgur.com/PYo7Qa0l.jpg",
-            "eventDetails": "“Music touches us emotionally, where words alone can’t.” So, if you have the\r\nvoice that can win hearts and steal the show, then get ready to dazzle the stage\r\nas we bring forth “SUR: The Solo Singing Event”, where you are given the\r\nideal platform to show your talent and prove your mettle.",
-            "maxMembers": 1,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 2,
-                "categoryName": "BANDISH"
-            }
-        },
-        {
-            "eventId": 8,
-            "eventName": "KRITI",
-            "image_URL": "https://i.imgur.com/CBTSjZ7l.jpg",
-            "eventDetails": "Kriti is your chance to let your imagination and creativity flow in the form of a\r\nbeautiful self-composed song. Stand out as that brilliantly clear solo is as you\r\ntake control over the vocals and mesmerize the audience. The championship is\r\nawarded to the performer who presents the best and wins the hearts with their\r\ncreation.",
-            "maxMembers": 1,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 2,
-                "categoryName": "BANDISH"
-            }
-        },
-        {
-            "eventId": 9,
-            "eventName": "ADVAITA",
-            "image_URL": "https://i.imgur.com/xK8icRNl.jpg",
-            "eventDetails": "If you think you can make the crowd forget themselves in your performance,\r\nthen this is the place to be. With massive enthusiasm and fearsome competition,\r\nthis event brings out the best in its participants striving for glory. If you have the\r\nband that can’t lose and have a hunger for more, then come and perform against\r\nthe most formidable bands in India. It is the battle of bands, and the clash is\r\nraging hotter than ever.",
-            "maxMembers": 10,
-            "minMembers": 3,
-            "parentEvent": {
-                "parentEventId": 2,
-                "categoryName": "BANDISH"
-            }
-        },
-        {
             "eventId": 6,
             "eventName": "RAAGSAMAR",
             "image_URL": "https://i.imgur.com/QyGrRZ4l.jpg",
-            "eventDetails": "If you think you can enthrall the audience by singing on soft acoustic music if\r\nunplugged tunes are all you need to set the cool vibes around then don't miss the\r\nchance to participate in Unplugged!",
+            "eventDetails": "If you think you can enthrall the audience by singing on soft acoustic music if\r\nunplugged tunes are all you need to set the cool vibes around then don't miss the\r\nchance to participate in Unplugged!\r\n\r\nRULES\r\n1. A 3- piece drum kit and a bass guitar will be provided to the participants\r\nand instrument other than those will have to arrange by the participant on\r\ntheir own.\r\n2. The team must have a minimum of 3 members and a maximum of ten\r\nmembers.\r\n3. The participant should use at least one melodic instrument in the\r\nperformance.\r\n4. No electric guitars are allowed, and only piano and strings patches are\r\npermitted on Synth.\r\n5. The performance can have a medley of songs, a cover and a group song.\r\nNo pre-mixed voices of samples are allowed.\r\n6. Time limit for the performance is 12 min (including sound check).\r\n7. The decision of the judges will be final.",
             "maxMembers": 10,
             "minMembers": 3,
             "parentEvent": {
@@ -412,7 +376,43 @@
             "eventId": 7,
             "eventName": "SANLAYAN",
             "image_URL": "https://i.imgur.com/cWKm3DGl.jpg",
-            "eventDetails": "There's something in the soft plink of a sitar or the mellifluous notes of a flute\r\nthat the human voice cannot seem to match. Instrumentalists spend years\r\nperfecting their art, to achieve the thrilling pace at which they change notes.\r\nKashiyatra gives you a chance for you to hear and create magic-harmonies with\r\ninstruments only. Let your emotions radiate and shine in its character through\r\ninstruments.",
+            "eventDetails": "There's something in the soft plink of a sitar or the mellifluous notes of a flute\r\nthat the human voice cannot seem to match. Instrumentalists spend years\r\nperfecting their art, to achieve the thrilling pace at which they change notes.\r\nKashiyatra gives you a chance for you to hear and create magic-harmonies with\r\ninstruments only. Let your emotions radiate and shine in its character through\r\ninstruments.\r\n\r\nRULES\r\nPreliminary Round\r\n1. Time limit: 6 minutes including sound check.\r\n2. Genre: All genres are accepted.\r\n3. Backing tracks are not allowed, but music can be looped in real time.\r\n4. Judging Criteria: Clarity of Rendition, Creativity, Proficiency and level of\r\ndifficulty of the composition. Original pieces will be given due points.\r\n5. Points may be deducted on exceeding the time limit or in case of using\r\nthe aid of written notations.\r\n6. All Instruments (String, Wind, Percussion-Electronic as well as Acoustic)\r\nare allowed.\r\n7. The participants will be judged in 2 separate categories: Percussion and\r\nNon-Percussion.\r\n8. The decision of the judges and the organizers will be final & abiding.\r\n\r\nFinal Round\r\n1. Selected participants from the prelims will go into the final round.\r\n2. General rules will remain the same as the prelims.\r\n3. In the final round, for the percussion category, each selected participant\r\nwill be given a melody/baseline on the spot, to play on.\r\n4. For the non-percussion category, each selected participant will be given a\r\ndrum beat on the spot, to play on.\r\n5. All the participants are required to play and improvise on the given track.\r\n6. The decision of the judges and the organizers will be final & abiding.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 2,
+                "categoryName": "BANDISH"
+            }
+        },
+        {
+            "eventId": 8,
+            "eventName": "KRITI",
+            "image_URL": "https://i.imgur.com/CBTSjZ7l.jpg",
+            "eventDetails": "Kriti is your chance to let your imagination and creativity flow in the form of a\r\nbeautiful self-composed song. Stand out as that brilliantly clear solo is as you\r\ntake control over the vocals and mesmerize the audience. The championship is\r\nawarded to the performer who presents the best and wins the hearts with their\r\ncreation.\r\n\r\nRULES\r\n1. Time Limit: 10 minutes (including sound check)\r\n2. You can perform only one composition.\r\n3. Your song should be self-written and self-composed.\r\n4. Screaming and growling are not allowed.\r\n5. Your song can be a purely instrumental composition. However, a song\r\nwith lyrics will be preferred.\r\n6. You can repeat the same composition performed in Kriti as in any of the\r\nother events of the Bandish.\r\n7. If your song contains lyrics, printed copies of the same should be brought\r\nat the time of the event.\r\n8. Judging Criteria: Originality of ideas, Creativity, Composition,\r\nArrangement of the Song, Sur, Lyrical Content, Taal and Voice quality.\r\n9. Plagiarism of any kind will be detrimental to one’s score.\r\n10.Points may be deducted on exceeding the time limit or in case of not\r\nmemorizing the lyrics (Vocalists) or using written notations\r\n(Instrumentalists).\r\n11.The decision of the judges and the organizers will be final & abiding.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 2,
+                "categoryName": "BANDISH"
+            }
+        },
+        {
+            "eventId": 9,
+            "eventName": "ADVAITA",
+            "image_URL": "https://i.imgur.com/xK8icRNl.jpg",
+            "eventDetails": "If you think you can make the crowd forget themselves in your performance,\r\nthen this is the place to be. With massive enthusiasm and fearsome competition,\r\nthis event brings out the best in its participants striving for glory. If you have the\r\nband that can’t lose and have a hunger for more, then come and perform against\r\nthe most formidable bands in India. It is the battle of bands, and the clash is\r\nraging hotter than ever.\r\n\r\nRULES\r\n1. Time limit: 25 minutes including sound check.\r\n2. Your performance may be of any genre and language.\r\n3. Mashups and Medleys are allowed, provided they don’t exceed the time\r\nlimit.\r\n4. Genre: Classical songs are NOT allowed. However, Semi-classical, Light\r\nIndian Music, Bollywood and Western songs (NO screaming/ growling)\r\nare permitted.\r\n5. Band members should not fall below 3 and should not exceed10.\r\n6. Obscenity and vulgarity are not allowed in lyrics and gestures.\r\n7. No pre-recorded music is allowed although music can be looped in real\r\ntime.\r\n8. We only provide the five-piece drum set; any further instruments should\r\nbe arranged by the participants only.\r\n9. For preliminary round, you have to mail your video\r\ntoevents.kashiyatra@gmail.com with the video renamed as “ADVAITABand_name”.\r\n10.You have to submit the lyrics printed copy at the time of the event.\r\n11.Judging Criteria: Instrumental Brilliance, Creativity, Stage Presence,\r\nTightness, Vocals and Public Appeal.\r\n12.Points may be deducted on exceeding the time limit or in case of not\r\nmemorizing the lyrics (vocalists) or using the aid of written notations\r\n(instrumentalists).\r\n13.The decision of the judges and the organizers will be final & abiding.",
+            "maxMembers": 10,
+            "minMembers": 3,
+            "parentEvent": {
+                "parentEventId": 2,
+                "categoryName": "BANDISH"
+            }
+        },
+        {
+            "eventId": 5,
+            "eventName": "SUR",
+            "image_URL": "https://i.imgur.com/PYo7Qa0l.jpg",
+            "eventDetails": "“Music touches us emotionally, where words alone can’t.” So, if you have the\r\nvoice that can win hearts and steal the show, then get ready to dazzle the stage\r\nas we bring forth “SUR: The Solo Singing Event”, where you are given the\r\nideal platform to show your talent and prove your mettle.\r\n\r\nRULES\r\n1. Time limit:\r\n• Elimination- 3 minutes including sound-check.\r\n• Prelims- 4 minutes including sound-check.\r\n• Finale- 6 minutes including sound-check.\r\n2. Genre: Classical songs are NOT allowed. However, Semi-classical, Light\r\nIndian Music, Bollywood and Western songs (NO screaming/growling)\r\nare permitted.\r\n3. Language: All languages are allowed.\r\n4. Backgroundtracksarepermitted.Participantswillhavetocarryitinapendrive, and the submission of the track should be made before the event.\r\n5. You may be asked to sing another song on judge’s demand.\r\n6. Mashups and Medleys are allowed, provided they don’t exceed the time\r\nlimit.\r\n7. You may bring along one accompanying instrumentalist with you for the\r\nelimination round and two for further rounds, or may play the instrument\r\nyourself, or use an Electronic Tanpura (under either case, you can’t use\r\nmore than two instruments). Only vocals shall be judged, however.\r\n8. Judging Criteria: Voice Quality, Voice Modulation, Sur, Taal and Choice\r\nof Song.\r\n9. Points may be deducted on exceeding the time limit.\r\n10.You have to perform a different composition in each round of the event.\r\n11.The decision of the judges and the organizers will be final &abiding.",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
@@ -423,10 +423,22 @@
     ],
     "ABHINAY": [
         {
+            "eventId": 4,
+            "eventName": "CHESTHA",
+            "image_URL": "https://i.imgur.com/uuNapHnl.jpg",
+            "eventDetails": "In the midst of eternal silence where slightest of the sound was finding it very\r\ndifficult to escape, those creatures in the shades of black and white were making\r\nstatements with their mouth stitched and were gradually paving the path for the\r\ncrowd to dive deep into the sea of joyride full of laughter and emotions Reliving\r\nthose golden days when Charlie Chaplin and Marcel Marceau ruled at\r\nKashiyatra un furl their hidden soul beneath you and let your mimed other\r\nchatters that won’t stop ever.\r\n\r\nRULES\r\nJudging criteria: Acting, expression & overall impact\r\n1. Team Limit: 8+2persons\r\n2. Time Limit: 10minutes\r\n3. Unnecessary use of props is discouraged.\r\n4. Face painting and costumes would not be considered as a prop.\r\n5. The act should not contain any dialogues, lip syncs.\r\n6. Background music is allowed. However, it must not contain any words\r\n(sound representing any living form is not allowed).\r\n7. The decision of judges will be final and binding.\r\n8. Any fluid/flame is not allowed.\r\n9. No act shall contain any obscene, disrespectful actions or gestures. The\r\nact will immediately be stopped, and entry will be disqualified if these\r\ninstructions are not followed.",
+            "maxMembers": 10,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 1,
+                "categoryName": "ABHINAY"
+            }
+        },
+        {
             "eventId": 3,
             "eventName": "HULLAD",
             "image_URL": "https://i.imgur.com/JPRE0Adl.jpg",
-            "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If\r\nyou can catch the attention & attract people to stay and watch your performance,\r\nhere is your chance. The art of grabbing the audience’s attention is all that you\r\nneed. No lights, no mics, only pure ACTION full of energy.",
+            "eventDetails": "In this fast-developing world, very few people have a natural taste for drama. If\r\nyou can catch the attention & attract people to stay and watch your performance,\r\nhere is your chance. The art of grabbing the audience’s attention is all that you\r\nneed. No lights, no mics, only pure ACTION full of energy.\r\n\r\nRULES\r\n1. Team Size: 10-30 (including CAs & music accompanists)\r\n2. Teams have to mail the following things at\r\nevents.kashiyatra@gmail.com: Synopsis of the play (not more than 100\r\nwords) and Prod List (List of production material and music instruments\r\nbrought by the teams). The subject of the email should be “HULLADCollege_name-Play_name” before the mentioned deadline.\r\n3. Time Limit : 15-30minutes. Points will be deducted on exceeding the time limit.\r\n4. Judging Criteria: Acting, Voice (Sync, modulation and diction)\r\nScreenplay, Script, Audience Interaction & overall impact.\r\n5. The team size represents the number of people registered as a team. Only\r\nthese shall be allowed to perform the Street play.\r\n6. Music accompanists are included in the team number stated above.\r\nMaximum of 4 can be included in the team.\r\n7. Teams are expected to perform at an open-air venue with the audience all\r\naround.\r\n8. No electrical appliances shall be allowed during the performance whether\r\ninside or outside the circle of performance.\r\n9. Only live music is allowed. Teams will have to bring the instruments. No\r\ninstruments will be provided.\r\n10.The language of the performance should be Hindi/English or both.\r\nHowever, short sub passages in other languages are allowed.\r\n11.Any fluid, live animals, flames, heavy objects or any material which has a\r\npossibility of damaging the stage is not allowed.\r\n12.Dry colors may be used during the play, but the teams have to clean the\r\nstage after their performance & the cleaning time will be included in the\r\nperformance time.\r\n13.Any plagiarism & profanity will lead to immediate disqualification.\r\n14.The decision of the judges and organizers will be final & abiding.",
             "maxMembers": 30,
             "minMembers": 10,
             "parentEvent": {
@@ -438,20 +450,8 @@
             "eventId": 2,
             "eventName": "ASMITA",
             "image_URL": "https://i.imgur.com/axxSG4Wl.jpg",
-            "eventDetails": "In civilized life, where the happiness, and indeed almost the existence, of man,\r\ndepends so much upon the opinion of his fellow men, he is always acting a\r\nstudied part. In a Mono Act, an actor is vulnerable. His total personality is\r\nexposed to critical judgment - his intellect, his bearing, his diction, his whole\r\nappearance. If you can reveal your emotions in front of the audience, here is\r\nyour chance.",
+            "eventDetails": "In civilized life, where the happiness, and indeed almost the existence, of man,\r\ndepends so much upon the opinion of his fellow men, he is always acting a\r\nstudied part. In a Mono Act, an actor is vulnerable. His total personality is\r\nexposed to critical judgment - his intellect, his bearing, his diction, his whole\r\nappearance. If you can reveal your emotions in front of the audience, here is\r\nyour chance.\r\n\r\nRULES\r\n1. In Mono act only single person allowed to be on stage.\r\n2. A participant can have a maximum of 2 helpers, one each for lights and\r\nsound.\r\n3. The act can be in English, Hindi or Bilingual. Short phrases of other\r\nlanguages can be used.\r\n4. Time Limit: 4-10minutes.\r\n5. Any fluid, live animals, flames, heavy objects or any material which has a\r\npossibility of damaging the stage is not allowed.\r\n6. Spillage of any item is strictly not allowed onstage.\r\n7. Points will be deducted on exceeding the time limit.\r\n8. Any Inappropriate content or vulgarity will not be tolerated.\r\n9. The decision of the judges and organizers shall be final and abiding.",
             "maxMembers": 3,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 1,
-                "categoryName": "ABHINAY"
-            }
-        },
-        {
-            "eventId": 4,
-            "eventName": "CHESTHA",
-            "image_URL": "https://i.imgur.com/uuNapHnl.jpg",
-            "eventDetails": "In the midst of eternal silence where slightest of the sound was finding it very\r\ndifficult to escape, those creatures in the shades of black and white were making\r\nstatements with their mouth stitched and were gradually paving the path for the\r\ncrowd to dive deep into the sea of joyride full of laughter and emotions Reliving\r\nthose golden days when Charlie Chaplin and Marcel Marceau ruled at\r\nKashiyatra un furl their hidden soul beneath you and let your mimed other\r\nchatters that won’t stop ever.",
-            "maxMembers": 10,
             "minMembers": 1,
             "parentEvent": {
                 "parentEventId": 1,
@@ -462,7 +462,7 @@
             "eventId": 1,
             "eventName": "RANGMANCH",
             "image_URL": "https://i.imgur.com/fcWACMVl.jpg",
-            "eventDetails": "Do you have what it takes to dissolve an audience in an ocean of emotions and\r\nactions? The colourful lights, cameras & the audience are waiting for you. If\r\nyou can make your expressions to the next level, then this is where you belong.\r\nThe stage is set and waiting for your next grand act.",
+            "eventDetails": "Do you have what it takes to dissolve an audience in an ocean of emotions and\r\nactions? The colourful lights, cameras & the audience are waiting for you. If\r\nyou can make your expressions to the next level, then this is where you belong.\r\nThe stage is set and waiting for your next grand act.\r\n\r\nRULES\r\n1. Length of the play should be around 20 to 50 minutes, with a penalty for\r\nevery extra minute. An additional time of 5 minutes will be given for\r\nboth, setting as well as clearing the stage.\r\n2. A technical check (both lights and sound) will be provided to each team\r\nbefore the starting of the event.\r\n3. The play could be in English, Hindi or Bilingual. Short phrases of other\r\nlanguages can be used.\r\n4. There is no restriction on team size.\r\n5. Teams are allowed to have one member each for lights, sound and spot.\r\nIn addition to that, a maximum of three backstage helpers is permitted.\r\nTheir names should be mentioned separately at the time of Registration.\r\n6. Any Inappropriate content or vulgarity will not be tolerated.\r\n7. Spillage of any item is strictly not allowed onstage.\r\n8. The decision of the organizers shall be final and abiding.\r\n9. Slot preference will be given in the order of registration on the first come\r\nfirst serve basis.",
             "maxMembers": 50,
             "minMembers": 1,
             "parentEvent": {

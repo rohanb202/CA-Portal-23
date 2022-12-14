@@ -1,8 +1,8 @@
 // import { Link } from 'react-scroll'
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import kashiyatra from "./KY Header Logo.svg";
-import kylogo from "../main/KY Logo.svg";
+import kashiyatra from "./kyheader.svg";
+import kylogo from "../../svgs/KY Logo.svg";
 import { useState } from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import cross from "./cross.png"
@@ -16,7 +16,7 @@ function NavBar() {
   const [navdisplay, setNavDisplay] = useState(0);
 
   function showNav() {
-    document.querySelector(".mobile-nav-dropdown").style.display = "flex";
+    document.querySelector(".mobile-nav-dropdown").style.height = "100%";
     setNavDisplay(1);
     var x = window.scrollX;
     var y = window.scrollY;
@@ -26,7 +26,7 @@ function NavBar() {
   }
   function closeNav() {
     // console.log("HI")
-    document.querySelector(".mobile-nav-dropdown").style.display = "none";
+    document.querySelector(".mobile-nav-dropdown").style.height = "0";
     setNavDisplay(0);
     window.onscroll = function () {};
   }
@@ -39,9 +39,9 @@ function NavBar() {
         <img src={kylogo} alt="ky-23"></img>
       </div>
       <div className="mobile-nav-dropdown">
-        <button onClick={closeNav} className="back-icon"></button>
         <div className="title">
-          <img src={kashiyatra} alt="kashiyatra"></img>
+          <button onClick={closeNav} className="back-icon"></button>
+          <div className="mobile-nav-kylogo"><img src={kashiyatra} alt="kashiyatra"></img></div>
         </div>
         <ul className="nav">
           <li onClick={closeNav}>
@@ -56,13 +56,13 @@ function NavBar() {
               </Link>
             </li>
           )}
-          {userInfo && (
+          {/* {userInfo && (
             <li onClick={closeNav}>
               <Link to="/profile">
                 <span>Profile</span>
               </Link>
             </li>
-          )}
+          )} */}
 
           <li onClick={closeNav}>
               <Link to="/events">
@@ -145,13 +145,13 @@ function NavBar() {
                 </Link>
               </li>
             )}
-            {userInfo && (
+            {/* {userInfo && (
               <li>
                 <Link to="/profile">
                   <span>Profile</span>
                 </Link>
               </li>
-            )}
+            )} */}
 
             <li>
             <Link to="/events">

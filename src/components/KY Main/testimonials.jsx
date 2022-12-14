@@ -6,44 +6,58 @@
 import React from "react";
 import "./testimonials.scss";
 import Testimonialcss from "./testimonial.module.css"
-import TestimonialImg from "./img/testimonails/testimonial.jpeg";
+// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 
 const slideWidth = 30;
 
 const _items = [
     {
         player: {
-            title: 'Efren Reyes',
-            desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
-            image: 'https://i.postimg.cc/RhYnBf5m/er-slider.jpg',
+            title: 'Aakash Gupta',
+            desc: 'You gave us one of the best nights of our career.',
+            image: require("./img/testimonails/aakash.jpg"),
         },
     },
     {
         player: {
-            title: "Ronnie O'Sullivan",
-            desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-            image: 'https://i.postimg.cc/qBGQNc37/ro-slider.jpg',
+            title: "Salim-Sulaiman",
+            desc: "Felt the energy of the crowd in every minute of the performance, loved the overall experience.",
+            image: require("./img/testimonails/SSL.jpg"),
         },
     },
     {
         player: {
-            title: 'Shane Van Boening',
-            desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
-            image: 'https://i.postimg.cc/cHdMJQKG/svb-slider.jpg',
+            title: 'Zakir Khan',
+            desc: 'The crowd was amazing, and enjoyed as much as them and the hospitality that the team presented me with touched my heart.',
+            image: require("./img/testimonails/zkl.jpg"),
         },
     },
     {
         player: {
-            title: 'Mike Sigel',
-            desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
-            image: 'https://i.postimg.cc/C12h7nZn/ms-1.jpg',
+            title: 'The Local Train',
+            desc: 'Best crowd that we have seen in a while, and their appreciation for the music was amazing.',
+            image: require("./img/testimonails/TLT TEST.jpg"),
         },
     },
     {
         player: {
-            title: 'Willie Mosconi',
-            desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
-            image: 'https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg',
+            title: 'Ritviz',
+            desc: "Great people, great energy, wouldn't have been tired to even go on for the entire night",
+            image: require("./img/testimonails/ritvizl.jpg"),
+        },
+    },
+    {
+        player: {
+            title: 'Amit Trivedi',
+            desc: "Right from the beginning till the end the crowd participation was amazing. This is definately one of the best crowds we have come across.",
+            image: require("./img/testimonails/atl.jpg"),
+        },
+    },
+    {
+        player: {
+            title: 'Divine',
+            desc: "Great energy!, superb atmosphere!, amazing crowd!, bhot hard!! bhot hard!!",
+            image: require("./img/testimonails/DIVINE.jpg"),
         },
     },
 ];
@@ -55,7 +69,7 @@ const sleep = (ms = 0) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const createItem = (position, idx) => {
+const createItem = (position, idx, activeIdx) => {
     const item = {
         styles: {
             transform: `translateX(${position * slideWidth}rem)`,
@@ -84,7 +98,7 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
     return (
         <li className="carousel__slide-item" style={item.styles}>
             <div className={Testimonialcss.testimonialCard}>
-            <img className="testimonialCardImg" src={TestimonialImg} alt="Image" />            
+            <img className="testimonialCardImg" src={item.player.image} alt="Image" />            
             <div className={Testimonialcss.testimonialData}>
               <div className={Testimonialcss.testimonailName}>
                 {item.player.title}
@@ -105,6 +119,35 @@ const Carousel = () => {
     const [isTicking, setIsTicking] = React.useState(false);
     const [activeIdx, setActiveIdx] = React.useState(0);
     const bigLength = items.length;
+    const [touchStart, setTouchStart] = React.useState(null)
+    const [touchEnd, setTouchEnd] = React.useState(null)
+
+    // the required distance between touchStart and touchEnd to be detected as a swipe
+    const minSwipeDistance = 50 
+
+    const onTouchStart = (e) => {
+    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX)
+    }
+
+    const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return
+        const distance = touchStart - touchEnd
+        const isLeftSwipe = distance > minSwipeDistance
+        const isRightSwipe = distance < -minSwipeDistance
+        if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
+        if (isLeftSwipe){
+            nextClick(1)
+            // console.log(activeIdx, length-1)
+        }
+        if (isRightSwipe){
+            prevClick(1);
+            // console.log(activeIdx)
+        }
+    // add your conditional logic here
+    }
 
     const prevClick = (jump = 1) => {
         if (!isTicking) {
@@ -145,7 +188,7 @@ const Carousel = () => {
                 {/* <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
                     <i className="carousel__btn-arrow carousel__btn-arrow--left" />
                 </button> */}
-                <div className="carousel__container">
+                <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className="carousel__container">
                     <ul className="carousel__slide-list">
                         {items.map((pos, i) => (
                             <CarouselSlideItem

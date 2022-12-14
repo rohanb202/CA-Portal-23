@@ -10,6 +10,32 @@
   color: #F6F5E9;
   margin-bottom: 5px;
 }
+.fpay{
+  border: solid 0.2px;
+  padding: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border-radius: 16px;
+  margin-right: 15px;
+  background:transparent;
+  display: flex;
+  flex-direction: row;
+}
+.gm{
+  padding-right: 5px;
+  transform: scale(0.8);
+}
+.buttonf{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
 .mainbody {
   background-color: #2D3047;
   /* margin-top: 10%; */
@@ -31,6 +57,10 @@
   margin-right: 4%;
   padding-left: 10%;
 }
+.column2{
+  position: relative;
+  right: 2%;
+}
 @media screen and (min-width: 1200px){
   .column1{
     position: relative;
@@ -45,10 +75,19 @@
   .column0{
     display: none;
   }
+  .buttonf{
+    position: relative;
+    left: 30%;
+    margin-top: 30px;
+  }
 }
 
 .column2{
   margin-left: 5%;
+}
+.column3{
+  position: relative;
+  right: 8%;
 }
 .column {
   margin-top: 15px;
@@ -98,6 +137,9 @@ h2 {
   margin-left: 18px;
   align-content: center;
   color: #F6F5E9;
+  text-align: center;
+  position: relative;
+  right: 32%;
 }
 .font2 {
   margin-bottom: 10px;
@@ -126,7 +168,6 @@ h2 {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  text-transform: capitalize;
 
   color: #F6F5E9;
 }
@@ -171,6 +212,9 @@ h2 {
   .home {
     font-size: 11px;
     line-height: 20px;
+    position: relative;
+    text-align: center;
+    right: 16%;
   }
   .font1 {
     margin-right: 35%;
@@ -186,15 +230,27 @@ h2 {
   }
   .column3{
  position: relative;
- right: 10%;
+ right: 21%;
   }
   .column2{
     position: relative;
-    right: 8%;
+    right: 14%;
+  }
+  .column1{
+    position: relative;
+    right: 6%;
   }
 .column0{
   display:none;
 
 }
-
+.fpay{
+  transform: scale(0.5);
+}
+.buttonf
+{
+  position: relative;
+  left: 0%;
+  
+}
 }
