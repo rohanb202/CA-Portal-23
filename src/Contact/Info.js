@@ -2,6 +2,7 @@ import React from 'react';
 import { Shake } from 'reshake'
 import contactPageImg from '../img/contactPageImg.png'
 import './Info.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Info () {
 
@@ -18,7 +19,8 @@ export default function Info () {
               fixed={true}
               fixedStop={false}
               freez={false}>
-              <img src={contactPageImg} alt='mage' className='contactImage' />
+                <LazyLoadImage src={contactPageImg} alt='mage' className='contactImage'
+                    />
             </Shake>
                 
             </div>

@@ -1,18 +1,11 @@
 import "./main.css";
 import { Link as ScrollLink } from "react-scroll";
-// import createScrollSnap from "scroll-snap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import NavBar from "../navbar/navbar";
-// import Nduty from '../New_Duty/Nduty';
-// import Brownie from "../New_brownie/Brownie_point";
-// import Contact from '../../Contact/Contact';
 import { Link } from "react-router-dom";
-//import sample from "./Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4";
 import kashiyatra from "../../svgs/kashiyatra.svg";
 import mouse from "../../svgs/mouse.svg";
 import { useEffect, useState } from "react";
-// import sidepattern from "../navbar/Super Side Pattern.svg";
-// import kylogo from "./KY Logo.svg"
-// import navicon from "./navicon.svg"
 import back from "../../svgs/back.svg";
 import whyCAImage from "./why ca_Mesa de trabajo 1 1.png";
 import right from "./why CA_Mesa de trabajo 1 1-cropped.png";
@@ -174,7 +167,10 @@ function Main(props) {
                     data-aos="zoom-in-up"
                     data-aos-duration="1000"
                   >
-                    <img src={right} alt="right"></img>
+                    <LazyLoadImage src={right}
+                      alt="right"
+                    />
+                    {/* <img src={right} alt="right"></img> */}
                   </div>
                 </div>
                 <div class="center-bottom">
@@ -183,7 +179,9 @@ function Main(props) {
                     data-aos="zoom-in-up"
                     data-aos-duration="1000"
                   >
-                    <img src={whyCAImage} alt="right"></img>
+                    <LazyLoadImage src={whyCAImage}
+                      alt="right"
+                    />
                   </div>
                   <div class="left">
                     <div class="left-title">Why Campus Ambassador?</div>
@@ -260,12 +258,11 @@ function Main(props) {
                     </div>
                   </div>
                   <div class="" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <img
-                      src={responsibility}
+                    <LazyLoadImage src={responsibility}
                       alt="responsibility"
-                      className="w-40 lg:w-[80%] lg:ml-16 mt-20
-                    "
-                    ></img>
+                      className="w-40 lg:w-[80%] lg:ml-16 mt-20"
+                    />
+                  
                   </div>
                 </div>
                 {props.children}

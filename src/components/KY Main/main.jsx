@@ -1,4 +1,5 @@
 import Maincss from "./main.module.css";
+import {lazy,Suspense} from "react";
 import { useState, useEffect, useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
@@ -6,7 +7,8 @@ import TestimonialFrame from "./img/testimonailFrame.svg";
 // import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
 // import TestimonialImg from "./img/testimonails/testimonial.jpeg";
-import Testimonials from "./testimonials.jsx";
+// import Testimonials from "./testimonials.jsx";
+
 import Throwcss from "./throw.module.css";
 import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
@@ -29,6 +31,9 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
+
+const Testimonials = lazy(() => import('./testimonials.jsx'));
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -418,7 +423,10 @@ function Main() {
           </div>
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
-        <Testimonials />
+        <Suspense fallback={<div style={{color:"white",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
+          <Testimonials />
+        </Suspense>
+        
         {/* <div className={Testimonialcss.blank}> </div> */}
       </div>
       <FooterMain />

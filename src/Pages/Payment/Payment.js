@@ -4,13 +4,13 @@ import NavBar from "../../components/navbar/navbar";
 import border from "../../svgs/border.svg";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
-import Contact from "../../components/Contact2/Contact";
+// import Contact from "../../components/Contact2/Contact";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+// import Button from "@mui/material/Button";
+// import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { BeakerIcon,PhoneIcon} from '@heroicons/react/solid'
+import {PhoneIcon} from '@heroicons/react/solid'
 
 // import Box from '@mui/material/Box';
 
@@ -113,10 +113,7 @@ const Payment = () => {
                       </li>
                     </ul>
                     {userInfo ? (
-                      <a
-                        href={`https://www.townscript.com/v2/e/kashiyatra/booking?td-Registration-No-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`}
-                        target="_blank"
-                      >
+                      <a href={`https://www.townscript.com/v2/e/kashiyatra/booking?td-Registration-No-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`} target="_blank" >
                         <div className="text-center mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
                           Buy
                         </div>
