@@ -3,17 +3,12 @@ import { useState, useEffect, useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
-// import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
-// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
-// import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
-// import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-// import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
@@ -55,72 +50,6 @@ function Main() {
   const sec3 = useRef(null);
   const cont = useRef(null);
 
-  // useEffect(()=>{
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   let sections = [sec1.current, sec2.current, sec3.current];
-  //   let container = cont.current;
-  // console.log(container.offsetWidth);
-  // console.log(sections);
-  // let tl=gsap.timeline({scrollTrigger: {
-  //   trigger: container,
-  //   pin: cont.current,
-  //   scrub: 0.1,
-  //   markers:true,
-
-  //   //snap: directionalSnap(1 /(sections.length - 1)),
-  //   end: `+=${4608}`
-  // }});
-  //  tl.to(sections, {
-  //   xPercent: -100 * (sections.length - 1),
-  //   ease: "none", // <-- IMPORTANT!
-
-  // });
-  //   let tl=gsap.timeline();
-  //   tl.to(sections, {
-
-  //     scrollTrigger: {
-  //       // start:"top top",
-  //       trigger:container,
-  //       pin: true,
-  //       invalidateOnRefresh: true,
-  //       anticipatePin: 1,
-  //       scrub: 1.23,
-  //       markers:true,
-  //       end:`+=${container.offsetWidth}`
-  //     }
-  //   }).to(sections,{
-  //     // xPercent: -100 * (sections.length - 1),
-  //     // ease: "none",
-  //   },">");
-
-  // }, [])
-
-  // useEffect(() => {
-  //   if (!vantaEffect){
-  //     setVantaEffect(
-  //       CLOUDS({
-  //         el: vantaRef.current,
-  //         mouseControls: true,
-  // touchControls: true,
-  // gyroControls: false,
-  // minHeight: 200.00,
-  // minWidth: 200.00,
-  // scale: 1.00,
-  // speed: 3,
-  // skyColor: 0x06122E,
-  // cloudColor: 0xFEE3E8,
-  // cloudShadowColor: 0x06122E,
-  // texturePath: "./noise.png",
-  //         THREE
-  //       })
-  //     )
-  //   }
-  //   return ()=>{
-  //     if (vantaEffect) vantaEffect.destroy()
-  //   }
-  // }, [vantaEffect])
-
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -155,14 +84,6 @@ function Main() {
     }
   };
 
-  // useEffect(() => {
-  //   if(userInfo && userInfo.ca_id){
-  //     navigate("/ca/leaderboard")
-  //   } else {
-  //     navigate("/ca");
-  //   }
-  // }, [])
-
   useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
 
@@ -187,27 +108,9 @@ function Main() {
       setEndTrophyCount(60);
       control.start("visible");
     } else {
-      // setStartPeopleCount(0);
-      // setEndPeopleCount(0);
-      // control.start("hidden");
     }
   }, [control, inView]);
 
-  // function showNav() {
-  //   document.getElementById("mobilenavdropdown").style.height = "100%";
-  //   setNavDisplay(1);
-  //   var x = window.scrollX;
-  //   var y = window.scrollY;
-  //   window.onscroll = function () {
-  //     window.scrollTo(x, y);
-  //   };
-  // }
-  // function closeNav() {
-  //   // console.log("HI")
-  //   document.getElementById("mobilenavdropdown").style.height = "0";
-  //   setNavDisplay(0);
-  //   window.onscroll = function () {};
-  // }
 
   return (
     <>
@@ -427,7 +330,7 @@ function Main() {
         <Suspense fallback={<div style={{color:"white",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
           <Testimonials />
         </Suspense>
-        {/* <div className={Testimonialcss.blank}> </div> */}
+
       </div>
       <FooterMain />
     </>

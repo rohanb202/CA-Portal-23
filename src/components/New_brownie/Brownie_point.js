@@ -50,11 +50,7 @@ const Brownie_point = () => {
           return <AnimatedText {...item} key={index} />;
         })}
       </div>
-      {/* <div className="container">
-        {paragraphText.map((item, index) => {
-          return <AnimatedText {...item} key={index} />;
-        })}
-      </div> */}
+
     </motion.div>
       </div>
       <div>

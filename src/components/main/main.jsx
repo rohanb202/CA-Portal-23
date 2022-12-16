@@ -1,18 +1,10 @@
 import "./main.css";
 import { Link as ScrollLink } from "react-scroll";
-// import createScrollSnap from "scroll-snap";
 import NavBar from "../navbar/navbar";
-// import Nduty from '../New_Duty/Nduty';
-// import Brownie from "../New_brownie/Brownie_point";
-// import Contact from '../../Contact/Contact';
 import { Link } from "react-router-dom";
-//import sample from "./Kashiyatra 2020 - Official Aftermovie - Rendition of the Retro - IIT(BHU) Varanasi.mp4";
 import kashiyatra from "../../svgs/kashiyatra.svg";
 import mouse from "../../svgs/mouse.svg";
 import { useEffect, useState } from "react";
-// import sidepattern from "../navbar/Super Side Pattern.svg";
-// import kylogo from "./KY Logo.svg"
-// import navicon from "./navicon.svg"
 import back from "../../svgs/back.svg";
 import whyCAImage from "./why ca_Mesa de trabajo 1 1.png";
 import right from "./why CA_Mesa de trabajo 1 1-cropped.png";
@@ -20,10 +12,9 @@ import responsibility from "../../img/responsibility.png";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
-// import homepattern from "./home.svg"
+
 
 function Main(props) {
   let { userInfo } = useContext(AuthContext);

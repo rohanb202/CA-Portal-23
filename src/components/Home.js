@@ -1,13 +1,10 @@
 import React,{useState} from "react";
-
-import Contact from "../Contact/Contact";
-// import Contact from './Contact/Contact';
 import Main from "./main/main";
-// import Main from './components/main/main';
-import Brownie_point from "./New_brownie/Brownie_point";
-// import Brownie from "./components/New_brownie/Brownie_point";
-// import Nduty from "./New_Duty/Nduty";
-// import Nduty from "./components/New_Duty/Nduty"
+import {lazy,Suspense} from "react";
+
+const Brownie_point = lazy(() => import('./New_brownie/Brownie_point'));
+const Contact = lazy(() => import('../Contact/Contact'));
+
 
 export default function Home (){
 
@@ -15,8 +12,14 @@ export default function Home (){
 
     return(
       <Main>
+        <Suspense fallback={<div style={{color:"#F74061",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
         <Brownie_point/>
+        </Suspense>
+        <Suspense fallback={<div style={{color:"#F74061",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
         <Contact />
+        </Suspense>
+        
+        
       </Main>
     );
 }
