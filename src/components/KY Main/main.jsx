@@ -6,9 +6,9 @@ import TestimonialFrame from "./img/testimonailFrame.svg";
 // import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
 // import TestimonialImg from "./img/testimonails/testimonial.jpeg";
-import Testimonials from "./testimonials.jsx";
+// import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
-import Slider from "../Slider/Slider";
+// import Slider from "../Slider/Slider";
 import kylogo from "./kylogo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
@@ -28,7 +28,11 @@ import logo from "../../svgs/Logo.svg";
 import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
+import {lazy,Suspense} from "react";
 import Nav from "../KY nav/nav";
+
+const Testimonials = lazy(() => import('./testimonials.jsx'));
+const Slider = lazy(() => import('../Slider/Slider'));
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -404,7 +408,9 @@ function Main() {
           </div>
           <div className={Throwcss.throwBorder4}></div>
         </div>
-        <Slider />
+        <Suspense fallback={<div style={{color:"#c21a39",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
+          <Slider />
+        </Suspense>
         <div className={Throwcss.blank}> </div>
       </div>
       <div id="testimonials" className={Testimonialcss.testimonialSectionBody}>
@@ -418,7 +424,9 @@ function Main() {
           </div>
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
-        <Testimonials />
+        <Suspense fallback={<div style={{color:"white",fontSize:"2rem",display:"flex",justifyContent:"center",padding:"2rem"}}>Loading...</div>}>
+          <Testimonials />
+        </Suspense>
         {/* <div className={Testimonialcss.blank}> </div> */}
       </div>
       <FooterMain />
