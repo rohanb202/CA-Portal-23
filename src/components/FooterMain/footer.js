@@ -94,7 +94,7 @@ export default function FooterMain() {
                   <a href="mailto: kashiyatra@iitbhu.ac.in">kashiyatra@iitbhu.ac.in</a>
                 </div>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
-                  <a href="tel:9068674125 ">9068674125 </a>
+                  <a href="tel:9411691659 ">9411691659 </a>
                 </div>
               </span>
             </div>
