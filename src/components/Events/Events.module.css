@@ -211,6 +211,8 @@
 
 .eventsBody{
     /* height: 100vh; */
+    padding-bottom: 100px;
+    background-repeat: repeat;
     background-image: url("./img/Group\ 344.svg");
     background-color: #06122E;
     font-family: 'Poppins', cursive;
