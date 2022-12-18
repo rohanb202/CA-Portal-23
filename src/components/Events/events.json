@@ -369,6 +369,30 @@
                 "parentEventId": 3,
                 "categoryName": "CROSSWINDZ"
             }
+        },
+        {
+            "eventId": 40,
+            "eventName": "Rap Battle",
+            "image_URL": "https://cdn.kqed.org/wp-content/uploads/sites/2/2020/04/Passwurdz-800x514.jpg",
+            "eventDetails": "RULES\r\n\r\n1. The time limit for the performance of the events shall be of maximum 4 minutes.\r\n2. Contestants should report to the venue precisely on time.\r\n3. There should not be any vulgarity in the content. If found, participant will be disqualified.\r\n4. The judgement on the performance shall be solely at the discretion of the judges.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 3,
+                "categoryName": "CROSSWINDZ"
+            }
+        },
+        {
+            "eventId": 41,
+            "eventName": "Beat Boxing",
+            "image_URL": "https://i.imgur.com/7CZLlLE.jpg",
+            "eventDetails": "RULES\r\n\r\n1. The time limit for the performance of the events shall be of maximum 4 minutes.\r\n2. Contestants should report to the venue precisely on time.\r\n3. There should not be any vulgarity in the content. If found, participant will be disqualified.\r\n4. The judgement on the performance shall be solely at the discretion of the judges.",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 3,
+                "categoryName": "CROSSWINDZ"
+            }
         }
     ],
     "BANDISH": [
@@ -425,18 +449,6 @@
             "eventName": "SUR",
             "image_URL": "https://i.imgur.com/PYo7Qa0l.jpg",
             "eventDetails": "“Music touches us emotionally, where words alone can’t.” So, if you have the\r\nvoice that can win hearts and steal the show, then get ready to dazzle the stage\r\nas we bring forth “SUR: The Solo Singing Event”, where you are given the\r\nideal platform to show your talent and prove your mettle.\r\n\r\nRULES\r\n1. Time limit:\r\n• Elimination- 3 minutes including sound-check.\r\n• Prelims- 4 minutes including sound-check.\r\n• Finale- 6 minutes including sound-check.\r\n2. Genre: Classical songs are NOT allowed. However, Semi-classical, Light\r\nIndian Music, Bollywood and Western songs (NO screaming/growling)\r\nare permitted.\r\n3. Language: All languages are allowed.\r\n4. Backgroundtracksarepermitted.Participantswillhavetocarryitinapendrive, and the submission of the track should be made before the event.\r\n5. You may be asked to sing another song on judge’s demand.\r\n6. Mashups and Medleys are allowed, provided they don’t exceed the time\r\nlimit.\r\n7. You may bring along one accompanying instrumentalist with you for the\r\nelimination round and two for further rounds, or may play the instrument\r\nyourself, or use an Electronic Tanpura (under either case, you can’t use\r\nmore than two instruments). Only vocals shall be judged, however.\r\n8. Judging Criteria: Voice Quality, Voice Modulation, Sur, Taal and Choice\r\nof Song.\r\n9. Points may be deducted on exceeding the time limit.\r\n10.You have to perform a different composition in each round of the event.\r\n11.The decision of the judges and the organizers will be final &abiding.",
-            "maxMembers": 1,
-            "minMembers": 1,
-            "parentEvent": {
-                "parentEventId": 2,
-                "categoryName": "BANDISH"
-            }
-        },
-        {
-            "eventId": 40,
-            "eventName": "Rap Battle",
-            "image_URL": "https://cdn.kqed.org/wp-content/uploads/sites/2/2020/04/Passwurdz-800x514.jpg",
-            "eventDetails": "Rap Battle!",
             "maxMembers": 1,
             "minMembers": 1,
             "parentEvent": {
