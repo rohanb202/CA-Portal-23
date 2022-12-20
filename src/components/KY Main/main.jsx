@@ -1,7 +1,7 @@
 import React from "react";
 import { lazy, Suspense} from "react";
 // import Slider from "../Slider/Slider";
-// const Slider = lazy(() => import('../Slider/Slider'));
+
 import Maincss from "./main.module.css";
 import { useState, useEffect, useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
@@ -34,7 +34,8 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
-const Slider = React.lazy(() => import('../Slider/Slider'));
+// const Slider = React.lazy(() => import('../Slider/Slider'));
+const Slider = lazy(() => import('../Slider/Slider'));
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
