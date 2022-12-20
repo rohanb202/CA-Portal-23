@@ -1,5 +1,5 @@
 .aboutSectionBody{
-    background-image: url("./aboutBack.png");
+    background-image: url("./aboutBack.webp");
     background-color: rgba(0,0,0,0.5);
     background-size: cover;
     /* margin-top: 1000px; */
@@ -47,7 +47,7 @@
     padding: 10px;
     background-repeat: no-repeat;
     width: 70px;
-    background-image: url("img/slider1.svg");
+    background-image: url("img/slider1.webp");
 }
 .aboutBorder2{
     padding: 10px;
@@ -63,7 +63,7 @@
     width: 100%;
     display: flex;
     justify-content: end;
-    background-image: url("img/slider2.svg");
+    background-image: url("img/slider2.webp");
 }
 .aboutContent{
     display: grid;
