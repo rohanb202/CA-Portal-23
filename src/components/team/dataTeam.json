@@ -1,0 +1,28 @@
+[
+    {
+        "id" : 1,
+        "profile" : "https://i.postimg.cc/x18kkPJ3/Rohan.webp",
+        "name":"Rohan Bhandari",
+        "designation": "Developer",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    },
+
+    {
+        "id" : 2,
+        "profile" : "https://i.postimg.cc/vBrDRqkb/Vysakh.jpg",
+        "name":"Vysakh A V",
+        "designation": "Developer",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    },
+
+    {
+        "id" : 3,
+        "profile" : "https://i.postimg.cc/Y0KvP43G/pawan.jpg",
+        "name":"Pawan Kumar",
+        "designation": "Developer",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    }
+]

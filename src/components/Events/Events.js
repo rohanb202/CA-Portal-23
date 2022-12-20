@@ -19,16 +19,15 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Nav from "../KY nav/nav";
 
-
 export default function Events() {
   const [teamNumber, setTeamNumber] = useState(0);
-  const [inputDataObject, setInputDataObject] = useState({})
+  const [inputDataObject, setInputDataObject] = useState({});
   const handleInputChange = (e) => {
-    setInputDataObject({...inputDataObject, [e.target.name]: e.target.value})
-  }
-  useEffect(()=>{
+    setInputDataObject({ ...inputDataObject, [e.target.name]: e.target.value });
+  };
+  useEffect(() => {
     // console.log(inputDataObject);
-  }, [inputDataObject])
+  }, [inputDataObject]);
 
   const style = {
     position: "absolute",
@@ -71,7 +70,6 @@ export default function Events() {
     setAnchorEl(null);
   };
 
-
   const [category, setCategory] = useState(Object.values(eventData)[0]);
   const axiosPrivate = useAxiosPrivate();
 
@@ -113,81 +111,79 @@ export default function Events() {
     let teamName = "";
     if (e.target.id == "firstregistrationbutton") {
       inputs = document.getElementsByClassName("firstinputs");
-      teamName = document.getElementById("firstteamname").value;  
-    }
-    else {
+      teamName = document.getElementById("firstteamname").value;
+    } else {
       inputs = document.getElementsByClassName("secondinputs");
-      teamName = document.getElementById("secondteamname").value;  
+      teamName = document.getElementById("secondteamname").value;
     }
     for (let input of inputs) {
       memberids.push(input.value.toUpperCase());
     }
-    memberids = memberids.filter(el => el!='')
+    memberids = memberids.filter((el) => el != "");
     console.log(memberids);
     console.log(teamName);
-    if(teamName == "") {
+    if (teamName == "") {
       alert("Please enter a team name!");
       return;
     }
-    if(memberids.includes(userInfo.ky_id)){
+    if (memberids.includes(userInfo.ky_id)) {
       alert("Do not add team leader ID to members list!");
       return;
     }
-    if(new Set(memberids).size !== memberids.length) {
+    if (new Set(memberids).size !== memberids.length) {
       alert("Do not fill the same KY ID twice!");
       return;
     }
     // console.log(eventToRegister);
-    axiosPrivate.post("/api/teamregister/", {
-      teamName: teamName,
-      eventId: eventToRegister.eventId,
-      otherMembers: memberids
-    })
-    .then((res) => {
-      // console.log("res", res);
-      toast.success(res.data.msg, {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
+    axiosPrivate
+      .post("/api/teamregister/", {
+        teamName: teamName,
+        eventId: eventToRegister.eventId,
+        otherMembers: memberids,
+      })
+      .then((res) => {
+        // console.log("res", res);
+        toast.success(res.data.msg, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate("/dashboard");
+      })
+      .catch((err) => {
+        // console.error("res", err);
+        if (err.response?.data?.msg) {
+          toast.error(err.response?.data?.msg, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast.error("Something went wrong. Try again.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
       });
-      navigate("/dashboard");
-    })
-    .catch((err) => {
-      // console.error("res", err);
-      if (err.response?.data?.msg) {
-        toast.error(err.response?.data?.msg, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      } else {
-        toast.error("Something went wrong. Try again.", {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-    });
-
-  }
+  };
   return (
     <div className={EventsCss.eventsBody}>
-
       {/* MODAL DIV WITH MULTIPLE INPUT FIELDS ACCORDING TO NUMBER OF TEAM MEMBERS */}
       <div
         class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto "
@@ -201,18 +197,19 @@ export default function Events() {
             <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center">
                 <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-
                   <div class="mb-2">
-                  <label
-                  class="block text-zinc-800 text-sm font-bold mb-1"
-                  for="teamname"
-                  >Team Name</label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
-                    id="firstteamname"
-                    type="text"
-                    placeholder="Team Name"
-                  />
+                    <label
+                      class="block text-zinc-800 text-sm font-bold mb-1"
+                      for="teamname"
+                    >
+                      Team Name
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
+                      id="firstteamname"
+                      type="text"
+                      placeholder="Team Name"
+                    />
                   </div>
                   {Array(teamNumber)
                     .fill(null)
@@ -227,21 +224,19 @@ export default function Events() {
                               ? "Team Leader (You)"
                               : `Team Member ${index}`}
                           </label>
-                          {
-                            (index === 0)?(
-                              <>
+                          {index === 0 ? (
+                            <>
                               <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
                                 id="username"
-
                                 type="text"
                                 value={userInfo.ky_id}
                                 placeholder="KY ID"
                                 disabled={true}
                               />
-                              </>
-                            ):(
-                              <>
+                            </>
+                          ) : (
+                            <>
                               <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline firstinputs"
                                 id="username"
@@ -250,9 +245,8 @@ export default function Events() {
                                 name={`${index}-1`}
                                 onChange={handleInputChange}
                               />
-                              </>
-                            )
-                          }
+                            </>
+                          )}
                         </div>
                       );
                     })}
@@ -261,8 +255,8 @@ export default function Events() {
                     <button
                       class="bg-[#456A9D] hover:bg-[#587eb4] text-[#06122E] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       id="firstregistrationbutton"
-
-                      type="button" data-bs-dismiss="modal"
+                      type="button"
+                      data-bs-dismiss="modal"
                       onClick={requestRegistration}
                     >
                       Register
@@ -283,7 +277,6 @@ export default function Events() {
         aria-hidden="true"
       >
         <div class="modal-dialog relative inset-0 m-auto w-auto pointer-events-none ">
-
           <div class="modal-content border-none relative inset-0 m-auto flex flex-col w-full outline-none text-current ">
             <div class="modal-body relative p-4 text-[#06122E] bg-white flex items-center justify-center">
               <div class="w-full max-w-xs flex items-center justify-center ">
@@ -293,18 +286,20 @@ export default function Events() {
 
                 <div class="flex items-center justify-center ml-4">
                   <form class="flex items-center justify-center">
-                  <div class="mb-2">
-                  <label
-                  class="block text-zinc-800 text-sm font-bold mb-1"
-                  for="teamname"
-                  >Team Name</label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
-                    id="secondteamname"
-                    type="text"
-                    placeholder="Team Name"
-                  />
-                  </div>
+                    <div class="mb-2">
+                      <label
+                        class="block text-zinc-800 text-sm font-bold mb-1"
+                        for="teamname"
+                      >
+                        Team Name
+                      </label>
+                      <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
+                        id="secondteamname"
+                        type="text"
+                        placeholder="Team Name"
+                      />
+                    </div>
                     {Array(teamNumber)
                       .fill(null)
                       .map((_, index) => {
@@ -318,7 +313,7 @@ export default function Events() {
                                 ? "Team Leader (You)"
                                 : `Team Member ${index}`}
                             </label>
-                            { index == 0 ? (
+                            {index == 0 ? (
                               <>
                                 <input
                                   class="shadow appearance-none border rounded w-48 py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline"
@@ -329,7 +324,7 @@ export default function Events() {
                                   disabled={true}
                                 />
                               </>
-                            ):(
+                            ) : (
                               <>
                                 <input
                                   class="shadow appearance-none border rounded w-48 py-2 px-3 text-zinc-800 leading-tight focus:outline-none focus:shadow-outline secondinputs"
@@ -365,20 +360,22 @@ export default function Events() {
       </div>
 
       <div className={EventsCss.eventsBody}>
-        <Nav/>
+        <Nav />
         <nav>
-
-
-<div>
-<div class={EventsCss.outerWrapper}>
-    <div class={EventsCss.innerWrapper}>
-    {Object.keys(eventData).map((category)=><><h3 className={EventsCss.btnCss} onClick={handleEventClick}>{category}</h3></>)}
-    </div>
-  </div>
-  <div class={EventsCss.pseudoTrack}></div>
-</div>
-
-         
+          <div>
+            <div class={EventsCss.outerWrapper}>
+              <div class={EventsCss.innerWrapper}>
+                {Object.keys(eventData).map((category) => (
+                  <>
+                    <h3 className={EventsCss.btnCss} onClick={handleEventClick}>
+                      {category}
+                    </h3>
+                  </>
+                ))}
+              </div>
+            </div>
+            <div class={EventsCss.pseudoTrack}></div>
+          </div>
 
           {/* <div className="flex shrink-0 opacity-40 bg-[#456A9D] items-center py-3 justify-center scrollbar-hide px-10 mt-5 mb-5 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll ">
 
@@ -410,16 +407,14 @@ export default function Events() {
                     className="font-bold text-xl mb-2 flex items-center justify-center"
                     style={{ color: "#06122E" }}
                   >
-                    {event.maxMembers==1?"Individual Event":"Team Event"}
+                    {event.maxMembers == 1 ? "Individual Event" : "Team Event"}
                   </div>
                   <div className={EventsCss.eventCardBorder}></div>
                   <p
                     className="text-base mt-3 pl-3 text-md flex items-center justify-center "
-                    style={{ color: "#06122E", }}
+                    style={{ color: "#06122E" }}
                   >
-
-                    {event.eventDetails.substring(0,150)}.....
-
+                    {event.eventDetails.substring(0, 150)}.....
                   </p>
                   <div className="flex items-center justify-center mt-5 mb-5">
                     <button
@@ -427,7 +422,9 @@ export default function Events() {
                       class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
                       data-bs-toggle="modal"
                       data-bs-target={"#exampleModal" + event.eventId}
-                      onClick={()=>{setEventToRegister(event)}}
+                      onClick={() => {
+                        setEventToRegister(event);
+                      }}
                     >
                       Explore{" "}
                     </button>
@@ -456,40 +453,41 @@ export default function Events() {
                                   {event.eventName}
                                 </div>
                                 <div className={EventsCss.eventCardTitle}>
-                                  {event.maxMembers==1?"Individual Event":"Team Event"}
+                                  {event.maxMembers == 1
+                                    ? "Individual Event"
+                                    : "Team Event"}
                                 </div>
                               </div>
                               <div className="flex items-center justify-center mt-5 mb-5">
-
-                                {userInfo?(
+                                {userInfo ? (
                                   <>
-                                {/* Register, Select Team Members or Enter Team members button in modal */}
-                                {event.maxMembers === event.minMembers ? (
-                                  <>
-                                    <button
-                                      type="button"
-                                      class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
-                                      data-bs-toggle="modal"
-                                      data-bs-target={
-                                        "#exampleModalRegister" + teamNumber
-                                      }
-                                      onClick={(e) =>
-                                        handleClose2(e, event.maxMembers)
-                                      }
-                                    >
-                                      {" "}
-                                      {event.maxMembers === 1
-                                        ? "Register"
-                                        : "Enter Team Members"}
-                                    </button>
-                                  </>
-                                ) : (
-                                  <>
-                                    <div class="flex justify-center">
-                                      <div>
-                                        <div class="dropdown relative">
-                                          <button
-                                            class="
+                                    {/* Register, Select Team Members or Enter Team members button in modal */}
+                                    {event.maxMembers === event.minMembers ? (
+                                      <>
+                                        <button
+                                          type="button"
+                                          class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
+                                          data-bs-toggle="modal"
+                                          data-bs-target={
+                                            "#exampleModalRegister" + teamNumber
+                                          }
+                                          onClick={(e) =>
+                                            handleClose2(e, event.maxMembers)
+                                          }
+                                        >
+                                          {" "}
+                                          {event.maxMembers === 1
+                                            ? "Register"
+                                            : "Enter Team Members"}
+                                        </button>
+                                      </>
+                                    ) : (
+                                      <>
+                                        <div class="flex justify-center">
+                                          <div>
+                                            <div class="dropdown relative">
+                                              <button
+                                                class="
           dropdown-toggle
           px-8
           py-4
@@ -509,28 +507,28 @@ export default function Events() {
           items-center
           whitespace-nowrap
         "
-                                            type="button"
-                                            id={
-                                              "dropdownMenuButton1" +
-                                              event.eventId
-                                            }
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                          >
-                                            Select Members
-                                            <svg
-                                              aria-hidden="true"
-                                              focusable="false"
-                                              data-prefix="fas"
-                                              data-icon="caret-down"
-                                              class="w-2 ml-2"
-                                              role="img"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                              viewBox="0 0 320 512"
-                                            ></svg>
-                                          </button>
-                                          <ul
-                                            class="
+                                                type="button"
+                                                id={
+                                                  "dropdownMenuButton1" +
+                                                  event.eventId
+                                                }
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                              >
+                                                Select Members
+                                                <svg
+                                                  aria-hidden="true"
+                                                  focusable="false"
+                                                  data-prefix="fas"
+                                                  data-icon="caret-down"
+                                                  class="w-2 ml-2"
+                                                  role="img"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  viewBox="0 0 320 512"
+                                                ></svg>
+                                              </button>
+                                              <ul
+                                                class="
           dropdown-menu
           min-w-max
           absolute
@@ -551,22 +549,22 @@ export default function Events() {
           bg-clip-padding
           border-none
         "
-                                            aria-labelledby={
-                                              "dropdownMenuButton1" +
-                                              event.eventId
-                                            }
-                                          >
-                                            {Array(
-                                              event.maxMembers -
-                                                event.minMembers +
-                                                1
-                                            )
-                                              .fill(null)
-                                              .map((_, index) => {
-                                                return (
-                                                  <li
-                                                    type="button"
-                                                    class="dropdown-toggle
+                                                aria-labelledby={
+                                                  "dropdownMenuButton1" +
+                                                  event.eventId
+                                                }
+                                              >
+                                                {Array(
+                                                  event.maxMembers -
+                                                    event.minMembers +
+                                                    1
+                                                )
+                                                  .fill(null)
+                                                  .map((_, index) => {
+                                                    return (
+                                                      <li
+                                                        type="button"
+                                                        class="dropdown-toggle
                                                   px-6
                                                   py-2.5
                                                   bg-[#456A9D]
@@ -584,42 +582,45 @@ export default function Events() {
                                                   flex
                                                   items-center
                                                   whitespace-nowrap"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target={
-                                                      "#exampleModal69" +
-                                                      teamNumber
-                                                    }
-                                                    onClick={handleClose1}
-                                                  >
-                                                    {event.minMembers + index}
-                                                  </li>
-                                                );
-                                              })}
-                                          </ul>
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target={
+                                                          "#exampleModal69" +
+                                                          teamNumber
+                                                        }
+                                                        onClick={handleClose1}
+                                                      >
+                                                        {event.minMembers +
+                                                          index}
+                                                      </li>
+                                                    );
+                                                  })}
+                                              </ul>
+                                            </div>
+                                          </div>
                                         </div>
-                                      </div>
-                                    </div>
+                                      </>
+                                    )}
                                   </>
-                                )}
-                                  </>
-                                ):(
+                                ) : (
                                   <>
-                                  <Link to="/login">
-                                  <button
-                                      type="button"
-                                      class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
-                                      data-bs-toggle="modal"
-                                    >
-                                      {" "}
-                                      Login
-                                    </button>
+                                    <Link to="/login">
+                                      <button
+                                        type="button"
+                                        class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
+                                        data-bs-toggle="modal"
+                                      >
+                                        {" "}
+                                        Login
+                                      </button>
                                     </Link>
                                   </>
                                 )}
-
                               </div>
                             </div>
-                            <p className={EventsCss.eventCardInsideText} style={{ whiteSpace: "pre-line"}}>
+                            <p
+                              className={EventsCss.eventCardInsideText}
+                              style={{ whiteSpace: "pre-line" }}
+                            >
                               {event.eventDetails}
                             </p>
                             <div class="flex items-center justify-center">
