@@ -15,49 +15,49 @@ const _items = [
         player: {
             title: 'Aakash Gupta',
             desc: 'You gave us one of the best nights of our career.',
-            image: require("./img/testimonails/aakash.jpg"),
+            image: require("./img/testimonails/aakash.webp"),
         },
     },
     {
         player: {
             title: "Salim-Sulaiman",
             desc: "Felt the energy of the crowd in every minute of the performance, loved the overall experience.",
-            image: require("./img/testimonails/SSL.jpg"),
+            image: require("./img/testimonails/SSL.webp"),
         },
     },
     {
         player: {
             title: 'Zakir Khan',
             desc: 'The crowd was amazing, and enjoyed as much as them and the hospitality that the team presented me with touched my heart.',
-            image: require("./img/testimonails/zkl.jpg"),
+            image: require("./img/testimonails/zkl.webp"),
         },
     },
     {
         player: {
             title: 'The Local Train',
             desc: 'Best crowd that we have seen in a while, and their appreciation for the music was amazing.',
-            image: require("./img/testimonails/TLT TEST.jpg"),
+            image: require("./img/testimonails/TLT TEST.webp"),
         },
     },
     {
         player: {
             title: 'Ritviz',
             desc: "Great people, great energy, wouldn't have been tired to even go on for the entire night",
-            image: require("./img/testimonails/ritvizl.jpg"),
+            image: require("./img/testimonails/ritvizl.webp"),
         },
     },
     {
         player: {
             title: 'Amit Trivedi',
             desc: "Right from the beginning till the end the crowd participation was amazing. This is definately one of the best crowds we have come across.",
-            image: require("./img/testimonails/atl.jpg"),
+            image: require("./img/testimonails/atl.webp"),
         },
     },
     {
         player: {
             title: 'Divine',
             desc: "Great energy!, superb atmosphere!, amazing crowd!, bhot hard!! bhot hard!!",
-            image: require("./img/testimonails/DIVINE.jpg"),
+            image: require("./img/testimonails/DIVINE.webp"),
         },
     },
 ];
