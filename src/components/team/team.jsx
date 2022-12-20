@@ -6,7 +6,7 @@ import Rohan from "./img/Rohan.webp";
 import Nav from "../KY nav/nav";
 import "./team.css";
 import Data from "./dataTeam.json"
-import { event } from "jquery";
+// import { event } from "jquery";
 export default function Team() {
   const [navdisplay, setNavDisplay] = useState(0);
 
