@@ -12,7 +12,7 @@ const Slider = () => {
       image: require("./throwback/1.jpg"),
     },
     {
-      image: require("./throwback/2.png"),
+      image: require("./throwback/2.jpg"),
     },
     {
       image: require("./throwback/3.jpg"),
