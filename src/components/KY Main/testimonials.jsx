@@ -29,7 +29,7 @@ const _items = [
         player: {
             title: 'Zakir Khan',
             desc: 'The crowd was amazing, and enjoyed as much as them and the hospitality that the team presented me with touched my heart.',
-            image: require("./img/testimonails/zkl.webp"),
+            image: require("./img/testimonails/zkl.jpg"),
         },
     },
     {
@@ -57,7 +57,7 @@ const _items = [
         player: {
             title: 'Divine',
             desc: "Great energy!, superb atmosphere!, amazing crowd!, bhot hard!! bhot hard!!",
-            image: require("./img/testimonails/DIVINE.webp"),
+            image: require("./img/testimonails/DIVINE.jpg"),
         },
     },
 ];
@@ -98,7 +98,7 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
     return (
         <li className="carousel__slide-item" style={item.styles}>
             <div className={Testimonialcss.testimonialCard}>
-            <img className="testimonialCardImg" src={item.player.image} alt="Image" />            
+            <img className="testimonialCardImg" src={item.player["image"]} alt="Image" />         
             <div className={Testimonialcss.testimonialData}>
               <div className={Testimonialcss.testimonailName}>
                 {item.player.title}

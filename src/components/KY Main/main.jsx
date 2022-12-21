@@ -58,71 +58,7 @@ function Main() {
   const sec3 = useRef(null);
   const cont = useRef(null);
 
-  // useEffect(()=>{
-  //   gsap.registerPlugin(ScrollTrigger);
 
-  //   let sections = [sec1.current, sec2.current, sec3.current];
-  //   let container = cont.current;
-  // console.log(container.offsetWidth);
-  // console.log(sections);
-  // let tl=gsap.timeline({scrollTrigger: {
-  //   trigger: container,
-  //   pin: cont.current,
-  //   scrub: 0.1,
-  //   markers:true,
-
-  //   //snap: directionalSnap(1 /(sections.length - 1)),
-  //   end: `+=${4608}`
-  // }});
-  //  tl.to(sections, {
-  //   xPercent: -100 * (sections.length - 1),
-  //   ease: "none", // <-- IMPORTANT!
-
-  // });
-  //   let tl=gsap.timeline();
-  //   tl.to(sections, {
-
-  //     scrollTrigger: {
-  //       // start:"top top",
-  //       trigger:container,
-  //       pin: true,
-  //       invalidateOnRefresh: true,
-  //       anticipatePin: 1,
-  //       scrub: 1.23,
-  //       markers:true,
-  //       end:`+=${container.offsetWidth}`
-  //     }
-  //   }).to(sections,{
-  //     // xPercent: -100 * (sections.length - 1),
-  //     // ease: "none",
-  //   },">");
-
-  // }, [])
-
-  // useEffect(() => {
-  //   if (!vantaEffect){
-  //     setVantaEffect(
-  //       CLOUDS({
-  //         el: vantaRef.current,
-  //         mouseControls: true,
-  // touchControls: true,
-  // gyroControls: false,
-  // minHeight: 200.00,
-  // minWidth: 200.00,
-  // scale: 1.00,
-  // speed: 3,
-  // skyColor: 0x06122E,
-  // cloudColor: 0xFEE3E8,
-  // cloudShadowColor: 0x06122E,
-  // texturePath: "./noise.png",
-  //         THREE
-  //       })
-  //     )
-  //   }
-  //   return ()=>{
-  //     if (vantaEffect) vantaEffect.destroy()
-  //   }
-  // }, [vantaEffect])
 
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
