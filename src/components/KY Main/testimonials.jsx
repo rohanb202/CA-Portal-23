@@ -22,7 +22,7 @@ const _items = [
         player: {
             title: "Salim-Sulaiman",
             desc: "Felt the energy of the crowd in every minute of the performance, loved the overall experience.",
-            image: require("./img/testimonails/SSL.webp"),
+            image: require("./img/testimonails/SSL.jpg"),
         },
     },
     {
@@ -36,14 +36,14 @@ const _items = [
         player: {
             title: 'The Local Train',
             desc: 'Best crowd that we have seen in a while, and their appreciation for the music was amazing.',
-            image: require("./img/testimonails/TLT TEST.webp"),
+            image: require("./img/testimonails/TLT TEST.jpg"),
         },
     },
     {
         player: {
             title: 'Ritviz',
             desc: "Great people, great energy, wouldn't have been tired to even go on for the entire night",
-            image: require("./img/testimonails/ritvizl.webp"),
+            image: require("./img/testimonails/ritvizl.jpg"),
         },
     },
     {
