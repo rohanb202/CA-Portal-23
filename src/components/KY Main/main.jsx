@@ -1,24 +1,17 @@
 import React from "react";
 import { lazy, Suspense} from "react";
-// import Slider from "../Slider/Slider";
-
 import Maincss from "./main.module.css";
 import { useState, useEffect, useContext, useRef } from "react";
 import Aboutcss from "./about.module.css";
 import Testimonialcss from "./testimonial.module.css";
 import TestimonialFrame from "./img/testimonailFrame.svg";
-// import ThrowbacksidePattern from "./img/throwbackSidePattern.svg";
 import FooterMain from "../FooterMain/footer";
-// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 import Testimonials from "./testimonials.jsx";
 import Throwcss from "./throw.module.css";
-// import Slider from "../Slider/Slider";
-
 import kylogo from "./kylogo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-// import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import peopleImg from "./img/Group.svg";
 import trophyImg from "./img/Trophy.svg";
@@ -34,7 +27,6 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
-// const Slider = React.lazy(() => import('../Slider/Slider'));
 const Slider = lazy(() => import('../Slider/Slider'));
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -68,13 +60,11 @@ function Main() {
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
 
-    // setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
     if (Math.floor(time / (1000 * 60 * 60 * 24)) < 10) {
       setDays("0" + Math.floor(time / (1000 * 60 * 60 * 24)));
     } else {
       setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
     }
-    // console.log(hours.toString().length)
     if (Math.floor((time / (1000 * 60 * 60)) % 24) < 10) {
       setHours("0" + Math.floor((time / (1000 * 60 * 60)) % 24));
     } else {
@@ -93,14 +83,6 @@ function Main() {
       setSeconds(Math.floor((time / 1000) % 60));
     }
   };
-
-  // useEffect(() => {
-  //   if(userInfo && userInfo.ca_id){
-  //     navigate("/ca/leaderboard")
-  //   } else {
-  //     navigate("/ca");
-  //   }
-  // }, [])
 
   useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
@@ -126,27 +108,9 @@ function Main() {
       setEndTrophyCount(60);
       control.start("visible");
     } else {
-      // setStartPeopleCount(0);
-      // setEndPeopleCount(0);
-      // control.start("hidden");
+      console.log("Hello");
     }
   }, [control, inView]);
-
-  // function showNav() {
-  //   document.getElementById("mobilenavdropdown").style.height = "100%";
-  //   setNavDisplay(1);
-  //   var x = window.scrollX;
-  //   var y = window.scrollY;
-  //   window.onscroll = function () {
-  //     window.scrollTo(x, y);
-  //   };
-  // }
-  // function closeNav() {
-  //   // console.log("HI")
-  //   document.getElementById("mobilenavdropdown").style.height = "0";
-  //   setNavDisplay(0);
-  //   window.onscroll = function () {};
-  // }
 
   return (
     <>
@@ -171,7 +135,6 @@ function Main() {
                 <img src={line}></img>
               </span>
             </div>
-            {/* <div className={Maincss.in}>IN</div> */}
           </div>
           <div className={Maincss.timebox}>
             <div className={Maincss.timeboxwrap}>
@@ -204,7 +167,6 @@ function Main() {
           <div className={Maincss.mouse}>
             <ScrollLink
               to="about"
-              // onClick={handleClick}
               spy={true}
               smooth={true}
             >
@@ -239,7 +201,6 @@ function Main() {
           </div>
           <div className={Aboutcss.aboutky}>
             <div className="flex justify-evenly">
-              {/* <div className={Aboutcss.aboutContentCard}> */}
               <div className={Aboutcss.aboutContentCard}>
                 <div className="flex justify-center">
                   <div className={Aboutcss.aboutContentPeopleImg}>
@@ -270,7 +231,6 @@ function Main() {
                   <h5 className={Aboutcss.aboutContentSubHeading}>Footfall</h5>
                 </div>
               </div>
-              {/* </div> */}
 
               <div className={Aboutcss.aboutContentCard}>
                 <div className="flex justify-center">
@@ -365,7 +325,6 @@ function Main() {
           <div className={Testimonialcss.testimonialBorderRight}></div>
         </div>
         <Testimonials />
-        {/* <div className={Testimonialcss.blank}> </div> */}
       </div>
       <FooterMain />
     </>

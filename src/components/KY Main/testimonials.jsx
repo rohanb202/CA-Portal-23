@@ -1,12 +1,7 @@
-/************************************
-1. If you want to add or remove items you will need to change a variable called $slide-count in the CSS *minimum 3 slides
 
-2. if you want to change the dimensions of the slides you will need to edit the slideWidth variable here 👇 and the $slide-width variable in the CSS.
-************************************/
 import React from "react";
 import "./testimonials.scss";
 import Testimonialcss from "./testimonial.module.css"
-// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
 
 const slideWidth = 30;
 
@@ -80,12 +75,10 @@ const createItem = (position, idx, activeIdx) => {
     switch (position) {
         case length - 1:
         case length + 1:
-            // item.styles = {...item.styles, filter: 'grayscale(1)'};
             break;
         case length:
             break;
         default:
-            // item.styles = {...item.styles, opacity: 0};
             break;
     }
 
@@ -122,11 +115,10 @@ const Carousel = () => {
     const [touchStart, setTouchStart] = React.useState(null)
     const [touchEnd, setTouchEnd] = React.useState(null)
 
-    // the required distance between touchStart and touchEnd to be detected as a swipe
     const minSwipeDistance = 50 
 
     const onTouchStart = (e) => {
-    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    setTouchEnd(null) 
     setTouchStart(e.targetTouches[0].clientX)
     }
 
@@ -140,13 +132,10 @@ const Carousel = () => {
         if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
         if (isLeftSwipe){
             nextClick(1)
-            // console.log(activeIdx, length-1)
         }
         if (isRightSwipe){
             prevClick(1);
-            // console.log(activeIdx)
         }
-    // add your conditional logic here
     }
 
     const prevClick = (jump = 1) => {
@@ -185,9 +174,7 @@ const Carousel = () => {
     return (
         <div className="carousel__wrap">
             <div className="carousel__inner">
-                {/* <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--left" />
-                </button> */}
+
                 <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className="carousel__container">
                     <ul className="carousel__slide-list">
                         {items.map((pos, i) => (
@@ -200,9 +187,6 @@ const Carousel = () => {
                         ))}
                     </ul>
                 </div>
-                {/* <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--right" />
-                </button> */}
                 <div className="carousel__dots">
                     {items.slice(0, length).map((pos, i) => (
                         <button
@@ -218,63 +202,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-// ReactDOM.render(<Carousel />, document.getElementById('root'));
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import Testimonialcss from "./testimonial.module.css";
-// import TestimonialImg from "./img/testimonails/testimonial.jpeg";
-
-// function testimonials() {
-//   return (
-//     <div>
-//         <div className={Testimonialcss.testimonailsBody}>
-          // <div className={Testimonialcss.testimonialCard}>
-          //   <img src={TestimonialImg} alt="Image" />
-          //   <div className={Testimonialcss.testimonialData}>
-          //     <div className={Testimonialcss.testimonailName}>
-          //       Peter Parker
-          //     </div>
-          //     <div className={Testimonialcss.aboutTestimonail}>
-          //       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-          //     </div>
-          //   </div>
-          // </div>
-//           <div className={Testimonialcss.testimonialCard}>
-//             <img src={TestimonialImg} alt="Image" />
-//             <div className={Testimonialcss.testimonialData}>
-//               <div className={Testimonialcss.testimonailName}>
-//                 Peter Parker
-//               </div>
-//               <div className={Testimonialcss.aboutTestimonail}>
-//                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-//               </div>
-//             </div>
-//           </div>
-//           <div className={Testimonialcss.testimonialCard}>
-//             <img src={TestimonialImg} alt="Image" />
-//             <div className={Testimonialcss.testimonialData}>
-//               <div className={Testimonialcss.testimonailName}>
-//                 Peter Parker
-//               </div>
-//               <div className={Testimonialcss.aboutTestimonail}>
-//                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos reprehenderit laboriosam sed vero a natus ipsa maxime distinctio, quo est minima saepe veritatis fugiat aspernatur doloribus, autem ab perspiciatis in asperiores delectus voluptatem culpa!
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//         <div className={Testimonialcss.blank}> </div>
-//     </div>
-//   )
-// }
-
-// export default testimonials
