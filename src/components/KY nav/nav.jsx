@@ -92,9 +92,9 @@ function Nav() {
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
-                <li onClick={closeNav} className={Maincss.navitem}>
+                {/* <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
-                </li>
+                </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/events">EVENTS</Link>
                 </li>
