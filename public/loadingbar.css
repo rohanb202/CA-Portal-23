@@ -1,5 +1,5 @@
 .loader {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -11,15 +11,15 @@
     margin-bottom: 50px;
 }
 .svg-continer{
-    display:flex;
-    justify-content: center;
+    display:flex important!;
+    justify-content: center important!;
     /* margin-bottom: 50px; */
     /* padding-bottom: 50px; */
 }
 .loader-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     /* align-items: center; */
 	width: 300px;
 	height: 200px;

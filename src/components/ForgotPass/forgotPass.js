@@ -5,9 +5,6 @@ import "./forgot.css"
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-// import Icon from  "../../img/Group 252.jpg";
-// import logo from "../";
-// import Loginlogo from "./image/Loginlogo.svg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 
