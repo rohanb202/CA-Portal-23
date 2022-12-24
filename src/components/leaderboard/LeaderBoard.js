@@ -35,28 +35,28 @@ export default function LeaderBoard (){
         // let data = response.json()
         // console.log(response)
         if (response.status === 200){
-          toast.success('Data fetched successfully', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+        //   toast.success('Data fetched successfully', {
+        //     position: "top-center",
+        //     autoClose: 3000,
+        //     hideProgressBar: false,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     theme: "light",
+        //     });
         }
         if (response.status === 404){
-          toast.error('Enter correct KY ID', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+        //   toast.error('Enter correct KY ID', {
+        //     position: "top-center",
+        //     autoClose: 3000,
+        //     hideProgressBar: false,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     theme: "light",
+        //     });
         }
     }, [])
 
@@ -168,14 +168,14 @@ export default function LeaderBoard (){
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>1</div>
                         <div class="truncate">Samar Jain</div>
-                        <div>1555</div>
+                        <div>1950</div>
                     </div> 
                 </div>
                 <div className={LeaderBoardCSS.hoverOnButtons}>
                     <div className={LeaderBoardCSS.LeaderBoardRightColumnContent}>
                         <div>2</div>
                         <div class="truncate">Anant Singh</div>
-                        <div>1520</div>
+                        <div>1855</div>
                     </div> 
                 </div>
                 {/* <div className={LeaderBoardCSS.hoverOnButtons}>

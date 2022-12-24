@@ -7,12 +7,18 @@
 	z-index: 99;
 	/* background: url(&#39;https://6ed03b3e7ee716b29bc2dee79aafb8179ed53b19-www.googledrive.com/host/0B9VLbslO6g64UnFTUlQzWDVMdXM&#39;) 50% 50% no-repeat rgb(249,249,249); */
 }
-.loader img{
-    margin-bottom: 50px;
+.loader svg{
+    margin-left: 120px;
+	width: 60px;
+	/* position :absolute; */
+	/* left: 40%; */
 }
 .svg-continer{
-    display:flex important!;
-    justify-content: center important!;
+    display:flex !important;
+    justify-content: center !important;
+	align-items: center;
+	position: fixed;
+	z-index: 99;
     /* margin-bottom: 50px; */
     /* padding-bottom: 50px; */
 }
