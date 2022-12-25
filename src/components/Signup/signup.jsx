@@ -1622,6 +1622,9 @@ function Signup() {
               <option value="SETH M. R. JAIPURIA SCHOOL, LUCKNOW">
                 SETH M. R. JAIPURIA SCHOOL, LUCKNOW
               </option>
+              <option value="SHAHEED BHAGAT SINGH COLLEGE, DELHI">
+                SHAHEED BHAGAT SINGH COLLEGE, DELHI
+              </option>
               <option value="SHAHEED RAJGURU COLLEGE OF APPLIED SCIENCES FOR WOMEN, DELHI">
                 SHAHEED RAJGURU COLLEGE OF APPLIED SCIENCES FOR WOMEN, DELHI
               </option>
