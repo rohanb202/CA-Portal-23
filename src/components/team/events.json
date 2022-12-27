@@ -1,7 +1,7 @@
 
 [{
         "id" : 1,
-        "profile" : "https://i.imgur.com/zJwh1zn.jpg",
+        "profile" : "https://i.imgur.com/zJwh1znm.jpg",
         "name":"Ankit Kumar",
         "designation": "Co-ordinator",
         "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
@@ -10,7 +10,7 @@
 
     {
         "id" : 2,
-        "profile" : "https://i.imgur.com/0CjuK70.jpg",
+        "profile" : "https://i.imgur.com/0CjuK70m.jpg",
         "name":"Ankit Kumar",
         "designation": "Co-ordinator",
         "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
@@ -19,7 +19,7 @@
 
     {
         "id" : 3,
-        "profile" : "https://i.imgur.com/3zChfwf.jpg",
+        "profile" : "https://i.imgur.com/3zChfwfm.jpg",
         "name":"Manan Arora",
         "designation": "Co-ordinator",
         "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
