@@ -1,0 +1,45 @@
+[{
+    "id" : 1,
+    "profile" : "https://i.imgur.com/ubdJbut.jpg",
+    "name":"Yash Varshney",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 2,
+    "profile" : "https://i.imgur.com/3KoS3bs.jpg",
+    "name":"Siddharth Gupta",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 3,
+    "profile" : "https://i.imgur.com/hgKNjLw.jpg",
+    "name":"Aryan",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 4,
+    "profile" : "https://i.imgur.com/BTpaReu.jpg",
+    "name":"Manish Saini",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 5,
+    "profile" : "https://i.imgur.com/KGeyila.jpg",
+    "name":"Anurag",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+}
+]

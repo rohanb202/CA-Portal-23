@@ -1,0 +1,27 @@
+
+[{
+        "id" : 1,
+        "profile" : "https://i.imgur.com/zJwh1zn.jpg",
+        "name":"Ankit Kumar",
+        "designation": "Co-ordinator",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    },
+
+    {
+        "id" : 2,
+        "profile" : "https://i.imgur.com/0CjuK70.jpg",
+        "name":"Ankit Kumar",
+        "designation": "Co-ordinator",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    },
+
+    {
+        "id" : 3,
+        "profile" : "https://i.imgur.com/3zChfwf.jpg",
+        "name":"Manan Arora",
+        "designation": "Co-ordinator",
+        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+    }]

@@ -1,0 +1,33 @@
+[{
+    "id" : 1,
+    "profile" : "https://i.imgur.com/OkdyOUo.jpg",
+    "name":"Aadish Jain",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},{
+    "id" : 2,
+    "profile" : "https://i.imgur.com/XMF3pKD.jpg",
+    "name":"Eshaan Agarwal",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 3,
+    "profile" : "https://i.imgur.com/9LTXMQ3.jpg",
+    "name":"Prakriti Gupta",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+},
+
+{
+    "id" : 4,
+    "profile" : "https://i.imgur.com/T0PgvLD.jpg",
+    "name":"Puranjay Khanijo",
+    "designation": "Co-ordinator",
+    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+}]
