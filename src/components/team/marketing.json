@@ -1,45 +1,46 @@
-[{
-    "id" : 1,
-    "profile" : "https://i.imgur.com/ubdJbutm.jpg",
-    "name":"Yash Varshney",
-    "designation": "Co-ordinator",
-    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
-},
+[
+  {
+    "id": 1,
+    "profile": "https://i.imgur.com/ubdJbutm.jpg",
+    "name": "Yash Varshney",
+    "designation": "Manager",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  },
 
-{
-    "id" : 2,
-    "profile" : "https://i.imgur.com/3KoS3bsm.jpg",
-    "name":"Siddharth Gupta",
-    "designation": "Co-ordinator",
-    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
-},
+  {
+    "id": 2,
+    "profile": "https://i.imgur.com/3KoS3bsm.jpg",
+    "name": "Siddharth Gupta",
+    "designation": "Manager",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  },
 
-{
-    "id" : 3,
-    "profile" : "https://i.imgur.com/hgKNjLwm.jpg",
-    "name":"Aryan",
-    "designation": "Co-ordinator",
-    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
-},
+  {
+    "id": 3,
+    "profile": "https://i.imgur.com/hgKNjLwm.jpg",
+    "name": "Aryan",
+    "designation": "Manager",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  },
 
-{
-    "id" : 4,
-    "profile" : "https://i.imgur.com/BTpaReum.jpg",
-    "name":"Manish Saini",
-    "designation": "Co-ordinator",
-    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
-},
+  {
+    "id": 4,
+    "profile": "https://i.imgur.com/jJFVgzLm.jpg",
+    "name": "Manish Saini",
+    "designation": "Manager",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  },
 
-{
-    "id" : 5,
-    "profile" : "https://i.imgur.com/KGeyilam.jpg",
-    "name":"Anurag",
-    "designation": "Co-ordinator",
-    "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-    "github":"https://www.facebook.com/kashiyatra.IITBHU/"
-}
+  {
+    "id": 5,
+    "profile": "https://i.imgur.com/KGeyilam.jpg",
+    "name": "Anurag",
+    "designation": "Manager",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  }
 ]
