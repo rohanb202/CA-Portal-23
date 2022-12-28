@@ -23,4 +23,8 @@
 }
 .cardx{
     margin: 0 1.5rem;
+    background: white;
+}
+.cardx:hover{
+    background: blue;
 }

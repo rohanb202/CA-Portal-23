@@ -30,7 +30,7 @@ export default function Team() {
             {Data.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group  cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
@@ -108,7 +108,7 @@ export default function Team() {
             {market.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
@@ -186,7 +186,7 @@ export default function Team() {
             {publicity.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
@@ -265,7 +265,7 @@ export default function Team() {
             {pr.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
@@ -344,7 +344,7 @@ export default function Team() {
             {evenetx.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
@@ -422,7 +422,7 @@ export default function Team() {
             {operations.map((data) => {
               return (
                 <>
-                  <div class="bg-white flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent cardx">
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
