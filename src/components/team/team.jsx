@@ -6,7 +6,7 @@ import Rohan from "./img/Rohan.webp";
 import Nav from "../KY nav/nav";
 import "./team.css";
 import Data from "./dataTeam.json";
-import evenetx from "./events.json";
+import evenetx from "./eventx.json";
 import market from "./marketing.json";
 import operations from "./operations.json";
 import pr from "./pr.json";
