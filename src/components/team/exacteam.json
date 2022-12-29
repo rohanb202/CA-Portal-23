@@ -22,10 +22,18 @@
         "designation": "Senior Advisor",
         "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
         "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+      },
+      {
+        "id": 4,
+        "profile": "https://i.imgur.com/hB3ZR0P.png",
+        "name": "Sheba",
+        "designation": "Senior Advisor",
+        "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+        "github": "https://www.facebook.com/kashiyatra.IITBHU/"
       }
       ,
       {
-        "id": 4,
+        "id": 5,
         "profile": "https://i.imgur.com/tQZ0QtV.png",
         "name": "Harshit Bhati",
         "designation": "Senior Advisor",
