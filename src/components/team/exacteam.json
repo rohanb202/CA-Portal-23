@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "profile": "https://i.imgur.com/ZiIgt49.jpg",
+      "name": "Vanshika Singh",
+      "designation": "Co-Convenor",
+      "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+      "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+    },
+    {
+        "id": 2,
+        "profile": "https://i.imgur.com/DV1NrS4.jpg",
+        "name": "Shivam Gupta",
+        "designation": "Co-Convenor",
+        "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+        "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+      },
+      {
+        "id": 3,
+        "profile": "https://i.imgur.com/4ef1XfU.png",
+        "name": "Rdurapit Patra",
+        "designation": "Senior Advisor",
+        "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+        "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+      }
+      ,
+      {
+        "id": 4,
+        "profile": "https://i.imgur.com/tQZ0QtV.png",
+        "name": "Harshit Bhati",
+        "designation": "Senior Advisor",
+        "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+        "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+      }
+  ]
