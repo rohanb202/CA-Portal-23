@@ -569,6 +569,9 @@ function Signup() {
               <option value="DRONACHARYA COLLEGE OF ENGINEERING, GURUGRAM">
                 DRONACHARYA COLLEGE OF ENGINEERING, GURUGRAM
               </option>
+              <option value="DYAL SINGH COLLEGE (EVENING)">
+                DYAL SINGH COLLEGE (EVENING)
+              </option>
               <option value="DYAL SINGH COLLEGE, NEW DELHI">
                 DYAL SINGH COLLEGE, NEW DELHI
               </option>
