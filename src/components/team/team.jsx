@@ -50,7 +50,7 @@ export default function Team() {
                       </div>
                     </div>
 
-                    <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+                    <p class="mt-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-300">
                       {data.content}
                     </p>
 
