@@ -1,4 +1,11 @@
-[
+[  {
+  "id": 3,
+  "profile": "https://i.imgur.com/9LTXMQ3m.jpg",
+  "name": "Prakriti Gupta",
+  "designation": "Manager",
+  "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+  "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+},
   {
     "id": 1,
     "profile": "https://i.imgur.com/OkdyOUom.jpg",
@@ -7,19 +14,11 @@
     "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
     "github": "https://www.facebook.com/kashiyatra.IITBHU/"
   },
+  
   {
     "id": 2,
     "profile": "https://i.imgur.com/XMF3pKDm.jpg",
     "name": "Eshaan Agarwal",
-    "designation": "Manager",
-    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
-    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
-  },
-
-  {
-    "id": 3,
-    "profile": "https://i.imgur.com/9LTXMQ3m.jpg",
-    "name": "Prakriti Gupta",
     "designation": "Manager",
     "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
     "github": "https://www.facebook.com/kashiyatra.IITBHU/"
