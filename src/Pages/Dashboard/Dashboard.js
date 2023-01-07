@@ -256,7 +256,7 @@ const Dashboard = () => {
                 {userIsTeamLeader ? (
                   <>
                     <div className="flex items-center justify-center mt-2 text-3xl">
-                      Are you sure you want to delete your account? (This is
+                      Are you sure you want to delete this team? (This is
                       irreversible!)
                     </div>
                     <div className="flex items-center justify-center mt-2 text-3xl">
