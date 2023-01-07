@@ -61,7 +61,7 @@ function Nav() {
           </div>
           <ul className={Maincss.nav}>
             <li onClick={closeNav}>
-              <Link to="/">TEAM</Link>
+              <Link to="/team">TEAM</Link>
             </li>
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
