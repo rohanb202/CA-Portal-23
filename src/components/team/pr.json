@@ -5,6 +5,14 @@
   "designation": "Manager",
   "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
   "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+},
+{
+  "id": 4,
+  "profile": "https://i.imgur.com/zFmiPqTm.jpg",
+  "name": "Puranjay Khanijo",
+  "designation": "Manager",
+  "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+  "github": "https://www.facebook.com/kashiyatra.IITBHU/"
 },{
   "id": 6,
   "profile": "https://i.imgur.com/Nklr3vL.jpg",
@@ -14,14 +22,7 @@
   "github": "https://www.facebook.com/kashiyatra.IITBHU/"
 },
 
-{
-  "id": 4,
-  "profile": "https://i.imgur.com/zFmiPqTm.jpg",
-  "name": "Puranjay Khanijo",
-  "designation": "Manager",
-  "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
-  "github": "https://www.facebook.com/kashiyatra.IITBHU/"
-},
+
   {
     "id": 1,
     "profile": "https://i.imgur.com/OkdyOUom.jpg",
