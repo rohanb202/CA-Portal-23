@@ -1,4 +1,18 @@
-[
+[  {
+  "id": 7,
+  "profile": "https://i.imgur.com/eSGd8BEm.jpg",
+  "name": "Dhroov Singh",
+  "designation": "Manager",
+  "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+  "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+},{
+  "id": 8,
+  "profile": "https://i.imgur.com/WQuNlTm.png",
+  "name": "Harshit Raj",
+  "designation": "Manager",
+  "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+  "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+},
   {
     "id": 1,
     "profile": "https://i.imgur.com/cSpErRlm.jpg",
@@ -48,22 +62,6 @@
     "id": 6,
     "profile": "https://i.imgur.com/G15Lsvlm.jpg",
     "name": "Shashank Maurya",
-    "designation": "Manager",
-    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
-    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
-  },
-
-  {
-    "id": 7,
-    "profile": "https://i.imgur.com/eSGd8BEm.jpg",
-    "name": "Dhroov Singh",
-    "designation": "Manager",
-    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
-    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
-  },{
-    "id": 8,
-    "profile": "https://i.imgur.com/W1tCr96m.jpg",
-    "name": "Harshit Raj",
     "designation": "Manager",
     "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
     "github": "https://www.facebook.com/kashiyatra.IITBHU/"

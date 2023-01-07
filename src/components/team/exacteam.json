@@ -1,18 +1,17 @@
 [
   {
+    "id": 2,
+    "profile": "https://i.imgur.com/DV1NrS4.jpg",
+    "name": "Shivam Gupta",
+    "content":"KY has always been close to my heart. We are happy to announce that Kashiyatra is back in it's full potential after a break of almost three years due to the Covid Pandemic. It gives me immense pleasure to invite you to join us, as we embark on this MYSTICAL VOYAGE!",
+    "designation": "Co-Convenor",
+    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
+    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
+  }, {
     "id": 1,
     "profile": "https://i.imgur.com/ZiIgt49.jpg",
     "name": "Vanshika Singh",
     "content":"Myself Vanshika Singh from Electronics Engineering placed in Microsoft, For me, KY is really a big celebration. It hypes up not just me but a large numbet of people in the college and even the city. It is something that clearly disproves the fact that IITians are only Nerds.",
-    "designation": "Co-Convenor",
-    "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
-    "github": "https://www.facebook.com/kashiyatra.IITBHU/"
-  },
-  {
-    "id": 2,
-    "profile": "https://i.imgur.com/DV1NrS4.jpg",
-    "name": "Shivam Gupta",
-    "content":"",
     "designation": "Co-Convenor",
     "fb": "https://www.facebook.com/kashiyatra.IITBHU/",
     "github": "https://www.facebook.com/kashiyatra.IITBHU/"
