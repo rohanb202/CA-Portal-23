@@ -328,9 +328,11 @@ const Dashboard = () => {
               <div className="mt-3 font-bold text-white text-xl">
                 Mail Id: {userInfo?.email}
               </div>
+              { userInfo?.gender && (           
               <div className="mt-3 font-bold text-white text-xl">
                 Gender: {userInfo?.gender}
               </div>
+              )}
             </div>
             <div className={Dashboard2Css.Dashboard2KyIdCheersDiv}>
               <div className={Dashboard2Css.Dashboard2KyId}>
