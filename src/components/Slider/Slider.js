@@ -92,7 +92,7 @@ const Slider = () => {
   return (
     <>
       <div className="slider" id="carousel">
-      <img className="sliderPatternleft" src={pattern}/>
+      <img className="sliderPatternleft" src={pattern} alt="pattern123"/>
         
         {sliderData.map((slide, index) => {
           return (
@@ -108,7 +108,7 @@ const Slider = () => {
             </div>
           );
         })}
-        <img className="sliderPatternright" src={pattern}/>
+        <img className="sliderPatternright" src={pattern} alt="pattern1243"/>
 
 
         <img

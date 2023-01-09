@@ -3,7 +3,7 @@ import LoginMain from "./components/LoginMain/LoginMain";
 import ForgotPass from "./components/ForgotPass/forgotPass";
 import Main from "./components/KY Main/main";
 import Payment from "./Pages/Payment/Payment";
-
+import PreEvents from "./components/Pre_Events/preevents";
 import "aos/dist/aos.css";
 
 import Home from "./components/Home";
@@ -66,7 +66,7 @@ function App() {
         <Route path="/events" element={<Events/>} />
 
         <Route path="/team" element={<Team />} />
-
+        <Route path="/preevents" element={<PreEvents />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />

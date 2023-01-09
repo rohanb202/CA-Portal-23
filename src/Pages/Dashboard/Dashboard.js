@@ -312,7 +312,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-center">
             <img
               src={userInfo?.profile_picture}
-              alt=""
+              alt="profile_picture"
               className="h-35 relative md:left-0 flex items-center justify-center "
             />
             </div>

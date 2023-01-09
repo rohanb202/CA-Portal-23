@@ -110,7 +110,7 @@ function Signup() {
           onSubmit={handleSubmit}
           className="flex flex-col space-y-5 mb-20 justify-center items-center px-10 w-[100%]"
         >
-          <img src={logo} alt="" className="w-1/2 min-w-[18rem]" />
+          <img src={logo} alt="logo123" className="w-1/2 min-w-[18rem]" />
 
           <label className="block w-6/12 min-w-[15rem]">
             <span className="text-gray-700 whitespace-nowrap">Email ID</span>

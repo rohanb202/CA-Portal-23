@@ -63,6 +63,9 @@ function Nav() {
             <li onClick={closeNav}>
               <Link to="/team">TEAM</Link>
             </li>
+            {/* <li onClick={closeNav}>
+              <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
+            </li> */}
             <li onClick={closeNav}>
               <Link to="/events">EVENTS</Link>
             </li>
@@ -88,13 +91,16 @@ function Nav() {
         <div className={Maincss.outernav}>
           <div className={Maincss.navbar}>
             <Link to="/">
-              <img src={logo} className={Maincss.kylogo}></img>
+              <img src={logo} className={Maincss.kylogo} alt="logo"></img>
             </Link>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
                 </li>
+                {/* <li onClick={closeNav}>
+              <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
+            </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/events">EVENTS</Link>
                 </li>

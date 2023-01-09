@@ -77,7 +77,7 @@ function ForgotPass() {
           onSubmit={sendPasswordResetLink}
           class="flex flex-col space-y-5 justify-center items-center px-10"
         >
-          <img src={logo} alt="" className="w-2/3 min-w-[18rem]" />
+          <img src={logo} alt="logoImg" className="w-2/3 min-w-[18rem]" />
 
           <label className="block w-6/12 min-w-[15rem]">
             <span className="text-gray-700 whitespace-nowrap">Email ID</span>
