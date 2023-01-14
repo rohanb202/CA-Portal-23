@@ -13,7 +13,7 @@ export default function PreEvents() {
     <div className="teamBg">
       <Nav></Nav>
       <div class="flex justify-center">
-        <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-white">Pre Events</h1>
+        <h1 class="font-medium leading-tight text-5xl mt-4 mb-2 text-white">Pre Events</h1>
       </div>
       <div className={PreEventsCss.PreEventsColumn}>
         <div className="flex justify-center">
