@@ -1,0 +1,17 @@
+.PreEventsColumn{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+@media screen and (max-width: 950px){
+    .PreEventsColumn{
+        grid-template-columns: auto auto ;
+    }
+}
+@media screen and (max-width: 600px){
+    .PreEventsColumn{
+        grid-template-columns: auto ;
+    }
+}

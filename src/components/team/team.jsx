@@ -37,7 +37,7 @@ export default function Team() {
                       <img
                         class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
                         src={data.profile}
-                        alt=""
+                        alt="data.profile"
                       />
 
                       <div class="mt-4 sm:mx-4 sm:mt-0">
@@ -107,7 +107,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile1"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -172,7 +172,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile12"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -252,7 +252,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile123"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -315,7 +315,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile78"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -379,7 +379,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile98"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -443,7 +443,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile63"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
@@ -506,7 +506,7 @@ export default function Team() {
                     <img
                       class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                       src={data.profile}
-                      alt=""
+                      alt="data.profile42"
                     />
 
                     <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">

@@ -23,7 +23,7 @@ const Nduty = () => {
               ac scelerisque ante pulvinar. Donec ut rhoncus ex.
             </div>
           </div>
-          <img className="mr-3 lg:ml-24 ml-10 mt-5 lg:mt-0 h-72 relative bottom-14" src={responsibility} alt="" />
+          <img className="mr-3 lg:ml-24 ml-10 mt-5 lg:mt-0 h-72 relative bottom-14" src={responsibility} alt="white_strip123" />
         </div>
       </div>
     </div>

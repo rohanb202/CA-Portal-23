@@ -31,14 +31,14 @@ export default function FooterMain() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={insta} className={Footercss.row1} alt=""></img>
+                  <img src={insta} className={Footercss.row1} alt="instaImg"></img>
                 </a>
                 <a
                   href="https://twitter.com/ky_iitbhu?lang=en"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={twitter} className={Footercss.row1} alt="" />
+                  <img src={twitter} className={Footercss.row1} alt="twitterImg" />
                 </a>
               </span>
               <span className={Footercss.row2}>
@@ -47,14 +47,14 @@ export default function FooterMain() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={yt} className={Footercss.row2} alt="" />
+                  <img src={yt} className={Footercss.row2} alt="ytImg" />
                 </a>
                 <a
                   href="https://www.facebook.com/kashiyatra.IITBHU/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={fb} className={Footercss.row2} alt="" />
+                  <img src={fb} className={Footercss.row2} alt="fbImg" />
                 </a>
               </span>
             </div>
@@ -83,10 +83,10 @@ export default function FooterMain() {
             <div className={Footercss.image}>
               <span className={Footercss.row1}>
                 <a href="mailto: kashiyatra@iitbhu.ac.in">
-                  <img src={gmail} className={Footercss.row1} alt="" />
+                  <img src={gmail} className={Footercss.row1} alt="gmailImg" />
                 </a>
                 <a href="tel:9068674125 ">
-                  <img src={call} className={Footercss.row1} alt="" />
+                  <img src={call} className={Footercss.row1} alt="callImg" />
                 </a>
               </span>
               <span className={Footercss.row2}>
