@@ -5,7 +5,13 @@
     background-image: url('./testimonialbg.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    /* margin-top: -100px; */
+    /* height: vh; */
     /* height: 400px; */
+}
+.heading{
+    margin-top: -30rem;
+    visibility: hidden;
 }
 
 .img-fluid{

@@ -1,79 +1,59 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import StarCss from "./star.module.css"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function MultiscrollText() {
-  let st1 = useRef(null);
-  let st2 = useRef(null);
-  let st3 = useRef(null);
+  const at1 = useRef(null);
+  const at2 = useRef(null);
+  const at3 = useRef(null);
+  const projectRef = useRef(null);
   useEffect(() => {
-    let sts = [st1.current, st2.current, st3.current];
-    let tl = gsap.timeline({ repeat: -1 });
-    sts.forEach((st, i) => {
-      tl.to(st, {
-        y: "-20px",
-        opacity: 0,
-        duration: 0.3,
-      })
-        .to(st, {
-          y: "20px",
-          duration: 0.3,
-        })
-        .to(st, {
-          opacity: 1,
-          ease: "power3.out",
-          duration: 0.3,
-          y: "0px",
-        })
-        .to(st, {
-          opacity: 0,
-          y: "-20px",
-          delay: 0.5,
-          ease: "power3.in",
-        });
+    let tl5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: projectRef.current,
+        start: "top top",
+        end: "+=50%",
+        scrub: true,
+        markers:true,
+      },
     });
-
-    // tl.from(sts, {
-    //   y: "0px",
-    //   delay: 1,
-    //   visibility: "visible",
-    // })
-    //   .to(sts, {
-    //     stagger: 1,
-    //     y: "-50px",
-    //     opacity: 0,
-    //   })
-    //   .to(sts, {
-    //     visibility: "hidden",
-    //   });
+    const ats = [at1.current, at2.current, at3.current];
+    ats.forEach((at, i) => {
+      tl5.to(at, {
+        y: `${i * at.offsetHeight * 0.15}`,
+        ease: "none",
+      });
+    });
   }, []);
-  const desk = (
-    <div className="flex flex-col items-center mx-auto space-x-5 text-4xl whitespace-nowrap sm:flex-row BGB md:text-6xl lg:text-7xl">
-      <div className="absolute opacity-0" ref={st1}>
-        Work Together
-      </div>
-      <div ref={st2} className="absolute opacity-0">
-        Collaborate
-      </div>
-      <div ref={st3} className="absolute opacity-0">
-        Grab Coffee
-      </div>
-    </div>
-  );
+
   return (
-    <div className="flex flex-col items-center mx-auto space-x-5 text-4xl whitespace-nowrap sm:flex-row BGB md:text-6xl lg:text-7xl">
-      <div className="absolute opacity-0" ref={st1}>
-        Work Together
-      </div>
-      <div ref={st2} className="absolute opacity-0">
-        Collaborate
-      </div>
-      <div ref={st3} className="absolute opacity-0">
-        Grab Coffee
-      </div>
-    </div>
+    <>
+     <div ref={projectRef} className={StarCss.heading}>
+      <h1>
+        Hello
+      </h1>
+</div>
+<div  className="relative   flex flex-col items-center justify-center w-full text-center text-white BGB text-4xl  lg:text-7xl z-[3] uppercase  ">
+  {/* <div className="mt-10"> */}
+          <div ref={at3} className="absolute textStroke3">
+            {/* and <br /> */}
+            Dharshan Raval
+          </div>
+          <div ref={at2} className="absolute textStroke3 ">
+            {/* and <br /> */}
+            Dharshan Raval
+          </div>
+          <div ref={at1} className="absolute ">
+            Dharshan Raval
+          </div>
+  {/* </div> */}
+          
+</div>
+    </>
+   
   );
 }
 

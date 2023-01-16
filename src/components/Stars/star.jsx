@@ -14,9 +14,9 @@ export default function Stars() {
   return (
     <>
     <div className={StarCss.StarCol}>
-        <div className="text-white col-lg-6 col-md-6 col-sm-12 text-6xl d-flex justify-content-between align-items-center ml-20">
-            Dharshan Raval
-        </div>
+        {/* <div className="text-white col-lg-6 col-md-6 col-sm-12 text-6xl d-flex justify-content-between align-items-center ml-20"> */}
+            <MultiscrollText />
+        {/* </div> */}
         <div className="col-lg-6 col-md-6 col-sm-12 " >
             <img classname="img-fluid " src={Star} alt="Dharshan Raval" />
         </div>
