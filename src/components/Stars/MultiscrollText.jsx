@@ -17,7 +17,7 @@ function MultiscrollText() {
         start: "top top",
         end: "+=50%",
         scrub: true,
-        markers:true,
+//         markers:true,
       },
     });
     const ats = [at1.current, at2.current, at3.current];
