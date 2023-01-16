@@ -63,6 +63,9 @@ function Nav() {
             <li onClick={closeNav}>
               <Link to="/team">TEAM</Link>
             </li>
+            <li onClick={closeNav}>
+              <Link to="/sponsors">SPONSORS</Link>
+            </li>
             {<li onClick={closeNav}>
               <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
             </li>}
@@ -97,6 +100,9 @@ function Nav() {
               <ul className={Maincss.navlistul}>
                 <li onClick={closeNav} className={Maincss.navitem}>
                   <Link to="/team">TEAM</Link>
+                </li>
+                <li onClick={closeNav} className={Maincss.navitem}>
+                  <Link to="/sponsors">SPONSORS</Link>
                 </li>
                 {<li onClick={closeNav}>
               <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
