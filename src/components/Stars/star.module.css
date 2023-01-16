@@ -1,0 +1,14 @@
+.StarCol{
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    display: flex;
+    background-image: url('./testimonialbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 400px; */
+}
+
+.img-fluid{
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
