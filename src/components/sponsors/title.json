@@ -111,73 +111,51 @@
   {
     "id": 18,
     "title": "Food Partner",
-    "src": ["https://i.imgur.com/z7MYZPy.jpeg"]
+    "src": ["https://i.imgur.com/gZK5Kve.jpg"]
   },
   {
     "id": 19,
     "title": "Bakery Partner",
-    "src": [
-      "https://previews.123rf.com/images/eljanstock/eljanstock1809/eljanstock180902197/107878866-chestnut-icon-vector-isolated-on-white-background-logo-concept-of-chestnut-sign-on-transparent-backg.jpg"
-    ]
+    "src": ["https://i.imgur.com/z7MYZPy.jpeg"]
   },
   {
     "id": 20,
     "title": "Secuirty Partner",
-    "src": [
-      "https://i.imgur.com/tuNIFhH.png"
-    ]
+    "src": ["https://i.imgur.com/tuNIFhH.png"]
   },
   {
     "id": 21,
     "title": "Travel Partner",
-    "src": [
-      "https://i.imgur.com/2GfoU1N.png"
-    ]
+    "src": ["https://i.imgur.com/2GfoU1N.png"]
   },
   {
     "id": 22,
     "title": "Resturant Partner",
-    "src": [
-      "https://i.imgur.com/gQAqG6h.png"
-    ]
+    "src": ["https://i.imgur.com/gQAqG6h.png"]
   },
   {
     "id": 23,
     "title": "Official Partner",
-    "src": [
-      "https://i.imgur.com/nRtwIWE.png"
-    ]
-  }
-  ,
+    "src": ["https://i.imgur.com/nRtwIWE.png"]
+  },
   {
     "id": 24,
     "title": "Associate Partner Bandish and Natraj",
-    "src": [
-      "https://i.imgur.com/MC52hnZ.jpeg"
-    ]
-  }
-  ,
+    "src": ["https://i.imgur.com/MC52hnZ.jpeg"]
+  },
   {
     "id": 25,
     "title": "Title Partner for comedy",
-    "src": [
-      "https://i.imgur.com/zLcnl8C.jpeg"
-    ]
-  }
-  ,
+    "src": ["https://i.imgur.com/zLcnl8C.jpeg"]
+  },
   {
     "id": 26,
     "title": "CAT-Prep Partner",
-    "src": [
-      "https://i.imgur.com/3JXeBGq.jpeg"
-    ]
-  }
-  ,
+    "src": ["https://i.imgur.com/3JXeBGq.jpeg"]
+  },
   {
     "id": 27,
     "title": "Social-Welfare Partner",
-    "src": [
-      "https://i.imgur.com/ZukLuuB.jpeg"
-    ]
+    "src": ["https://i.imgur.com/ZukLuuB.jpeg"]
   }
 ]
