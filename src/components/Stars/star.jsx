@@ -7,6 +7,7 @@ import Star2 from "./Raftaar.png";
 import StarCss from "./star.module.css"
 // import { event } from "jquery";
 import MultiscrollText from "./MultiscrollText";
+import MultiscrollText2 from "./MultiscrollText2";
 export default function Stars() {
 //   const [navdisplay, setNavDisplay] = useState(0);
 
@@ -44,7 +45,7 @@ export default function Stars() {
         <div className="relative z-50 col-lg-6 col-md-6 col-sm-12 " >
             <img classname="img-fluid " src={Star2} alt="Raftaar" />
         </div>
-        <MultiscrollText starName="Raftaar"/>
+        <MultiscrollText2 starName="Raftaar"/>
     </div>
     </>
   );
