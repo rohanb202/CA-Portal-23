@@ -30,6 +30,7 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
+import Stars from "../Stars/star";
 const Slider = lazy(() => import('../Slider/Slider'));
 
 
@@ -329,6 +330,7 @@ function Main() {
           </div>
         </div>
       </div>
+      <Stars />
       <div id="throwback" className={Throwcss.throwSectionBody}>
         <div className={Throwcss.throwTitle}>
           <div className={Throwcss.throwBorder3}></div>
