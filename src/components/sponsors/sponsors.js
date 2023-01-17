@@ -18,7 +18,7 @@ export default function Sponsors() {
       {tdata.map((data)=>{
           return(
             <>
-            <div class="boxs">
+            <div class="boxs" data-aos="fade-right">
           <div class="header">{data.title}</div>
           <div class="imgContainer">
             {data.src.map((sdata)=>{
