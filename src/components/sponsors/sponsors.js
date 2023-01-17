@@ -16,6 +16,7 @@ export default function Sponsors() {
       <Nav></Nav>
       <section class="content-center Mainx">
       {tdata.map((data)=>{
+        if(data.id%2===0){
           return(
             <>
             <div class="boxs" data-aos="fade-right">
@@ -42,6 +43,35 @@ export default function Sponsors() {
             </>
 
           );
+        }
+        else{
+          return(
+            <>
+            <div class="boxs" data-aos="fade-left">
+          <div class="header">{data.title}</div>
+          <div class="imgContainer">
+            {data.src.map((sdata)=>{
+              return(
+                <>
+                <div class="partners">
+                <a href="" target="new">
+                <img
+                  class="imagexd"
+                  src={sdata}
+                />
+              </a>
+              <div class="subHeader"></div>
+              </div>
+              </>
+              );
+            })}
+              </div>
+        </div>
+              
+            </>
+
+          );
+        }
         })}
 
       </section>
