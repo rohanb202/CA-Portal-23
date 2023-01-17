@@ -1,0 +1,85 @@
+.sponbg {
+  background: url(./images/testimonialbg.jpg);
+  /* min-height: 100vh; */
+  background-repeat: repeat;
+  background-size: cover;
+}
+.Mainx {
+  align-items: center;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  width: 100%;
+  z-index: 20000;
+}
+.boxs {
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: linear-gradient(
+    283.8deg,
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0) 100.78%
+  );
+  border-radius: 16px;
+  box-shadow: 8px 12px 50px rgb(0 0 0 / 40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4%;
+  width: 79%;
+}
+.header {
+  -webkit-text-fill-color: transparent;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px;
+  margin-bottom: 2%;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.imgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  z-index: 15;
+}
+.imagexd {
+  cursor: pointer;
+  width: 300px;
+  z-index: 20000;
+}
+.partners {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Oxanium;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+@media screen and (max-width: 800px) {
+.header{
+    font-size: 1.8rem;
+}
+  }
+@media screen and (max-width: 700px) {
+.header{
+    font-size: 1.8rem;
+}
+  }
+@media screen and (max-width: 400px) {
+.header{
+    font-size: 1.2rem;
+}
+  }
