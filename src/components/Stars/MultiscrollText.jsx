@@ -5,7 +5,7 @@ import StarCss from "./star.module.css"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function MultiscrollText() {
+function MultiscrollText(props) {
   const at1 = useRef(null);
   const at2 = useRef(null);
   const at3 = useRef(null);
@@ -40,14 +40,14 @@ function MultiscrollText() {
   {/* <div className="mt-10"> */}
           <div ref={at3} className="absolute textStroke3">
             {/* and <br /> */}
-            Dharshan Raval
+            {props.starName}
           </div>
           <div ref={at2} className="absolute textStroke3 ">
             {/* and <br /> */}
-            Dharshan Raval
+            {props.starName}
           </div>
           <div ref={at1} className="absolute ">
-            Dharshan Raval
+            {props.starName}
           </div>
   {/* </div> */}
           
