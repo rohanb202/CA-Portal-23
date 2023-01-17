@@ -284,7 +284,7 @@
             "eventId": 15,
             "eventName": "BLISS",
             "image_URL": "https://i.imgur.com/1zoLyPul.jpg",
-            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.\r\n\r\nRULES\r\nPreliminary Round\r\nTime limit: 3-5 minutes. Exceeding this will lead to penalization in marks.\r\nTeam size:- Minimum of 5 and a maximum of 35 members are allowed in a\r\nteam, with at least 3 and at most 30 members on stage at any point during the\r\nperformance.\r\n1. All dance forms except folk are allowed.\r\n2. Participants can use props suited to their performance. Props which might\r\ncause in convenience to the other teams or cause damage to the stage or\r\nthe surroundings, will not be entertained under any circumstance (this\r\napplies to any fluid, flame, powders, colours, confetti, glass etc.).\r\n3. The performance must be a part of their out in esthetic to be presented in\r\nthe final round.\r\n4. Participants are required to give the corresponding edited audio songs of\r\nboth the rounds in .mp3 format, in PENDRIVES ONLY and must be\r\nsubmitted at the time of registration. Other devices such as CDs or mobile\r\nphones etc. will not be accepted.\r\n5. The decision of the judges and the coordinators will be considered as\r\nfinal and binding and will not be changed under any circumstances.\r\n6. The obscenity of any kind will lead to immediate disqualification.\r\n\r\nFinal Round\r\nStage setting time: 2 minutes (maximum).\r\nTime limit: 6-10 minutes. Exceeding this will lead to penalization in marks.\r\n1. Participants can use props suited to their performance.\r\n2. Participants are required to give the corresponding edited audio songs in\r\n.mp3 format, in PENDRIVES ONLY along with the final round track and\r\nmust be submitted at the time of registration.\r\n3. No substitutions are allowed. Only the same team that was registered for\r\nthe eliminations will be allowed to perform in the finals if it qualifies.\r\n4. Any specific requirements regarding lights and smoke must be discussed\r\nwith organizers well in advance.\r\n[NOTE: The pen-drive must contain two tracks, one for preliminary round and\r\nthe other for final. Named as: BLISS-your_group_name/college_name-round\r\n(PRELIMS/FINAL), e.g.: BLISS-IITBHU-PRELIMS indicates IITBHU’s track\r\nfor PRELIMINARY round]",
+            "eventDetails": "“Talent is not rare, but the opportunity to show case is.” Kashiyatra unfolds to\r\nyou “Bliss - the Group Dance Competition” where synchronicity, energy and\r\ncreativity unfold themselves and the stage echoes with the thud of your steps,\r\ndiverse with every leg yet unified with every beat.\r\n\r\nRULES\r\nPreliminary Round\r\nTime limit: 3-5 minutes. Exceeding this will lead to penalization in marks.\r\nTeam size:- Minimum of 5 and a maximum of 35 members are allowed in a\r\nteam, with at least 3 and at most 20 members on stage at any point during the\r\nperformance.\r\n1. All dance forms except folk are allowed.\r\n2. Participants can use props suited to their performance. Props which might\r\ncause in convenience to the other teams or cause damage to the stage or\r\nthe surroundings, will not be entertained under any circumstance (this\r\napplies to any fluid, flame, powders, colours, confetti, glass etc.).\r\n3. The performance must be a part of their out in esthetic to be presented in\r\nthe final round.\r\n4. Participants are required to give the corresponding edited audio songs of\r\nboth the rounds in .mp3 format, in PENDRIVES ONLY and must be\r\nsubmitted at the time of registration. Other devices such as CDs or mobile\r\nphones etc. will not be accepted.\r\n5. The decision of the judges and the coordinators will be considered as\r\nfinal and binding and will not be changed under any circumstances.\r\n6. The obscenity of any kind will lead to immediate disqualification.\r\n\r\nFinal Round\r\nStage setting time: 2 minutes (maximum).\r\nTime limit: 6-10 minutes. Exceeding this will lead to penalization in marks.\r\n1. Participants can use props suited to their performance.\r\n2. Participants are required to give the corresponding edited audio songs in\r\n.mp3 format, in PENDRIVES ONLY along with the final round track and\r\nmust be submitted at the time of registration.\r\n3. No substitutions are allowed. Only the same team that was registered for\r\nthe eliminations will be allowed to perform in the finals if it qualifies.\r\n4. Any specific requirements regarding lights and smoke must be discussed\r\nwith organizers well in advance.\r\n[NOTE: The pen-drive must contain two tracks, one for preliminary round and\r\nthe other for final. Named as: BLISS-your_group_name/college_name-round\r\n(PRELIMS/FINAL), e.g.: BLISS-IITBHU-PRELIMS indicates IITBHU’s track\r\nfor PRELIMINARY round]",
             "maxMembers": 35,
             "minMembers": 5,
             "parentEvent": {
@@ -504,6 +504,20 @@
             "parentEvent": {
                 "parentEventId": 1,
                 "categoryName": "ABHINAY"
+            }
+        }
+    ],
+    "CAPTURE IT": [
+        {
+            "eventId": 42,
+            "eventName": "Capture the moment",
+            "image_URL": "https://i.imgur.com/KoTp1gZm.jpg",
+            "eventDetails": "Photography",
+            "maxMembers": 1,
+            "minMembers": 1,
+            "parentEvent": {
+                "parentEventId": 9,
+                "categoryName": "CAPTURE IT"
             }
         }
     ]
