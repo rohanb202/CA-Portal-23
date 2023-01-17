@@ -28,7 +28,7 @@ export default function TransitionAlerts() {
           }
           sx={{ mb: 2 }}
         >
-          Registration will be closed from today. So hurry up and Register
+          Registration for Kashiyatra '23 closing today! Hurry up and register so that you don't miss out!
         </Alert>
       </Collapse>
     </Box>
