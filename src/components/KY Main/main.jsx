@@ -142,7 +142,7 @@ function Main() {
   <AlertTitle>Warning</AlertTitle>
   This is a warning alert — <strong>check it out!</strong>
 </Alert> */}
-<div className="sticky top-0 z-[100] ">
+<div className="fixed-bottom z-[100] ">
   <ActionAlerts />
 </div>
 
