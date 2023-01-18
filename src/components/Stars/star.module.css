@@ -8,7 +8,17 @@
     background-repeat: no-repeat; */
     /* margin-top: -100px; */
     /* height: vh; */
+    background-color: #2D3047;
     /* height: 400px; */
+}
+.StarTitle{
+    font-family: themeFont;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #2D3047;
 }
 .heading{
     margin-top: -30rem;
