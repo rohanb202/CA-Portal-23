@@ -30,7 +30,7 @@ export default function Stars() {
 
 
     <div className={StarCss.StarCol}>
-    <div className="absolute z-20 h-[120vh] w-[120vw]" style={{backgroundColor:"#2D3047"}}>
+    <div className="absolute z-20 h-[120vh] w-[100%]" style={{backgroundColor:"#2D3047"}}>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1999.007 560"  xmlSpace="preserve">
 <path class="line1" style={{fill:"none",stroke:"#fefae0",strokeWidth:11,strokeMiterlimit:10}} d="M0,205.122c0,0,1.873-5.227,34.181,11.771
