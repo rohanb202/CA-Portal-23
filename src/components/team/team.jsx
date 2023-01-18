@@ -8,6 +8,7 @@ import "./team.css";
 import Data from "./dataTeam.json";
 import Senior from "./senior.json";
 import evenetx from "./eventx.json";
+import Hospital from "./hospitality.json"
 import market from "./marketing.json";
 import operations from "./operations.json";
 import pr from "./pr.json";
@@ -500,6 +501,69 @@ export default function Team() {
 
           <div class="content-center grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
             {operations.map((data) => {
+              return (
+                <>
+                  <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#90e0ef] dark:border-gray-700 dark:hover:border-transparent cardx">
+                    <img
+                      class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                      src={data.profile}
+                      alt="data.profile42"
+                    />
+
+                    <div class="mt-4 text-2xl text-center text-black-500 capitalize group-hover:text-white">
+                      {data.name}
+                    </div>
+
+                    <p class="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
+                      {data.designation}
+                    </p>
+
+                    <div class="flex mt-3 -mx-2">
+                    <a
+                        href="#"
+                        class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                        aria-label="Reddit"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          class="w-5 h-5"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                          />
+                        </svg>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                        aria-label="Facebook"
+                      >
+                        <svg
+                          class="w-6 h-6 fill-current"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
+        <div class="content-center px-6 py-10 mx-auto">
+          <h1 class="text-3xl font-semibold text-center text-white capitalize lg:text-4xl pt-16">
+            Hospitality Team
+          </h1>
+
+          <div class="content-center grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
+            {Hospital.map((data) => {
               return (
                 <>
                   <div class=" flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#90e0ef] dark:border-gray-700 dark:hover:border-transparent cardx">
