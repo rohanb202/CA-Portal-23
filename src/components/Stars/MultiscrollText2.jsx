@@ -36,18 +36,18 @@ function MultiscrollText2(props) {
         Hello
       </h1>
 </div>
-<div  className="relative mr-10  flex flex-col items-center justify-center w-full text-center text-white BGB text-4xl  lg:text-7xl z-[3] uppercase  ">
+<div  className="relative mr-10  flex flex-col items-center justify-center w-full text-center text-white BGB text-4xl  lg:text-7xl z-50 uppercase  ">
   {/* <div className="mt-10"> */}
           <div ref={at3} className="absolute textStroke3">
             {/* and <br /> */}
-            Raftar
+            Raftaar
           </div>
           <div ref={at2} className="absolute textStroke3 ">
             {/* and <br /> */}
-            Raftar
+            Raftaar
           </div>
           <div ref={at1} className="absolute ">
-            Raftar
+            Raftaar
           </div>
   {/* </div> */}
           
