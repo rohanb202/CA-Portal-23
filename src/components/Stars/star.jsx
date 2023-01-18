@@ -30,7 +30,7 @@ export default function Stars() {
 
 
     <div className={StarCss.StarCol}>
-    <div className="absolute z-20 h-[120vh] w-[100%]" style={{backgroundColor:"#2D3047"}}>
+    {/* <div className="absolute z-20 h-[120vh] w-[100%]" style={{backgroundColor:"#2D3047"}}>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1999.007 560"  xmlSpace="preserve">
 <path class="line1" style={{fill:"none",stroke:"#fefae0",strokeWidth:11,strokeMiterlimit:10}} d="M0,205.122c0,0,1.873-5.227,34.181,11.771
@@ -48,7 +48,7 @@ export default function Stars() {
 	c0,0,260.692-109.142,307.727-118.406c47.035-9.264,132.368-18.393,195.794,3.404s243.095,67.78,340.015,64.93
 	c96.92-2.851,204.513-72.49,236.582-89.594c32.069-17.104,65.547-14.766,143.225-14.766c77.679,0,771.911,0,771.911,0"/>
 </svg>
-</div>
+</div> */}
         {/* <video loop autoPlay muted playsinline>
           <source
             type="video/mp4"
