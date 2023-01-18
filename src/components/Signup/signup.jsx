@@ -26,6 +26,10 @@ function Signup() {
     e.preventDefault();
 
     // await loginUser(formData.email, formData.password);
+    if (formData.gender != "Male" && formData.gender != "Female" && formData.gender != "Other"){
+      alert("Enter a valid gender!");
+      return;
+    }
     if (isNaN(formData.year)) {
       alert("Year must be a number!");
       return;

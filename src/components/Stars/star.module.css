@@ -1,0 +1,49 @@
+.StarCol{
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    position: relative;
+    display: flex;
+    /* background-image: url('./testimonialbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* margin-top: -100px; */
+    /* height: vh; */
+    background-color: #2D3047;
+    /* height: 400px; */
+}
+.StarTitle{
+    font-family: themeFont;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #2D3047;
+}
+.heading{
+    margin-top: -30rem;
+    visibility: hidden;
+}
+
+.img-fluid{
+    position: absolute;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    z-index: 100;
+}
+
+.StarCol video{
+    /* position: absolute; */
+    /* top: 0; */
+    justify-self: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    /* z-index: -1;; */
+    /* background-position: 0; */
+    /* overflow: hidden; */
+    /* z-index: -1;
+    backdrop-filter: blur(5px); */
+    /* -o-filter: blur(4px); */
+    /* filter: blur(4px); */
+}

@@ -1,4 +1,7 @@
 import React from "react";
+// import {Alert} from "react-native"
+import 'react-toastify/dist/ReactToastify.css';
+import ActionAlerts from "./Alert";
 import { lazy, Suspense} from "react";
 import Maincss from "./main.module.css";
 import { useState, useEffect, useContext, useRef } from "react";
@@ -27,7 +30,9 @@ import line from "../../svgs/themeline.svg";
 import mouse from "../../svgs/mouse.svg";
 import { Link as ScrollLink } from "react-scroll";
 import Nav from "../KY nav/nav";
+import Stars from "../Stars/star";
 const Slider = lazy(() => import('../Slider/Slider'));
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -106,15 +111,43 @@ function Main() {
       setEndHutCount(360);
       setStartTrophyCount(0);
       setEndTrophyCount(60);
+//       <ToastContainer
+// position="top-center"
+// autoClose={5000}
+// hideProgressBar={false}
+// newestOnTop={false}
+// closeOnClick
+// rtl={false}
+// pauseOnFocusLoss
+// draggable
+// pauseOnHover
+// theme="colored"
+// />
       control.start("visible");
     } else {
       console.log("Hello");
     }
   }, [control, inView]);
 
+  // useEffect(()=>{
+  //   Alert.alert("Hello","Yo the Man",[{text: "Closed",onPress:()=> console.log('alert closed')}])
+  // },[])
+
   return (
     <>
+    {/* <div class="alert alert-warning" role="alert">
+      A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div> */}
+    {/* <Alert severity="warning">
+  <AlertTitle>Warning</AlertTitle>
+  This is a warning alert — <strong>check it out!</strong>
+</Alert> */}
+<div className="sticky top-0 z-[100] ">
+  <ActionAlerts />
+</div>
+
       <div id="main" className={Maincss.main}>
+      
         <Nav />
         <video loop autoPlay muted playsinline>
           <source
@@ -175,6 +208,7 @@ function Main() {
           </div>
         </div>
       </div>
+      
       <div id="about" className={Aboutcss.aboutSectionBody}>
         <div className={Aboutcss.aboutTitle}>
           <div className={Aboutcss.aboutBorder1}></div>
@@ -296,6 +330,7 @@ function Main() {
           </div>
         </div>
       </div>
+      <Stars />
       <div id="throwback" className={Throwcss.throwSectionBody}>
         <div className={Throwcss.throwTitle}>
           <div className={Throwcss.throwBorder3}></div>
