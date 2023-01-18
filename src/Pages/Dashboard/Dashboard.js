@@ -42,7 +42,7 @@ const style = {
   top: "50%",
   left: "50%",
   overflowY:"scroll",
-  maxHeight: '90vh',
+  maxHeight: '80vh',
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "#F74061",
