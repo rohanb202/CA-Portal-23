@@ -31,14 +31,22 @@ export default function FooterMain() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={insta} className={Footercss.row1} alt="instaImg"></img>
+                  <img
+                    src={insta}
+                    className={Footercss.row1}
+                    alt="instaImg"
+                  ></img>
                 </a>
                 <a
                   href="https://twitter.com/ky_iitbhu?lang=en"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={twitter} className={Footercss.row1} alt="twitterImg" />
+                  <img
+                    src={twitter}
+                    className={Footercss.row1}
+                    alt="twitterImg"
+                  />
                 </a>
               </span>
               <span className={Footercss.row2}>
@@ -91,7 +99,9 @@ export default function FooterMain() {
               </span>
               <span className={Footercss.row2}>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
-                  <a href="mailto: kashiyatra@iitbhu.ac.in">kashiyatra@iitbhu.ac.in</a>
+                  <a href="mailto: kashiyatra@iitbhu.ac.in">
+                    kashiyatra@iitbhu.ac.in
+                  </a>
                 </div>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>
                   <a href="tel:9411691659 ">9411691659 </a>
@@ -106,7 +116,9 @@ export default function FooterMain() {
         <a href="mailto: kashiyatra@iitbhu.ac.in">
         <button className={Footercss.fpay}><img src={gmail} className={Footercss.gm} alt="" />  Genral Queries</button></a></div> */}
         <div className={Footercss.Lborder}></div>
-        <div className={Footercss.copyright}>© Kashiytra 2023 All Rights Reserved</div>
+        <div className={Footercss.copyright}>
+          © Kashiyatra 2023 All Rights Reserved
+        </div>
       </div>
     </div>
   );
