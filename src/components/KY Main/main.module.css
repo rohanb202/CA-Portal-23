@@ -242,6 +242,7 @@ video{
     src: url("./SAMAN___.TTF");
  }
 .themetext{
+    margin-top: 10px;
     font-size: 110px;
     font-family: myFirstFont;
    /* color: darkgreen; */
