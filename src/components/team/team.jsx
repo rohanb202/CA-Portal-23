@@ -8,7 +8,7 @@ import "./team.css";
 import Data from "./dataTeam.json";
 import Senior from "./senior.json";
 import evenetx from "./eventx.json";
-import Hospital from "./hospitality.json"
+import Hospital from "./hospitality.json";
 import market from "./marketing.json";
 import operations from "./operations.json";
 import pr from "./pr.json";
@@ -120,7 +120,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -185,8 +185,10 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href={data.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
                       >
@@ -204,6 +206,8 @@ export default function Team() {
 
                       <a
                         href={data.fb}
+                        target="_blank"
+                        rel="noreferrer"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Facebook"
                       >
@@ -265,7 +269,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -328,7 +332,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -392,7 +396,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -456,7 +460,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -519,7 +523,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
@@ -582,7 +586,7 @@ export default function Team() {
                     </p>
 
                     <div class="flex mt-3 -mx-2">
-                    <a
+                      <a
                         href="#"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
