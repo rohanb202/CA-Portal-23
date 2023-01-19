@@ -2,7 +2,9 @@
   background: url(./images/testimonialbg.jpg);
   /* min-height: 100vh; */
   background-repeat: repeat;
+  min-width: 100vw;
   background-size: cover;
+  overflow-x: hidden;
 }
 .Mainx {
   align-items: center;
