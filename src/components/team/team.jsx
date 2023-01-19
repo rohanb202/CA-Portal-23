@@ -186,7 +186,7 @@ export default function Team() {
 
                     <div class="flex mt-3 -mx-2">
                     <a
-                        href="#"
+                        href={data.linkedin}
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Reddit"
                       >
@@ -203,7 +203,7 @@ export default function Team() {
                       </a>
 
                       <a
-                        href="#"
+                        href={data.fb}
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                         aria-label="Facebook"
                       >
@@ -218,7 +218,7 @@ export default function Team() {
                       </a>
 
                       <a
-                        href="https://github.com/rohanb202"
+                        href={data.github}
                         target="_blank"
                         rel="noreferrer"
                         class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"

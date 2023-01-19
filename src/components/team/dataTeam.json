@@ -4,8 +4,9 @@
         "profile" : "https://imgur.com/jxLndAQm.jpg",
         "name":"Rohan Bhandari",
         "designation": "Developer",
+        "linkedin":"https://www.linkedin.com/in/rohan-bhandari-8824b0209/",
         "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
-        "github":"https://www.facebook.com/kashiyatra.IITBHU/"
+        "github":"https://github.com/rohanb202"
     },
 
     {
@@ -13,6 +14,7 @@
         "profile" : "https://imgur.com/tTVOatzm.jpg",
         "name":"Vysakh A V",
         "designation": "Developer",
+        "linkedin":"https://www.facebook.com/kashiyatra.IITBHU/",
         "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
         "github":"https://github.com/Yshaq"
     },
@@ -22,7 +24,8 @@
         "profile" : "https://imgur.com/tFstJxdm.jpg",
         "name":"Pawan Kumar",
         "designation": "Developer",
-        "fb":"https://www.facebook.com/kashiyatra.IITBHU/",
+        "linkedin":"https://www.linkedin.com/in/pawan-kumar-sahu-4329a2208 ",
+        "fb":"https://www.facebook.com/pawankumar.sahu.7127146?mibextid=ZbWKwL ",
         "github":"https://github.com/coderpawan"
     }
 ]
