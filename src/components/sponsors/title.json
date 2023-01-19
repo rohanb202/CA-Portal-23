@@ -33,9 +33,7 @@
   {
     "id": 6,
     "title": "Footwear Partner",
-    "src": [
-      "https://iconape.com/wp-content/files/mo/133586/svg/133586.svg"
-    ]
+    "src": ["https://iconape.com/wp-content/files/mo/133586/svg/133586.svg"]
   },
   {
     "id": 7,
@@ -61,9 +59,7 @@
   {
     "id": 10,
     "title": "Title Partner Mirage",
-    "src": [
-      "https://imgur.com/UaIrMgp.jpg"
-    ]
+    "src": ["https://imgur.com/UaIrMgp.jpg"]
   },
   {
     "id": 11,
@@ -117,6 +113,11 @@
     "id": 19,
     "title": "Bakery Partner",
     "src": ["https://i.imgur.com/z7MYZPy.jpeg"]
+  },
+  {
+    "id": 28,
+    "title": "Stay Partner",
+    "src": ["https://imgur.com/g51B2tF.jpg"]
   },
   {
     "id": 20,
