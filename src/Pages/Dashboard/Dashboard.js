@@ -22,6 +22,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import useAxiosPrivate from "../../utils/useAxiosPrivate";
 import { toast } from "react-toastify";
+import ActionAlert from "./DashboardAlert"
 import { BeakerIcon,PhoneIcon} from '@heroicons/react/solid'
 // import ClearIcon from '@mui/icons-material/Clear';
 
@@ -356,12 +357,15 @@ const Dashboard = () => {
         <div className="font-bold text-[#F74061] text-3xl text-center md:text-left">
           Your Registrations
         </div>
-      
+      {/* {PersonData.length != 0 ? } */}
         
         
         <div className={Dashboard2Css.Dashboard2Columns}>
           {PersonData.length != 0 ? (
             <>
+            <div className="fixed-bottom z-[100] ">
+              <ActionAlert />
+            </div>
               {PersonData.map((post) => {
                 return (
                   <div className={Dashboard2Css.Dashboard2Card}>

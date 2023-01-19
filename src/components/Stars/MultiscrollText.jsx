@@ -49,6 +49,15 @@ function MultiscrollText(props) {
           <div ref={at1} className="absolute ">
             Darshan Raval
           </div>
+          <div className={StarCss.starInfo}>
+            <div className="">
+              Date: 20th January, 2023
+            </div>
+            <div className="">
+              Venue: ADV Grounds, IIT BHU, Varanasi
+            </div>
+          </div>
+
   {/* </div> */}
           
 </div>
