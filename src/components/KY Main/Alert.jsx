@@ -28,7 +28,7 @@ export default function TransitionAlerts() {
           }
           sx={{ mb: 2 }}
         >
-          Registration for Kashiyatra '23 closing today! Hurry up and register so that you don't miss out!
+          Registration for Kashiyatra '23 closing today! Hurry up and register so that you don't miss out! To view the events schedule - <a href="https://drive.google.com/file/d/1xb8z2ZU1hMCv1rjhio6JzvajDRtnWUmD/view?usp=sharing" target="_blank"><u>CLICK HERE!</u></a>
         </Alert>
       </Collapse>
     </Box>
