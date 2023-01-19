@@ -28,7 +28,7 @@ export default function TransitionAlerts() {
           }
           sx={{ mb: 2 }}
         >
-          Click on the link to join the respective group
+          <a href="https://drive.google.com/file/d/1o4WJctcgPhI2q2dZyf_TPQVdIYJbi_6K/view?usp=sharing" target="_blank">CLICK HERE </a>to join the whatsapp group of your respective event!
         </Alert>
       </Collapse>
     </Box>
