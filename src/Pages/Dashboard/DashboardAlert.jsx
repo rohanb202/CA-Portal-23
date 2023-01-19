@@ -28,7 +28,7 @@ export default function TransitionAlerts() {
           }
           sx={{ mb: 2 }}
         >
-          Click on the below link to join the respective group
+          Click on the link to join the respective group
         </Alert>
       </Collapse>
     </Box>
