@@ -152,7 +152,10 @@ function Main() {
         <video loop autoPlay muted playsinline>
           <source
             type="video/mp4"
-            src="https://i.imgur.com/FVEh1Jf.mp4"
+            src="https://i.imgur.com/i3KbBPn.mp4"
+            // src="https://i.imgur.com/p3ZslcL.mp4"
+            // src="https://i.imgur.com/Dv7Cood.mp4"
+            // src="https://i.imgur.com/FVEh1Jf.mp4"
           ></source>
         </video>
         <div className={Maincss.maincontent}>
@@ -169,29 +172,7 @@ function Main() {
               </span>
             </div>
           </div>
-          <div className={Maincss.timebox}>
-            <div className={Maincss.timeboxwrap}>
-              <div className={Maincss.outerbox}>
-                <div className={Maincss.numbox}>{days}</div>
-                <div className={Maincss.textbox}>Days</div>
-              </div>
-              <div className={Maincss.colon}>:</div>
-              <div className={Maincss.outerbox}>
-                <div className={Maincss.numbox}>{hours}</div>
-                <div className={Maincss.textbox}>Hours</div>
-              </div>
-              <div className={Maincss.colon}>:</div>
-              <div className={Maincss.outerbox}>
-                <div className={Maincss.numbox}>{minutes}</div>
-                <div className={Maincss.textbox}>Minutes</div>
-              </div>
-              <div className={Maincss.colon}>:</div>
-              <div className={Maincss.outerbox}>
-                <div className={Maincss.numbox}>{seconds}</div>
-                <div className={Maincss.textbox}>Seconds</div>
-              </div>
-            </div>
-          </div>
+          
           <div className={Maincss.register}>
             <Link to="/login">
               <button className={Maincss.kyregister}>Register Now</button>

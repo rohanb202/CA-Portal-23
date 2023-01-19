@@ -2,6 +2,25 @@
     /* background-color: red; */
     /* background: transparent; */
     height: 120%;
+    width: 100%;
+    overflow: hidden;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    justify-self: center;
+    /* object-fit: contain; */
+    /* height: 60%; */
+    /* width: 60%; */
+    overflow: hidden;
+    /* z-index: -1;; */
+    /* background-position: 0; */
+    /* overflow: hidden; */
+    /* z-index: -1;; */
+    /* transform: scale(1.); */
+    -o-filter: blur(30px);
+    /* filter: blur(4px); */
 }
 
 .mobilenavdropdown{
@@ -184,22 +203,6 @@
     color: white;
 }
 
-video{
-    position: absolute;
-    top: 0;
-    justify-self: center;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    /* z-index: -1;; */
-    /* background-position: 0; */
-    /* overflow: hidden; */
-    /* z-index: -1;
-    backdrop-filter: blur(5px); */
-    /* -o-filter: blur(4px); */
-    /* filter: blur(4px); */
-}
-
 .maincontent{
     position: relative;
     display: flex;
@@ -348,7 +351,7 @@ font-style: normal;
     text-align: center;
     justify-content:center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .mouse img{
