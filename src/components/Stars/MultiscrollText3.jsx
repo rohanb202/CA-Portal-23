@@ -51,7 +51,7 @@ function MultiscrollText3(props) {
           </div>
           <div className={StarCss.starInfo}>
             <div className="mt-5">
-              Date: 20th January, 2023
+              Date: 21st January, 2023
             </div>
             <div className="">
               Venue: ADV Grounds, IIT BHU, Varanasi
