@@ -36,7 +36,7 @@ function MultiscrollText3(props) {
         Hello
       </h1>
 </div>
-<div  className="relative   flex flex-col items-center justify-center w-full text-center text-white BGB text-4xl  lg:text-6xl z-50 uppercase  ">
+<div  className="relative mr-[30px]   flex flex-col items-center justify-center w-full text-center text-white BGB text-3xl  lg:text-6xl z-50 uppercase ">
   {/* <div className="mt-10"> */}
           {/* <div ref={at3} className="absolute textStroke3">
             and <br />
