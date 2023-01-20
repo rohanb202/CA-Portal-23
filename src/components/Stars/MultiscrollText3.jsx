@@ -20,10 +20,10 @@ function MultiscrollText3(props) {
 //         markers:true,
       },
     });
-    const ats = [at1.current, at2.current, at3.current];
+    const ats = [at1.current, at2.current];
     ats.forEach((at, i) => {
       tl5.to(at, {
-        y: `${i * at.offsetHeight * 0.15}`,
+        y: `${i * at.offsetHeight * 0.1}`,
         ease: "none",
       });
     });
@@ -38,10 +38,10 @@ function MultiscrollText3(props) {
 </div>
 <div  className="relative   flex flex-col items-center justify-center w-full text-center text-white BGB text-4xl  lg:text-6xl z-50 uppercase  ">
   {/* <div className="mt-10"> */}
-          <div ref={at3} className="absolute textStroke3">
-            {/* and <br /> */}
+          {/* <div ref={at3} className="absolute textStroke3">
+            and <br />
             Anubhav Singh Bassi
-          </div>
+          </div> */}
           <div ref={at2} className="absolute textStroke3 ">
             {/* and <br /> */}
             Anubhav Singh Bassi
