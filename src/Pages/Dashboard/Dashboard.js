@@ -451,7 +451,7 @@ const Dashboard = () => {
                 {/* <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a> */}
                 <div className="flex">
                   <PhoneIcon className="w-5"/>
-                  <a href="tel:9838660830" className='contactCallInfo'>9838660830</a>
+                  <a href="tel:8005149004" className='contactCallInfo'>8005149004</a>
                 </div>
             </div>
 
