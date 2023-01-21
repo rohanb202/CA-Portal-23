@@ -29,7 +29,7 @@ export default function Info () {
                 <a href="tel:8763811512" className='contactCallInfo'>Call 8763811512</a>
                 <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
                 <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a>
-                <a href="tel:9838660830" className='contactCallInfo'>Call 9838660830</a>
+                <a href="tel:8005149004" className='contactCallInfo'>Call 8005149004</a>
             </div>
             
         </div>
