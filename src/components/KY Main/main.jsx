@@ -152,7 +152,7 @@ function Main() {
         <video loop autoPlay muted playsinline>
           <source
             type="video/mp4"
-            src="https://i.imgur.com/i3KbBPn.mp4"
+            src="https://imgur.com/7xDiRR7.mp4"
             // src="https://i.imgur.com/p3ZslcL.mp4"
             // src="https://i.imgur.com/Dv7Cood.mp4"
             // src="https://i.imgur.com/FVEh1Jf.mp4"
