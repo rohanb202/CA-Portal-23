@@ -93,9 +93,9 @@ export default function FooterMain() {
                 <a href="mailto: kashiyatra@iitbhu.ac.in">
                   <img src={gmail} className={Footercss.row1} alt="gmailImg" />
                 </a>
-                <a href="tel:9068674125 ">
+                {/* <a href="tel:9068674125 ">
                   <img src={call} className={Footercss.row1} alt="callImg" />
-                </a>
+                </a> */}
               </span>
               <span className={Footercss.row2}>
                 <div className={`${Footercss.row2} ${Footercss.ky}`}>

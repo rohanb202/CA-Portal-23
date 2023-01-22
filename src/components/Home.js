@@ -16,7 +16,7 @@ export default function Home (){
     return(
       <Main>
         <Brownie_point/>
-        <Contact />
+        {/* <Contact /> */}
       </Main>
     );
 }
