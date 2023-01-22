@@ -22,16 +22,16 @@ export default function Info () {
             </Shake>
                 
             </div>
-            <div className='contactPageInfo'>
-                <h2 className='contactPageInfoHeading'>Publicity</h2>
-                <a href='mailto:publicity@kashiyatra.all' className='contactPersonEmail'>Mail: publicity@kashiyatra.org</a>
-                <h3 className='contactPersonName'>Rudrarpit Patra</h3>
+            {/* <div className='contactPageInfo'> */}
+                {/* <h2 className='contactPageInfoHeading'>Publicity</h2> */}
+                {/* <a href='mailto:publicity@kashiyatra.all' className='contactPersonEmail'>Mail: publicity@kashiyatra.org</a> */}
+                {/* <h3 className='contactPersonName'>Rudrarpit Patra</h3> */}
                 {/* <a href='mailto:rudrarpit.patra.mec19@iitbhu.ac.in' className='contactPersonEmail'>rudrarpit.patra.mec19@iitbhu.ac.in</a> */}
-                <a href="tel:8763811512" className='contactCallInfo'>Call 8763811512</a>
-                <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
+                {/* <a href="tel:8763811512" className='contactCallInfo'>Call 8763811512</a> */}
+                {/* <h3 className='contactPersonName'>Gaurav Jaiswal</h3> */}
                 {/* <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a> */}
-                <a href="tel:9838660830" className='contactCallInfo'>Call 9838660830</a>
-            </div>
+                {/* <a href="tel:9838660830" className='contactCallInfo'>Call 9838660830</a> */}
+            {/* </div> */}
             
         </div>
         

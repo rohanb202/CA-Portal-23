@@ -22,7 +22,7 @@ export default function Info () {
             </Shake>
                 
             </div>
-            <div className='contactPageInfo'>
+            {/* <div className='contactPageInfo'>
                 <h2 className='contactPageInfoHeading'>Publicity</h2>
                 <h3 className='contactPersonName'>Rudrarpit Patra</h3>
                 <a href='mailto:rudrarpit.patra.mec19@iitbhu.ac.in' className='contactPersonEmail'>rudrarpit.patra.mec19@iitbhu.ac.in</a>
@@ -30,7 +30,7 @@ export default function Info () {
                 <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
                 <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a>
                 <a href="tel:9838660830" className='contactCallInfo'>Call 9838660830</a>
-            </div>
+            </div> */}
             
         </div>
         

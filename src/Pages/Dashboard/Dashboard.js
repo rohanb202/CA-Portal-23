@@ -432,27 +432,25 @@ const Dashboard = () => {
 </h1>
         </div>
         <div className="flex justify-center items-center text-xl md:text-2xl py-2 whitespace-nowrap">
-          For Registrations and Payments
+          {/* For Registrations and Payments */}
         </div>
         <div className='flex flex-col space-y-5 items-center py-2'>
-                <div className="flex space-x-2">
+                {/* <div className="flex space-x-2">
                   <EnvelopeIcon className="w-5"/>
                   <a href='mailto:publicity@kashiyatra.all' className='flex justify-center w-full text-2xl'>publicity@kashiyatra.org</a>
                 </div>
                 
                 <h3 className='contactPersonName'>Rudrarpit Patra</h3>
-                {/* <a href='mailto:rudrarpit.patra.mec19@iitbhu.ac.in' className='contactPersonEmail'>rudrarpit.patra.mec19@iitbhu.ac.in</a> */}
                 <div className="flex">
                   <PhoneIcon className="w-5"/>
                   <a href="tel:8763811512" className='contactCallInfo'>8763811512</a>
                 </div>
                 <div className="w-[50%] h-[2px] bg-black "></div>
                 <h3 className='contactPersonName'>Gaurav Jaiswal</h3>
-                {/* <a href='mailto:gaurav.jaiswal.min19@iitbhu.ac.in' className='contactPersonEmail'>gaurav.jaiswal.min19@iitbhu.ac.in</a> */}
                 <div className="flex">
                   <PhoneIcon className="w-5"/>
                   <a href="tel:9838660830" className='contactCallInfo'>9838660830</a>
-                </div>
+                </div> */}
             </div>
 
       </div>
