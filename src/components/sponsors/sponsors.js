@@ -72,6 +72,34 @@ export default function Sponsors() {
 
           );
         }
+        if(data.id==30){
+          return(
+            <>
+            <div class="boxs" data-aos="fade-right">
+          <div class="header">{data.title}</div>
+          <div class="imgContainer">
+            {data.src.map((sdata)=>{
+              return(
+                <>
+                <div class="partners">
+                <a href="https://www.uptourism.gov.in/en" target="new">
+                <img
+                  class="imagexd"
+                  src={sdata}
+                />
+              </a>
+              <div class="subHeader"></div>
+              </div>
+              </>
+              );
+            })}
+              </div>
+        </div>
+              
+            </>
+
+          );
+        }
         })}
 
       </section>
