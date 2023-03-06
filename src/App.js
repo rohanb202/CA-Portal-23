@@ -62,7 +62,8 @@ function App() {
           }
         />
         <Route path="/login" element={<LoginMain />} />
-//         <Route path="/register" element={<Signup />} />
+                   {/* <Route path="/register" element={<Signup />} /> */}
+
 
         <Route path="/events" element={<Events/>} />
 
