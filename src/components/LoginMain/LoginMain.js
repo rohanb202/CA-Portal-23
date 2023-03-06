@@ -133,10 +133,7 @@ function LoginMain() {
         </div>
 
         <span className="text-sm text-[#F74061] accounta">
-          <span className="text-[white]">Don't have an account?</span>
-          <span className="signupcol">
-            <Link to="/register"> Sign up</Link>
-          </span>
+          <span className="text-[white]">Registrations for KY'23 are closed</span>
         </span>
         <Link to="/" className="text-sm text-[white]">
           Back to Home Page
