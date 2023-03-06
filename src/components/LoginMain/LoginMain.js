@@ -133,9 +133,9 @@ function LoginMain() {
         </div>
 
         <span className="text-sm text-[#F74061] accounta">
-          <div className="h-[1px] w-[23%] min-w-[6rem] bg-black/50"></div>
+          <div className="h-[1px] min-w-[6rem] bg-black/50"></div>
           <span className="text-[white]"><b>Registrations for KY'23 are closed</b></span>
-          <div className="h-[1px] w-[23%] min-w-[6rem] bg-black/50"></div>
+          <div className="h-[1px] min-w-[6rem] bg-black/50"></div>
         </span>
         <Link to="/" className="text-sm text-[white]">
           Back to Home Page
