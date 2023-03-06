@@ -134,7 +134,7 @@ function LoginMain() {
 
         <span className="text-sm text-[#F74061] accounta">
           <div className="h-[2px] min-w-[6rem] bg-black/50"></div>
-          <span className="text-[white] text-xl py-2"><b>Registrations for KY'23 are closed</b></span>
+          <span className="text-[white] text-3xl my-4"><b>Registrations for KY'23 are closed</b></span>
           <div className="h-[2px] min-w-[6rem] bg-black/50"></div>
         </span>
         <Link to="/" className="text-sm text-[white]">
