@@ -23,7 +23,7 @@ import RequireAuth from "./utils/RequireAuth";
 import GoogleMiddleware from "./Pages/GoogleLogin/GoogleMiddleware";
 import CompleteProfile from "./Pages/CompleteProfile/CompleteProfile";
 import TestPage from "./Pages/TestPage";
-import Signup from "./components/Signup/signup";
+// import Signup from "./components/Signup/signup";
 
 import Events from "./components/Events/Events";
 import Sponsors from "./components/sponsors/sponsors";
