@@ -76,7 +76,7 @@ function Nav() {
               <Link to="/">FAQ</Link>
             </li> */}
             <li onClick={closeNav}>
-              <Link to="/ca">CA</Link>
+              <a href="ca.kashiyatra.org">CA</a>
             </li>
             {
               userInfo?(
@@ -114,7 +114,7 @@ function Nav() {
                   <Link to="/">FAQ</Link>
                 </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
-                <Link to="/ca">CA</Link>
+                <a href="ca.kashiyatra.org">CA</a>
                 </li>
                 
                 <li>
