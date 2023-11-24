@@ -76,7 +76,7 @@ function Nav() {
               <Link to="/">FAQ</Link>
             </li> */}
             <li onClick={closeNav}>
-              <a href="ca.kashiyatra.org">CA</a>
+            <a rel='noopener noreferrer' href="https://ca.kashiyatra.org">CA</a>
             </li>
             {
               userInfo?(
@@ -114,7 +114,7 @@ function Nav() {
                   <Link to="/">FAQ</Link>
                 </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
-                <Link to="ca.kashiyatra.org">CA</Link>
+                <a rel='noopener noreferrer' href="https://ca.kashiyatra.org">CA</a>
                 </li>
                 
                 <li>
