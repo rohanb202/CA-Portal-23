@@ -80,7 +80,7 @@ const Payment = () => {
                   </li>
                 </ul> */}
                     <div className="text-center mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
-                      SUCCESSFULLY REGISTERED FOR KY'23!
+                      SUCCESSFULLY REGISTERED FOR KY'24!
                     </div>
                   </div>
                 </div>

@@ -114,7 +114,7 @@ function Nav() {
                   <Link to="/">FAQ</Link>
                 </li> */}
                 <li onClick={closeNav} className={Maincss.navitem}>
-                <a href="ca.kashiyatra.org">CA</a>
+                <Link to="ca.kashiyatra.org">CA</Link>
                 </li>
                 
                 <li>
