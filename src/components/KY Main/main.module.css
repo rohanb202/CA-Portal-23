@@ -4,6 +4,11 @@
     height: 120%;
     width: 100%;
     overflow: hidden;
+    background: url(../LoginMain/skypg.jpg);
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* transform: scale(1.05); */
 }
 
 video{
@@ -221,7 +226,7 @@ video{
     align-items: center;
     height: 10vh;
     margin-top: 6%;
-    color:#A89ED8;
+    color:#dfd9fa;
     font-size: 140px;
     font-weight: bolder;
 }

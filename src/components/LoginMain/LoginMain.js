@@ -79,6 +79,9 @@ function LoginMain() {
         <Link to="/forgotpass" className="text-sm text-[white]">
           Forgot password?
         </Link>
+        <Link to="/register" className="text-sm text-[white]">
+          Not a registered user? Sign up
+        </Link>
         <div className={LoaderCss.LoginBtnAndSpinner}>
           {!requesting && (
             <>
@@ -133,7 +136,7 @@ function LoginMain() {
         </div>
 
         <span className="text-sm text-[#F74061] accounta">
-          <span className="text-[white] text-3xl my-4"><b>Registrations for KY'23 are closed</b></span>
+          {/* <span className="text-[white] text-3xl my-4"><b>Registrations for KY'23 are closed</b></span> */}
           <div className="h-[2px] min-w-[6rem] bg-black/50"></div>
         </span>
         <Link to="/" className="text-sm text-[white]">

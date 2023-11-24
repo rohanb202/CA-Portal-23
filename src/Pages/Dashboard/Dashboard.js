@@ -343,8 +343,8 @@ const Dashboard = () => {
               </div>
               <div className={Dashboard2Css.Dashboard2Cheers}>
                 {userInfo?.is_paid
-                  ? "Cheers! You are a part of KY '23!"
-                  : "Oops! Complete payment to be a part of KY '23!"
+                  ? "Cheers! You are a part of KY '24!"
+                  : "Oops! Complete payment to be a part of KY '24!"
                 }
               </div>
             </div>

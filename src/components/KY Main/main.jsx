@@ -149,7 +149,7 @@ function Main() {
       <div id="main" className={Maincss.main}>
       
         <Nav />
-        <video loop autoPlay muted playsinline>
+        {/* <video loop autoPlay muted playsinline>
           <source
             type="video/mp4"
             src="https://imgur.com/HlJjv44.mp4"
@@ -157,16 +157,16 @@ function Main() {
             // src="https://i.imgur.com/Dv7Cood.mp4"
             // src="https://i.imgur.com/FVEh1Jf.mp4"
           ></source>
-        </video>
+        </video> */}
         <div className={Maincss.maincontent}>
           <div className={Maincss.blurbg}></div>
           <div className={Maincss.themebox}>
-            <div className={Maincss.themetext}>SAFARNAMA</div>
+            <div className={Maincss.themetext}>KASHIYATRA'24</div>
             <div className={Maincss.themefont}>
               <span>
                 <img src={line}></img>
               </span>
-              A Mystical Voyage
+              Registrations Open
               <span>
                 <img src={line}></img>
               </span>
@@ -174,8 +174,11 @@ function Main() {
           </div>
           
           <div className={Maincss.register}>
-            <Link to="/login">
+            <Link to="/register">
               <button className={Maincss.kyregister}>Register Now</button>
+            </Link>
+            <Link to="/login" className="text-sm mx-[4.5rem] text-[white]">
+              Already Registered? Login
             </Link>
           </div>
           <div className={Maincss.mouse}>
