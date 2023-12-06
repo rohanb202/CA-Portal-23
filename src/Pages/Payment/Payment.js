@@ -115,7 +115,7 @@ const Payment = () => {
                     </ul>
                     {userInfo ? (
                       <a
-                        href={`https://www.townscript.com/v2/e/kashiyatra/booking?td-Registration-No-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`}
+                        href={`https://www.townscript.com/v2/e/kashiyatra-24-the-annual-sociocultural-festival-of-iit-bhu-varanasi-000222/booking?td-Registration-No-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`}
                         target="_blank"
                       >
                         <div className="text-center mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
@@ -157,8 +157,8 @@ const Payment = () => {
                       </li>
                     </ul>
                     {userInfo ? (
-                      <a
-                        href={`https://www.townscript.com/v2/e/kashiyatra/booking?td-Registration-With-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`}
+                      <a  
+                        href={`https://www.townscript.com/v2/e/kashiyatra-24-the-annual-sociocultural-festival-of-iit-bhu-varanasi-000222/booking?td-Registration-With-Food=1&name=${userInfo?.full_name}&emailid=${userInfo?.email}&cq1=${userInfo.ky_id}`}
                         target="_blank"
                       >
                         <div className="text-center mt-20 rounded-xl font-bold text-white py-3 bg-[#098770]">
@@ -175,7 +175,7 @@ const Payment = () => {
               </>
             )}
           </div>
-          <div className=" relative mt-14">
+          {/* <div className=" relative mt-14">
             <div className="font-bold text-[#F74061] text-3xl text-left">
               Pay for Multiple Users
             </div>
@@ -209,7 +209,7 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <Modal
