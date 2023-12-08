@@ -32,6 +32,7 @@ import Sponsors from "./components/sponsors/sponsors";
 
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import { useEffect } from "react";
+import PaymentStatus from "./Pages/Payment/PaymentStatus";
 
 
 function App() {
@@ -96,6 +97,9 @@ function App() {
           <RequireAuth>
               <Payment />
             </RequireAuth>} />
+        <Route path="/payment/success" element={
+              <PaymentStatus/>}/>
+        
       </Routes>
     </>
   );
