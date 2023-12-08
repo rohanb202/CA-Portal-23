@@ -39,9 +39,9 @@ function LoginMain() {
         className="flex flex-col space-y-5 justify-center items-center px-10 formhi"
       >
         <img src={logo} alt="logoImg" className="w-[60%] min-w-[18rem]" />
-        <div className="pt-4">
+        {/* <div className="pt-4">
           <LoginWithGoogle />
-        </div>
+        </div> */}
         <div className="flex items-center justify-center space-x-2 w-full ">
           <div className="h-[1px] w-[23%] min-w-[6rem] bg-black/50"></div>
           <p className="text-center">or</p>
