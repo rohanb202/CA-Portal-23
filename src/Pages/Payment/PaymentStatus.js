@@ -27,7 +27,7 @@ const PaymentStatus = () => {
                       Your Payment Has Been Completed! 
                     </div>
                     <div className="text-center text-black-500 my-3 font-normal text-m">
-                    The details regarding the same will be updated within 30 mins. If not updated, please reach out to any of the following contacts:
+                    Your payment status will be updated on the website in 30 mins, after which you'll be able to register for events. If not updated, please reach out to any of the following contacts:
                       <ul className="text-red-600 my-2 font-bold" style={{listStyle:"none"}}>
                         <li>Aryan Singh (+919997255604)</li>
                         <li>Mrigank (+919079610045)</li>
