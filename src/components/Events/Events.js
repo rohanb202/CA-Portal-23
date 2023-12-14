@@ -603,7 +603,7 @@ export default function Events() {
                                   </>
                                 ) : (
                                   <>
-                                    <Link to="/login">
+                                    <Link to="https://www.kashiyatra.org/kylogin">
                                       <button
                                         type="button"
                                         class="px-20 py-3 bg-[#456A9D] text-[#06122E] font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-[#587eb4] active:shadow-lg transition duration-150 ease-in-out"
