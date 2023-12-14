@@ -48,9 +48,9 @@ function Nav() {
           <i className="bg-gray-300 fa fa-bars" aria-hidden="true"></i>
         
           <button onClick={showNav}></button>
-          <Link to="/">
+          <a href="www.kashiyatra.org">
           <img src={logo} alt="ky-23" className={Maincss.kyLogoMobileScreen}></img>
-          </Link>
+          </a>
           
         </div>
         <div id="mobilenavdropdown" className={Maincss.mobilenavdropdown}>
@@ -61,10 +61,10 @@ function Nav() {
           </div>
           <ul className={Maincss.nav}>
             <li onClick={closeNav}>
-              <Link to="/team">TEAM</Link>
+              <Link to="">TEAM</Link>
             </li>
             <li onClick={closeNav}>
-              <Link to="/sponsors">SPONSORS</Link>
+              <Link to="">SPONSORS</Link>
             </li>
             {<li onClick={closeNav}>
               <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
@@ -81,11 +81,11 @@ function Nav() {
             {
               userInfo?(
                 <li onClick={closeNav}>
-                <Link to="/dashboard">Dashboard</Link>
+                <a href="www.kashiyatra.org/kydashboard">Dashboard</a>
                 </li>
               ):(
                 <li onClick={closeNav}>
-                <Link to="/login">Login</Link>
+                <a href="www.kashiyatra.org/kylogin">Login</a>
                 </li>
               )
             }
@@ -93,16 +93,16 @@ function Nav() {
         </div>
         <div className={Maincss.outernav}>
           <div className={Maincss.navbar}>
-            <Link to="/">
+            <a href="www.kashiyatra.org">
               <img src={logo} className={Maincss.kylogo} alt="logo"></img>
-            </Link>
+            </a>
             <div className={Maincss.navlist}>
               <ul className={Maincss.navlistul}>
                 <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/team">TEAM</Link>
+                  <Link to="">TEAM</Link>
                 </li>
                 <li onClick={closeNav} className={Maincss.navitem}>
-                  <Link to="/sponsors">SPONSORS</Link>
+                  <Link to="">SPONSORS</Link>
                 </li>
                 {<li onClick={closeNav}>
               <Link to="/preevents" className={Maincss.navitem}>PRE-EVENTS</Link>
@@ -143,11 +143,11 @@ function Nav() {
                         {
                             userInfo?(
                                 <>
-                                <Link to="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
-                                <Link to="/"><MenuItem onClick={()=>{handleClose(); logoutUser();}}>Logout</MenuItem></Link>
+                                <a href="www.kashiyatra.org/kydashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></a>
+                                <a href="www.kashiyatra.org"><MenuItem onClick={()=>{handleClose(); logoutUser();}}>Logout</MenuItem></a>
                                 </>
                             ):(
-                                <Link to="/login"><MenuItem onClick={handleClose}>Login</MenuItem></Link>
+                                <a href="www.kashiyatra.org/kylogin"><MenuItem onClick={handleClose}>Login</MenuItem></a>
                             )
                         }
                         {/* <MenuItem onClick={handleClose}>My account</MenuItem> */}
